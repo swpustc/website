@@ -5,8 +5,8 @@ mkdir /home/git/html/
 GIT_WORK_TREE=/home/git/html git checkout -f
 rm -fr /home/git/config/
 cp -PR /home/git/html/.config/ /home/git/config/
-cp -f /home/git/config/post-receive /home/git/repositories/swp/website.git/custom_hooks/post-receive
-chmod 755 /home/git/repositories/swp/website.git/custom_hooks/post-receive
+cp -f /home/git/config/post-receive $0
+chmod 755 $0
 cd /tmp/
 cd /home/git/html/
 echo calling post-events
