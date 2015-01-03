@@ -69,6 +69,20 @@ sudo chmod 755 /home/git/html/
 sudo chmod 755 /home/git/config/
 ```
 
+
+- 配置DDNS日志输出脚本
+
+需要添加到开机启动`/etc/rc.local`和定时器`crontab`脚本，
+
+```shell
+# /home/git/config/update-ddns startup
+sudo vim /etc/rc.local         # Add this line before 'exit 0'
+
+# */15 * *   *   *     /home/git/config/update-ddns >/dev/null 2>&1
+sudo -u git -H crontab -e      # Add this line at the end
+```
+
+
 ## Push事件
 
 - 每次push events会通过Gitlab hook调用`.config/post-receive`文件，其将更新配置和网站文件，并调用`.config/post-events`完成结束工作。
