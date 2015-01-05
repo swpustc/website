@@ -78,7 +78,7 @@ sudo chmod 755 /home/git/config/
 # /home/git/config/update-ddns startup
 sudo vim /etc/rc.local         # Add this line before 'exit 0'
 
-# */15 * *   *   *     /home/git/config/update-ddns >/dev/null 2>&1
+# */10 * *   *   *     /home/git/config/update-ddns >/dev/null 2>&1
 sudo -u git -H crontab -e      # Add this line at the end
 ```
 
