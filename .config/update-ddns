@@ -1,22 +1,27 @@
 #!/bin/bash
 if [ "startup"x == "$1"x ] ;then
   echo '<html><head><meta charset="utf-8"><title>DDNS Logs</title></head><body>' >/tmp/ddns
-  echo "<p>System Startup time:  `date -R`</p>" >>/tmp/ddns
-  echo '<table><thead><table width=65% border=1><tr><th style="width:31%;">Update time</th><th style="width:23%;">Oray swpustc</th><th style="width:23%;">Oray swp543210</th><th style="width:23%;">Oray router-swp</th></tr></thead><tbody>' >>/tmp/ddns
+  echo "<p>Startup time:  `date -R`</p>" >>/tmp/ddns
+  echo '<table><thead><table width=65% border=1><tr>
+<th style="width:31%;">Update time</th>
+<th style="width:23%;">Oray swpustc</th>
+<th style="width:23%;">Oray swp543210</th>
+<th style="width:23%;">Oray router-swp</th>
+</tr></thead><tbody>' >>/tmp/ddns
   chown git. /tmp/ddns
   chmod 644 /tmp/ddns
 else
   if host mirrors.lug >/tmp/ddns.tmp; then
-    echo "<tr><td>`date -R`</td><td colspan='3'>`cat /tmp/ddns.tmp | awk 'NR==1'` (1)</td></tr>" >>/tmp/ddns
+    echo "<tr><td>`date -R`</td><td colspan='3' style=\"background-color: #FFD0A2\">`cat /tmp/ddns.tmp | awk 'NR==1'` (1)</td></tr>" >>/tmp/ddns
   elif host mirrors.lug >/tmp/ddns.tmp; then
-    echo "<tr><td>`date -R`</td><td colspan='3'>`cat /tmp/ddns.tmp | awk 'NR==1'` (2)</td></tr>" >>/tmp/ddns
+    echo "<tr><td>`date -R`</td><td colspan='3' style=\"background-color: #FFBC79\">`cat /tmp/ddns.tmp | awk 'NR==1'` (2)</td></tr>" >>/tmp/ddns
   elif host mirrors.lug >/tmp/ddns.tmp; then
-    echo "<tr><td>`date -R`</td><td colspan='3'>`cat /tmp/ddns.tmp | awk 'NR==1'` (3)</td></tr>" >>/tmp/ddns
+    echo "<tr><td>`date -R`</td><td colspan='3' style=\"background-color: #FFA851\">`cat /tmp/ddns.tmp | awk 'NR==1'` (3)</td></tr>" >>/tmp/ddns
   elif host mirrors.lug >/tmp/ddns.tmp; then
-    echo "<tr><td>`date -R`</td><td colspan='3'>`cat /tmp/ddns.tmp | awk 'NR==1'` (4)</td></tr>" >>/tmp/ddns
+    echo "<tr><td>`date -R`</td><td colspan='3' style=\"background-color: #FF9428\">`cat /tmp/ddns.tmp | awk 'NR==1'` (4)</td></tr>" >>/tmp/ddns
   elif host mirrors.lug >/tmp/ddns.tmp; then
-    echo "<tr><td>`date -R`</td><td colspan='3'>`cat /tmp/ddns.tmp | awk 'NR==1'` (5)</td></tr>" >>/tmp/ddns
+    echo "<tr><td>`date -R`</td><td colspan='3' style=\"background-color: #FF8000\">`cat /tmp/ddns.tmp | awk 'NR==1'` (5)</td></tr>" >>/tmp/ddns
   else
-    echo "<tr><td>`date -R`</td><td>`/home/git/update-ddns 1`</td><td>`/home/git/update-ddns 2`</td><td>`/home/git/update-ddns 3`</td></tr>" >>/tmp/ddns
+    echo "<tr><td>`date -R`</td>`/home/git/update-ddns 1``/home/git/update-ddns 2``/home/git/update-ddns 3`</tr>" >>/tmp/ddns
   fi
 fi
