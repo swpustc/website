@@ -1,12 +1,19 @@
 #!/bin/bash
 if [ "startup"x == "$1"x ] ;then
-  echo '<html><head><meta charset="utf-8"><title>DDNS Logs</title></head><body>' >/tmp/ddns
-  echo "<p>Update time:  `date \"+%F %T\"`</p>" >>/tmp/ddns
-  echo '<table><thead><table width=60% border=1><tr>
-<th style="width:25%;">Update time</th>
-<th style="width:25%;">Oray swpustc</th>
-<th style="width:25%;">Oray swp543210</th>
-<th style="width:25%;">Oray router-swp</th>
+  echo '<html><head><meta charset="utf-8"><title>DDNS Logs</title>
+<style type="text/css">th,td{color:#666;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;margin:0;margin:auto;}</style>
+</head><body>' >/tmp/ddns
+  echo "<p>Update time: `date \"+%F %T\"`</p>" >>/tmp/ddns
+  echo '<script type="text/javascript">
+if (/iphone|nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|wap|android|iPod|iPad/i.test(navigator.userAgent.toLowerCase())) {
+document.write("<table><thead><table width=100% border=1><tr>");
+}else{
+document.write("<table><thead><table width=720px border=1><tr>");
+}</script>
+<th style="width:22%;">Update time</th>
+<th style="width:26%;">Oray swpustc</th>
+<th style="width:26%;">Oray swp543210</th>
+<th style="width:26%;">Oray router-swp</th>
 </tr></thead><tbody>' >>/tmp/ddns
   chown git. /tmp/ddns
   chmod 644 /tmp/ddns
@@ -25,5 +32,5 @@ else
     echo "<tr><td>`date \"+%F %T\"`</td>`/home/git/update-ddns 1``/home/git/update-ddns 2``/home/git/update-ddns 3`</tr>" >>/tmp/ddns
   fi
   cat /tmp/ddns >/tmp/ddns.tmp
-  sed -e "2 s/^<p>Update time:\(.*\)/<p>Update time:  `date \"+%F %T\"`<\/p>/g" /tmp/ddns.tmp | tee /tmp/ddns
+  sed -e "4 s/^<p>Update time:\(.*\)/<p>Update time: `date \"+%F %T\"`<\/p>/g" /tmp/ddns.tmp | tee /tmp/ddns
 fi
