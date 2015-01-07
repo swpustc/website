@@ -24,12 +24,14 @@ sudo -u git -H chmod 755 /home/git/repositories/root/website.git/custom_hooks/po
 `gitlab`和`gitlab-shell`目录为Gitlab配置文件，需要复制到`/home/git/gitlab/`和`/home/git/gitlab-shell/`目录中。
 
 ```shell
-cd /home/git/gitlab/config
-sudo -u git -H ln -fs database.yml.mysql database.yml
-sudo -u git -H ln -fs gitlab.yml.example gitlab.yml
-sudo -u git -H ln -fs unicorn.rb.example unicorn.rb
-cd /home/git/gitlab-shell
-sudo -u git -H ln -fs config.yml.example config.yml
+# GitLab
+sudo -u git -H ln -fs database.yml.mysql /home/git/gitlab/config/database.yml
+sudo -u git -H ln -fs gitlab.yml.example /home/git/gitlab/config/gitlab.yml
+sudo -u git -H ln -fs resque.yml.example /home/git/gitlab/config/resque.yml
+sudo -u git -H ln -fs unicorn.rb.example /home/git/gitlab/config/unicorn.rb
+sudo -u git -H ln -fs rack_attack.rb.example /home/git/gitlab/config/initializers/rack_attack.rb
+# GitLab shell
+sudo -u git -H ln -fs config.yml.example /home/git/gitlab-shell/config.yml
 ```
 
 - 加载nginx配置
