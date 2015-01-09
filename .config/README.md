@@ -58,23 +58,26 @@ sudo service nginx restart
 ```
 
 
-- 建立html目录和config目录
+- 建立html目录、ftp目录和config目录
 
 如果目录已建立确保所有者为git，并且git具有rwx权限。
 
 ```shell
 sudo -u git -H mkdir /home/git/html/
+sudo -u git -H mkdir /home/git/ftp/
 sudo -u git -H mkdir /home/git/config/
 sudo chown git:git /home/git/html/
+sudo chown git:git /home/git/ftp/
 sudo chown git:git /home/git/config/
 sudo chmod 755 /home/git/html/
+sudo chmod 755 /home/git/ftp/
 sudo chmod 755 /home/git/config/
 ```
 
 
 - 配置DDNS日志输出脚本
 
-需要添加到开机启动`/etc/rc.local`和定时器`crontab`脚本，
+需要添加到开机启动`/etc/rc.local`和定时器`crontab`脚本。
 
 ```shell
 # /home/git/config/update-ddns startup
@@ -82,6 +85,17 @@ sudo vim /etc/rc.local         # Add this line before 'exit 0'
 
 # */10 * *   *   *     /home/git/config/update-ddns >/dev/null 2>&1
 sudo -u git -H crontab -e      # Add this line at the end
+```
+
+- 挂载共享文件夹或者NTFS驱动器
+
+对于虚拟机，需挂载共享文件夹。
+
+```shell
+# //192.168.254.9/Documents$ /mnt/Documents cifs ro,credentials=/home/swp/.smbcredentials,uid=0,sec=ntlm,file_mode=0444,dir_mode=0555,iocharset=gb2312 0 0
+sudo vim /etc/fstab            # Add this line at the end
+# echo "//192.168.254.9/Documents$ /mnt/Documents cifs ro,credentials=/home/swp/.smbcredentials,uid=0,sec=ntlm,file_mode=0444,dir_mode=0555,iocharset=gb2312 0 0" | sudo tee -a /etc/fstab
+sudo mount -a
 ```
 
 
