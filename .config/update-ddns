@@ -1,10 +1,10 @@
 #!/bin/bash
 if [ "startup"x == "$1"x ] ;then
   echo '<!DOCTYPE html>
-<html><head><meta charset="utf-8" /><title>DDNS Logs</title>
+<html><head><meta charset="utf-8" /><meta http-equiv="refresh" content="60" /><title>DDNS Logs</title>
 <style type="text/css">th,td{color:#666;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;margin:0;margin:auto;}</style>
 </head><body>' >/tmp/ddns
-  echo "<p>Update time: `date \"+%F %T\"`</p>" >>/tmp/ddns
+  echo "<p>Update time: `date '+%F %T'`</p>" >>/tmp/ddns
   echo '<script type="text/javascript">
 if (/iphone|nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|wap|android|iPod|iPad/i.test(navigator.userAgent.toLowerCase())) {
 document.write("<table><thead><table width=100% border=1><tr>");
@@ -12,26 +12,25 @@ document.write("<table><thead><table width=100% border=1><tr>");
 document.write("<table><thead><table width=720px border=1><tr>");
 }</script>
 <th style="width:22%;">Update time</th>
-<th style="width:26%;">Oray swpustc</th>
-<th style="width:26%;">Oray swp543210</th>
-<th style="width:26%;">Oray router-swp</th>
+<th style="width:26%;">Oray: swpustc</th>
+<th style="width:26%;">Oray: swp543210</th>
+<th style="width:26%;">Oray: router-swp</th>
 </tr></thead><tbody>' >>/tmp/ddns
   chown git. /tmp/ddns
   chmod 644 /tmp/ddns
 else
   if host mirrors.lug >/tmp/ddns.tmp; then
-    echo "<tr><td>`date \"+%F %T\"`</td><td colspan='3' style=\"background-color: #FFFF80\">`cat /tmp/ddns.tmp | awk 'NR==1'` (1)</td></tr>" >>/tmp/ddns
+    echo "<tr><td>`date '+%F %T'`</td><td colspan='3' style=\"background-color: #FFFF80\">`cat /tmp/ddns.tmp | awk 'NR==1'` (1)</td></tr>" >>/tmp/ddns
   elif host mirrors.lug >/tmp/ddns.tmp; then
-    echo "<tr><td>`date \"+%F %T\"`</td><td colspan='3' style=\"background-color: #FFDF80\">`cat /tmp/ddns.tmp | awk 'NR==1'` (2)</td></tr>" >>/tmp/ddns
+    echo "<tr><td>`date '+%F %T'`</td><td colspan='3' style=\"background-color: #FFDF9F\">`cat /tmp/ddns.tmp | awk 'NR==1'` (2)</td></tr>" >>/tmp/ddns
   elif host mirrors.lug >/tmp/ddns.tmp; then
-    echo "<tr><td>`date \"+%F %T\"`</td><td colspan='3' style=\"background-color: #FFBF80\">`cat /tmp/ddns.tmp | awk 'NR==1'` (3)</td></tr>" >>/tmp/ddns
+    echo "<tr><td>`date '+%F %T'`</td><td colspan='3' style=\"background-color: #FFBFBF\">`cat /tmp/ddns.tmp | awk 'NR==1'` (3)</td></tr>" >>/tmp/ddns
   elif host mirrors.lug >/tmp/ddns.tmp; then
-    echo "<tr><td>`date \"+%F %T\"`</td><td colspan='3' style=\"background-color: #FF9F80\">`cat /tmp/ddns.tmp | awk 'NR==1'` (4)</td></tr>" >>/tmp/ddns
+    echo "<tr><td>`date '+%F %T'`</td><td colspan='3' style=\"background-color: #FF9FDF\">`cat /tmp/ddns.tmp | awk 'NR==1'` (4)</td></tr>" >>/tmp/ddns
   elif host mirrors.lug >/tmp/ddns.tmp; then
-    echo "<tr><td>`date \"+%F %T\"`</td><td colspan='3' style=\"background-color: #FF8080\">`cat /tmp/ddns.tmp | awk 'NR==1'` (5)</td></tr>" >>/tmp/ddns
+    echo "<tr><td>`date '+%F %T'`</td><td colspan='3' style=\"background-color: #FF80FF\">`cat /tmp/ddns.tmp | awk 'NR==1'` (5)</td></tr>" >>/tmp/ddns
   else
-    echo "<tr><td>`date \"+%F %T\"`</td>`/home/git/update-ddns 1``/home/git/update-ddns 2``/home/git/update-ddns 3`</tr>" >>/tmp/ddns
+    echo "<tr><td>`date '+%F %T'`</td>`/home/git/update-ddns 1``/home/git/update-ddns 2``/home/git/update-ddns 3`</tr>" >>/tmp/ddns
   fi
-  cat /tmp/ddns >/tmp/ddns.tmp
-  sed -e "5 s/^<p>Update time:\(.*\)/<p>Update time: `date \"+%F %T\"`<\/p>/g" /tmp/ddns.tmp | tee /tmp/ddns
+  sed -ie "5 s/^<p>Update time:\(.*\)/<p>Update time: `date '+%F %T'`<\/p>/g" /tmp/ddns
 fi
