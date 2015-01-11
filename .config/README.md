@@ -57,6 +57,15 @@ sudo ln -s /home/git/config/nginx/sites-available/*.conf /etc/nginx/conf.d/
 sudo service nginx restart
 ```
 
+日志格式proxy如下：，需要放在nginx的主配置文件`/etc/nginx/nginx.conf`中。
+
+```shell
+##	log_format proxy '$remote_addr $http_x_forwarded_for $remote_user [$time_local] '
+##	                 ' "$request" $status $body_bytes_sent '
+##	                 ' "$http_referer" "$http_user_agent" ';
+sudo vim /etc/nginx/nginx.conf      # The "log_format" directive can be only on "http" level
+```
+
 
 - 建立html目录、ftp目录和config目录
 
@@ -92,9 +101,15 @@ sudo -u git -H crontab -e      # Add this line at the end
 对于虚拟机，需挂载共享文件夹。
 
 ```shell
-# //192.168.254.9/Documents$ /mnt/Documents cifs ro,credentials=/home/swp/.smbcredentials,uid=0,sec=ntlm,file_mode=0444,dir_mode=0555,iocharset=gb2312 0 0
+# fstab: Automatically mount smbfs(cifs)
+# //192.168.254.9/Documents$ /mnt/Documents cifs ro,credentials=/root/.smbcredentials,uid=0,sec=ntlm,file_mode=0444,dir_mode=0555,iocharset=gb2312 0 0
 sudo vim /etc/fstab            # Add this line at the end
-# echo "//192.168.254.9/Documents$ /mnt/Documents cifs ro,credentials=/home/swp/.smbcredentials,uid=0,sec=ntlm,file_mode=0444,dir_mode=0555,iocharset=gb2312 0 0" | sudo tee -a /etc/fstab
+# echo "//192.168.254.9/Documents$ /mnt/Documents cifs ro,credentials=/root/.smbcredentials,uid=0,sec=ntlm,file_mode=0444,dir_mode=0555,iocharset=gb2312 0 0" | sudo tee -a /etc/fstab
+# Network folder username/password setting.
+## username:guest
+## password:passwd
+sudo vim /root/.smbcredentials # Add username and password
+sudo chmod 600 /root/.smbcredentials
 sudo mount -a
 ```
 
