@@ -102,9 +102,9 @@ sudo -u git -H crontab -e      # Add this line at the end
 
 ```shell
 # fstab: Automatically mount smbfs(cifs)
-# //192.168.254.9/Documents$ /mnt/Documents cifs ro,credentials=/root/.smbcredentials,uid=0,sec=ntlm,file_mode=0444,dir_mode=0555,iocharset=gb2312 0 0
+# //192.168.254.9/Documents$ /mnt/Documents cifs ro,credentials=/root/.smbcredentials,uid=0,sec=ntlm,file_mode=0444,dir_mode=0555,iocharset=utf8 0 0
 sudo vim /etc/fstab            # Add this line at the end
-# echo "//192.168.254.9/Documents$ /mnt/Documents cifs ro,credentials=/root/.smbcredentials,uid=0,sec=ntlm,file_mode=0444,dir_mode=0555,iocharset=gb2312 0 0" | sudo tee -a /etc/fstab
+# echo "//192.168.254.9/Documents$ /mnt/Documents cifs ro,credentials=/root/.smbcredentials,uid=0,sec=ntlm,file_mode=0444,dir_mode=0555,iocharset=utf8 0 0" | sudo tee -a /etc/fstab
 # Network folder username/password setting.
 ## username:guest
 ## password:passwd
