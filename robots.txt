@@ -7,3 +7,4 @@ Disallow: /
 User-agent: *
 Allow:    /ftp*/$
 Disallow: /ftp*/
+Disallow: /status/*?
