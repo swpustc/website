@@ -5,6 +5,22 @@ User-agent: baiduspider
 Disallow: /
 
 User-agent: *
-Allow:    /ftp*/$
-Disallow: /ftp*/
 Disallow: /status/*?
+Disallow: /ftp/*.7z$
+Disallow: /ftp/*.ape$
+Disallow: /ftp/*.apk$
+Disallow: /ftp/*.cab$
+Disallow: /ftp/*.cue$
+Disallow: /ftp/*.dll$
+Disallow: /ftp/*.exe$
+Disallow: /ftp/*.EXE$
+Disallow: /ftp/*.flac$
+Disallow: /ftp/*.idb$
+Disallow: /ftp/*.iso$
+Disallow: /ftp/*.ISO$
+Disallow: /ftp/*.mdf$
+Disallow: /ftp/*.msi$
+Disallow: /ftp/*.pdb$
+Disallow: /ftp/*.rar$
+Disallow: /ftp/*.wv$
+Disallow: /ftp/*.zip$
