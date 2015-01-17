@@ -1,0 +1,45 @@
+code {
+	font-family: Consolas,Monaco,Andale Mono,monospace;
+	line-height: 1.5;
+	font-size: 13px
+}
+body {
+	margin: 0 auto;
+	font-family: Georgia,Palatino,serif;
+	color: #444;
+	line-height: 1;
+	width: 100%;
+	max-width: 960px;
+	padding: 30px
+}
+a {
+	color: #09f;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	text-decoration: none
+}
+a:hover {
+	text-decoration: none;
+	color: #f60
+}
+a:visited {
+	color: purple
+}
+pre {
+	font-family: Consolas,Monaco,Andale Mono,monospace;
+	line-height: 1.4;
+	font-size: 12px
+}
+pre.prettyprint {
+	padding: 4px;
+	background-color:  #f7f7f9;
+	border: 1px solid #e1e1e8
+}
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 {
+	list-style-type: decimal
+}
+ol.linenums li {
+	color: #09b;
+	padding-left: 4px
+}
