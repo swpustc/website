@@ -1,45 +1,65 @@
 code {
-	font-family: Consolas,Monaco,Andale Mono,monospace;
-	line-height: 1.5;
-	font-size: 13px
+  font-family: Consolas,Monaco,Andale Mono,monospace;
+  line-height: 1.5;
+  font-size: 13px
 }
 body {
-	margin: 0 auto;
-	font-family: Georgia,Palatino,serif;
-	color: #444;
-	line-height: 1;
-	width: 100%;
-	max-width: 960px;
-	padding: 30px
+  margin: 0 auto;
+  color: #444;
+  width: 100%;
+  max-width: 960px;
+  padding: 30px 0 30px 0;
 }
 a {
-	color: #09f;
-	margin: 0;
-	padding: 0;
-	vertical-align: baseline;
-	text-decoration: none
+  color: #09f;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  text-decoration: none
 }
 a:hover {
-	text-decoration: none;
-	color: #f60
+  text-decoration: none;
+  color: #f60
 }
 a:visited {
-	color: purple
+  color: purple
 }
 pre {
-	font-family: Consolas,Monaco,Andale Mono,monospace;
-	line-height: 1.4;
-	font-size: 12px
+  font-family: Consolas,Monaco,Andale Mono,monospace;
+  line-height: 1.4;
+  font-size: 12px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word
 }
 pre.prettyprint {
-	padding: 4px;
-	background-color:  #f7f7f9;
-	border: 1px solid #e1e1e8
+  padding: 4px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8
 }
-li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 {
-	list-style-type: decimal
+li {
+  padding-left: 2px
 }
-ol.linenums li {
-	color: #09b;
-	padding-left: 4px
+li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
+  list-style-type: decimal;
+  line-height: normal;
+}
+ol.linenums {
+  color: #09b;
+}
+@media screen and (max-device-width:640px) {
+  li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
+    list-style-position: inside;
+  }
+  ol.linenums {
+    padding-left: 0
+  }
+}
+@media screen and (min-device-width:641px) {
+  li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
+    list-style-position: outside;
+  }
+  ol.linenums {
+    padding-left: auto
+  }
 }

@@ -3,9 +3,6 @@ body {
   font-family: Georgia,Palatino,serif;
   color: #444;
   line-height: 1;
-  min-width: 480px;
-  width: 100%;
-  max-width: 960px;
   padding: 30px
 }
 h1,h2,h3,h4 {
@@ -58,20 +55,18 @@ li ul,li ul {
 }
 p,ul,ol {
   font-size: 16px;
-  line-height: 24px;
-  width: 100%;
-  max-width: 720px;
+  line-height: 24px
 }
 pre {
   padding: 0 24px;
-  width: 90%;
-  max-width: 660px;
-  white-space: pre-wrap
+  white-space: pre-wrap;
+  word-wrap: break-word
 }
 code {
   font-family: Consolas,Monaco,Andale Mono,monospace;
   line-height: 1.5;
-  font-size: 13px
+  font-size: 13px;
+  word-break: break-all
 }
 aside {
   display: block;
@@ -98,10 +93,25 @@ blockquote p {
 }
 hr {
   width: 100%;
-  max-width: 720px;
   text-align: left;
   margin: 0 auto 0 0;
   color: #999
+}
+@media screen and (max-device-width:720px) {
+  body,p,ul,ol,pre,hr {
+    width: 100%;
+    word-wrap: break-word
+  }
+}
+@media screen and (min-device-width:721px) {
+  body,p,ul,ol,pre,hr {
+    max-width: 720px
+  }
+}
+@media screen and (min-device-width:960px) {
+  body {
+    max-width: 960px
+  }
 }
 button,input,select,textarea {
   font-size: 100%;
