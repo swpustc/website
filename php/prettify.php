@@ -17,7 +17,7 @@ $name = basename($_SERVER['DOCUMENT_ROOT'] . $_SERVER['SCRIPT_NAME']);
     <a name="top" id="top"></a>
     <code><a href="javascript:history.go(-1);">back</a>
       <a href="#end">end</a>&nbsp;&nbsp;&nbsp;&nbsp;<script type="text/javascript">
-document.write('Download: <a href="/download'+document.location.pathname+'" type="application/octet-stream"><?php echo $name; ?></a>');
+document.write('Download: <a href="/download'+document.location.pathname+'"><?php echo $name; ?></a>');
     </script></code>
     <pre class="prettyprint linenums"><?php echo $html; ?></pre>
     <code><a href="javascript:history.go(-1);">back</a>

@@ -979,7 +979,7 @@ class Markdown implements MarkdownInterface {
 	# Create a code span markup for $code. Called from handleSpanToken.
 	#
 		$code = htmlspecialchars(trim($code), ENT_NOQUOTES);
-		return $this->hashPart("<code class=\"prettyprint\">$code</code>");
+		return $this->hashPart("<code>$code</code>");
 	}
 
 
