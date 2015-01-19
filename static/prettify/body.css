@@ -25,16 +25,18 @@ a:visited {
   color: purple
 }
 pre {
-  font-family: Consolas,Monaco,Andale Mono,monospace;
-  line-height: 1.4;
-  font-size: 12px;
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word
 }
+.prettyprint {
+  font-family: Consolas,Monaco,Andale Mono,monospace;
+  font-size: 12px;
+  background-color: #f7f7f9
+}
 pre.prettyprint {
+  margin-top: 10px;
   padding: 4px;
-  background-color: #f7f7f9;
   border: 1px solid #e1e1e8
 }
 li {
@@ -42,7 +44,7 @@ li {
 }
 li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
   list-style-type: decimal;
-  line-height: normal;
+  line-height: normal
 }
 ol.linenums {
   color: #09b;
@@ -50,6 +52,7 @@ ol.linenums {
 @media screen and (max-device-width:640px) {
   li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
     list-style-position: inside;
+    list-style-type: decimal-leading-zero
   }
   ol.linenums {
     padding-left: 0
@@ -57,9 +60,28 @@ ol.linenums {
 }
 @media screen and (min-device-width:641px) {
   li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
-    list-style-position: outside;
+    list-style-position: outside
   }
-  ol.linenums {
-    padding-left: auto
-  }
+}
+select {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: normal;
+  margin-bottom: 6px;
+  height: 24px;
+  -webkit-transition: border linear .2s,box-shadow linear .2s;
+  -moz-transition: border linear .2s,box-shadow linear .2s;
+  transition: border linear .2s,box-shadow linear .2s;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  color: #808080;  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  width: auto;
+  padding: 3px;
+  vertical-align: middle;
 }
