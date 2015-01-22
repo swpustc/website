@@ -1,5 +1,9 @@
 #!/bin/bash
-cd /usr/share/wordpress/
+if [ "2"x == "$1"x ]; then
+  cd /var/lib/wordpress/
+else
+  cd /usr/share/wordpress/
+fi
 echo Google Service: | ag Google
 grep -r fonts.googleapis.com         `pwd` --color=auto
 grep -r ajax.googleapis.com          `pwd` --color=auto
