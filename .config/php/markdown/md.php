@@ -5,7 +5,7 @@ spl_autoload_register(function($class){
 use \Michelf\Markdown;
 $text = file_get_contents($_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME']);
 $encode=mb_detect_encoding($text, array('ASCII','UTF-8','GBK','BIG5'));
-$html = Markdown::defaultTransform(htmlspecialchars(iconv($encode, "UTF-8//IGNORE", $text)));
+$html = Markdown::defaultTransform(iconv($encode, "UTF-8//IGNORE", $text));
 $name = basename($_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME']);
 $css  = $_COOKIE['css-markdown'];
 if($css<0 or $css>9) $css = 0;
