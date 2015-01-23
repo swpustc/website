@@ -1,2 +1,3 @@
 #!/bin/bash
 rm README.md
+rm static/prettify/body.css static/prettify/body.js

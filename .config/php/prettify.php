@@ -1,28 +1,29 @@
 <?php
-$text = file_get_contents($_SERVER['DOCUMENT_ROOT'] . $_SERVER['SCRIPT_NAME']);
-$encode  = mb_detect_encoding($text, array('ASCII','UTF-8','GBK','BIG5'));
+$text = file_get_contents($_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME']);
+$encode=mb_detect_encoding($text, array('ASCII','UTF-8','GBK','BIG5'));
 $html = htmlspecialchars(iconv($encode, "UTF-8//IGNORE", $text));
-$name = basename($_SERVER['DOCUMENT_ROOT'] . $_SERVER['SCRIPT_NAME']);
+$name = basename($_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME']);
+$css  = $_COOKIE['css-prettify'];
+if($css<0 or $css>9) $css = 0;
 ?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <title><?php echo $name; ?></title>
-    <link href="/static/prettify/prettify.css" type="text/css" rel="stylesheet" title="Default" ID="CSS0" />
-    <link href="/static/prettify/body.css" type="text/css" rel="stylesheet" />
-    <link href="/static/prettify/vibrant-ink.css" type="text/css" rel="stylesheet" title="Vibrant Ink" ID="CSS1" DISABLED />
-    <link href="/static/prettify/github.css" type="text/css" rel="stylesheet" title="GitHub" ID="CSS2" DISABLED />
-    <link href="/static/prettify/tomorrow-night.css" type="text/css" rel="stylesheet" title="Tomorrow Night" ID="CSS3" DISABLED />
-    <link href="/static/prettify/tomorrow.css" type="text/css" rel="stylesheet" title="Tomorrow" ID="CSS4" DISABLED />
-    <link href="/static/prettify/tomorrow-night-eighties.css" type="text/css" rel="stylesheet" title="Tomorrow Night Eighties" ID="CSS5" DISABLED />
-    <link href="/static/prettify/tomorrow-night-blue.css" type="text/css" rel="stylesheet" title="Tomorrow Night Blue" ID="CSS6" DISABLED />
-    <link href="/static/prettify/tomorrow-night-bright.css" type="text/css" rel="stylesheet" title="Tomorrow Night Bright" ID="CSS7" DISABLED />
-    <link href="/static/prettify/hemisu-dark.css" type="text/css" rel="stylesheet" title="Hemisu Dark" ID="CSS8" DISABLED />
-    <link href="/static/prettify/hemisu-light.css" type="text/css" rel="stylesheet" title="Hemisu Light" ID="CSS9" DISABLED />
+    <link href="/static/prettify/prettify.css" type="text/css" rel="stylesheet" title="Default" ID="CSS0" <?php if($css!=0) echo "disabled"; ?>/>
+    <link href="/static/prettify/body.min.css" type="text/css" rel="stylesheet" />
+    <link href="/static/prettify/vibrant-ink.css" type="text/css" rel="stylesheet" title="Vibrant Ink" ID="CSS1" <?php if($css!=1) echo "disabled"; ?>/>
+    <link href="/static/prettify/github.css" type="text/css" rel="stylesheet" title="GitHub" ID="CSS2" <?php if($css!=2) echo "disabled"; ?>/>
+    <link href="/static/prettify/tomorrow-night.css" type="text/css" rel="stylesheet" title="Tomorrow Night" ID="CSS3" <?php if($css!=3) echo "disabled"; ?>/>
+    <link href="/static/prettify/tomorrow.css" type="text/css" rel="stylesheet" title="Tomorrow" ID="CSS4" <?php if($css!=4) echo "disabled"; ?>/>
+    <link href="/static/prettify/tomorrow-night-eighties.css" type="text/css" rel="stylesheet" title="Tomorrow Night Eighties" ID="CSS5" <?php if($css!=5) echo "disabled"; ?>/>
+    <link href="/static/prettify/tomorrow-night-blue.css" type="text/css" rel="stylesheet" title="Tomorrow Night Blue" ID="CSS6" <?php if($css!=6) echo "disabled"; ?>/>
+    <link href="/static/prettify/tomorrow-night-bright.css" type="text/css" rel="stylesheet" title="Tomorrow Night Bright" ID="CSS7" <?php if($css!=7) echo "disabled"; ?>/>
+    <link href="/static/prettify/hemisu-dark.css" type="text/css" rel="stylesheet" title="Hemisu Dark" ID="CSS8" <?php if($css!=8) echo "disabled"; ?>/>
+    <link href="/static/prettify/hemisu-light.css" type="text/css" rel="stylesheet" title="Hemisu Light" ID="CSS9" <?php if($css!=9) echo "disabled"; ?>/>
     <script type="text/javascript" src="/static/prettify/prettify.js"></script>
-    <script type="text/javascript" src="/static/prettify/body.js"></script>
-    <script type="text/javascript">changeCss("css-prettify",getCss("css-prettify"))</script>
+    <script type="text/javascript" src="/static/prettify/body.min.js"></script>
   </head>
   <body onload="prettyPrint()">
     <a name="top" id="top"></a>
