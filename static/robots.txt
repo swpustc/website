@@ -8,3 +8,9 @@ Disallow: /
 
 User-agent: baiduspider
 Disallow: /
+
+User-agent: *
+Disallow: /*/commit/*.diff
+Disallow: /*/commit/*.patch
+Disallow: /*/compare/
+Disallow: /*/logs_tree/
