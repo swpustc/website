@@ -3,7 +3,6 @@ echo calling post-receive
 rm -fr /home/git/html/
 mkdir /home/git/html/
 GIT_WORK_TREE=/home/git/html git checkout -f
-rm -fr /home/git/config/
 cp -f /home/git/html/config/post-receive $0
 chmod 755 $0
 cd /tmp/

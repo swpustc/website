@@ -1,0 +1,68 @@
+    <!-- ************* - Main Footer - *************** -->
+    <footer id="footer" class="clearfix">
+      <div class="one-half">
+        <nav id="footer-nav" class="clearfix">
+          <ul>
+            <li><a href="//swpbox.info/">Home</a></li>
+            <li><a href="//ftp.swpbox.info/">FTP</a></li>
+            <li><a href="//git.swpbox.info/">GitLab</a></li>
+            <li><a href="//mysql.swpbox.info/">MySql</a></li>
+            <li><a href="//blog.swpbox.info/">Blog</a></li>
+            <li><a href="//status.swpbox.info/">Status</a></li>
+          </ul>
+        </nav><!--/ #footer-nav-->
+        <div class="copyright">&copy; 2015 swpustc. All rights reserved.</div><!--/ .copyright-->
+      </div><!--/ .one-half-->
+      <div class="one-half last">
+        <ul data-description="Stay in touch via social networks:" class="social-links">
+          <li data-tooltip="LinkedIn" class="linked"><a href="#">LinkedIn</a></li>
+          <li data-tooltip="Flickr" class="flickr"><a href="#">Flickr</a></li>
+          <li data-tooltip="Twitter" class="twitter"><a href="#">Twitter</a></li>
+          <li data-tooltip="Facebook" class="facebook"><a href="#">Facebook</a></li>
+          <li data-tooltip="Rss" class="rss"><a href="#">Rss</a></li>
+        </ul><!--/ .social-links-->
+      </div><!--/ .one-half.last-->
+    </footer>
+    <!-- ************ - end Footer - ************ -->
+  </section><!--/ .container-->
+  <!-- *************** - end Container - *************** -->
+  <!-- ************ - Footer Bottom - ************ -->
+  <footer id="footer-bottom">
+    <a href="#" id="footer-more"></a>
+    <section class="container panel clearfix">
+      <div class="one-half">
+        <div class="widget-text">
+          <h1>About Me</h1>
+          <p>Graduated from University of Science and Technology of China, born in 1991. Now living in Anhui Province.</p>
+          <p><a href="//resume.swpbox.info/">more</a></p>
+        </div><!--/ .widget-text-->
+      </div><!--/ .one-half-->
+      <div class="one-fourth">
+        <div class="widget-text">
+          <h1>Email</h1>
+          <ul class="contact-info" style="display: block;">
+            <li class="email"><a href="mailto:swp543210@gmail.com">swp543210@gmail.com</a></li><br/>
+            <li class="email"><a href="mailto:swpustc@mail.ustc.edu.cn">swpustc@mail.ustc.edu.cn</a></li><br/>
+            <li class="email"><a href="mailto:swp543210@126.com">swp543210@126.com</a></li><br/>
+          </ul><!--/ .contact-info-->
+        </div><!--/ .widget-text-->
+      </div><!--/ .one-fourth-->
+      <div class="one-fourth last">
+        <div class="widget-text">
+          <h1>Telephone</h1>
+          <ul class="contact-info" style="display: block;">
+            <li class="phone">+86 139 5693 6382</li><br/>
+          </ul><!--/ .contact-info-->
+        </div><!--/ .widget-text-->
+      </div><!--/ .one-fourth.last-->
+    </section><!--/ .container-->
+  </footer><!--/ #footer-bottom-->
+  <!-- ************ - end Footer - ************ -->
+</div><!--/ #wrapper-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>!window.jQuery && document.write('<script src="//static.swpbox.info/js/jquery-1.7.1.min.js"><\/script>')</script>
+<!--[if lt IE 9]>
+  <script src="//static.swpbox.info/js/selectivizr-and-extra-selectors.min.js"></script>
+  <script src="https://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+  <script>!window.jQuery && document.write('<script src="https://static.swpbox.info/js/IE8.js"><\/script>')</script>
+<![endif]-->

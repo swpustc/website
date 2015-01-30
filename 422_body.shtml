@@ -1,0 +1,7 @@
+<div class="content-wrapper clearfix">
+  <div class="error404">
+    <h1>422</h1>
+    <div class="title-error">Unprocessable Entity!</div>
+    <div class="description-error">Sorry, the request was well-formed but was unable to be followed due to semantic errors..</div>
+  </div><!--/ .error404-->
+</div><!--/ .content-wrapper-->

@@ -1,0 +1,120 @@
+<body class="liquid light">
+<div id="wrapper">
+  <!-- ***************** - Header Top - ***************** -->
+  <div id="header-top" class="clearfix">
+    <section class="container clearfix">
+      <div class="one-half">
+        <ul class="contact-info clearfix">
+          <li class="phone">+86 139 5693 6382</li>
+          <li class="email"><a href="mailto:swp543210@gmail.com">swp543210@gmail.com</a></li>
+        </ul><!--/ .contact-info-->
+      </div><!--/ .one-half-->
+      <div  class="one-half last">
+        <ul data-description="Stay in touch via social networks:" class="social-links clearfix">
+          <li data-tooltip="LinkedIn" class="linked"><a href="#">LinkedIn</a></li>
+          <li data-tooltip="Flickr" class="flickr"><a href="#">Flickr</a></li>
+          <li data-tooltip="Twitter" class="twitter"><a href="#">Twitter</a></li>
+          <li data-tooltip="Facebook" class="facebook"><a href="#">Facebook</a></li>
+          <li data-tooltip="Rss" class="rss"><a href="#">Rss</a></li>
+        </ul><!--/ .social-links-->
+      </div><!--/ .one-fourth.last-->
+    </section><!--/ .container-->
+    <a href="#" id="more"></a>
+  </div><!--/ #header-top-->
+  <!-- ***************** - END Header Top - ***************** -->
+  <!-- ***************** - Container - ***************** -->
+  <section class="container">
+    <!-- ***************** - Header - ***************** -->
+    <header id="header" class="clearfix">
+      <div id="logo">
+        <h1><a href="//swpbox.info/">swpustc</a></h1>
+        <div class="slogan"><span>Responsive Homepage</span></div><!--/ .slogan-->
+      </div><!--/ #logo-->
+      <nav id="navigation" class="navigation">
+        <ul>
+          <li class="current"><a href="//swpbox.info/">Home</a>
+            <ul>
+              <li><a href="//resume.swpbox.info/">Resume</a></li>
+              <li><a href="//freeshell.swpbox.info/">freeshell</a>
+                <ul>
+                  <li><a href="http://swpustc.6.freeshell.ustc.edu.cn/">ipv6</a></li>
+                  <li><a href="https://swp.freeshell.ustc.edu.cn/">USTC Proxy</a></li>
+                  <li><a href="//mirrors.swpbox.info/">Local Proxy</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="//ftp.swpbox.info/">FTP</a>
+            <ul>
+              <li><a href="//ftp.swpbox.info/GNUinVisualStudio/">GNUinVisualStudio</a>
+                <ul>
+                  <li><a href="//ftp.swpbox.info/GNUinVisualStudio/README.md">README</a></li>
+                  <li><a href="//ftp.swpbox.info/GNUinVisualStudio/CHANGELOG.md">CHANGELOG</a></li>
+                  <li><a href="//ftp.swpbox.info/GNUinVisualStudio/VERSION.md">VERSION</a></li>
+                  <li><a href="//ftp.swpbox.info/GNUinVisualStudio/BUG.md">BUG</a></li>
+                  <li><a href="//ftp.swpbox.info/GNUinVisualStudio/exe/">exe/</a></li>
+                  <li><a href="//ftp.swpbox.info/GNUinVisualStudio/dll/">dll/</a></li>
+                  <li><a href="//ftp.swpbox.info/GNUinVisualStudio/lib/">lib/</a></li>
+                  <li><a href="//ftp.swpbox.info/GNUinVisualStudio/pdb/">pdb/</a></li>
+                  <li><a href="//ftp.swpbox.info/GNUinVisualStudio/project/">project/</a></li>
+                  <li><a href="//ftp.swpbox.info/GNUinVisualStudio/include/">include/</a></li>
+                </ul>
+              </li>
+              <li><a href="//ftp.swpbox.info/home/">home</a></li>
+              <li><a href="//ftp.swpbox.info/html/">html</a></li>
+              <li><a href="//ftp.swpbox.info/software/">software</a>
+                <ul>
+                  <li><a href="//ftp.swpbox.info/software/Android/">Android</a></li>
+                  <li><a href="//ftp.swpbox.info/software/DragonNest/">DragonNest</a></li>
+                  <li><a href="//ftp.swpbox.info/software/Operating%20System%20Installer/">Operating System</a></li>
+                  <li><a href="//ftp.swpbox.info/software/OriginLab.OriginPro.v9.0.SR2.Cracked-EAT/">OriginLab Pro v9.0 SR2</a></li>
+                  <li><a href="//ftp.swpbox.info/software/Microsoft%20Visual%20Studio/">Microsoft Visual Studio</a></li>
+                  <li><a href="//ftp.swpbox.info/software/Adobe%20Photoshop%20CC%202014/">Adobe Photoshop CC 2014</a></li>
+                  <li><a href="//ftp.swpbox.info/software/雅尼无损全集/">雅尼无损全集</a></li>
+                </ul>
+              </li>
+              <li><a href="//download.swpbox.info/ftp/">Download</a></li>
+              <li><a href="//CA.swpbox.info/">swpustc CA</a>
+                <ul>
+                  <li><a href="//CA.swpbox.info/rootcert.cer">cer document</a></li>
+                  <li><a href="//CA.swpbox.info/rootcert.crt">crt document</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="//git.swpbox.info/">GitLab</a>
+            <ul>
+              <li><a href="https://git.ustclug.org">USTC GitLab</a>
+                <ul>
+                  <li><a href="https://gitlab.lug.ustc.edu.cn">Old Domain</a></li>
+                </ul>
+              </li>
+              <li><a href="http://210.45.78.50:8888/">NEK</a>
+                <ul>
+                  <li><a href="//nek.swpbox.info/">Local Proxy</a></li>
+                </ul>
+              </li>
+              <li><a href="https://github.com/swpustc">GitHub</a></li>
+            </ul>
+          </li>
+          <li><a href="//mysql.swpbox.info/">MySql</a>
+            <ul>
+              <li><a href="//router.swpbox.info/">Router</a></li>
+              <li><a href="https://www.dnspod.cn/">DNSPod</a></li>
+            </ul>
+          </li>
+          <li><a href="//blog.swpbox.info/">Blog</a>
+            <ul>
+              <li><a href="//bbs.swpbox.info/">BBS</a></li>
+            </ul>
+          </li>
+          <li><a href="//status.swpbox.info/">Status</a>
+            <ul>
+              <li><a href="//status.swpbox.info/phpinfo.php">phpInfo</a></li>
+              <li><a href="//status.swpbox.info/ddns-log.html">DDNS</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!--/ #navigation-->
+    </header><!--/ #header-->
+    <!-- **************** - end Header - **************** -->

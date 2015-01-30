@@ -1,37 +1,35 @@
 #!/bin/bash
-if [ "startup"x == "$1"x ] ;then
-  echo '<!DOCTYPE html>
-<html><head><meta charset="utf-8" /><meta http-equiv="refresh" content="60" />
-<link rel="shortcut icon" href="/static/status/favicon.ico" type="image/x-icon" /><title>DDNS Logs</title>
-<style type="text/css">th,td{color:#666;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;margin:0;margin:auto;}</style>
-</head><body>' >/tmp/ddns
-  echo "<p>Update time: `date '+%F %T'`</p>" >>/tmp/ddns
-  echo '<script type="text/javascript">
-if (/iphone|nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|wap|android|iPod|iPad/i.test(navigator.userAgent.toLowerCase())) {
-document.write("<table><thead><table width=100% border=1><tr>");
-}else{
-document.write("<table><thead><table width=720px border=1><tr>");
-}</script>
-<th style="width:22%;">Update time</th>
-<th style="width:26%;">Oray: swpustc</th>
-<th style="width:26%;">Oray: swp543210</th>
-<th style="width:26%;">Oray: router-swp</th>
-</tr></thead><tbody>' >>/tmp/ddns
-  chown git. /tmp/ddns
-  chmod 644 /tmp/ddns
+cd `dirname $0`
+## Work Directory: /home/git/html/config/
+## User: git
+
+## Generate Table
+if host mirrors.lug >/tmp/ddns.tmp; then
+  echo "<div class=\"one-fourth\">`date '+%F %T'`</div><div class=\"three-fourth last\" style=\"color:#808000\">`cat /tmp/ddns.tmp | awk 'NR==1'` (1)</div><hr class=\"clear\" style=\"padding:0;\"/>" >>/tmp/ddns
+elif host mirrors.lug >/tmp/ddns.tmp; then
+  echo "<div class=\"one-fourth\">`date '+%F %T'`</div><div class=\"three-fourth last\" style=\"color:#806020\">`cat /tmp/ddns.tmp | awk 'NR==1'` (2)</div><hr class=\"clear\" style=\"padding:0;\"/>" >>/tmp/ddns
+elif host mirrors.lug >/tmp/ddns.tmp; then
+  echo "<div class=\"one-fourth\">`date '+%F %T'`</div><div class=\"three-fourth last\" style=\"color:#804040\">`cat /tmp/ddns.tmp | awk 'NR==1'` (3)</div><hr class=\"clear\" style=\"padding:0;\"/>" >>/tmp/ddns
+elif host mirrors.lug >/tmp/ddns.tmp; then
+  echo "<div class=\"one-fourth\">`date '+%F %T'`</div><div class=\"three-fourth last\" style=\"color:#802060\">`cat /tmp/ddns.tmp | awk 'NR==1'` (4)</div><hr class=\"clear\" style=\"padding:0;\"/>" >>/tmp/ddns
+elif host mirrors.lug >/tmp/ddns.tmp; then
+  echo "<div class=\"one-fourth\">`date '+%F %T'`</div><div class=\"three-fourth last\" style=\"color:#800080\">`cat /tmp/ddns.tmp | awk 'NR==1'` (5)</div><hr class=\"clear\" style=\"padding:0;\"/>" >>/tmp/ddns
 else
-  if host mirrors.lug >/tmp/ddns.tmp; then
-    echo "<tr><td>`date '+%F %T'`</td><td colspan='3' style=\"background-color: #FFFF80\">`cat /tmp/ddns.tmp | awk 'NR==1'` (1)</td></tr>" >>/tmp/ddns
-  elif host mirrors.lug >/tmp/ddns.tmp; then
-    echo "<tr><td>`date '+%F %T'`</td><td colspan='3' style=\"background-color: #FFDF9F\">`cat /tmp/ddns.tmp | awk 'NR==1'` (2)</td></tr>" >>/tmp/ddns
-  elif host mirrors.lug >/tmp/ddns.tmp; then
-    echo "<tr><td>`date '+%F %T'`</td><td colspan='3' style=\"background-color: #FFBFBF\">`cat /tmp/ddns.tmp | awk 'NR==1'` (3)</td></tr>" >>/tmp/ddns
-  elif host mirrors.lug >/tmp/ddns.tmp; then
-    echo "<tr><td>`date '+%F %T'`</td><td colspan='3' style=\"background-color: #FF9FDF\">`cat /tmp/ddns.tmp | awk 'NR==1'` (4)</td></tr>" >>/tmp/ddns
-  elif host mirrors.lug >/tmp/ddns.tmp; then
-    echo "<tr><td>`date '+%F %T'`</td><td colspan='3' style=\"background-color: #FF80FF\">`cat /tmp/ddns.tmp | awk 'NR==1'` (5)</td></tr>" >>/tmp/ddns
-  else
-    echo "<tr><td>`date '+%F %T'`</td>`/home/git/update-ddns 1``/home/git/update-ddns 2``/home/git/update-ddns 3`</tr>" >>/tmp/ddns
-  fi
-  sed -i "6 s/^<p>Update time:\(.*\)/<p>Update time: `date '+%F %T'`<\/p>/g" /tmp/ddns
+  echo "<div class=\"one-fourth\">`date '+%F %T'`</div>`/home/git/update-ddns 1``/home/git/update-ddns 2``/home/git/update-ddns 3`<hr class=\"clear\" style=\"padding:0;\"/>" >>/tmp/ddns
 fi
+
+## Generate ddns-log.html
+### /tmp/ddns-log.html
+cat ../ddns-log_header.shtml  | tee /tmp/ddns-log.html    >/dev/null
+cat ../header.shtml           | tee /tmp/ddns-log.html -a >/dev/null
+echo "<div class=\"content-wrapper clearfix\">
+  <h1 class=\"content-title\">Update time: `date '+%F %T'`</h1>
+  <div class=\"one-fourth\">     <h4>Update time</h4></div>
+  <div class=\"one-fourth\">     <h4>Oray: swpustc</h4></div>
+  <div class=\"one-fourth\">     <h4>Oray: swp543210</h4></div>
+  <div class=\"one-fourth last\"><h4>Oray: router-swp</h4></div>
+  <hr class=\"clear\" style=\"padding:0;\"/>" | tee /tmp/ddns-log.html -a >/dev/null
+cat /tmp/ddns                 | tee /tmp/ddns-log.html -a >/dev/null
+echo "</div>"                 | tee /tmp/ddns-log.html -a >/dev/null
+cat ../footer.shtml           | tee /tmp/ddns-log.html -a >/dev/null
+cat ../errorpage_footer.shtml | tee /tmp/ddns-log.html -a >/dev/null

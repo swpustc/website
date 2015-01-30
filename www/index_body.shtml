@@ -1,0 +1,78 @@
+<!-- ***************** - Slider - ***************** -->  
+<div id="ei-slider" class="ei-slider">
+  <ul class="ei-slider-large">
+    <li>
+      <img src="//static.swpbox.info/images/sliders/img_01.jpg" alt="image01" />
+      <div class="ei-title">
+        <h2>The Old Mills, Holland</h2>
+        <h3>Photography</h3>
+      </div>
+    </li>
+    <li>
+      <img src="//static.swpbox.info/images/sliders/img_02.jpg" alt="image01" />
+      <div class="ei-title">
+        <h2>The Bay of Kotor, Montenegro</h2>
+        <h3>Photography</h3>
+      </div>
+    </li>
+    <li>
+      <img src="//static.swpbox.info/images/sliders/img_03.jpg" alt="image01" />
+      <div class="ei-title">
+        <h2>The Liberty Bridge Across The River Danube, Hungary</h2>
+        <h3>Travelling</h3>
+      </div>
+    </li>
+    <li>
+      <img src="//static.swpbox.info/images/sliders/img_04.jpg" alt="image01" />
+      <div class="ei-title">
+        <h2>Panorama View of Budapest,  Hungary</h2>
+        <h3>Photography</h3>
+      </div>
+    </li>
+    <li>
+      <img src="//static.swpbox.info/images/sliders/img_05.jpg" alt="image01" />
+      <div class="ei-title">
+        <h2>Panorama View of Budapest, Hungary</h2>
+       <h3>Travelling</h3>
+      </div>
+    </li>
+  </ul><!-- ei-slider-large -->
+  <ul class="ei-slider-thumbs">
+    <li class="ei-slider-element">Current</li>
+    <li><a href="#">Slide 1</a><img src="//static.swpbox.info/images/thumbs/1.jpg" alt="thumb01" /></li>
+    <li><a href="#">Slide 2</a><img src="//static.swpbox.info/images/thumbs/2.jpg" alt="thumb02" /></li>
+    <li><a href="#">Slide 3</a><img src="//static.swpbox.info/images/thumbs/3.jpg" alt="thumb03" /></li>
+    <li><a href="#">Slide 4</a><img src="//static.swpbox.info/images/thumbs/4.jpg" alt="thumb04" /></li>
+    <li><a href="#">Slide 5</a><img src="//static.swpbox.info/images/thumbs/5.jpg" alt="thumb05" /></li>
+  </ul><!-- ei-slider-thumbs -->
+</div><!--/ .container-->
+<div class="clear"></div>
+<!-- ************* - BEGIN Testimonials - *************** -->
+<div class="testimonials">
+  <h1>Client Testimonials</h1>
+  <div class="quote-nav">
+    <span class="quote-prev">Previous</span>
+    <span class="quote-next">Next</span>
+  </div><!--/ .quote-nav-->
+  <ul class="quoteBox">
+    <li>
+      <blockquote class="quote-text">
+        Ut pharetra augue nec augue. Nam elit agna, endrerit sit amet, tincidunt ac, viverra sed, nulla. 
+        Donec porta diam eu massa. Quisque diam lorem, interdum vitae, dapibus ac, scelerisque vitae, pede.
+        Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar. 
+        Vestibulum iaculis lacinia est. 
+        <div class="quote-author">Gloria Mann, The United States</div>
+      </blockquote>          
+    </li>
+    <li>
+      <blockquote class="quote-text">
+        Quisque diam lorem, interdum vitae, dapibus ac, scelerisque vitae, pede.
+        Donec eget tellus non erat lacinia fermentum. Ut pharetra augue nec augue. Nam elit agna, endrerit sit amet,
+        tincidunt ac, viverra sed, nulla. Donec porta diam eu massa.  Donec in velit vel ipsum auctor pulvinar. 
+        Vestibulum iaculis lacinia est. 
+        <div class="quote-author">James Brown, The United States</div>
+      </blockquote>          
+    </li>
+  </ul><!--/ .quoteBox-->
+</div><!--/ #testimonials -->
+<!-- ************* - end Testimonials - *************** -->

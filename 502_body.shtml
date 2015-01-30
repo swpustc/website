@@ -1,0 +1,7 @@
+<div class="content-wrapper clearfix">
+  <div class="error404">
+    <h1>502</h1>
+    <div class="title-error">Bad Gateway!</div>
+    <div class="description-error">Please contact <a href="mailto:swp543210@gmail.com">administrator</a> if this problem persists.</div>
+  </div><!--/ .error404-->
+</div><!--/ .content-wrapper-->

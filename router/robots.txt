@@ -1,1 +1,1 @@
-../static/robots.txt
+../robots.txt
