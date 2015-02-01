@@ -73,7 +73,7 @@ e85cb33570af63d796d6c7343e5ec48d6aa2808aa97138feb27ac7ed5b643aaf
       </div><!--/ .toggle-container-->
     </div><!--/ .box-toggle-->
   </div><!--/ .one-half-->
-  <div class="one-half last">
+  <div class="one-half last" style="float:left;">
     <div class="box-toggle">
       <span class="trigger">Base64 Encode Certificate</span>
       <div class="toggle-container">

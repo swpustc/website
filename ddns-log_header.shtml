@@ -3,7 +3,7 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en">  <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="refresh" content="60" />
+  <meta http-equiv="refresh" content="300" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>swpustc | DDNS</title>
   <link rel="stylesheet" href="//static.swpbox.info/css/style.min.css" media="screen" />

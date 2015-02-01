@@ -5,15 +5,15 @@ cd `dirname $0`
 
 ## Generate Table
 if host mirrors.lug >/tmp/ddns.tmp; then
-  echo "<div class=\"one-fourth\">`date '+%F %T'`</div><div class=\"three-fourth last\" style=\"color:#808000\">`cat /tmp/ddns.tmp | awk 'NR==1'` (1)</div><hr class=\"clear\" style=\"padding:0;\"/>" >>/tmp/ddns
+  echo "<div class=\"one-fourth\">`date '+%F %T'`</div><div class=\"three-fourth last\" style=\"color:#808000\"><b>`cat /tmp/ddns.tmp | awk 'NR==1'` (1)</b></div><hr class=\"clear\" style=\"padding:0;\"/>" >>/tmp/ddns
 elif host mirrors.lug >/tmp/ddns.tmp; then
-  echo "<div class=\"one-fourth\">`date '+%F %T'`</div><div class=\"three-fourth last\" style=\"color:#806020\">`cat /tmp/ddns.tmp | awk 'NR==1'` (2)</div><hr class=\"clear\" style=\"padding:0;\"/>" >>/tmp/ddns
+  echo "<div class=\"one-fourth\">`date '+%F %T'`</div><div class=\"three-fourth last\" style=\"color:#806020\"><b>`cat /tmp/ddns.tmp | awk 'NR==1'` (2)</b></div><hr class=\"clear\" style=\"padding:0;\"/>" >>/tmp/ddns
 elif host mirrors.lug >/tmp/ddns.tmp; then
-  echo "<div class=\"one-fourth\">`date '+%F %T'`</div><div class=\"three-fourth last\" style=\"color:#804040\">`cat /tmp/ddns.tmp | awk 'NR==1'` (3)</div><hr class=\"clear\" style=\"padding:0;\"/>" >>/tmp/ddns
+  echo "<div class=\"one-fourth\">`date '+%F %T'`</div><div class=\"three-fourth last\" style=\"color:#804040\"><b>`cat /tmp/ddns.tmp | awk 'NR==1'` (3)</b></div><hr class=\"clear\" style=\"padding:0;\"/>" >>/tmp/ddns
 elif host mirrors.lug >/tmp/ddns.tmp; then
-  echo "<div class=\"one-fourth\">`date '+%F %T'`</div><div class=\"three-fourth last\" style=\"color:#802060\">`cat /tmp/ddns.tmp | awk 'NR==1'` (4)</div><hr class=\"clear\" style=\"padding:0;\"/>" >>/tmp/ddns
+  echo "<div class=\"one-fourth\">`date '+%F %T'`</div><div class=\"three-fourth last\" style=\"color:#802060\"><b>`cat /tmp/ddns.tmp | awk 'NR==1'` (4)</b></div><hr class=\"clear\" style=\"padding:0;\"/>" >>/tmp/ddns
 elif host mirrors.lug >/tmp/ddns.tmp; then
-  echo "<div class=\"one-fourth\">`date '+%F %T'`</div><div class=\"three-fourth last\" style=\"color:#800080\">`cat /tmp/ddns.tmp | awk 'NR==1'` (5)</div><hr class=\"clear\" style=\"padding:0;\"/>" >>/tmp/ddns
+  echo "<div class=\"one-fourth\">`date '+%F %T'`</div><div class=\"three-fourth last\" style=\"color:#800080\"><b>`cat /tmp/ddns.tmp | awk 'NR==1'` (5)</b></div><hr class=\"clear\" style=\"padding:0;\"/>" >>/tmp/ddns
 else
   echo "<div class=\"one-fourth\">`date '+%F %T'`</div>`/home/git/update-ddns 1``/home/git/update-ddns 2``/home/git/update-ddns 3`<hr class=\"clear\" style=\"padding:0;\"/>" >>/tmp/ddns
 fi
@@ -21,14 +21,12 @@ fi
 ## Generate ddns-log.html
 ### /tmp/ddns-log.html
 cat ../ddns-log_header.shtml  | tee /tmp/ddns-log.html    >/dev/null
-cat ../header.shtml           | tee /tmp/ddns-log.html -a >/dev/null
-echo "<div class=\"content-wrapper clearfix\">
-  <h1 class=\"content-title\">Update time: `date '+%F %T'`</h1>
-  <div class=\"one-fourth\">     <h4>Update time</h4></div>
-  <div class=\"one-fourth\">     <h4>Oray: swpustc</h4></div>
-  <div class=\"one-fourth\">     <h4>Oray: swp543210</h4></div>
-  <div class=\"one-fourth last\"><h4>Oray: router-swp</h4></div>
-  <hr class=\"clear\" style=\"padding:0;\"/>" | tee /tmp/ddns-log.html -a >/dev/null
+cat ../header.shtml           | sed "s/<!--CURRENT:DDNS-->/<li class=\"current\">/g" \
+                              | sed "s/<!--CURRENT:STATUS-->/<li class=\"current\">/g" \
+                              | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+                              | tee /tmp/ddns-log.html -a >/dev/null
+cat ../ddns-log_body.shtml    | sed "s/<!--UPDATETIME-->/`date '+%F %T'`/g" \
+                              | tee /tmp/ddns-log.html -a >/dev/null
 cat /tmp/ddns                 | tee /tmp/ddns-log.html -a >/dev/null
 echo "</div>"                 | tee /tmp/ddns-log.html -a >/dev/null
 cat ../footer.shtml           | tee /tmp/ddns-log.html -a >/dev/null

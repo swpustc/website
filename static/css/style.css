@@ -1163,6 +1163,9 @@ ul.contact-info .email {background-position: 0 -25px;}
 	ul.social-links li.twitter:hover a {background-color: #45b0e3 !important;;}
 	ul.social-links li.flickr:hover a {background-color: #ffffff !important;;}
 	ul.social-links li.linked:hover a {background-color: #65b7d2 !important;}
+	ul.social-links li.github:hover a {background-color: #9BDAF0 !important;}
+	ul.social-links li.sina:hover a {background-color: #F6ECCD !important;}
+	ul.social-links li.qq:hover a {background-color: #6EA8DF !important;}
 	ul.social-links li.skype:hover a {background-color: #17a1ce !important;;}
 	ul.social-links li.mail:hover a {background-color: #a6412b !important;;}
 	ul.social-links li.google:hover a {background-color: #ce3f31 !important;;}
@@ -1173,6 +1176,11 @@ ul.contact-info .email {background-position: 0 -25px;}
 	ul.social-links .twitter a {background-position: -58px 0;}
 	ul.social-links .flickr a {background-position: -87px 0;}
 	ul.social-links .linked a {background-position: -116px 0;}
+	ul.social-links .github a {background-position: -145px 0;}
+	ul.social-links .sina a {background-position: -174px 0;}
+	ul.social-links .qq a {background-position: -203px 0;}
+	ul.social-links .skype a {background-position: -116px -48px;}
+	ul.social-links .mail a {background-position: -145px -48px;}
 	ul.social-links .google a {background-position: -174px -48px;}
 	ul.social-links .pinterest a {background-position: -203px -48px;}
 
@@ -1181,25 +1189,44 @@ ul.contact-info .email {background-position: 0 -25px;}
 	ul.social-links .twitter:hover a {background-position: -58px -24px;}
 	ul.social-links .flickr:hover a {background-position: -87px -24px;}
 	ul.social-links .linked:hover a {background-position: -116px -24px;}
+	ul.social-links .github:hover a {background-position: -145px -24px;}
+	ul.social-links .sina:hover a {background-position: -174px -24px;}
+	ul.social-links .qq:hover a {background-position: -203px -24px;}
+	ul.social-links .skype:hover a {background-position: -116px -72px;}
+	ul.social-links .mail:hover a {background-position: -145px -72px;}
+	ul.social-links .google:hover a {background-position: -174px -72px;}
+	ul.social-links .pinterest:hover a {background-position: -203px -72px;}
 
-	.accordion ul.social-links .facebook a {background-position: 0 -48px;}
-	.accordion ul.social-links .twitter a {background-position: -29px -48px;}
-	.accordion ul.social-links .flickr a {background-position: -58px -48px;}
-	.accordion ul.social-links .linked a {background-position: -87px -48px;}
+	.accordion ul.social-links .rss a {background-position: 0 0;}
+	.accordion ul.social-links .facebook a {background-position: -29px 0;}
+	.accordion ul.social-links .twitter a {background-position: -58px 0;}
+	.accordion ul.social-links .flickr a {background-position: -87px 0;}
+	.accordion ul.social-links .linked a {background-position: -116px 0;}
+	.accordion ul.social-links .github a {background-position: -145px 0;}
+	.accordion ul.social-links .sina a {background-position: -174px 0;}
+	.accordion ul.social-links .qq a {background-position: -203px 0;}
 	.accordion ul.social-links .skype a {background-position: -116px -48px;}
 	.accordion ul.social-links .mail a {background-position: -145px -48px;}
+	.accordion ul.social-links .google a {background-position: -174px -48px;}
+	.accordion ul.social-links .pinterest a {background-position: -203px -48px;}
 
-	.accordion ul.social-links .facebook:hover a {background-position: 0 -72px;}
-	.accordion ul.social-links .twitter:hover a {background-position: -29px -72px;}
-	.accordion ul.social-links .flickr:hover a {background-position: -58px -72px;}
-	.accordion ul.social-links .linked:hover a {background-position: -87px -72px;}
+	.accordion ul.social-links .rss:hover a {background-position: 0 -24px;}
+	.accordion ul.social-links .facebook:hover a {background-position: -29px -24px;}
+	.accordion ul.social-links .twitter:hover a {background-position: -58px -24px;}
+	.accordion ul.social-links .flickr:hover a {background-position: -87px -24px;}
+	.accordion ul.social-links .linked:hover a {background-position: -116px -24px;}
+	.accordion ul.social-links .github:hover a {background-position: -145px -24px;}
+	.accordion ul.social-links .sina:hover a {background-position: -174px -24px;}
+	.accordion ul.social-links .qq:hover a {background-position: -203px -24px;}
 	.accordion ul.social-links .skype:hover a {background-position: -116px -72px;}
 	.accordion ul.social-links .mail:hover a {background-position: -145px -72px;}
+	.accordion ul.social-links .google:hover a {background-position: -174px -72px;}
+	.accordion ul.social-links .pinterest:hover a {background-position: -203px -72px;}
 	
 	.meta ul.social-links .facebook:hover a,
-	.post-item ul.social-links .facebook:hover a {background-position: 0 -72px;}
+	.post-item ul.social-links .facebook:hover a {background-position: -29px -24px;}
 	.meta ul.social-links .twitter:hover a,
-	.post-item ul.social-links .twitter:hover a {background-position: -29px -72px;}
+	.post-item ul.social-links .twitter:hover a {background-position: -58px -24px;}
 	.meta ul.social-links .google:hover a,
 	.post-item ul.social-links .google:hover a {background-position: -174px -72px;}
 	.meta ul.social-links .pinterest:hover a,

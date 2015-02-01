@@ -4,22 +4,24 @@
         <nav id="footer-nav" class="clearfix">
           <ul>
             <li><a href="//swpbox.info/">Home</a></li>
-            <li><a href="//ftp.swpbox.info/">FTP</a></li>
-            <li><a href="//git.swpbox.info/">GitLab</a></li>
-            <li><a href="//mysql.swpbox.info/">MySql</a></li>
-            <li><a href="//blog.swpbox.info/">Blog</a></li>
-            <li><a href="//status.swpbox.info/">Status</a></li>
+            <li><a href="//ftp.swpbox.info/" target="_blank">FTP</a></li>
+            <li><a href="//git.swpbox.info/" target="_blank">GitLab</a></li>
+            <li><a href="//mysql.swpbox.info/" target="_blank">MySql</a></li>
+            <li><a href="//blog.swpbox.info/" target="_blank">Blog</a></li>
+            <li><a href="//status.swpbox.info/" target="_blank">Status</a></li>
           </ul>
         </nav><!--/ #footer-nav-->
         <div class="copyright">&copy; 2015 swpustc. All rights reserved.</div><!--/ .copyright-->
       </div><!--/ .one-half-->
       <div class="one-half last">
         <ul data-description="Stay in touch via social networks:" class="social-links">
-          <li data-tooltip="LinkedIn" class="linked"><a href="#">LinkedIn</a></li>
-          <li data-tooltip="Flickr" class="flickr"><a href="#">Flickr</a></li>
-          <li data-tooltip="Twitter" class="twitter"><a href="#">Twitter</a></li>
-          <li data-tooltip="Facebook" class="facebook"><a href="#">Facebook</a></li>
-          <li data-tooltip="Rss" class="rss"><a href="#">Rss</a></li>
+          <!--li data-tooltip="Rss" class="rss"><a href="#">Rss</a></li-->
+          <li data-tooltip="Google+" class="google"><a href="https://plus.google.com/u/0/102021946737862248380" target="_blank">Google+</a></li>
+          <li data-tooltip="Sina" class="sina"><a href="http://www.weibo.com/u/2678757083" target="_blank">Sina</a></li>
+          <li data-tooltip="QQ" class="qq"><a href="tencent://message/?uin=378124792&Site=swpbox.info&Menu=yes">QQ: 378124792</a></li>
+          <li data-tooltip="Twitter" class="twitter"><a href="https://twitter.com/swpustc" target="_blank">Twitter</a></li>
+          <li data-tooltip="Facebook" class="facebook"><a href="https://www.facebook.com/swpustc" target="_blank">Facebook</a></li>
+          <li data-tooltip="GitHub" class="github"><a href="https://github.com/swpustc" target="_blank">GitHub</a></li>
         </ul><!--/ .social-links-->
       </div><!--/ .one-half.last-->
     </footer>
