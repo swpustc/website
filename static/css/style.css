@@ -3851,7 +3851,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 /*	Markdown
 /* ---------------------------------------------------------------------- */
 
-.markdown h1,.markdown h2,.markdown h3,.markdown h4,.markdown h5,.markdown h6,.markdown p,.markdown ul,.markdown ul{
+.markdown h1,.markdown h2,.markdown h3,.markdown h4,.markdown h5,.markdown h6,.markdown p,.markdown ul,.markdown ol{
   font-family: Georgia,Palatino,serif;
 }
 .markdown h1 {
@@ -3882,7 +3882,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
   font-size: 16px;
 }
 .markdown p {
-  margin:4px 0 4px;
+  margin: 4px 0 4px;
   line-height: 24px;
   word-break: break-word;
 }
@@ -3914,8 +3914,14 @@ ul.related span.categories {color: #50554e; font-style: italic;}
   line-height: 1.5;
 }
 .markdown li {
-  margin:6px 0 6px;
+  margin: 6px 0 6px;
   line-height: 24px;
   word-break: break-word;
+}
+body.light .markdown a, body.light .markdown a > * {
+  color: #50557e;
+}
+body.dark .markdown a, body.dark .markdown a > * {
+  color: #7E8AA3;
 }
 /*  <!-- Markdown END -->  */
