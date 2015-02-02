@@ -119,6 +119,17 @@ cat footer.shtml             | tee nowhere/502.html -a >/dev/null
 cat errorpage_footer.shtml   | tee nowhere/502.html -a >/dev/null
 rm nowhere/502_header.shtml nowhere/502_body.shtml
 echo Generate nowhere/502.html
+### php
+cat php/markdown/resume_header.phps | tee php/markdown/resume.php    >/dev/null
+cat header.shtml                    | sed "s/<!--CURRENT:RESUME-->/<li class=\"current\">/g" \
+                                    | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                                    | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+                                    | sed "1 s/<body([^>]*)>/<body$1 onload=\"prettyPrint()\">/g" \
+                                    | tee php/markdown/resume.php -a >/dev/null
+cat php/markdown/resume_body.phps   | tee php/markdown/resume.php -a >/dev/null
+cat footer.shtml                    | tee php/markdown/resume.php -a >/dev/null
+cat php/markdown/resume_footer.phps | tee php/markdown/resume.php -a >/dev/null
+echo Generate php/markdown/resume.php
 ### static
 cat static/403_header.shtml | tee static/403.html    >/dev/null
 cat header.shtml            | sed "s/<!--CURRENT:ERR403-->/<li class=\"current\">/g" \

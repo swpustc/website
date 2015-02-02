@@ -73,7 +73,22 @@
       <blockquote class="quote-text">
         It's hard enough to find an error in your code when you're looking for it;
         it's even harder when you've assumed your code is error-free.
-        <div class="quote-author">Steve McConnell, "Code Complete"</div>
+        <div class="quote-author">Steve McConnell, <cite>Code Complete</cite></div>
+      </blockquote>
+    </li>
+    <li>
+      <blockquote class="quote-text">
+        Good code is its own best documentation. As you're about to add a comment,
+        ask yourself, 'How can I improve the code so that this comment isn't needed?'
+        <br/>Improve the code and then document it to make it even clearer.
+        <div class="quote-author">Steve McConnell, <cite>Code Complete</cite></div>
+      </blockquote>
+    </li>
+    <li>
+      <blockquote class="quote-text">
+        Programmers are in a race with the Universe to create bigger and better idiot-proof programs.
+        The Universe is trying to create bigger and better idiots. <br/>So far the Universe is winning.
+        <div class="quote-author">Anon</div>
       </blockquote>
     </li>
   </ul><!--/ .quoteBox-->
