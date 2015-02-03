@@ -189,7 +189,6 @@ cat footer.shtml                  | tee status/502-ganglia.html -a >/dev/null
 cat errorpage_footer.shtml        | tee status/502-ganglia.html -a >/dev/null
 rm status/502-ganglia_body.shtml
 echo Generate status/502-ganglia.html
-### status
 cat 502_header.shtml              | tee status/502-phpinfo.html    >/dev/null
 cat header.shtml                  | sed "s/<!--CURRENT:ERR502-->/<li class=\"current\">/g" \
                                   | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \

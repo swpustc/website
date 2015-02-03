@@ -6,7 +6,7 @@
       <div class="one-half">
         <ul class="contact-info clearfix">
           <li class="phone">+86 139 5693 6382</li>
-          <li class="email"><a href="mailto:swp543210@gmail.com">swp543210@gmail.com</a></li>
+          <li class="email"><a href="m&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#119;&#112;&#53;&#x34;&#x33;&#x32;&#x31;&#x30;&#x40;&#x67;&#x6d;&#x61;i&#108;&#46;&#99;&#111;&#109;">&#115;&#119;&#112;&#53;&#x34;&#x33;&#x32;&#x31;&#x30;&#x40;&#x67;&#x6d;&#x61;i&#108;&#46;&#99;&#111;&#109;</a></li>
         </ul><!--/ .contact-info-->
       </div><!--/ .one-half-->
       <div  class="one-half last">
@@ -45,7 +45,7 @@
                   <!--CURRENT:MIRRORS--><a href="//mirrors.swpbox.info/" target="_blank">Local Proxy</a></li>
                 </ul>
               </li>
-              <!--CURRENT:ERRPAGE--><a>ErrorPage</a>
+              <!--CURRENT:ERRPAGE--><a id="errorpage">ErrorPage</a>
                 <ul>
                   <!--CURRENT:ERR403--><a href="/403.html">403 Page</a></li>
                   <!--CURRENT:ERR404--><a href="/404.html">404 Page</a></li>
@@ -61,28 +61,28 @@
           </li>
           <!--CURRENT:FTP--><a href="//ftp.swpbox.info/" target="_blank">FTP</a>
             <ul>
-              <!--CURRENT:GNUVS--><a href="//ftp.swpbox.info/GNUinVisualStudio/" target="_blank">GNUinVisualStudio</a>
+              <!--CURRENT:FTP:/GNUinVisualStudio/--><a href="//ftp.swpbox.info/GNUinVisualStudio/" target="_blank">GNUinVisualStudio</a>
                 <ul>
-                  <!--CURRENT:GNUVS-README--><a href="//ftp.swpbox.info/GNUinVisualStudio/README.md" target="_blank">README</a></li>
-                  <!--CURRENT:GNUVS-CHANGELOG--><a href="//ftp.swpbox.info/GNUinVisualStudio/CHANGELOG.md" target="_blank">CHANGELOG</a></li>
-                  <!--CURRENT:GNUVS-VERSION--><a href="//ftp.swpbox.info/GNUinVisualStudio/VERSION.md" target="_blank">VERSION</a></li>
-                  <!--CURRENT:GNUVS-BUG--><a href="//ftp.swpbox.info/GNUinVisualStudio/BUG.md" target="_blank">BUG</a></li>
-                  <!--CURRENT:GNUVS-EXE--><a href="//ftp.swpbox.info/GNUinVisualStudio/exe/" target="_blank">exe</a></li>
-                  <!--CURRENT:GNUVS-DLL--><a href="//ftp.swpbox.info/GNUinVisualStudio/dll/" target="_blank">dll</a></li>
-                  <!--CURRENT:GNUVS-LIB--><a href="//ftp.swpbox.info/GNUinVisualStudio/lib/" target="_blank">lib</a></li>
-                  <!--CURRENT:GNUVS-PDB--><a href="//ftp.swpbox.info/GNUinVisualStudio/pdb/" target="_blank">pdb</a></li>
-                  <!--CURRENT:GNUVS-PROJECT--><a href="//ftp.swpbox.info/GNUinVisualStudio/project/" target="_blank">project</a></li>
-                  <!--CURRENT:GNUVS-INCLUDE--><a href="//ftp.swpbox.info/GNUinVisualStudio/include/" target="_blank">include</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/README.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/README.md" target="_blank">README</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/CHANGELOG.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/CHANGELOG.md" target="_blank">CHANGELOG</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/VERSION.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/VERSION.md" target="_blank">VERSION</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/BUG.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/BUG.md" target="_blank">BUG</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/exe/--><a href="//ftp.swpbox.info/GNUinVisualStudio/exe/" target="_blank">exe</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/dll/--><a href="//ftp.swpbox.info/GNUinVisualStudio/dll/" target="_blank">dll</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/lib/--><a href="//ftp.swpbox.info/GNUinVisualStudio/lib/" target="_blank">lib</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/pdb/--><a href="//ftp.swpbox.info/GNUinVisualStudio/pdb/" target="_blank">pdb</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/project/--><a href="//ftp.swpbox.info/GNUinVisualStudio/project/" target="_blank">project</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/include/--><a href="//ftp.swpbox.info/GNUinVisualStudio/include/" target="_blank">include</a></li>
                 </ul>
               </li>
-              <!--CURRENT:FTP-HOME--><a href="//ftp.swpbox.info/home/" target="_blank">home</a></li>
-              <!--CURRENT:FTP-HTML--><a href="//ftp.swpbox.info/html/" target="_blank">html</a></li>
-              <!--CURRENT:FTP-SOFTWARE--><a href="//ftp.swpbox.info/software/" target="_blank">software</a></li>
+              <!--CURRENT:FTP:/home/--><a href="//ftp.swpbox.info/home/" target="_blank">home</a></li>
+              <!--CURRENT:FTP:/html/--><a href="//ftp.swpbox.info/html/" target="_blank">html</a></li>
+              <!--CURRENT:FTP:/software/--><a href="//ftp.swpbox.info/software/" target="_blank">software</a></li>
               <!--CURRENT:DOWNLOAD--><a href="//download.swpbox.info/ftp/" target="_blank">Download</a></li>
               <!--CURRENT:CA--><a href="//CA.swpbox.info/">swpustc CA</a>
                 <ul>
-                  <!--CURRENT:CA-CER--><a href="//CA.swpbox.info/rootcert.cer" target="_blank">cer document</a></li>
-                  <!--CURRENT:CA-CRT--><a href="//CA.swpbox.info/rootcert.crt" target="_blank">crt document</a></li>
+                  <!--CURRENT:CA:/rootcert.cer--><a href="//CA.swpbox.info/rootcert.cer" target="_blank">cer document</a></li>
+                  <!--CURRENT:CA:/rootcert.crt--><a href="//CA.swpbox.info/rootcert.crt" target="_blank">crt document</a></li>
                 </ul>
               </li>
             </ul>

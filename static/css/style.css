@@ -62,7 +62,9 @@ Stylesheet Guide
 
 13. Media Queries
 
-14. Markdown
+14. DDNS
+
+15. Markdown
 
  */
 
@@ -3848,6 +3850,92 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 }
 
 /* ---------------------------------------------------------------------- */
+/*	DDNS
+/* ---------------------------------------------------------------------- */
+
+.ddns hr,.ddns h4,.ddns p {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.ddns .vpn1,.ddns .vpn2,.ddns .vpn3,.ddns .vpn4,.ddns .vpn5,.ddns .fail,.ddns .good,.ddns .abuse,.ddns .unknow{
+  font-weight: bold;
+}
+.light .ddns .time {
+  color: #20251e;
+}
+.dark .ddns .time {
+  color: #becac3;
+}
+.light .ddns .vpn1 {
+  color :#808000;
+}
+.dark .ddns .vpn1 {
+  color :#c0c040;
+}
+.light .ddns .vpn2 {
+  color :#806020;
+}
+.dark .ddns .vpn2 {
+  color :#c0a060;
+}
+.light .ddns .vpn3 {
+  color :#804040;
+}
+.dark .ddns .vpn3 {
+  color :#c08080;
+}
+.light .ddns .vpn4 {
+  color :#802060;
+}
+.dark .ddns .vpn4 {
+  color :#c060a0;
+}
+.light .ddns .vpn5 {
+  color :#800080;
+}
+.dark .ddns .vpn5 {
+  color :#c040c0;
+}
+.light .ddns .fail {
+  color :#800000;
+}
+.dark .ddns .fail {
+  color :#c00000;
+}
+.light .ddns .nochg {
+  color: #60453e;
+}
+.dark .ddns .nochg {
+  color: #bebaa3;
+}
+.light .ddns .good {
+  color :#008000;
+}
+.dark .ddns .good {
+  color :#00c000;
+}
+.light .ddns .abuse {
+  color :#008080;
+}
+.dark .ddns .abuse {
+  color :#00c0c0;
+}
+.light .ddns .unknow {
+  color :#000080;
+}
+.dark .ddns .unknow {
+  color :#0000c0;
+}
+.light .ddns a,.light .ddns a>* {
+  color: #525452;
+}
+.dark .ddns a,.dark .ddns a>* {
+  color: #bfbfbf;
+}
+/*  <!-- DDNS END -->  */
+
+/* ---------------------------------------------------------------------- */
 /*	Markdown
 /* ---------------------------------------------------------------------- */
 
@@ -3918,10 +4006,10 @@ ul.related span.categories {color: #50554e; font-style: italic;}
   line-height: 24px;
   word-break: break-word;
 }
-body.light .markdown a, body.light .markdown a > * {
-  color: #50557e;
+.light .markdown a, .light .markdown a > * {
+  color: #5055ae;
 }
-body.dark .markdown a, body.dark .markdown a > * {
-  color: #7E8AA3;
+.dark .markdown a, .dark .markdown a > * {
+  color: #7e8ac3;
 }
 /*  <!-- Markdown END -->  */

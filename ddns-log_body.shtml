@@ -1,7 +1,7 @@
-<div class="content-wrapper clearfix">
-  <h1 class="content-title">Update time: <!--UPDATETIME--></h1>
+<div class="content-wrapper clearfix ddns">
+  <h1 class="content-title">Update time: <a id="update-time"><!--UPDATETIME--></a></h1>
   <div class="one-fourth">     <h4>Update time</h4></div>
   <div class="one-fourth">     <h4>swpustc</h4></div>
   <div class="one-fourth">     <h4>swp543210</h4></div>
   <div class="one-fourth last"><h4>router-swp</h4></div>
-  <hr class="clear" style="padding:0;"/>
+  <hr class="clear"/>
