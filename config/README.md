@@ -83,6 +83,10 @@
 	sudo chmod 600 /root/.smbcredentials
 	sudo mount -a
 
+- 建立日志文件
+
+	sudo touch /var/log/ddns.log
+	sudo chown git:adm /var/log/ddns.log
 
 ## Push事件
 

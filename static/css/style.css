@@ -1962,6 +1962,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 	float: right;
     margin: 0 0 0;
     overflow: hidden;
+    white-space: nowrap;
 }
 
 	#portfolio-filter li:first-child {
@@ -3853,7 +3854,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 /*	DDNS
 /* ---------------------------------------------------------------------- */
 
-.ddns hr,.ddns h4,.ddns p {
+.ddns hr,.ddns h4,.ddns p ,#portfolio-items.ddns article{
   padding: 0;
   margin: 0;
   border: 0;
@@ -3927,10 +3928,10 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 .dark .ddns .unknow {
   color :#0000c0;
 }
-.light .ddns a,.light .ddns a>* {
+.light .update-time {
   color: #525452;
 }
-.dark .ddns a,.dark .ddns a>* {
+.dark .update-time {
   color: #bfbfbf;
 }
 /*  <!-- DDNS END -->  */

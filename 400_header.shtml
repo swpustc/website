@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]>              <html class="ie8 no-js" lang="en">     <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en">  <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>400 Bad Request</title>
+  <link rel="stylesheet" href="//static.swpbox.info/css/style.min.css" media="screen" />
+  <script src="//static.swpbox.info/js/modernizr.custom.js"></script>
+</head>
