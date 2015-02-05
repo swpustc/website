@@ -11,19 +11,19 @@ if($css<0 or $css>9) $css = 0;
   <head>
     <meta charset="utf-8" />
     <title><?php echo $name; ?></title>
-    <link href="//static.swpbox.info/css/prettify/prettify.css" type="text/css" rel="stylesheet" title="Default" ID="CSS0" <?php if($css!=0) echo "disabled"; ?>/>
-    <link href="//static.swpbox.info/css/prettify/body.min.css" type="text/css" rel="stylesheet" />
-    <link href="//static.swpbox.info/css/prettify/vibrant-ink.css" type="text/css" rel="stylesheet" title="Vibrant Ink" ID="CSS1" <?php if($css!=1) echo "disabled"; ?>/>
-    <link href="//static.swpbox.info/css/prettify/github.css" type="text/css" rel="stylesheet" title="GitHub" ID="CSS2" <?php if($css!=2) echo "disabled"; ?>/>
-    <link href="//static.swpbox.info/css/prettify/tomorrow-night.css" type="text/css" rel="stylesheet" title="Tomorrow Night" ID="CSS3" <?php if($css!=3) echo "disabled"; ?>/>
-    <link href="//static.swpbox.info/css/prettify/tomorrow.css" type="text/css" rel="stylesheet" title="Tomorrow" ID="CSS4" <?php if($css!=4) echo "disabled"; ?>/>
-    <link href="//static.swpbox.info/css/prettify/tomorrow-night-eighties.css" type="text/css" rel="stylesheet" title="Tomorrow Night Eighties" ID="CSS5" <?php if($css!=5) echo "disabled"; ?>/>
-    <link href="//static.swpbox.info/css/prettify/tomorrow-night-blue.css" type="text/css" rel="stylesheet" title="Tomorrow Night Blue" ID="CSS6" <?php if($css!=6) echo "disabled"; ?>/>
-    <link href="//static.swpbox.info/css/prettify/tomorrow-night-bright.css" type="text/css" rel="stylesheet" title="Tomorrow Night Bright" ID="CSS7" <?php if($css!=7) echo "disabled"; ?>/>
-    <link href="//static.swpbox.info/css/prettify/hemisu-dark.css" type="text/css" rel="stylesheet" title="Hemisu Dark" ID="CSS8" <?php if($css!=8) echo "disabled"; ?>/>
-    <link href="//static.swpbox.info/css/prettify/hemisu-light.css" type="text/css" rel="stylesheet" title="Hemisu Light" ID="CSS9" <?php if($css!=9) echo "disabled"; ?>/>
-    <script type="text/javascript" src="//static.swpbox.info/js/prettify/prettify.js"></script>
-    <script type="text/javascript" src="//static.swpbox.info/js/prettify/body.min.js"></script>
+    <link href="//cdn.swpbox.info/css/prettify/prettify.css" type="text/css" rel="stylesheet" title="Default" ID="CSS0" <?php if($css!=0) echo "disabled"; ?>/>
+    <link href="//cdn.swpbox.info/css/prettify/body.min.css" type="text/css" rel="stylesheet" />
+    <link href="//cdn.swpbox.info/css/prettify/vibrant-ink.css" type="text/css" rel="stylesheet" title="Vibrant Ink" ID="CSS1" <?php if($css!=1) echo "disabled"; ?>/>
+    <link href="//cdn.swpbox.info/css/prettify/github.css" type="text/css" rel="stylesheet" title="GitHub" ID="CSS2" <?php if($css!=2) echo "disabled"; ?>/>
+    <link href="//cdn.swpbox.info/css/prettify/tomorrow-night.css" type="text/css" rel="stylesheet" title="Tomorrow Night" ID="CSS3" <?php if($css!=3) echo "disabled"; ?>/>
+    <link href="//cdn.swpbox.info/css/prettify/tomorrow.css" type="text/css" rel="stylesheet" title="Tomorrow" ID="CSS4" <?php if($css!=4) echo "disabled"; ?>/>
+    <link href="//cdn.swpbox.info/css/prettify/tomorrow-night-eighties.css" type="text/css" rel="stylesheet" title="Tomorrow Night Eighties" ID="CSS5" <?php if($css!=5) echo "disabled"; ?>/>
+    <link href="//cdn.swpbox.info/css/prettify/tomorrow-night-blue.css" type="text/css" rel="stylesheet" title="Tomorrow Night Blue" ID="CSS6" <?php if($css!=6) echo "disabled"; ?>/>
+    <link href="//cdn.swpbox.info/css/prettify/tomorrow-night-bright.css" type="text/css" rel="stylesheet" title="Tomorrow Night Bright" ID="CSS7" <?php if($css!=7) echo "disabled"; ?>/>
+    <link href="//cdn.swpbox.info/css/prettify/hemisu-dark.css" type="text/css" rel="stylesheet" title="Hemisu Dark" ID="CSS8" <?php if($css!=8) echo "disabled"; ?>/>
+    <link href="//cdn.swpbox.info/css/prettify/hemisu-light.css" type="text/css" rel="stylesheet" title="Hemisu Light" ID="CSS9" <?php if($css!=9) echo "disabled"; ?>/>
+    <script type="text/javascript" src="//cdn.swpbox.info/js/prettify/prettify.js"></script>
+    <script type="text/javascript" src="//cdn.swpbox.info/js/prettify/body.min.js"></script>
   </head>
   <body onload="prettyPrint()">
     <a name="top" id="top"></a>

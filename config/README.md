@@ -85,8 +85,11 @@
 
 - 建立日志文件
 
+务必确保定时器用户`git`具备写权限。
+
 	sudo touch /var/log/ddns.log
 	sudo chown git:adm /var/log/ddns.log
+	sudo chmod 644 /var/log/ddns.log
 
 ## Push事件
 

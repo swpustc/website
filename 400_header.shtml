@@ -5,6 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>400 Bad Request</title>
-  <link rel="stylesheet" href="//static.swpbox.info/css/style.min.css" media="screen" />
-  <script src="//static.swpbox.info/js/modernizr.custom.js"></script>
+  <link rel="stylesheet" href="//cdn.swpbox.info/css/style.min.css" media="screen" />
+  <script src="//cdn.swpbox.info/js/modernizr.custom.js"></script>
 </head>

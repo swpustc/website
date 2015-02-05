@@ -2,35 +2,35 @@
 <div id="ei-slider" class="ei-slider">
   <ul class="ei-slider-large">
     <li>
-      <img src="//static.swpbox.info/images/sliders/img_01.png" alt="image01" />
+      <img src="//cdn.swpbox.info/images/sliders/img_01.png" alt="image01" />
       <div class="ei-title">
         <h2>一心亭, West USTC, Hefei, Anhui</h2>
         <h3>28 Jan 2015</h3>
       </div>
     </li>
     <li>
-      <img src="//static.swpbox.info/images/sliders/img_02.png" alt="image01" />
+      <img src="//cdn.swpbox.info/images/sliders/img_02.png" alt="image01" />
       <div class="ei-title">
         <h2>荷花塘, East USTC, Hefei, Anhui</h2>
         <h3>27 Jan 2015</h3>
       </div>
     </li>
     <li>
-      <img src="//static.swpbox.info/images/sliders/img_03.png" alt="image01" />
+      <img src="//cdn.swpbox.info/images/sliders/img_03.png" alt="image01" />
       <div class="ei-title">
         <h2>水上报告厅, East USTC, Hefei, Anhui</h2>
         <h3>28 Jan 2015</h3>
       </div>
     </li>
     <li>
-      <img src="//static.swpbox.info/images/sliders/img_04.png" alt="image01" />
+      <img src="//cdn.swpbox.info/images/sliders/img_04.png" alt="image01" />
       <div class="ei-title">
         <h2>中国科大, USTC, Hefei, Anhui</h2>
         <h3>28 Jan 2015</h3>
       </div>
     </li>
     <li>
-      <img src="//static.swpbox.info/images/sliders/img_05.png" alt="image01" />
+      <img src="//cdn.swpbox.info/images/sliders/img_05.png" alt="image01" />
       <div class="ei-title">
         <h2>中国科大, USTC, Hefei, Anhui</h2>
         <h3>28 Jan 2015</h3>
@@ -39,11 +39,11 @@
   </ul><!-- ei-slider-large -->
   <ul class="ei-slider-thumbs">
     <li class="ei-slider-element">Current</li>
-    <li><a href="#">Slide 1</a><img src="//static.swpbox.info/images/thumbs/1.png" alt="thumb01" /></li>
-    <li><a href="#">Slide 2</a><img src="//static.swpbox.info/images/thumbs/2.png" alt="thumb02" /></li>
-    <li><a href="#">Slide 3</a><img src="//static.swpbox.info/images/thumbs/3.png" alt="thumb03" /></li>
-    <li><a href="#">Slide 4</a><img src="//static.swpbox.info/images/thumbs/4.png" alt="thumb04" /></li>
-    <li><a href="#">Slide 5</a><img src="//static.swpbox.info/images/thumbs/5.png" alt="thumb05" /></li>
+    <li><a href="#">Slide 1</a><img src="//cdn.swpbox.info/images/thumbs/1.png" alt="thumb01" /></li>
+    <li><a href="#">Slide 2</a><img src="//cdn.swpbox.info/images/thumbs/2.png" alt="thumb02" /></li>
+    <li><a href="#">Slide 3</a><img src="//cdn.swpbox.info/images/thumbs/3.png" alt="thumb03" /></li>
+    <li><a href="#">Slide 4</a><img src="//cdn.swpbox.info/images/thumbs/4.png" alt="thumb04" /></li>
+    <li><a href="#">Slide 5</a><img src="//cdn.swpbox.info/images/thumbs/5.png" alt="thumb05" /></li>
   </ul><!-- ei-slider-thumbs -->
 </div><!--/ .container-->
 <div class="clear"></div>

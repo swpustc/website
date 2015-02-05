@@ -3941,7 +3941,8 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 /* ---------------------------------------------------------------------- */
 
 .markdown h1,.markdown h2,.markdown h3,.markdown h4,.markdown h5,.markdown h6,.markdown p,.markdown ul,.markdown ol{
-  font-family: Georgia,Palatino,serif;
+  font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 .markdown h1 {
   margin: 16px 0 16px;
@@ -3977,12 +3978,6 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 }
 .markdown p,.markdown ul,.markdown ol,.markdown li {
   font-size: 15px;
-}
-.markdown strong code{
-  font-size: 100%;
-}
-.markdown strong,.markdown code {
-  font-size: 90%;
 }
 .markdown code {
   font-family: Consolas,Monaco,Andale Mono,monospace;
