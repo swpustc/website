@@ -45,7 +45,7 @@
                   <!--CURRENT:MIRRORS--><a href="//mirrors.swpbox.info/" target="_blank">Local Proxy</a></li>
                 </ul>
               </li>
-              <!--CURRENT:ERRPAGE--><a id="errorpage">ErrorPage</a>
+              <!--CURRENT:ERRPAGE--><a id="no-default-action" href="#">ErrorPage</a>
                 <ul>
                   <!--CURRENT:ERR400--><a href="/400.html">400 Page</a></li>
                   <!--CURRENT:ERR403--><a href="/403.html">403 Page</a></li>

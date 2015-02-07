@@ -681,8 +681,7 @@ input.btn{font-weight: bold; height: 20px; line-height: 20px; padding: 0 6px; co
 .word{word-break:break-all;}
 -->
 </style>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>!window.jQuery && document.write('<script type="text/javascript" src="//lib.sinaapp.com/js/jquery/1.10.2/jquery-1.10.2.min.js"><\/script>');</script>
+<script type="text/javascript" src="//ajax.lug.ustc.edu.cn/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>!window.jQuery && document.write('<script type="text/javascript" src="//cdn.swpbox.info/js/jquery-1.10.2.min.js"><\/script>');</script>
 <script type="text/javascript"> 
 <!--

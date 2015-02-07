@@ -66,6 +66,8 @@ Stylesheet Guide
 
 15. Markdown
 
+16. Code Prettify
+
  */
 
 /* ---------------------------------------------------------------------- */
@@ -3946,12 +3948,12 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 }
 .markdown h1 {
   margin: 16px 0 16px;
-  font-size: 48px;
+  font-size: 42px;
   line-height: 1;
 }
 .markdown h2 {
   margin: 12px 0 12px;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 1.2;
 }
 .markdown h3 {
@@ -3973,28 +3975,28 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 }
 .markdown p {
   margin: 4px 0 4px;
-  line-height: 24px;
+  line-height: 1.5;
   word-break: break-word;
 }
 .markdown p,.markdown ul,.markdown ol,.markdown li {
-  font-size: 15px;
+  font-size: 14px;
 }
 .markdown code {
   font-family: Consolas,Monaco,Andale Mono,monospace;
-  line-height: 18px;
+  line-height: 1.5;
   word-break: break-word;
 }
 .markdown pre {
   margin: 16px 0 24px;
 }
 .markdown ul {
-  list-style: disc inside;
-  margin: 12px 0 18px 8px;
+  list-style: disc outside;
+  margin: 12px 0 18px 4px;
   line-height: 1.5;
 }
 .markdown ol {
   list-style: decimal outside;
-  margin: 12px 0 18px 30px;
+  margin: 12px 0 18px 6px;
   line-height: 1.5;
 }
 .markdown li {
@@ -4009,3 +4011,537 @@ ul.related span.categories {color: #50554e; font-style: italic;}
   color: #7e8ac3;
 }
 /*  <!-- Markdown END -->  */
+
+
+/* ---------------------------------------------------------------------- */
+/*	Code Prettify
+/* ---------------------------------------------------------------------- */
+
+/*  --> Master  */
+
+.light .code-light { display: block !important; }
+.dark .code-light { display: none !important; }
+
+.light .code-dark { display: none !important; }
+.dark .code-dark { display: block !important; }
+
+.prettyprint code {
+  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace !important;
+}
+.prettyprint {
+  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+  -webkit-font-smoothing: antialiased;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 4px 8px 4px 8px;
+}
+.light .prettyprint {
+  border: 1px solid #888;
+}
+.dark .prettyprint {
+  border: 1px solid #ccc;
+}
+.linenums {
+  margin-top:0;
+  margin-bottom:0;
+}
+
+@media print,projection{
+.kwd, .typ, .tag  {
+  font-weight: bold;
+}
+.com {
+  font-style: italic;
+}
+}
+
+/*  --> Google  */
+
+.light .code-google .pln {
+  color: #000;
+}
+@media screen{
+.light .code-google .str {
+  color: #080;
+}
+.light .code-google .kwd {
+  color: #008;
+}
+.light .code-google .com {
+  color: #800;
+}
+.light .code-google .typ {
+  color: #606;
+}
+.light .code-google .lit{
+  color: #066;
+}
+.light .code-google .pun,.light .code-google .opn,.light .code-google .clo {
+  color: #660;
+}
+.light .code-google .tag {
+  color: #008;
+}
+.light .code-google .atn {
+  color: #606;
+}
+.light .code-google .atv {
+  color: #080;
+}
+.light .code-google .dec,.light .code-google .var {
+  color: #606;
+}
+.light .code-google .fun{
+  color: red;
+}
+}
+@media print,projection {
+.light .code-google .str {
+  color: #060;
+}
+.light .code-google .kwd {
+  color: #006;
+}
+.light .code-google .com {
+  color: #600;
+}
+.light .code-google .typ {
+  color: #404;
+}
+.light .code-google .lit {
+  color: #044;
+}
+.light .code-google .pun,.light .code-google .opn,.light .code-google .clo {
+  color: #440;
+}
+.light .code-google .tag {
+  color: #006;
+}
+.light .code-google .atn {
+  color: #404;
+}
+.light .code-google .atv {
+  color: #060;
+}
+}
+
+/*  --> GitHub  */
+
+.light .code-github .pln {
+  color: #333333;
+}
+@media screen {
+.light .code-github .str,.light .code-github .atv {
+  color: #dd1144;
+}
+.light .code-github .kwd,.light .code-github .pun,.light .code-github .opn,.light .code-github .clo,.light .code-github .dec {
+  color: #333333;
+}
+.light .code-github .com {
+  color: #999988;
+}
+.light .code-github .typ,.light .code-github .lit {
+  color: #445588;
+}
+.light .code-github .tag {
+  color: navy;
+}
+.light .code-github .atn,.light .code-github .var {
+  color: teal;
+}
+.light .code-github .fun {
+  color: #990000;
+}
+}
+@media print, projection {
+.light .code-github .str,.light .code-github .atv {
+  color: #006600;
+}
+.light .code-github .kwd,.light .code-github .tag {
+  color: #006;
+}
+.light .code-github .com {
+  color: #600;
+}
+.light .code-github .typ {
+  color: #404;
+}
+.light .code-github .lit {
+  color: #004444;
+}
+.light .code-github .pun,.light .code-github .opn,.light .code-github .clo {
+  color: #444400;
+}
+.light .code-github .atn {
+  color: #440044;
+}
+}
+
+/*  --> Vibrant Ink  */
+
+.dark .code-vibrant-ink .pln {
+  color: white;
+}
+@media screen {
+.dark .code-vibrant-ink .str,.dark .code-vibrant-ink .atv {
+  color: #66ff00;
+}
+.dark .code-vibrant-ink .kwd {
+  color: #ff6600;
+}
+.dark .code-vibrant-ink .com {
+  color: #9933cc;
+}
+.dark .code-vibrant-ink .typ,.dark .code-vibrant-ink .lit {
+  color: #445588;
+}
+.dark .code-vibrant-ink .pun,.dark .code-vibrant-ink .opn,.dark .code-vibrant-ink .clo,.dark .code-vibrant-ink .tag,.dark .code-vibrant-ink .dec,.dark .code-vibrant-ink .var {
+  color: white;
+}
+.dark .code-vibrant-ink .atn {
+  color: #99cc99;
+}
+.dark .code-vibrant-ink .fun {
+  color: #ffcc00;
+}
+}
+@media print, projection {
+.dark .code-vibrant-ink .str,.dark .code-vibrant-ink .atv {
+  color: #006600;
+}
+.dark .code-vibrant-ink .kwd,.dark .code-vibrant-ink .tag {
+  color: #006;
+}
+.dark .code-vibrant-ink .com {
+  color: #600;
+}
+.dark .code-vibrant-ink .typ {
+  color: #404;
+}
+.dark .code-vibrant-ink .lit {
+  color: #004444;
+}
+.dark .code-vibrant-ink .pun,.dark .code-vibrant-ink .opn,.dark .code-vibrant-ink .clo {
+  color: #444400;
+}
+.dark .code-vibrant-ink .atn {
+  color: #440044;
+}
+}
+
+/*  --> Tomorrow Light  */
+
+.light .code-tomorrow-light .pln {
+  color: #4d4d4c;
+}
+@media screen {
+.light .code-tomorrow-light .str {
+  color: #718c00;
+}
+.light .code-tomorrow-light .kwd {
+  color: #8959a8;
+}
+.light .code-tomorrow-light .com {
+  color: #8e908c;
+}
+.light .code-tomorrow-light .typ,.light .code-tomorrow-light .fun {
+  color: #4271ae;
+}
+.light .code-tomorrow-light .lit,.light .code-tomorrow-light .atn,.light .code-tomorrow-light .dec {
+  color: #f5871f;
+}
+.light .code-tomorrow-light .pun,.light .code-tomorrow-light .opn,.light .code-tomorrow-light .clo {
+  color: #4d4d4c;
+}
+.light .code-tomorrow-light .tag,.light .code-tomorrow-light .var {
+  color: #c82829;
+}
+.light .code-tomorrow-light .atv {
+  color: #3e999f;
+}
+.light .code-tomorrow-light .dec {
+  color: #f5871f;
+}
+}
+@media print, projection {
+.light .code-tomorrow-light .str,.light .code-tomorrow-light .atv {
+  color: #006600;
+}
+.light .code-tomorrow-light .kwd,.light .code-tomorrow-light .tag {
+  color: #006;
+}
+.light .code-tomorrow-light .com {
+  color: #600;
+}
+.light .code-tomorrow-light .typ {
+  color: #404;
+}
+.light .code-tomorrow-light .lit {
+  color: #004444;
+}
+.light .code-tomorrow-light .pun,.light .code-tomorrow-light .opn,.light .code-tomorrow-light .clo {
+  color: #444400;
+}
+.light .code-tomorrow-light .atn {
+  color: #440044;
+}
+}
+
+/*  --> Tomorrow Night  */
+
+.dark .code-tomorrow-dark .pln {
+  color: #c5c8c6;
+}
+@media screen {
+.dark .code-tomorrow-dark .str {
+  color: #b5bd68;
+}
+.dark .code-tomorrow-dark .kwd {
+  color: #b294bb;
+}
+.dark .code-tomorrow-dark .com {
+  color: #969896;
+}
+.dark .code-tomorrow-dark .typ,.dark .code-tomorrow-dark .fun {
+  color: #81a2be;
+}
+.dark .code-tomorrow-dark .lit,.dark .code-tomorrow-dark .atn,.dark .code-tomorrow-dark .dec {
+  color: #de935f;
+}
+.dark .code-tomorrow-dark .pun,.dark .code-tomorrow-dark .opn,.dark .code-tomorrow-dark .clo {
+  color: #c5c8c6;
+}
+.dark .code-tomorrow-dark .tag,.dark .code-tomorrow-dark .var {
+  color: #cc6666;
+}
+.dark .code-tomorrow-dark .atv {
+  color: #8abeb7;
+}
+}
+@media print, projection {
+.dark .code-tomorrow-dark .str,.dark .code-tomorrow-dark .atv {
+  color: #006600;
+}
+.dark .code-tomorrow-dark .kwd,.dark .code-tomorrow-dark .tag {
+  color: #006;
+}
+.dark .code-tomorrow-dark .com {
+  color: #600;
+}
+.dark .code-tomorrow-dark .typ {
+  color: #404;
+}
+.dark .code-tomorrow-dark .lit {
+  color: #004444;
+}
+.dark .code-tomorrow-dark .pun,.dark .code-tomorrow-dark .opn,.dark .code-tomorrow-dark .clo {
+  color: #444400;
+}
+.dark .code-tomorrow-dark .atn {
+  color: #440044;
+}
+}
+
+/*  --> Tomorrow Night Eighties  */
+
+.dark .code-tomorrow-dark-eighties .pln {
+  color: #cccccc;
+}
+@media screen {
+.dark .code-tomorrow-dark-eighties .str {
+  color: #99cc99;
+}
+.dark .code-tomorrow-dark-eighties .kwd {
+  color: #cc99cc;
+}
+.dark .code-tomorrow-dark-eighties .com {
+  color: #999999;
+}
+.dark .code-tomorrow-dark-eighties .typ,.dark .code-tomorrow-dark-eighties .fun {
+  color: #6699cc;
+}
+.dark .code-tomorrow-dark-eighties .lit,.dark .code-tomorrow-dark-eighties .atn,.dark .code-tomorrow-dark-eighties .dec {
+  color: #f99157;
+}
+.dark .code-tomorrow-dark-eighties .pun,.dark .code-tomorrow-dark-eighties .opn,.dark .code-tomorrow-dark-eighties .clo {
+  color: #cccccc;
+}
+.dark .code-tomorrow-dark-eighties .tag,.dark .code-tomorrow-dark-eighties .var {
+  color: #f2777a;
+}
+.dark .code-tomorrow-dark-eighties .atv {
+  color: #66cccc;
+}
+}
+@media print, projection {
+.dark .code-tomorrow-dark-eighties .str,.dark .code-tomorrow-dark-eighties .atv {
+  color: #006600;
+}
+.dark .code-tomorrow-dark-eighties .kwd,.dark .code-tomorrow-dark-eighties .tag {
+  color: #006;
+}
+.dark .code-tomorrow-dark-eighties .com {
+  color: #600;
+}
+.dark .code-tomorrow-dark-eighties .typ {
+  color: #404;
+}
+.dark .code-tomorrow-dark-eighties .lit {
+  color: #004444;
+}
+.dark .code-tomorrow-dark-eighties .pun,.dark .code-tomorrow-dark-eighties .opn,.dark .code-tomorrow-dark-eighties .clo {
+  color: #444400;
+}
+.dark .code-tomorrow-dark-eighties .atn {
+  color: #440044;
+}
+}
+
+/*  --> Tomorrow Night Bright  */
+
+.dark .code-tomorrow-dark-bright .pln {
+  color: #eaeaea;
+}
+@media screen {
+.dark .code-tomorrow-dark-bright .str {
+  color: #b9ca4a;
+}
+.dark .code-tomorrow-dark-bright .kwd {
+  color: #c397d8;
+}
+.dark .code-tomorrow-dark-bright .com {
+  color: #969896;
+}
+.dark .code-tomorrow-dark-bright .typ,.dark .code-tomorrow-dark-bright .fun {
+  color: #7aa6da;
+}
+.dark .code-tomorrow-dark-bright .lit,.dark .code-tomorrow-dark-bright .atn,.dark .code-tomorrow-dark-bright .dec {
+  color: #e78c45;
+}
+.dark .code-tomorrow-dark-bright .pun,.dark .code-tomorrow-dark-bright .opn,.dark .code-tomorrow-dark-bright .clo {
+  color: #eaeaea;
+}
+.dark .code-tomorrow-dark-bright .tag,.dark .code-tomorrow-dark-bright .var {
+  color: #d54e53;
+}
+.dark .code-tomorrow-dark-bright .atv {
+  color: #70c0b1;
+}
+}
+@media print, projection {
+.dark .code-tomorrow-dark-bright .str,.dark .code-tomorrow-dark-bright .atv {
+  color: #006600;
+}
+.dark .code-tomorrow-dark-bright .kwd,.dark .code-tomorrow-dark-bright .tag  {
+  color: #006;
+}
+.dark .code-tomorrow-dark-bright .com {
+  color: #600;
+}
+.dark .code-tomorrow-dark-bright .typ {
+  color: #404;
+}
+.dark .code-tomorrow-dark-bright .lit {
+  color: #004444;
+}
+.dark .code-tomorrow-dark-bright .pun,.dark .code-tomorrow-dark-bright .opn,.dark .code-tomorrow-dark-bright .clo {
+  color: #444400;
+}
+.dark .code-tomorrow-dark-bright .atn {
+  color: #440044;
+}
+}
+
+/*  --> Hemisu Light  */
+
+.light .code-hemisu-light .pln {
+  color: #111111;
+}
+@media screen {
+.light .code-hemisu-light .str,.light .code-hemisu-light .kwd,.light .code-hemisu-light .atn {
+  color: #739200;
+}
+.light .code-hemisu-light .com {
+  color: #999999;
+}
+.light .code-hemisu-light .typ,.light .code-hemisu-light .atv {
+  color: #ff0055;
+}
+.light .code-hemisu-light .lit,.light .code-hemisu-light .fun {
+  color: #538192;
+}
+.light .code-hemisu-light .pun,.light .code-hemisu-light .opn,.light .code-hemisu-light .clo,.light .code-hemisu-light .tag,.light .code-hemisu-light .dec,.light .code-hemisu-light .var {
+  color: #111111;
+}
+}
+@media print, projection {
+.light .code-hemisu-light .str,.light .code-hemisu-light .atv {
+  color: #006600;
+}
+.light .code-hemisu-light .kwd,.light .code-hemisu-light .tag {
+  color: #006;
+}
+.light .code-hemisu-light .com {
+  color: #600;
+}
+.light .code-hemisu-light .typ {
+  color: #404;
+}
+.light .code-hemisu-light .lit {
+  color: #004444;
+}
+.light .code-hemisu-light .pun,.light .code-hemisu-light .opn,.light .code-hemisu-light .clo {
+  color: #444400;
+}
+.light .code-hemisu-light .atn {
+  color: #440044;
+}
+}
+
+/*  --> Hemisu Dark  */
+
+.dark .code-hemisu-dark .pln {
+  color: #eeeeee;
+}
+@media screen {
+.dark .code-hemisu-dark .str,.dark .code-hemisu-dark .kwd,.dark .code-hemisu-dark .atn {
+  color: #b1d631;
+}
+.dark .code-hemisu-dark .com {
+  color: #777777;
+}
+.dark .code-hemisu-dark .typ,.dark .code-hemisu-dark .atv {
+  color: #bbffaa;
+}
+.dark .code-hemisu-dark .lit,.dark .code-hemisu-dark .fun {
+  color: #9fd3e6;
+}
+.dark .code-hemisu-dark .pun,.dark .code-hemisu-dark .opn,.dark .code-hemisu-dark .clo,.dark .code-hemisu-dark .tag,.dark .code-hemisu-dark .dec,.dark .code-hemisu-dark .var {
+  color: #eeeeee;
+}
+}
+@media print, projection {
+.dark .code-hemisu-dark .str,.dark .code-hemisu-dark .atv {
+  color: #006600;
+}
+.dark .code-hemisu-dark .kwd,.dark .code-hemisu-dark .tag {
+  color: #006;
+}
+.dark .code-hemisu-dark .com {
+  color: #600;
+}
+.dark .code-hemisu-dark .typ {
+  color: #404;
+}
+.dark .code-hemisu-dark .lit {
+  color: #004444;
+}
+.dark .code-hemisu-dark .pun,.dark .code-hemisu-dark .opn,.dark .code-hemisu-dark .clo {
+  color: #444400;
+}
+.dark .code-hemisu-dark .atn {
+  color: #440044;
+}
+}
+
+/*  <!-- Code Prettify END -->  */

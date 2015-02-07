@@ -16,7 +16,5 @@ $name = basename($_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME']);
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>swpustc | Resume - <?php echo $name; ?></title>
   <link rel="stylesheet" href="//cdn.swpbox.info/css/style.min.css" media="screen" />
-  <link rel="stylesheet" href="//cdn.swpbox.info/sliders/elastslider/elastic.min.css" media="screen" />
-  <link rel="stylesheet" href="//cdn.swpbox.info/css/prettify/prettify.css" media="screen" />
   <script src="//cdn.swpbox.info/js/modernizr.custom.js"></script>
 </head>

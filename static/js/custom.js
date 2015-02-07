@@ -65,8 +65,8 @@ WebFontConfig = {
 };
 (function() {
 	var wf = document.createElement('script');
-	wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-	'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+	wf.src = ('https:' == document.location.protocol ? 'https:' : 'http:') +
+	'//cdn.swpbox.info/js/webfont.min.js';
 	wf.type = 'text/javascript';
 	wf.async = 'true';
 	var s = document.getElementsByTagName('body')[0];
@@ -995,7 +995,16 @@ jQuery(document).ready(function(){
 				var $this         = $(this),
 				currentOption = $this.attr('data-categories');
 
-				$itemsFilter.find('a').removeClass('active');
+				var $itemsFilterSub = $itemsFilter.find($('ul'));
+				if ($itemsFilterSub.length) {
+					$itemsFilterSub.each(function(){
+						if($(this).find($this).length) {
+							$(this).find('a').removeClass('active');
+						}
+					});
+				} else {
+					$itemsFilter.find('a').removeClass('active');
+				}
 				$this.addClass('active');
 
 				if(currentOption) {
@@ -1009,7 +1018,14 @@ jQuery(document).ready(function(){
 				e.preventDefault();
 			});
 
-			$itemsFilter.find('a').first().addClass('active');
+			var $itemsFilterSub = $itemsFilter.find('ul');
+			if ($itemsFilterSub.length) {
+				$itemsFilterSub.each(function(){
+					$(this).find('a').first().addClass('active');
+				});
+			} else {
+				$itemsFilter.find('a').first().addClass('active');
+			}
 			$itemsFilter.find('a').not('.active').hide();
 
 			$itemsFilter.on('mouseenter', function() {
@@ -1021,9 +1037,12 @@ jQuery(document).ready(function(){
 					$this.find('li a').stop(true,true).slideShow(300);
 				}, 100);
 			}).on('mouseleave', function() {
+				var $this = $(this);
 				clearTimeout(mouseOver);
 				if($container.width() == 420 || $container.width() == 300) return false;
-				$(this).find('li a').not('.active').stop(true,true).slideHide(150);
+				mouseOver = setTimeout( function() {
+					$this.find('li a').not('.active').stop(true,true).slideHide(150);
+				}, 500);
 			});
 
 		}

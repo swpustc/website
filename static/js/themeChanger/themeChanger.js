@@ -114,6 +114,58 @@ var page_config = {
 
 $(function() {
 
+	/* ------------------------------------------------------------------- */
+	/*	Prettify & preventDefault
+	/* ------------------------------------------------------------------- */
+
+	var $bodyCodeLight = $("#code-prettify-light"),
+		$bodyCodeDark = $("#code-prettify-dark"),
+		$itemPrettify = $('.code-prettify');
+
+	var codeLight = jQuery.cookie('code-light'),
+		codeDark = jQuery.cookie('code-dark');
+
+	function addCookieCodeLight() {
+		$bodyCodeLight.removeClass().addClass(codeLight);
+	}
+	function addCookieCodeDark() {
+		$bodyCodeDark.removeClass().addClass(codeDark);
+	}
+
+	// Prettify projects
+	$itemPrettify.on('click', 'a', function(e) {
+		var $this         = $(this),
+		prettify_code = $this.attr('id');
+		if($body.hasClass('light')) {
+			$bodyCodeLight.removeClass().addClass(prettify_code);
+			jQuery.cookie('code-light', prettify_code);
+		} else {
+			$bodyCodeDark.removeClass().addClass(prettify_code);
+			jQuery.cookie('code-dark', prettify_code);
+		}
+		e.preventDefault();
+	});
+
+	if(codeLight) {
+		addCookieCodeLight();
+		$('.code-light').find('a').removeClass('active').hide();
+		$('.code-light').find('#'+codeLight).addClass('active').show();
+	}
+
+	if(codeDark) {
+		addCookieCodeDark();
+		$('.code-dark').find('a').removeClass('active').hide();
+		$('.code-dark').find('#'+codeDark).addClass('active').show();
+	}
+
+
+	$('#no-default-action').on('click', 'a', function(e) {
+		e.preventDefault();
+	});
+
+	/* end Prettify  */
+
+
     /* Theme controller --> Begin */
 	
     var $body = $("body");
@@ -121,7 +173,7 @@ $(function() {
 		var $theme_control_panel = $('#control_panel');
 	
 	var layout = jQuery.cookie('layout'),
-		skin = jQuery.cookie('skin');
+		skin = jQuery.cookie('skin'),
 		bgcolor = jQuery.cookie('bgcolor'),
 		patternfixed = jQuery.cookie('patternfixed'),
 		patternliquid = jQuery.cookie('patternliquid');
@@ -288,17 +340,20 @@ $(function() {
 				var $this = $(this),
 					$checked = $this.attr('checked'),
 					nextClassName = $this.attr('value');
-					if($body.hasClass('fixed')) {
-						if(nextClassName == 'light') {
-							bg_picker.css('background-color','#393F38');
-							$input_bg_color.attr('value','#393f38');
-							$body.css('background-color','#393f38');
-						} else {
-							bg_picker.css('background-color','#CDD2CC');
-							$input_bg_color.attr('value','#cdd2cc');
-							$body.css('background-color','#cdd2cc');
-						}
+				if($body.hasClass('fixed')) {
+					if(nextClassName == 'light') {
+						bg_picker.css('background-color','#393F38');
+						$input_bg_color.attr('value','#393f38');
+						$body.css('background-color','#393f38');
+					} else {
+						bg_picker.css('background-color','#CDD2CC');
+						$input_bg_color.attr('value','#cdd2cc');
+						$body.css('background-color','#cdd2cc');
 					}
+				}
+				setTimeout( function() {
+					$('#portfolio-filter').find('li a').not('.active').stop(true,true).slideHide(150);
+				}, 100);
 				jQuery.cookie('skin', nextClassName);
 				
                 if (!$body.hasClass(nextClassName)) {
@@ -440,6 +495,21 @@ $(function() {
 			$('.layout').find('input[type=radio]').first().attr('checked','checked');
 			$('.skin').find('input[type=radio]').first().attr('checked','checked');
 			$theme_control_panel.find('.active').removeClass();
+			$.cookie('code-light', null);
+			$.cookie('code-dark', null);
+			$bodyCodeLight.removeClass().addClass('code-google');
+			$bodyCodeDark.removeClass().addClass('code-vibrant-ink');
+			var $itemsFilter = $('#portfolio-filter'),
+				$itemsFilterSub = $itemsFilter.find($('ul'));
+			$itemsFilter.find('a').removeClass('active');
+			if ($itemsFilterSub.length) {
+				$itemsFilterSub.each(function(){
+					$(this).find('a').first().addClass('active').show();
+				});
+			} else {
+				$itemsFilter.find('a').first().addClass('active').show();
+			}
+			$itemsFilter.find('a').not('.active').hide();
 			return false;
 		};
 		
