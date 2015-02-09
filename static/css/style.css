@@ -3294,7 +3294,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 	
 	.fixed #wrapper {width: 400px;}
 	
-	.container {width: 300px;}
+	.container {width: 95%;}
 
 	/* -------------------------------------------------- */
 	/*	Columns
@@ -3518,7 +3518,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 
 	.fixed #wrapper {width: 520px;}
 	
-	.container {width: 420px;}
+	.container {width: 90%;}
 
 	/* -------------------------------------------------- */
 	/*	Columns
@@ -3986,8 +3986,93 @@ ul.related span.categories {color: #50554e; font-style: italic;}
   line-height: 1.5;
 }
 .markdown pre {
-  margin: 16px 0 24px;
+  margin: 9px 0 12px 0;
+  overflow: auto;
+  overflow-y: hidden;
+  word-break: break-all;
+  word-wrap: normal;
 }
+.liquid.light .markdown pre {
+  background-color: rgba(188, 190, 188, 0.1);
+}
+.liquid.dark .markdown pre {
+  background-color: rgba(101, 110, 105, 0.1);
+}
+
+.fixed.light.f-pattern-1 .markdown pre {
+  background-image: url(../images/bgs/fd-bg-1.png);
+}
+.fixed.light.f-pattern-2 .markdown pre {
+  background-image: url(../images/bgs/fd-bg-2.png);
+}
+.fixed.light.f-pattern-3 .markdown pre {
+  background-image: url(../images/bgs/fd-bg-3.png);
+}
+.fixed.light.f-pattern-4 .markdown pre {
+  background-image: url(../images/bgs/fd-bg-4.png);
+}
+.fixed.light.f-pattern-5 .markdown pre {
+  background-image: url(../images/bgs/fd-bg-5.png);
+}
+.fixed.light.f-pattern-6 .markdown pre {
+  background-image: url(../images/bgs/fd-bg-6.png);
+}
+.fixed.light.f-pattern-7 .markdown pre {
+  background-image: url(../images/bgs/fd-bg-7.png);
+}
+.fixed.light.f-pattern-8 .markdown pre {
+  background-image: url(../images/bgs/fd-bg-8.png);
+}
+.fixed.light.f-pattern-9 .markdown pre {
+  background-image: url(../images/bgs/fd-bg-9.png);
+}
+.fixed.light.f-pattern-10 .markdown pre {
+  background-image: url(../images/bgs/fd-bg-10.png);
+}
+.fixed.light.f-pattern-11 .markdown pre {
+  background-image: url(../images/bgs/fd-bg-11.png);
+}
+.fixed.light.f-pattern-12 .markdown pre {
+  background-image: url(../images/bgs/fd-bg-12.png);
+}
+
+.fixed.dark.f-pattern-1 .markdown pre {
+  background-image: url(../images/bgs/f-bg-1.png);
+}
+.fixed.dark.f-pattern-2 .markdown pre {
+  background-image: url(../images/bgs/f-bg-2.png);
+}
+.fixed.dark.f-pattern-3 .markdown pre {
+  background-image: url(../images/bgs/f-bg-3.png);
+}
+.fixed.dark.f-pattern-4 .markdown pre {
+  background-image: url(../images/bgs/f-bg-4.png);
+}
+.fixed.dark.f-pattern-5 .markdown pre {
+  background-image: url(../images/bgs/f-bg-5.png);
+}
+.fixed.dark.f-pattern-6 .markdown pre {
+  background-image: url(../images/bgs/f-bg-6.png);
+}
+.fixed.dark.f-pattern-7 .markdown pre {
+  background-image: url(../images/bgs/f-bg-7.png);
+}
+.fixed.dark.f-pattern-8 .markdown pre {
+  background-image: url(../images/bgs/f-bg-8.png);
+}
+.fixed.dark.f-pattern-9 .markdown pre {
+  background-image: url(../images/bgs/f-bg-9.png);
+}
+.fixed.dark.f-pattern-10 .markdown pre {
+  background-image: url(../images/bgs/f-bg-10.png);
+}
+.fixed.dark.f-pattern-11 .markdown pre {
+  background-image: url(../images/bgs/f-bg-11.png);
+}
+.fixed.dark.f-pattern-12 .markdown pre {
+  background-image: url(../images/bgs/f-bg-12.png);
+}
+
 .markdown ul {
   list-style: disc outside;
   margin: 12px 0 18px 4px;
@@ -4016,108 +4101,6 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 /*	Code Prettify
 /* ---------------------------------------------------------------------- */
 
-/*  --> .prettyprint.linenums  */
-
-.liquid.light.l-pattern-1 li.L1,.liquid.light.l-pattern-1 li.L3,.liquid.light.l-pattern-1 li.L5,.liquid.light.l-pattern-1 li.L7,.liquid.light.l-pattern-1 li.L9,
-.liquid.light.l-pattern-4 li.L1,.liquid.light.l-pattern-4 li.L3,.liquid.light.l-pattern-4 li.L5,.liquid.light.l-pattern-4 li.L7,.liquid.light.l-pattern-4 li.L9,
-.liquid.light.l-pattern-6 li.L1,.liquid.light.l-pattern-6 li.L3,.liquid.light.l-pattern-6 li.L5,.liquid.light.l-pattern-6 li.L7,.liquid.light.l-pattern-6 li.L9 {
-  background-image: url(../images/bgs/l-bg-2.png);
-}
-.liquid.light.l-pattern-2 li.L1,.liquid.light.l-pattern-2 li.L3,.liquid.light.l-pattern-2 li.L5,.liquid.light.l-pattern-2 li.L7,.liquid.light.l-pattern-2 li.L9,
-.liquid.light.l-pattern-3 li.L1,.liquid.light.l-pattern-3 li.L3,.liquid.light.l-pattern-3 li.L5,.liquid.light.l-pattern-3 li.L7,.liquid.light.l-pattern-3 li.L9,
-.liquid.light.l-pattern-5 li.L1,.liquid.light.l-pattern-5 li.L3,.liquid.light.l-pattern-5 li.L5,.liquid.light.l-pattern-5 li.L7,.liquid.light.l-pattern-5 li.L9,
-.liquid.light.l-pattern-7 li.L1,.liquid.light.l-pattern-7 li.L3,.liquid.light.l-pattern-7 li.L5,.liquid.light.l-pattern-7 li.L7,.liquid.light.l-pattern-7 li.L9,
-.liquid.light.l-pattern-8 li.L1,.liquid.light.l-pattern-8 li.L3,.liquid.light.l-pattern-8 li.L5,.liquid.light.l-pattern-8 li.L7,.liquid.light.l-pattern-8 li.L9 {
-  background-image: url(../images/bgs/l-bg-6.png);
-}
-.liquid.dark.l-pattern-1 li.L1,.liquid.dark.l-pattern-1 li.L3,.liquid.dark.l-pattern-1 li.L5,.liquid.dark.l-pattern-1 li.L7,.liquid.dark.l-pattern-1 li.L9,
-.liquid.dark.l-pattern-4 li.L1,.liquid.dark.l-pattern-4 li.L3,.liquid.dark.l-pattern-4 li.L5,.liquid.dark.l-pattern-4 li.L7,.liquid.dark.l-pattern-4 li.L9,
-.liquid.dark.l-pattern-6 li.L1,.liquid.dark.l-pattern-6 li.L3,.liquid.dark.l-pattern-6 li.L5,.liquid.dark.l-pattern-6 li.L7,.liquid.dark.l-pattern-6 li.L9 {
-  background-image: url(../images/bgs/ld-bg-2.png);
-}
-.liquid.dark.l-pattern-2 li.L1,.liquid.dark.l-pattern-2 li.L3,.liquid.dark.l-pattern-2 li.L5,.liquid.dark.l-pattern-2 li.L7,.liquid.dark.l-pattern-2 li.L9,
-.liquid.dark.l-pattern-3 li.L1,.liquid.dark.l-pattern-3 li.L3,.liquid.dark.l-pattern-3 li.L5,.liquid.dark.l-pattern-3 li.L7,.liquid.dark.l-pattern-3 li.L9,
-.liquid.dark.l-pattern-5 li.L1,.liquid.dark.l-pattern-5 li.L3,.liquid.dark.l-pattern-5 li.L5,.liquid.dark.l-pattern-5 li.L7,.liquid.dark.l-pattern-5 li.L9,
-.liquid.dark.l-pattern-7 li.L1,.liquid.dark.l-pattern-7 li.L3,.liquid.dark.l-pattern-7 li.L5,.liquid.dark.l-pattern-7 li.L7,.liquid.dark.l-pattern-7 li.L9,
-.liquid.dark.l-pattern-8 li.L1,.liquid.dark.l-pattern-8 li.L3,.liquid.dark.l-pattern-8 li.L5,.liquid.dark.l-pattern-8 li.L7,.liquid.dark.l-pattern-8 li.L9 {
-  background-image: url(../images/bgs/ld-bg-6.png);
-}
-
-.fixed.light.f-pattern-1 li.L1,.fixed.light.f-pattern-1 li.L3,.fixed.light.f-pattern-1 li.L5,.fixed.light.f-pattern-1 li.L7,.fixed.light.f-pattern-1 li.L9 {
-  background-image: url(../images/bgs/fd-bg-1.png);
-}
-.fixed.light.f-pattern-2 li.L1,.fixed.light.f-pattern-2 li.L3,.fixed.light.f-pattern-2 li.L5,.fixed.light.f-pattern-2 li.L7,.fixed.light.f-pattern-2 li.L9 {
-  background-image: url(../images/bgs/fd-bg-2.png);
-}
-.fixed.light.f-pattern-3 li.L1,.fixed.light.f-pattern-3 li.L3,.fixed.light.f-pattern-3 li.L5,.fixed.light.f-pattern-3 li.L7,.fixed.light.f-pattern-3 li.L9 {
-  background-image: url(../images/bgs/fd-bg-3.png);
-}
-.fixed.light.f-pattern-4 li.L1,.fixed.light.f-pattern-4 li.L3,.fixed.light.f-pattern-4 li.L5,.fixed.light.f-pattern-4 li.L7,.fixed.light.f-pattern-4 li.L9 {
-  background-image: url(../images/bgs/fd-bg-4.png);
-}
-.fixed.light.f-pattern-5 li.L1,.fixed.light.f-pattern-5 li.L3,.fixed.light.f-pattern-5 li.L5,.fixed.light.f-pattern-5 li.L7,.fixed.light.f-pattern-5 li.L9 {
-  background-image: url(../images/bgs/fd-bg-5.png);
-}
-.fixed.light.f-pattern-6 li.L1,.fixed.light.f-pattern-6 li.L3,.fixed.light.f-pattern-6 li.L5,.fixed.light.f-pattern-6 li.L7,.fixed.light.f-pattern-6 li.L9 {
-  background-image: url(../images/bgs/fd-bg-6.png);
-}
-.fixed.light.f-pattern-7 li.L1,.fixed.light.f-pattern-7 li.L3,.fixed.light.f-pattern-7 li.L5,.fixed.light.f-pattern-7 li.L7,.fixed.light.f-pattern-7 li.L9 {
-  background-image: url(../images/bgs/fd-bg-7.png);
-}
-.fixed.light.f-pattern-8 li.L1,.fixed.light.f-pattern-8 li.L3,.fixed.light.f-pattern-8 li.L5,.fixed.light.f-pattern-8 li.L7,.fixed.light.f-pattern-8 li.L9 {
-  background-image: url(../images/bgs/fd-bg-8.png);
-}
-.fixed.light.f-pattern-9 li.L1,.fixed.light.f-pattern-9 li.L3,.fixed.light.f-pattern-9 li.L5,.fixed.light.f-pattern-9 li.L7,.fixed.light.f-pattern-9 li.L9 {
-  background-image: url(../images/bgs/fd-bg-9.png);
-}
-.fixed.light.f-pattern-10 li.L1,.fixed.light.f-pattern-10 li.L3,.fixed.light.f-pattern-10 li.L5,.fixed.light.f-pattern-10 li.L7,.fixed.light.f-pattern-10 li.L9 {
-  background-image: url(../images/bgs/fd-bg-10.png);
-}
-.fixed.light.f-pattern-11 li.L1,.fixed.light.f-pattern-11 li.L3,.fixed.light.f-pattern-11 li.L5,.fixed.light.f-pattern-11 li.L7,.fixed.light.f-pattern-11 li.L9 {
-  background-image: url(../images/bgs/fd-bg-11.png);
-}
-.fixed.light.f-pattern-12 li.L1,.fixed.light.f-pattern-12 li.L3,.fixed.light.f-pattern-12 li.L5,.fixed.light.f-pattern-12 li.L7,.fixed.light.f-pattern-12 li.L9 {
-  background-image: url(../images/bgs/fd-bg-12.png);
-}
-
-.fixed.dark.f-pattern-1 li.L1,.fixed.dark.f-pattern-1 li.L3,.fixed.dark.f-pattern-1 li.L5,.fixed.dark.f-pattern-1 li.L7,.fixed.dark.f-pattern-1 li.L9 {
-  background-image: url(../images/bgs/f-bg-1.png);
-}
-.fixed.dark.f-pattern-2 li.L1,.fixed.dark.f-pattern-2 li.L3,.fixed.dark.f-pattern-2 li.L5,.fixed.dark.f-pattern-2 li.L7,.fixed.dark.f-pattern-2 li.L9 {
-  background-image: url(../images/bgs/f-bg-2.png);
-}
-.fixed.dark.f-pattern-3 li.L1,.fixed.dark.f-pattern-3 li.L3,.fixed.dark.f-pattern-3 li.L5,.fixed.dark.f-pattern-3 li.L7,.fixed.dark.f-pattern-3 li.L9 {
-  background-image: url(../images/bgs/f-bg-3.png);
-}
-.fixed.dark.f-pattern-4 li.L1,.fixed.dark.f-pattern-4 li.L3,.fixed.dark.f-pattern-4 li.L5,.fixed.dark.f-pattern-4 li.L7,.fixed.dark.f-pattern-4 li.L9 {
-  background-image: url(../images/bgs/f-bg-4.png);
-}
-.fixed.dark.f-pattern-5 li.L1,.fixed.dark.f-pattern-5 li.L3,.fixed.dark.f-pattern-5 li.L5,.fixed.dark.f-pattern-5 li.L7,.fixed.dark.f-pattern-5 li.L9 {
-  background-image: url(../images/bgs/f-bg-5.png);
-}
-.fixed.dark.f-pattern-6 li.L1,.fixed.dark.f-pattern-6 li.L3,.fixed.dark.f-pattern-6 li.L5,.fixed.dark.f-pattern-6 li.L7,.fixed.dark.f-pattern-6 li.L9 {
-  background-image: url(../images/bgs/f-bg-6.png);
-}
-.fixed.dark.f-pattern-7 li.L1,.fixed.dark.f-pattern-7 li.L3,.fixed.dark.f-pattern-7 li.L5,.fixed.dark.f-pattern-7 li.L7,.fixed.dark.f-pattern-7 li.L9 {
-  background-image: url(../images/bgs/f-bg-7.png);
-}
-.fixed.dark.f-pattern-8 li.L1,.fixed.dark.f-pattern-8 li.L3,.fixed.dark.f-pattern-8 li.L5,.fixed.dark.f-pattern-8 li.L7,.fixed.dark.f-pattern-8 li.L9 {
-  background-image: url(../images/bgs/f-bg-8.png);
-}
-.fixed.dark.f-pattern-9 li.L1,.fixed.dark.f-pattern-9 li.L3,.fixed.dark.f-pattern-9 li.L5,.fixed.dark.f-pattern-9 li.L7,.fixed.dark.f-pattern-9 li.L9 {
-  background-image: url(../images/bgs/f-bg-9.png);
-}
-.fixed.dark.f-pattern-10 li.L1,.fixed.dark.f-pattern-10 li.L3,.fixed.dark.f-pattern-10 li.L5,.fixed.dark.f-pattern-10 li.L7,.fixed.dark.f-pattern-10 li.L9 {
-  background-image: url(../images/bgs/f-bg-10.png);
-}
-.fixed.dark.f-pattern-11 li.L1,.fixed.dark.f-pattern-11 li.L3,.fixed.dark.f-pattern-11 li.L5,.fixed.dark.f-pattern-11 li.L7,.fixed.dark.f-pattern-11 li.L9 {
-  background-image: url(../images/bgs/f-bg-11.png);
-}
-.fixed.dark.f-pattern-12 li.L1,.fixed.dark.f-pattern-12 li.L3,.fixed.dark.f-pattern-12 li.L5,.fixed.dark.f-pattern-12 li.L7,.fixed.dark.f-pattern-12 li.L9 {
-  background-image: url(../images/bgs/f-bg-12.png);
-}
-
-
 /*  --> Master  */
 
 .light .code-light { display: block !important; }
@@ -4128,12 +4111,15 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 
 .light .prettyprint.linenums {
   color: #088;
+  background-color: rgba(188, 190, 188, 0.1);
 }
 .dark .prettyprint.linenums {
   color: #4cc;
+  background-color: rgba(101, 110, 105, 0.1);
 }
 .prettyprint.linenums {
-  margin: 23.09px 4px 0 16px;
+  margin: 0;
+  margin-top: 23.09px;
 }
 
 .prettyprint code {
@@ -4145,7 +4131,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
   font-size: 12px;
   line-height: 1.5;
   word-break: break-word;
-  padding: 4px 8px 4px 8px;
+  padding: 10px;
 }
 .light .prettyprint {
   border: 1px solid #ccd3cd;
@@ -4154,8 +4140,41 @@ ul.related span.categories {color: #50554e; font-style: italic;}
   border: 1px solid #333732;
 }
 .linenums {
-  margin-top:0;
-  margin-bottom:0;
+  list-style: decimal outside;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 24px;
+}
+.light .linenums li:hover {
+background-color: rgba(187, 190, 187, 0.3);
+}
+.dark .linenums li:hover {
+background-color: rgba(79, 82, 78, 0.3);
+}
+.light .linenums li.hrefline {
+background-color: rgba(127, 230, 127, 0.4);
+}
+.dark .linenums li.hrefline {
+background-color: rgba(49, 152, 48, 0.4);
+}
+
+@media only screen and (max-width:999px){
+.linenums {
+  list-style: decimal-leading-zero inside;
+  padding-left: 0;
+}
+}
+@media only screen and (max-width:767px){
+.prettyprint {
+  overflow: auto;
+  overflow-y: hidden;
+  word-break: break-all;
+  word-wrap: normal;
+}
+li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
+  float: left;
+  min-width: 100%;
+}
 }
 
 @media print,projection{
