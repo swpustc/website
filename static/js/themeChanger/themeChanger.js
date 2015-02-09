@@ -159,7 +159,7 @@ $(function() {
 	}
 
 
-	$('#no-default-action').on('click', 'a', function(e) {
+	$('#no-default-action').click(function(e) {
 		e.preventDefault();
 	});
 

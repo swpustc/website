@@ -18,7 +18,7 @@
           <!--li data-tooltip="Rss" class="rss"><a href="#">Rss</a></li-->
           <li data-tooltip="Google+" class="google"><a href="https://plus.google.com/u/0/102021946737862248380" target="_blank">Google+</a></li>
           <li data-tooltip="Sina" class="sina"><a href="http://www.weibo.com/u/2678757083" target="_blank">Sina</a></li>
-          <li data-tooltip="QQ" class="qq"><a href="tencent://message/?uin=378124792&Site=swpbox.info&Menu=yes">QQ: 378124792</a></li>
+          <li data-tooltip="QQ" class="qq"><a href="tencent://message/?uin=378124792&Site=swpbox.info&Menu=yes">QQ</a></li>
           <li data-tooltip="Twitter" class="twitter"><a href="https://twitter.com/swpustc" target="_blank">Twitter</a></li>
           <li data-tooltip="Facebook" class="facebook"><a href="https://www.facebook.com/swpustc" target="_blank">Facebook</a></li>
           <li data-tooltip="GitHub" class="github"><a href="https://github.com/swpustc" target="_blank">GitHub</a></li>

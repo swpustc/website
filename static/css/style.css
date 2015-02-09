@@ -3984,7 +3984,6 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 .markdown code {
   font-family: Consolas,Monaco,Andale Mono,monospace;
   line-height: 1.5;
-  word-break: break-word;
 }
 .markdown pre {
   margin: 16px 0 24px;
@@ -4017,6 +4016,108 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 /*	Code Prettify
 /* ---------------------------------------------------------------------- */
 
+/*  --> .prettyprint.linenums  */
+
+.liquid.light.l-pattern-1 li.L1,.liquid.light.l-pattern-1 li.L3,.liquid.light.l-pattern-1 li.L5,.liquid.light.l-pattern-1 li.L7,.liquid.light.l-pattern-1 li.L9,
+.liquid.light.l-pattern-4 li.L1,.liquid.light.l-pattern-4 li.L3,.liquid.light.l-pattern-4 li.L5,.liquid.light.l-pattern-4 li.L7,.liquid.light.l-pattern-4 li.L9,
+.liquid.light.l-pattern-6 li.L1,.liquid.light.l-pattern-6 li.L3,.liquid.light.l-pattern-6 li.L5,.liquid.light.l-pattern-6 li.L7,.liquid.light.l-pattern-6 li.L9 {
+  background-image: url(../images/bgs/l-bg-2.png);
+}
+.liquid.light.l-pattern-2 li.L1,.liquid.light.l-pattern-2 li.L3,.liquid.light.l-pattern-2 li.L5,.liquid.light.l-pattern-2 li.L7,.liquid.light.l-pattern-2 li.L9,
+.liquid.light.l-pattern-3 li.L1,.liquid.light.l-pattern-3 li.L3,.liquid.light.l-pattern-3 li.L5,.liquid.light.l-pattern-3 li.L7,.liquid.light.l-pattern-3 li.L9,
+.liquid.light.l-pattern-5 li.L1,.liquid.light.l-pattern-5 li.L3,.liquid.light.l-pattern-5 li.L5,.liquid.light.l-pattern-5 li.L7,.liquid.light.l-pattern-5 li.L9,
+.liquid.light.l-pattern-7 li.L1,.liquid.light.l-pattern-7 li.L3,.liquid.light.l-pattern-7 li.L5,.liquid.light.l-pattern-7 li.L7,.liquid.light.l-pattern-7 li.L9,
+.liquid.light.l-pattern-8 li.L1,.liquid.light.l-pattern-8 li.L3,.liquid.light.l-pattern-8 li.L5,.liquid.light.l-pattern-8 li.L7,.liquid.light.l-pattern-8 li.L9 {
+  background-image: url(../images/bgs/l-bg-6.png);
+}
+.liquid.dark.l-pattern-1 li.L1,.liquid.dark.l-pattern-1 li.L3,.liquid.dark.l-pattern-1 li.L5,.liquid.dark.l-pattern-1 li.L7,.liquid.dark.l-pattern-1 li.L9,
+.liquid.dark.l-pattern-4 li.L1,.liquid.dark.l-pattern-4 li.L3,.liquid.dark.l-pattern-4 li.L5,.liquid.dark.l-pattern-4 li.L7,.liquid.dark.l-pattern-4 li.L9,
+.liquid.dark.l-pattern-6 li.L1,.liquid.dark.l-pattern-6 li.L3,.liquid.dark.l-pattern-6 li.L5,.liquid.dark.l-pattern-6 li.L7,.liquid.dark.l-pattern-6 li.L9 {
+  background-image: url(../images/bgs/ld-bg-2.png);
+}
+.liquid.dark.l-pattern-2 li.L1,.liquid.dark.l-pattern-2 li.L3,.liquid.dark.l-pattern-2 li.L5,.liquid.dark.l-pattern-2 li.L7,.liquid.dark.l-pattern-2 li.L9,
+.liquid.dark.l-pattern-3 li.L1,.liquid.dark.l-pattern-3 li.L3,.liquid.dark.l-pattern-3 li.L5,.liquid.dark.l-pattern-3 li.L7,.liquid.dark.l-pattern-3 li.L9,
+.liquid.dark.l-pattern-5 li.L1,.liquid.dark.l-pattern-5 li.L3,.liquid.dark.l-pattern-5 li.L5,.liquid.dark.l-pattern-5 li.L7,.liquid.dark.l-pattern-5 li.L9,
+.liquid.dark.l-pattern-7 li.L1,.liquid.dark.l-pattern-7 li.L3,.liquid.dark.l-pattern-7 li.L5,.liquid.dark.l-pattern-7 li.L7,.liquid.dark.l-pattern-7 li.L9,
+.liquid.dark.l-pattern-8 li.L1,.liquid.dark.l-pattern-8 li.L3,.liquid.dark.l-pattern-8 li.L5,.liquid.dark.l-pattern-8 li.L7,.liquid.dark.l-pattern-8 li.L9 {
+  background-image: url(../images/bgs/ld-bg-6.png);
+}
+
+.fixed.light.f-pattern-1 li.L1,.fixed.light.f-pattern-1 li.L3,.fixed.light.f-pattern-1 li.L5,.fixed.light.f-pattern-1 li.L7,.fixed.light.f-pattern-1 li.L9 {
+  background-image: url(../images/bgs/fd-bg-1.png);
+}
+.fixed.light.f-pattern-2 li.L1,.fixed.light.f-pattern-2 li.L3,.fixed.light.f-pattern-2 li.L5,.fixed.light.f-pattern-2 li.L7,.fixed.light.f-pattern-2 li.L9 {
+  background-image: url(../images/bgs/fd-bg-2.png);
+}
+.fixed.light.f-pattern-3 li.L1,.fixed.light.f-pattern-3 li.L3,.fixed.light.f-pattern-3 li.L5,.fixed.light.f-pattern-3 li.L7,.fixed.light.f-pattern-3 li.L9 {
+  background-image: url(../images/bgs/fd-bg-3.png);
+}
+.fixed.light.f-pattern-4 li.L1,.fixed.light.f-pattern-4 li.L3,.fixed.light.f-pattern-4 li.L5,.fixed.light.f-pattern-4 li.L7,.fixed.light.f-pattern-4 li.L9 {
+  background-image: url(../images/bgs/fd-bg-4.png);
+}
+.fixed.light.f-pattern-5 li.L1,.fixed.light.f-pattern-5 li.L3,.fixed.light.f-pattern-5 li.L5,.fixed.light.f-pattern-5 li.L7,.fixed.light.f-pattern-5 li.L9 {
+  background-image: url(../images/bgs/fd-bg-5.png);
+}
+.fixed.light.f-pattern-6 li.L1,.fixed.light.f-pattern-6 li.L3,.fixed.light.f-pattern-6 li.L5,.fixed.light.f-pattern-6 li.L7,.fixed.light.f-pattern-6 li.L9 {
+  background-image: url(../images/bgs/fd-bg-6.png);
+}
+.fixed.light.f-pattern-7 li.L1,.fixed.light.f-pattern-7 li.L3,.fixed.light.f-pattern-7 li.L5,.fixed.light.f-pattern-7 li.L7,.fixed.light.f-pattern-7 li.L9 {
+  background-image: url(../images/bgs/fd-bg-7.png);
+}
+.fixed.light.f-pattern-8 li.L1,.fixed.light.f-pattern-8 li.L3,.fixed.light.f-pattern-8 li.L5,.fixed.light.f-pattern-8 li.L7,.fixed.light.f-pattern-8 li.L9 {
+  background-image: url(../images/bgs/fd-bg-8.png);
+}
+.fixed.light.f-pattern-9 li.L1,.fixed.light.f-pattern-9 li.L3,.fixed.light.f-pattern-9 li.L5,.fixed.light.f-pattern-9 li.L7,.fixed.light.f-pattern-9 li.L9 {
+  background-image: url(../images/bgs/fd-bg-9.png);
+}
+.fixed.light.f-pattern-10 li.L1,.fixed.light.f-pattern-10 li.L3,.fixed.light.f-pattern-10 li.L5,.fixed.light.f-pattern-10 li.L7,.fixed.light.f-pattern-10 li.L9 {
+  background-image: url(../images/bgs/fd-bg-10.png);
+}
+.fixed.light.f-pattern-11 li.L1,.fixed.light.f-pattern-11 li.L3,.fixed.light.f-pattern-11 li.L5,.fixed.light.f-pattern-11 li.L7,.fixed.light.f-pattern-11 li.L9 {
+  background-image: url(../images/bgs/fd-bg-11.png);
+}
+.fixed.light.f-pattern-12 li.L1,.fixed.light.f-pattern-12 li.L3,.fixed.light.f-pattern-12 li.L5,.fixed.light.f-pattern-12 li.L7,.fixed.light.f-pattern-12 li.L9 {
+  background-image: url(../images/bgs/fd-bg-12.png);
+}
+
+.fixed.dark.f-pattern-1 li.L1,.fixed.dark.f-pattern-1 li.L3,.fixed.dark.f-pattern-1 li.L5,.fixed.dark.f-pattern-1 li.L7,.fixed.dark.f-pattern-1 li.L9 {
+  background-image: url(../images/bgs/f-bg-1.png);
+}
+.fixed.dark.f-pattern-2 li.L1,.fixed.dark.f-pattern-2 li.L3,.fixed.dark.f-pattern-2 li.L5,.fixed.dark.f-pattern-2 li.L7,.fixed.dark.f-pattern-2 li.L9 {
+  background-image: url(../images/bgs/f-bg-2.png);
+}
+.fixed.dark.f-pattern-3 li.L1,.fixed.dark.f-pattern-3 li.L3,.fixed.dark.f-pattern-3 li.L5,.fixed.dark.f-pattern-3 li.L7,.fixed.dark.f-pattern-3 li.L9 {
+  background-image: url(../images/bgs/f-bg-3.png);
+}
+.fixed.dark.f-pattern-4 li.L1,.fixed.dark.f-pattern-4 li.L3,.fixed.dark.f-pattern-4 li.L5,.fixed.dark.f-pattern-4 li.L7,.fixed.dark.f-pattern-4 li.L9 {
+  background-image: url(../images/bgs/f-bg-4.png);
+}
+.fixed.dark.f-pattern-5 li.L1,.fixed.dark.f-pattern-5 li.L3,.fixed.dark.f-pattern-5 li.L5,.fixed.dark.f-pattern-5 li.L7,.fixed.dark.f-pattern-5 li.L9 {
+  background-image: url(../images/bgs/f-bg-5.png);
+}
+.fixed.dark.f-pattern-6 li.L1,.fixed.dark.f-pattern-6 li.L3,.fixed.dark.f-pattern-6 li.L5,.fixed.dark.f-pattern-6 li.L7,.fixed.dark.f-pattern-6 li.L9 {
+  background-image: url(../images/bgs/f-bg-6.png);
+}
+.fixed.dark.f-pattern-7 li.L1,.fixed.dark.f-pattern-7 li.L3,.fixed.dark.f-pattern-7 li.L5,.fixed.dark.f-pattern-7 li.L7,.fixed.dark.f-pattern-7 li.L9 {
+  background-image: url(../images/bgs/f-bg-7.png);
+}
+.fixed.dark.f-pattern-8 li.L1,.fixed.dark.f-pattern-8 li.L3,.fixed.dark.f-pattern-8 li.L5,.fixed.dark.f-pattern-8 li.L7,.fixed.dark.f-pattern-8 li.L9 {
+  background-image: url(../images/bgs/f-bg-8.png);
+}
+.fixed.dark.f-pattern-9 li.L1,.fixed.dark.f-pattern-9 li.L3,.fixed.dark.f-pattern-9 li.L5,.fixed.dark.f-pattern-9 li.L7,.fixed.dark.f-pattern-9 li.L9 {
+  background-image: url(../images/bgs/f-bg-9.png);
+}
+.fixed.dark.f-pattern-10 li.L1,.fixed.dark.f-pattern-10 li.L3,.fixed.dark.f-pattern-10 li.L5,.fixed.dark.f-pattern-10 li.L7,.fixed.dark.f-pattern-10 li.L9 {
+  background-image: url(../images/bgs/f-bg-10.png);
+}
+.fixed.dark.f-pattern-11 li.L1,.fixed.dark.f-pattern-11 li.L3,.fixed.dark.f-pattern-11 li.L5,.fixed.dark.f-pattern-11 li.L7,.fixed.dark.f-pattern-11 li.L9 {
+  background-image: url(../images/bgs/f-bg-11.png);
+}
+.fixed.dark.f-pattern-12 li.L1,.fixed.dark.f-pattern-12 li.L3,.fixed.dark.f-pattern-12 li.L5,.fixed.dark.f-pattern-12 li.L7,.fixed.dark.f-pattern-12 li.L9 {
+  background-image: url(../images/bgs/f-bg-12.png);
+}
+
+
 /*  --> Master  */
 
 .light .code-light { display: block !important; }
@@ -4024,6 +4125,16 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 
 .light .code-dark { display: none !important; }
 .dark .code-dark { display: block !important; }
+
+.light .prettyprint.linenums {
+  color: #088;
+}
+.dark .prettyprint.linenums {
+  color: #4cc;
+}
+.prettyprint.linenums {
+  margin: 23.09px 4px 0 16px;
+}
 
 .prettyprint code {
   font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace !important;
@@ -4033,13 +4144,14 @@ ul.related span.categories {color: #50554e; font-style: italic;}
   -webkit-font-smoothing: antialiased;
   font-size: 12px;
   line-height: 1.5;
+  word-break: break-word;
   padding: 4px 8px 4px 8px;
 }
 .light .prettyprint {
-  border: 1px solid #888;
+  border: 1px solid #ccd3cd;
 }
 .dark .prettyprint {
-  border: 1px solid #ccc;
+  border: 1px solid #333732;
 }
 .linenums {
   margin-top:0;

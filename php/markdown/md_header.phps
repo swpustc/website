@@ -18,7 +18,7 @@ function isChildDocument($thispath) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>swpustc | Resume - <?php echo $name; ?></title>
+  <title>swpustc | Markdown - <?php echo $name; ?></title>
   <link rel="stylesheet" href="//cdn.swpbox.info/css/style.min.css" media="screen" />
   <script src="//cdn.swpbox.info/js/modernizr.custom.js"></script>
 </head>

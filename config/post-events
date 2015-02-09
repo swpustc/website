@@ -140,9 +140,31 @@ cat footer.shtml             | tee nowhere/502.html -a >/dev/null
 cat errorpage_footer.shtml   | tee nowhere/502.html -a >/dev/null
 rm nowhere/502_header.shtml nowhere/502_body.shtml
 echo Generate nowhere/502.html
+### php
+cat php/prettify_header.phps | tee php/prettify.php    >/dev/null
+cat header.shtml             | sed "s/<!--CURRENT:FTP:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
+                             | sed "s/<!--CURRENT:FTP-->/<li class=\"current\">/g" \
+                             | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+                             | sed "1 s/<body\([^>]*\)>/<body\1 onload=\"prettyPrint()\">/g" \
+                             | tee php/prettify.php -a >/dev/null
+cat php/prettify_body.phps   | tee php/prettify.php -a >/dev/null
+cat footer.shtml             | tee php/prettify.php -a >/dev/null
+cat php/prettify_footer.phps | tee php/prettify.php -a >/dev/null
+echo Generate php/prettify.php
 ### php/markdown
+cat php/markdown/md_header.phps | tee php/markdown/md.php    >/dev/null
+cat header.shtml                | sed "s/<!--CURRENT:FTP:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
+                                | sed "s/<!--CURRENT:FTP-->/<li class=\"current\">/g" \
+                                | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+                                | sed "1 s/<body\([^>]*\)>/<body\1 onload=\"prettyPrint()\">/g" \
+                                | tee php/markdown/md.php -a >/dev/null
+cat php/markdown/md_body.phps   | tee php/markdown/md.php -a >/dev/null
+cat footer.shtml                | tee php/markdown/md.php -a >/dev/null
+cat php/markdown/md_footer.phps | tee php/markdown/md.php -a >/dev/null
+echo Generate php/markdown/md.php
 cat php/markdown/resume_header.phps | tee php/markdown/resume.php    >/dev/null
-cat header.shtml                    | sed "s/<!--CURRENT:RESUME-->/<li class=\"current\">/g" \
+cat header.shtml                    | sed "s/<!--CURRENT:RESUME:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
+                                    | sed "s/<!--CURRENT:RESUME-->/<li class=\"current\">/g" \
                                     | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
                                     | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
                                     | sed "1 s/<body\([^>]*\)>/<body\1 onload=\"prettyPrint()\">/g" \

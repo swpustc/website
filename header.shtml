@@ -14,7 +14,7 @@
           <!--li data-tooltip="Rss" class="rss"><a href="#">Rss</a></li-->
           <li data-tooltip="Google+" class="google"><a href="https://plus.google.com/u/0/102021946737862248380" target="_blank">Google+</a></li>
           <li data-tooltip="Sina" class="sina"><a href="http://www.weibo.com/u/2678757083" target="_blank">Sina</a></li>
-          <li data-tooltip="QQ" class="qq"><a href="tencent://message/?uin=378124792&Site=swpbox.info&Menu=yes">QQ: 378124792</a></li>
+          <li data-tooltip="QQ" class="qq"><a href="tencent://message/?uin=378124792&Site=swpbox.info&Menu=yes">QQ</a></li>
           <li data-tooltip="Twitter" class="twitter"><a href="https://twitter.com/swpustc" target="_blank">Twitter</a></li>
           <li data-tooltip="Facebook" class="facebook"><a href="https://www.facebook.com/swpustc" target="_blank">Facebook</a></li>
           <li data-tooltip="GitHub" class="github"><a href="https://github.com/swpustc" target="_blank">GitHub</a></li>
@@ -45,7 +45,7 @@
                   <!--CURRENT:MIRRORS--><a href="//mirrors.swpbox.info/" target="_blank">Local Proxy</a></li>
                 </ul>
               </li>
-              <!--CURRENT:ERRPAGE--><a id="no-default-action" href="#">ErrorPage</a>
+              <!--CURRENT:ERRPAGE--><a href="#" id="no-default-action">ErrorPage</a>
                 <ul>
                   <!--CURRENT:ERR400--><a href="/400.html">400 Page</a></li>
                   <!--CURRENT:ERR403--><a href="/403.html">403 Page</a></li>
@@ -60,30 +60,30 @@
               </li>
             </ul>
           </li>
-          <!--CURRENT:FTP--><a href="//ftp.swpbox.info/" target="_blank">FTP</a>
+          <!--CURRENT:FTP--><a href="//ftp.swpbox.info/">FTP</a>
             <ul>
-              <!--CURRENT:FTP:/GNUinVisualStudio/--><a href="//ftp.swpbox.info/GNUinVisualStudio/" target="_blank">GNUinVisualStudio</a>
+              <!--CURRENT:FTP:/GNUinVisualStudio/--><a href="//ftp.swpbox.info/GNUinVisualStudio/">GNUinVisualStudio</a>
                 <ul>
-                  <!--CURRENT:FTP:/GNUinVisualStudio/README.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/README.md" target="_blank">README.md</a></li>
-                  <!--CURRENT:FTP:/GNUinVisualStudio/CHANGELOG.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/CHANGELOG.md" target="_blank">CHANGELOG.md</a></li>
-                  <!--CURRENT:FTP:/GNUinVisualStudio/VERSION.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/VERSION.md" target="_blank">VERSION.md</a></li>
-                  <!--CURRENT:FTP:/GNUinVisualStudio/BUG.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/BUG.md" target="_blank">BUG.md</a></li>
-                  <!--CURRENT:FTP:/GNUinVisualStudio/exe/--><a href="//ftp.swpbox.info/GNUinVisualStudio/exe/" target="_blank">exe</a></li>
-                  <!--CURRENT:FTP:/GNUinVisualStudio/dll/--><a href="//ftp.swpbox.info/GNUinVisualStudio/dll/" target="_blank">dll</a></li>
-                  <!--CURRENT:FTP:/GNUinVisualStudio/lib/--><a href="//ftp.swpbox.info/GNUinVisualStudio/lib/" target="_blank">lib</a></li>
-                  <!--CURRENT:FTP:/GNUinVisualStudio/pdb/--><a href="//ftp.swpbox.info/GNUinVisualStudio/pdb/" target="_blank">pdb</a></li>
-                  <!--CURRENT:FTP:/GNUinVisualStudio/project/--><a href="//ftp.swpbox.info/GNUinVisualStudio/project/" target="_blank">project</a></li>
-                  <!--CURRENT:FTP:/GNUinVisualStudio/include/--><a href="//ftp.swpbox.info/GNUinVisualStudio/include/" target="_blank">include</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/README.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/README.md">README.md</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/CHANGELOG.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/CHANGELOG.md">CHANGELOG.md</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/VERSION.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/VERSION.md">VERSION.md</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/BUG.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/BUG.md">BUG.md</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/exe/--><a href="//ftp.swpbox.info/GNUinVisualStudio/exe/">exe</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/dll/--><a href="//ftp.swpbox.info/GNUinVisualStudio/dll/">dll</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/lib/--><a href="//ftp.swpbox.info/GNUinVisualStudio/lib/">lib</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/pdb/--><a href="//ftp.swpbox.info/GNUinVisualStudio/pdb/">pdb</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/project/--><a href="//ftp.swpbox.info/GNUinVisualStudio/project/">project</a></li>
+                  <!--CURRENT:FTP:/GNUinVisualStudio/include/--><a href="//ftp.swpbox.info/GNUinVisualStudio/include/">include</a></li>
                 </ul>
               </li>
-              <!--CURRENT:FTP:/home/--><a href="//ftp.swpbox.info/home/" target="_blank">home</a></li>
-              <!--CURRENT:FTP:/html/--><a href="//ftp.swpbox.info/html/" target="_blank">html</a></li>
-              <!--CURRENT:FTP:/software/--><a href="//ftp.swpbox.info/software/" target="_blank">software</a></li>
-              <!--CURRENT:DOWNLOAD--><a href="//download.swpbox.info/ftp/" target="_blank">Download</a></li>
+              <!--CURRENT:FTP:/home/--><a href="//ftp.swpbox.info/home/">home</a></li>
+              <!--CURRENT:FTP:/html/--><a href="//ftp.swpbox.info/html/">html</a></li>
+              <!--CURRENT:FTP:/software/--><a href="//ftp.swpbox.info/software/">software</a></li>
+              <!--CURRENT:DOWNLOAD--><a href="//download.swpbox.info/ftp/">Download</a></li>
               <!--CURRENT:CA--><a href="//CA.swpbox.info/">swpustc CA</a>
                 <ul>
-                  <!--CURRENT:CA:/rootcert.cer--><a href="//CA.swpbox.info/rootcert.cer" target="_blank">cer document</a></li>
-                  <!--CURRENT:CA:/rootcert.crt--><a href="//CA.swpbox.info/rootcert.crt" target="_blank">crt document</a></li>
+                  <!--CURRENT:CA:/rootcert.cer--><a href="//CA.swpbox.info/rootcert.cer">cer document</a></li>
+                  <!--CURRENT:CA:/rootcert.crt--><a href="//CA.swpbox.info/rootcert.crt">crt document</a></li>
                 </ul>
               </li>
             </ul>
