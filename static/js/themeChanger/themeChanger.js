@@ -241,6 +241,19 @@ $(function() {
 		addClassPatLiquid();
 	}
 
+	var $cont = $('#portfolio-items'),
+		$itemsFilter = $('#portfolio-filter'),
+		$itemsFilterSub = $itemsFilter.find('ul');
+	if (skin == 'dark')
+		currentOption = $itemsFilter.find('.code-dark .active').attr('data-categories');
+	else
+		currentOption = $itemsFilter.find('.code-light .active').attr('data-categories');
+	if(currentOption) {
+		if(currentOption !== '*') currentOption = currentOption.replace(currentOption, '.' + currentOption)
+			$cont.isotope({filter : currentOption});
+	}
+	$cont.find('article').show();
+
 		var $heading = $('<h5/>').text('Choose Your Style').addClass('control_panel_title');
 		
 		$theme_control_panel.append($heading);
@@ -352,7 +365,20 @@ $(function() {
 					}
 				}
 				setTimeout( function() {
-					$('#portfolio-filter').find('li a').not('.active').stop(true,true).slideHide(150);
+					$itemsFilter.find('li a').not('.active').stop(true,true).slideHide(150);
+					if(nextClassName == 'light') {
+						currentOption = $itemsFilter.find('.code-light .active').attr('data-categories');
+						if(currentOption) {
+							if(currentOption !== '*') currentOption = currentOption.replace(currentOption, '.' + currentOption)
+								$cont.isotope({filter : currentOption});
+						}
+					} else {
+						currentOption = $itemsFilter.find('.code-dark .active').attr('data-categories');
+						if(currentOption) {
+							if(currentOption !== '*') currentOption = currentOption.replace(currentOption, '.' + currentOption)
+								$cont.isotope({filter : currentOption});
+						}
+					}
 				}, 100);
 				jQuery.cookie('skin', nextClassName);
 				
@@ -499,9 +525,7 @@ $(function() {
 			$.cookie('code-dark', null);
 			$bodyCodeLight.removeClass().addClass('code-google');
 			$bodyCodeDark.removeClass().addClass('code-vibrant-ink');
-			var $itemsFilter = $('#portfolio-filter'),
-				$itemsFilterSub = $itemsFilter.find($('ul'));
-			$itemsFilter.find('a').removeClass('active');
+			$itemsFilter.find('a').removeClass('active').hide();
 			if ($itemsFilterSub.length) {
 				$itemsFilterSub.each(function(){
 					$(this).find('a').first().addClass('active').show();
@@ -509,7 +533,11 @@ $(function() {
 			} else {
 				$itemsFilter.find('a').first().addClass('active').show();
 			}
-			$itemsFilter.find('a').not('.active').hide();
+			currentOption = $itemsFilter.find('.code-light .active').attr('data-categories');
+			if(currentOption) {
+				if(currentOption !== '*') currentOption = currentOption.replace(currentOption, '.' + currentOption)
+					$cont.isotope({filter : currentOption});
+			}
 			return false;
 		};
 		

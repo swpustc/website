@@ -5,23 +5,38 @@
       <li style="display: block!important;">
         <ul class="code-light">
           <li>Code Prettify:</li>
-          <li><a id="code-google">Google</a></li>
-          <li><a id="code-github">GitHub</a></li>
-          <li><a id="code-tomorrow-light">Tomorrow</a></li>
-          <li><a id="code-hemisu-light">Hemisu</a></li>
+          <li><a id="code-google" data-categories="data-google">Google</a></li>
+          <li><a id="code-github" data-categories="data-github">GitHub</a></li>
+          <li><a id="code-tomorrow-light" data-categories="data-tomorrow">Tomorrow</a></li>
+          <li><a id="code-hemisu-light" data-categories="data-hemisu">Hemisu</a></li>
         </ul><!--/ .code-light -->
         <ul class="code-dark">
           <li>Code Prettify:</li>
-          <li><a id="code-vibrant-ink">Vibrant Ink</a></li>
-          <li><a id="code-tomorrow-dark">Tomorrow</a></li>
-          <li><a id="code-tomorrow-dark-eighties">Tomorrow Eighties</a></li>
-          <li><a id="code-tomorrow-dark-bright">Tomorrow Bright</a></li>
-          <li><a id="code-hemisu-dark">Hemisu</a></li>
+          <li><a id="code-vibrant-ink" data-categories="data-vibrant-ink">Vibrant Ink</a></li>
+          <li><a id="code-tomorrow-dark" data-categories="data-tomorrow">Tomorrow</a></li>
+          <li><a id="code-tomorrow-dark-eighties" data-categories="data-tomorrow">Tomorrow Eighties</a></li>
+          <li><a id="code-tomorrow-dark-bright" data-categories="data-tomorrow">Tomorrow Bright</a></li>
+          <li><a id="code-hemisu-dark" data-categories="data-hemisu">Hemisu</a></li>
         </ul><!--/ .code-dark -->
       </li>
     </ul><!-- end #portfolio-items-filter -->
   </header><!--/ .page-header-->
-  <section id="portfolio-items">
+  <section id="portfolio-items" class="code-licence">
+    <article data-categories="data-google">
+      <a href="https://code.google.com/p/google-code-prettify/">Google Code Theme</a>
+    </article>
+    <article data-categories="data-github">
+      <a href="https://github.com/">GitHub Theme</a>
+    </article>
+    <article data-categories="data-tomorrow">
+      <a href="https://github.com/chriskempson/tomorrow-theme">Tomorrow Theme</a>
+    </article>
+    <article data-categories="data-hemisu">
+      <a href="https://noahfrederick.com/vim-color-scheme-hemisu/">Hemisu Theme</a>
+    </article>
+    <article data-categories="data-vibrant-ink">
+      <a href="http://alternateidea.com/blog/articles/2006/1/3/textmate-vibrant-ink-theme-and-prototype-bundle">Vibrant Ink Theme</a>
+    </article>
   </section><!-- end #portfolio-items -->
   <div id="code-prettify-light" class="code-google">
     <div id="code-prettify-dark" class="code-vibrant-ink">

@@ -4103,6 +4103,30 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 
 /*  --> Master  */
 
+#portfolio-items.code-licence {
+  padding: 0;
+  margin: 0 0 0 auto;
+  border: 0;
+  min-width: 124px;
+  width: 10%;
+  float: right;
+}
+#portfolio-items.code-licence article {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  line-height: 1.2;
+  font-size: 12px;
+  white-space: nowrap;
+  display: none;
+}
+#portfolio-items.code-licence a {
+  width: 116px;
+  text-align: right;
+  color: #888c87;
+  font-style: italic;
+}
+
 .light .code-light { display: block !important; }
 .dark .code-light { display: none !important; }
 
@@ -4119,7 +4143,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 }
 .prettyprint.linenums {
   margin: 0;
-  margin-top: 23.09px;
+  margin-top: 40px;
 }
 
 .prettyprint code {

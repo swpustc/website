@@ -995,7 +995,7 @@ jQuery(document).ready(function(){
 				var $this         = $(this),
 				currentOption = $this.attr('data-categories');
 
-				var $itemsFilterSub = $itemsFilter.find($('ul'));
+				var $itemsFilterSub = $itemsFilter.find('ul');
 				if ($itemsFilterSub.length) {
 					$itemsFilterSub.each(function(){
 						if($(this).find($this).length) {
