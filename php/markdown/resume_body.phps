@@ -38,7 +38,7 @@
       <a href="http://alternateidea.com/blog/articles/2006/1/3/textmate-vibrant-ink-theme-and-prototype-bundle">Vibrant Ink Theme</a>
     </article>
   </section><!-- end #portfolio-items -->
-  <div class="markdown">
+  <div class="markdown resume">
     <div id="code-prettify-light" class="code-google">
       <div id="code-prettify-dark" class="code-vibrant-ink">
 <?php echo $html; ?>

@@ -3847,7 +3847,8 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 	
 	footer ul.social-links {
 		float: left;
-		margin: 1.5em 0;
+		margin: 1.5em;
+		margin-right: 0;
 	}
 
 }
@@ -3938,23 +3939,51 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 }
 /*  <!-- DDNS END -->  */
 
+.CA {
+  overflow: auto;
+  overflow-y: hidden;
+  word-break: break-all;
+  word-wrap: normal;
+}
+
+/*  <!-- CA END -->  */
+
+
 /* ---------------------------------------------------------------------- */
 /*	Markdown
 /* ---------------------------------------------------------------------- */
 
-.markdown h1,.markdown h2,.markdown h3,.markdown h4,.markdown h5,.markdown h6,.markdown p,.markdown ul,.markdown ol{
+div.markdown {
+  margin-top: 40px;
+}
+.markdown {
   font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 .markdown h1 {
   margin: 16px 0 16px;
   font-size: 42px;
+  text-align: center;
+  margin-bottom: 15px;
   line-height: 1;
 }
 .markdown h2 {
   margin: 12px 0 12px;
   font-size: 30px;
   line-height: 1.2;
+}
+.markdown h2.resume:before {
+  content: "";
+  display: inline-block;
+  margin-right: 1%;
+  width: 16%;
+  height: 12px;
+}
+.light .markdown h2.resume:before {
+  background-color: #536C2A;
+}
+.dark .markdown h2.resume:before {
+  background-color: #9CB770;
 }
 .markdown h3 {
   margin: 10px 0 10px;
@@ -3975,7 +4004,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 }
 .markdown p {
   margin: 4px 0 4px;
-  line-height: 1.5;
+  line-height: 1.6;
   word-break: break-word;
 }
 .markdown p,.markdown ul,.markdown ol,.markdown li {
@@ -3983,8 +4012,77 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 }
 .markdown code {
   font-family: Consolas,Monaco,Andale Mono,monospace;
+  line-height: 1.4;
+}
+
+.markdown ul {
+  list-style: disc outside;
+  margin: 12px 0 18px 30px;
   line-height: 1.5;
 }
+.markdown ol {
+  list-style: decimal outside;
+  margin: 12px 0 18px 32px;
+  line-height: 1.5;
+}
+.markdown li {
+  margin: 6px 0 6px;
+  line-height: 24px;
+  word-break: break-word;
+}
+
+.markdown dt {
+  float: left;
+  clear: left;
+  width: 17%;
+}
+.markdown dd {
+  margin-left: 17%;
+}
+.markdown blockquote {
+  text-align: center
+}
+.markdown table {
+  width: 100%;
+}
+@media only screen and (max-width: 767px) {
+.markdown h2.resume:before {
+  width: 20%;
+  margin-right: 2%;
+}
+.markdown ul,.markdown ol {
+  margin-left: 0;
+}
+.markdown dt {
+  width: 22%;
+}
+.markdown dd {
+  margin-left: 22%;
+}
+}
+@media only screen and (max-width: 479px) {
+.markdown h2.resume:before {
+  width: 24%;
+  margin-right: 3%;
+}
+.markdown ul,.markdown ol {
+  list-style-position: inside;
+}
+.markdown dt {
+  width: 27%;
+}
+.markdown dd {
+  margin-left: 27%;
+}
+}
+
+.light .markdown a, .light .markdown a > * {
+  color: #5055ae;
+}
+.dark .markdown a, .dark .markdown a > * {
+  color: #7e8ac3;
+}
+
 .markdown pre {
   margin: 9px 0 12px 0;
   overflow: auto;
@@ -4073,27 +4171,6 @@ ul.related span.categories {color: #50554e; font-style: italic;}
   background-image: url(../images/bgs/f-bg-12.png);
 }
 
-.markdown ul {
-  list-style: disc outside;
-  margin: 12px 0 18px 4px;
-  line-height: 1.5;
-}
-.markdown ol {
-  list-style: decimal outside;
-  margin: 12px 0 18px 6px;
-  line-height: 1.5;
-}
-.markdown li {
-  margin: 6px 0 6px;
-  line-height: 24px;
-  word-break: break-word;
-}
-.light .markdown a, .light .markdown a > * {
-  color: #5055ae;
-}
-.dark .markdown a, .dark .markdown a > * {
-  color: #7e8ac3;
-}
 /*  <!-- Markdown END -->  */
 
 

@@ -4,7 +4,7 @@
         <nav id="footer-nav" class="clearfix">
           <ul>
             <li><a href="//swpbox.info/">Home</a></li>
-            <li><a href="//ftp.swpbox.info/" target="_blank">FTP</a></li>
+            <li><a href="//ftp.swpbox.info/">FTP</a></li>
             <li><a href="//git.swpbox.info/" target="_blank">GitLab</a></li>
             <li><a href="//mysql.swpbox.info/" target="_blank">MySql</a></li>
             <li><a href="//blog.swpbox.info/" target="_blank">Blog</a></li>

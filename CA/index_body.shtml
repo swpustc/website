@@ -11,7 +11,7 @@
     <div class="box-toggle">
       <span class="trigger">Binary Certificate File</span>
       <div class="toggle-container">
-        <pre>
+        <pre class="CA">
 3082071930820501a0030201020210ca408ab14356129848c8da8edea2006030
 0d06092a864886f70d01010b05003081b33127302506092a864886f70d010901
 161873777075737463406d61696c2e757374632e6564752e636e310b30090603
@@ -75,9 +75,9 @@ e85cb33570af63d796d6c7343e5ec48d6aa2808aa97138feb27ac7ed5b643aaf
   </div><!--/ .one-half-->
   <div class="one-half last" style="float:left;">
     <div class="box-toggle">
-      <span class="trigger">Base64 Encode Certificate</span>
+      <span class="trigger">Base64 Encode Certificate File</span>
       <div class="toggle-container">
-        <pre>
+        <pre class="CA">
 -----BEGIN CERTIFICATE-----
 MIIHGTCCBQGgAwIBAgIQykCKsUNWEphIyNqO3qIAYDANBgkqhkiG9w0BAQsFADCB
 szEnMCUGCSqGSIb3DQEJARYYc3dwdXN0Y0BtYWlsLnVzdGMuZWR1LmNuMQswCQYD
