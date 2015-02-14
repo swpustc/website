@@ -692,7 +692,7 @@ jQuery(document).ready(function(){
 		if($('#contactform').length) {
 				
 			var $form = $('#contactform'),
-			$loader = '<img src="images/loader.gif" height="11" width="16" alt="Loading..." />';
+			$loader = '<img src="//cdn.swpbox.info/images/loader.gif?t=TIMESTAMP:BEGIN:images/loader.gif:END:TIMESTAMP" height="11" width="16" alt="Loading..." />';
 			$form.append('<div class="hidden" id="contact_form_responce">');
 					
 			var $response = $('#contact_form_responce');

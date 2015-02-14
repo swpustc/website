@@ -96,7 +96,7 @@
 
 #patterns_liquid li a,
 #patterns_fixed li a {
-	background-image: url(../../images/themeChanger/patterns_sprite.png);
+	background-image: url(../../images/themeChanger/patterns_sprite.png?t=TIMESTAMP:BEGIN:images/themeChanger/patterns_sprite.png:END:TIMESTAMP);
 	background-repeat: no-repeat;
 }
 
@@ -146,7 +146,7 @@
     top: 0;
     width: 35px;
     height: 35px;
-    background-image: url('../../images/themeChanger/theme_control_bg.png');
+    background-image: url(../../images/themeChanger/theme_control_bg.png?t=TIMESTAMP:BEGIN:images/themeChanger/theme_control_bg.png:END:TIMESTAMP);
 	background-repeat: no-repeat;
 	background-color: rgba(31,34,30, .91);
 	-webkit-transition: background-color .25s linear;
@@ -188,7 +188,7 @@
 	float: left;
     height: 24px;
     width: 24px;
-	background: url(../../images/themeChanger/colorpicker_mask.png) no-repeat;
+	background: url(../../images/themeChanger/colorpicker_mask.png?t=TIMESTAMP:BEGIN:images/themeChanger/colorpicker_mask.png:END:TIMESTAMP) no-repeat;
 	cursor: pointer;
 }
 

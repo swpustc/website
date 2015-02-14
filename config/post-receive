@@ -1,4 +1,5 @@
 #!/bin/bash
+curdir=$(pwd)
 echo calling post-receive
 rm -fr /home/git/html/
 mkdir /home/git/html/
@@ -9,5 +10,5 @@ cd /tmp/
 cd /home/git/html/
 echo calling post-events
 chmod 755 /home/git/html/config/post-events
-/home/git/html/config/post-events
+GIT_WORK_TREE=/home/git/html GIT_DIR=$curdir /home/git/html/config/post-events
 echo complate!

@@ -2,6 +2,24 @@
 ## Work Directory: /home/git/html/
 ## User: git
 
+## Create Timestamp
+echo call config/post-timestamp startup
+config/post-timestamp startup
+### Sign static resources
+echo call config/post-timestamp STANDARD
+for file in $(find -P ./ -type f \( -name '*.html' -or -name '*.shtml' -or -name '*.php' -or -name '*.phps' \) -print) ; do
+  if [ ! -L $file ] ; then
+    config/post-timestamp STANDARD $file
+  fi
+done
+#### static directory
+echo call config/post-timestamp TIMESTAMP
+for file in $(find -P static/ -type f \( -name '*.css' -or -name '*.js' \) -print) ; do
+  if [ ! -L $file ] ; then
+    config/post-timestamp TIMESTAMP $file
+  fi
+done
+
 ## Generate HTML5 document
 ### Master
 cat 400_header.shtml       | tee 400.html    >/dev/null
