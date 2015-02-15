@@ -302,7 +302,7 @@ $(function() {
 					$body.attr('style','');
 					bg_picker.css('background-color','#393f38');
 					$input_bg_color.attr('value','#393f38');
-					$.cookie('bgcolor', null);
+					jQuery.cookie('bgcolor', null);
 				} else {
 					$links_bg_wrapper.css('display','block');
 					$layout_block_fixed.css('display','block');
@@ -507,11 +507,11 @@ $(function() {
 
 		var setDefaultsSettings = function() {
 			$body.attr('style','');
-			$.cookie('layout', null);
-			$.cookie('skin', null);
-			$.cookie('patternfixed', null);
-			$.cookie('patternliquid', null);
-			$.cookie('bgcolor', null);
+			jQuery.cookie('layout', null);
+			jQuery.cookie('skin', null);
+			jQuery.cookie('patternfixed', null);
+			jQuery.cookie('patternliquid', null);
+			jQuery.cookie('bgcolor', null);
 			$body.removeClass().addClass('liquid light l-pattern-1 f-pattern-1');
 			$links_bg_wrapper.css('display','none');
 			$layout_block_fixed.css('display','none');
@@ -521,8 +521,8 @@ $(function() {
 			$('.layout').find('input[type=radio]').first().attr('checked','checked');
 			$('.skin').find('input[type=radio]').first().attr('checked','checked');
 			$theme_control_panel.find('.active').removeClass();
-			$.cookie('code-light', null);
-			$.cookie('code-dark', null);
+			jQuery.cookie('code-light', null);
+			jQuery.cookie('code-dark', null);
 			$bodyCodeLight.removeClass().addClass('code-google');
 			$bodyCodeDark.removeClass().addClass('code-vibrant-ink');
 			$itemsFilter.find('a').removeClass('active').hide();

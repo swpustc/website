@@ -35,7 +35,8 @@ else
   TME="`date --date=@$UTC '+%F %T'`"
   echo "<article data-categories=\"$DAY\"><div class=\"one-fourth time\">$TME</div>`/home/git/update-ddns 1``/home/git/update-ddns 2``/home/git/update-ddns 3`<hr class=\"clear\"/></article>" >>/var/log/ddns.log
 fi
-tail -n 1008 /var/log/ddns.log >/dev/null
+tail -n 1008 /var/log/ddns.log >/tmp/ddns.tmp
+cat /tmp/ddns.tmp | tee /var/log/ddns.log >/dev/null
 
 ## Generate ddns-log.html
 ### /tmp/ddns-log.html

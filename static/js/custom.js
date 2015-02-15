@@ -1242,7 +1242,7 @@ jQuery.cookie = function (name, value, options) {
 			value = '';
 			options.expires = -1
 		}
-		var expires = '';
+		var expires;
 		if (options.expires && (typeof options.expires == 'number' || options.expires.toUTCString)) {
 			var date;
 			if (typeof options.expires == 'number') {
@@ -1252,9 +1252,13 @@ jQuery.cookie = function (name, value, options) {
 				date = options.expires
 			}
 			expires = '; expires=' + date.toUTCString()
+		} else {
+			date = new Date();
+			date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+			expires = '; expires=' + date.toUTCString()
 		}
-		var path = options.path ? '; path=' + (options.path) : '';
-		var domain = options.domain ? '; domain=' + (options.domain) : '';
+		var path = options.path ? '; path=' + (options.path) : '; path=/';
+		var domain = options.domain ? '; domain=' + (options.domain) : '; domain=swpbox.info';
 		var secure = options.secure ? '; secure' : '';
 		document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('')
 	} else {
