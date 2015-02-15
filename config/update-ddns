@@ -35,7 +35,7 @@ else
   TME="`date --date=@$UTC '+%F %T'`"
   echo "<article data-categories=\"$DAY\"><div class=\"one-fourth time\">$TME</div>`/home/git/update-ddns 1``/home/git/update-ddns 2``/home/git/update-ddns 3`<hr class=\"clear\"/></article>" >>/var/log/ddns.log
 fi
-tail -n 1008 /var/log/ddns.log >/tmp/ddns.tmp
+tail -n 864 /var/log/ddns.log >/tmp/ddns.tmp
 cat /tmp/ddns.tmp | tee /var/log/ddns.log >/dev/null
 
 ## Generate ddns-log.html
@@ -46,21 +46,18 @@ let "UTC3=$UTC2-86400"
 let "UTC4=$UTC3-86400"
 let "UTC5=$UTC4-86400"
 let "UTC6=$UTC5-86400"
-let "UTC7=$UTC6-86400"
 DAT1="`date --date=@$UTC1 +%m\\\/%d`"
 DAT2="`date --date=@$UTC2 +%m\\\/%d`"
 DAT3="`date --date=@$UTC3 +%m\\\/%d`"
 DAT4="`date --date=@$UTC4 +%m\\\/%d`"
 DAT5="`date --date=@$UTC5 +%m\\\/%d`"
 DAT6="`date --date=@$UTC6 +%m\\\/%d`"
-DAT7="`date --date=@$UTC7 +%m\\\/%d`"
 DAY1="`date --date=@$UTC1 +%m-%d`"
 DAY2="`date --date=@$UTC2 +%m-%d`"
 DAY3="`date --date=@$UTC3 +%m-%d`"
 DAY4="`date --date=@$UTC4 +%m-%d`"
 DAY5="`date --date=@$UTC5 +%m-%d`"
 DAY6="`date --date=@$UTC6 +%m-%d`"
-DAY7="`date --date=@$UTC7 +%m-%d`"
 TME="`date --date=@$UTC1 '+%F %T'`"
 cat ddns-log_header.shtml    | tee /tmp/ddns.tmp    >/dev/null
 cat header.shtml             | sed "s/<!--CURRENT:DDNS-->/<li class=\"current\">/g" \
@@ -74,7 +71,6 @@ cat ddns-log_body.shtml      | sed "s/<!--UPDATETIME-->/$TME/g" \
                              | sed "s/<!--DATA-CATEGORIES:TIME:4-->/<a data-categories=\"$DAY4\">$DAT4<\/a>/g" \
                              | sed "s/<!--DATA-CATEGORIES:TIME:5-->/<a data-categories=\"$DAY5\">$DAT5<\/a>/g" \
                              | sed "s/<!--DATA-CATEGORIES:TIME:6-->/<a data-categories=\"$DAY6\">$DAT6<\/a>/g" \
-                             | sed "s/<!--DATA-CATEGORIES:TIME:7-->/<a data-categories=\"$DAY7\">$DAT7<\/a>/g" \
                              | tee /tmp/ddns.tmp -a >/dev/null
 cat /var/log/ddns.log        | tee /tmp/ddns.tmp -a >/dev/null
 echo $'  </section>\n</div>' | tee /tmp/ddns.tmp -a >/dev/null

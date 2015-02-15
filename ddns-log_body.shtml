@@ -4,7 +4,6 @@
     <ul id="portfolio-filter">
       <li>Show:</li>
       <li><a data-categories="*">All</a></li>
-      <li><!--DATA-CATEGORIES:TIME:7--></a></li>
       <li><!--DATA-CATEGORIES:TIME:6--></a></li>
       <li><!--DATA-CATEGORIES:TIME:5--></a></li>
       <li><!--DATA-CATEGORIES:TIME:4--></a></li>
