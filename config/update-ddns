@@ -73,7 +73,7 @@ cat ddns-log_body.shtml      | sed "s/<!--UPDATETIME-->/$TME/g" \
                              | sed "s/<!--DATA-CATEGORIES:TIME:6-->/<a data-categories=\"$DAY6\">$DAT6<\/a>/g" \
                              | tee /tmp/ddns.tmp -a >/dev/null
 cat /var/log/ddns.log        | tee /tmp/ddns.tmp -a >/dev/null
-echo $'  </section>\n</div>' | tee /tmp/ddns.tmp -a >/dev/null
+echo $' </section>\n</div>'  | tee /tmp/ddns.tmp -a >/dev/null
 cat footer.shtml             | tee /tmp/ddns.tmp -a >/dev/null
 cat ddns-log_footer.shtml    | tee /tmp/ddns.tmp -a >/dev/null
 cp /tmp/ddns.tmp /tmp/ddns-log.html

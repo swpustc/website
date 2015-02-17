@@ -1653,3 +1653,32 @@ var prettyPrint;
     });
   }
 })();
+
+// jQuery onload
+$(document).ready(function() {
+  prettyPrint();
+  var $li = $('ol.linenums').children('li');
+  $li.each(function(index){
+    $(this).prepend('<a class="linelink" id="H'+(index+1)+'" href="#"></a>');
+  });
+  $('.linelink').click(function() {
+    var href = '#L' + $(this).attr('id').substring(1);
+    location.hash = href;
+    $li.removeClass('hrefline');
+    $(this).parent().addClass('hrefline');
+    return false;
+  });
+  var url = window.location.hash,
+      line = url.split('#')[1];
+  if(line) {
+    var $id = $li.find('#H'+line.substring(1));
+    if ($id.length) {
+      $li.removeClass('hrefline');
+      $id.parent().addClass('hrefline')
+      var pos = $id.offset().top-54;
+      setTimeout( function() {
+        $('body').stop(true,true).animate({scrollTop: pos}, 1200);
+      }, 300);
+    }
+  }
+});

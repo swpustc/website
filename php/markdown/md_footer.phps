@@ -3,5 +3,3 @@
 <script src="//cdn.swpbox.info/js/themeChanger/colorpicker.min.js"></script>
 <script src="//cdn.swpbox.info/js/themeChanger/themeChanger.min.js"></script>
 <script src="//cdn.swpbox.info/js/prettify/prettify.min.js"></script>
-</body>
-</html>

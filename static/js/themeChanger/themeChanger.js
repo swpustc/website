@@ -158,11 +158,6 @@ $(function() {
 		$('.code-dark').find('#'+codeDark).addClass('active').show();
 	}
 
-
-	$('#no-default-action').click(function(e) {
-		e.preventDefault();
-	});
-
 	/* end Prettify  */
 
 

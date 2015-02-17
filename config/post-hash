@@ -12,15 +12,9 @@ function timestamp() {
     ##Error2
     echo $2: Input file error2
     exit
-  elif git log --no-color --oneline -- $3 >/dev/null 2>&1 ; then
-    if [ $# = 4 ] ; then
-      if ! git log --no-color --oneline -- $4 >/dev/null 2>&1 ; then
-        return 4
-      fi
-      time=$(git log --no-color --date=raw -- $4 | grep Date: | awk 'NR==1 {print $2}')
-    else
-      time=$(git log --no-color --date=raw -- $3 | grep Date: | awk 'NR==1 {print $2}')
-    fi
+  elif [ -f $3 ] ; then
+    time=($(cksum $3))
+    time=$(echo "obase=16;$time" | bc)
     realurl=$(echo $3 | sed 's/^static\//\/\/cdn.swpbox.info\//g' )
     url=$(echo $realurl | sed 's/\//\\\//g')
     replace=$(echo $url | sed 's/\./\\./g')
@@ -29,43 +23,38 @@ function timestamp() {
     stamp=$(echo $TIMESTAMP | sed 's/\//\\\//g')
     replace=$(echo $stamp | sed 's/\./\\./g')
     echo "s/$replace/$time/g" >>$2
-    echo "Timestamp: $realurl"
+    echo "Hash: $realurl"
     return 0
   else
     return 2
   fi
 }
 
-# Timestamp
-sedsc_std=config/timestamp_standard.sed
-sedsc_inl=config/timestamp_inline.sed
+# Hash
+sed_std=config/hash_standard.sed
+sed_inl=config/hash_inline.sed
 if [ "$1"x = x ] ; then
   ## Error
   echo $0: Too few arguments
   exit
 elif [ "$1"x = startupx ] ; then
   ## Create sed Script
-  tee $sedsc_std </dev/null
-  tee $sedsc_inl </dev/null
+  tee $sed_std </dev/null
+  tee $sed_inl </dev/null
   for file in $(find -L static/ -type f -follow -print) ; do
-    if [ -L $file ] ; then
-      link="$(dirname $file)/$(readlink $file)"
-      timestamp $sedsc_std $sedsc_inl $file $link
-    else
-      timestamp $sedsc_std $sedsc_inl $file
-    fi
+    timestamp $sed_std $sed_inl $file
   done
   exit
 elif [ "$1"x = STANDARDx ] ; then
   ## sed Script STANDARD
   if [ ! -L $2 ] ; then
-    sed -i -f $sedsc_std $2 >/dev/null
+    sed -i -f $sed_std $2 >/dev/null
   fi
   exit
 elif [ "$1"x = TIMESTAMPx ] ; then
   ## sed Script replace TIMESTAMP
   if [ ! -L $2 ] ; then
-    sed -i -f $sedsc_inl $2 >/dev/null
+    sed -i -f $sed_inl $2 >/dev/null
   fi
   exit
 fi

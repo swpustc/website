@@ -2,24 +2,6 @@
 ## Work Directory: /home/git/html/
 ## User: git
 
-## Create Timestamp
-echo call config/post-timestamp startup
-config/post-timestamp startup
-### Sign static resources
-echo call config/post-timestamp STANDARD
-for file in $(find -P ./ -type f \( -name '*.html' -or -name '*.shtml' -or -name '*.php' -or -name '*.phps' \) -print) ; do
-  if [ ! -L $file ] ; then
-    config/post-timestamp STANDARD $file
-  fi
-done
-#### static directory
-echo call config/post-timestamp TIMESTAMP
-for file in $(find -P static/ -type f \( -name '*.css' -or -name '*.js' \) -print) ; do
-  if [ ! -L $file ] ; then
-    config/post-timestamp TIMESTAMP $file
-  fi
-done
-
 ## Generate HTML5 document
 ### Master
 cat 400_header.shtml       | tee 400.html    >/dev/null
@@ -163,7 +145,6 @@ cat php/prettify_header.phps | tee php/prettify.php    >/dev/null
 cat header.shtml             | sed "s/<!--CURRENT:FTP:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
                              | sed "s/<!--CURRENT:FTP-->/<li class=\"current\">/g" \
                              | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
-                             | sed "1 s/<body\([^>]*\)>/<body\1 onload=\"prettyPrint()\">/g" \
                              | tee php/prettify.php -a >/dev/null
 cat php/prettify_body.phps   | tee php/prettify.php -a >/dev/null
 cat footer.shtml             | tee php/prettify.php -a >/dev/null
@@ -174,7 +155,6 @@ cat php/markdown/md_header.phps | tee php/markdown/md.php    >/dev/null
 cat header.shtml                | sed "s/<!--CURRENT:FTP:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
                                 | sed "s/<!--CURRENT:FTP-->/<li class=\"current\">/g" \
                                 | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
-                                | sed "1 s/<body\([^>]*\)>/<body\1 onload=\"prettyPrint()\">/g" \
                                 | tee php/markdown/md.php -a >/dev/null
 cat php/markdown/md_body.phps   | tee php/markdown/md.php -a >/dev/null
 cat footer.shtml                | tee php/markdown/md.php -a >/dev/null
@@ -185,7 +165,6 @@ cat header.shtml                    | sed "s/<!--CURRENT:RESUME:\([^>]*\)-->/<li
                                     | sed "s/<!--CURRENT:RESUME-->/<li class=\"current\">/g" \
                                     | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
                                     | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
-                                    | sed "1 s/<body\([^>]*\)>/<body\1 onload=\"prettyPrint()\">/g" \
                                     | tee php/markdown/resume.php -a >/dev/null
 cat php/markdown/resume_body.phps   | tee php/markdown/resume.php -a >/dev/null
 cat footer.shtml                    | tee php/markdown/resume.php -a >/dev/null
@@ -275,7 +254,7 @@ cat ddns-log_body.shtml      | sed "s/<!--UPDATETIME-->/1970-01-01 08:00:00/g" \
                              | sed "s/<!--DATA-CATEGORIES:TIME:6-->/<a data-categories=\"01-02\">01\/02<\/a>/g" \
                              | sed "s/<!--DATA-CATEGORIES:TIME:7-->/<a data-categories=\"01-01\">01\/01<\/a>/g" \
                              | tee status/ddns-log-static.html -a >/dev/null
-echo $'  </section>\n</div>' | tee status/ddns-log-static.html -a >/dev/null
+echo $' </section>\n</div>'  | tee status/ddns-log-static.html -a >/dev/null
 cat footer.shtml             | tee status/ddns-log-static.html -a >/dev/null
 cat ddns-log_footer.shtml    | tee status/ddns-log-static.html -a >/dev/null
 echo Generate status/ddns-log-static.html
@@ -290,3 +269,22 @@ cat footer.shtml           | tee www/index.html -a >/dev/null
 cat www/index_footer.shtml | tee www/index.html -a >/dev/null
 rm www/index_header.shtml www/index_body.shtml www/index_footer.shtml
 echo Generate www/index.html
+
+## Create Hash
+echo call config/post-hash startup
+config/post-hash startup
+#### Hash static directory
+echo call config/post-hash TIMESTAMP
+for file in $(find -P static/ -type f \( -name '*.css' -or -name '*.js' \) -print) ; do
+  if [ ! -L $file ] ; then
+    config/post-hash TIMESTAMP $file
+  fi
+done
+### Hash static resources
+echo call config/post-hash STANDARD
+for file in $(find -P ./ -type f \( -name '*.html' -or -name '*.php' \) -print) ; do
+  if [ ! -L $file ] ; then
+    config/post-hash STANDARD $file
+    sed -i 's/<!--\(\/\| end\| \*\)[^!<>]*-->//;s/^[[:space:]]*//;/^$/d' $file
+  fi
+done
