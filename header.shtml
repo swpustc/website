@@ -1,5 +1,4 @@
- <!-- ***************** - Master Color - ***************** -->
- <style>body.light{color:#50554e}body.dark{color:#7e8a83}body.liquid.light{background-color:#ebeeeb}body.liquid.dark{background-color:#1f221e}#logo .slogan span{color:#888c87}.light #header-top{background-color:#1f221e}.dark #header-top{background-color:#ebeeeb}</style>
+ <link rel="stylesheet" href="//cdn.swpbox.info/css/style.min.css" media="screen"/>
 </head>
 <body class="liquid light">
  <div id="wrapper">
@@ -36,90 +35,90 @@
     </div><!--/ #logo-->
     <nav id="navigation" class="navigation">
      <ul>
-      <!--CURRENT:HOME--><a href="//swpbox.info/">Home</a>
+      <li><!--CURRENT:HOME--><a href="//swpbox.info/">Home</a>
        <ul>
-        <!--CURRENT:INDEX--><a href="//swpbox.info/index.html">index.html</a></li>
-        <!--CURRENT:RESUME--><a href="//resume.swpbox.info/">Resume</a></li>
-        <!--CURRENT:FREESHELL--><a href="//freeshell.swpbox.info/" target="_blank">freeshell</a>
+        <li><!--CURRENT:INDEX--><a href="//swpbox.info/index.html">index.html</a></li>
+        <li><!--CURRENT:RESUME--><a href="//resume.swpbox.info/">Resume</a></li>
+        <li><!--CURRENT:FREESHELL--><a href="//freeshell.swpbox.info/" target="_blank">freeshell</a>
          <ul>
-          <!--CURRENT:FREESHELL-IPV6--><a href="http://swpustc.6.freeshell.ustc.edu.cn/" target="_blank">ipv6 Entry</a></li>
-          <!--CURRENT:FREESHELL-USTC--><a href="https://swp.freeshell.ustc.edu.cn/" target="_blank">USTC Proxy</a></li>
-          <!--CURRENT:MIRRORS--><a href="//mirrors.swpbox.info/" target="_blank">Local Proxy</a></li>
+          <li><!--CURRENT:FREESHELL-IPV6--><a href="http://swpustc.6.freeshell.ustc.edu.cn/" target="_blank">ipv6 Entry</a></li>
+          <li><!--CURRENT:FREESHELL-USTC--><a href="https://swp.freeshell.ustc.edu.cn/" target="_blank">USTC Proxy</a></li>
+          <li><!--CURRENT:MIRRORS--><a href="//mirrors.swpbox.info/" target="_blank">Local Proxy</a></li>
          </ul>
         </li>
-        <!--CURRENT:ERRPAGE--><a href="javascript:void(0)">ErrorPage</a>
+        <li><!--CURRENT:ERRPAGE--><a href="javascript:void(0)">ErrorPage</a>
          <ul>
-          <!--CURRENT:ERR400--><a href="/400.html">400 Page</a></li>
-          <!--CURRENT:ERR403--><a href="/403.html">403 Page</a></li>
-          <!--CURRENT:ERR404--><a href="/404.html">404 Page</a></li>
-          <!--CURRENT:ERR414--><a href="/414.html">414 Page</a></li>
-          <!--CURRENT:ERR422--><a href="/422.html">422 Page</a></li>
-          <!--CURRENT:ERR500--><a href="/500.html">500 Page</a></li>
-          <!--CURRENT:ERR502--><a href="/502.html">502 Page</a></li>
-          <!--CURRENT:ERR503--><a href="/503.html">503 Page</a></li>
-          <!--CURRENT:ERR504--><a href="/504.html">504 Page</a></li>
-         </ul>
-        </li>
-       </ul>
-      </li>
-      <!--CURRENT:FTP--><a href="//ftp.swpbox.info/">FTP</a>
-       <ul>
-        <!--CURRENT:FTP:/GNUinVisualStudio/--><a href="//ftp.swpbox.info/GNUinVisualStudio/">GNUinVisualStudio</a>
-         <ul>
-          <!--CURRENT:FTP:/GNUinVisualStudio/README.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/README.md">README.md</a></li>
-          <!--CURRENT:FTP:/GNUinVisualStudio/CHANGELOG.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/CHANGELOG.md">CHANGELOG.md</a></li>
-          <!--CURRENT:FTP:/GNUinVisualStudio/VERSION.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/VERSION.md">VERSION.md</a></li>
-          <!--CURRENT:FTP:/GNUinVisualStudio/BUG.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/BUG.md">BUG.md</a></li>
-          <!--CURRENT:FTP:/GNUinVisualStudio/exe/--><a href="//ftp.swpbox.info/GNUinVisualStudio/exe/">exe</a></li>
-          <!--CURRENT:FTP:/GNUinVisualStudio/dll/--><a href="//ftp.swpbox.info/GNUinVisualStudio/dll/">dll</a></li>
-          <!--CURRENT:FTP:/GNUinVisualStudio/lib/--><a href="//ftp.swpbox.info/GNUinVisualStudio/lib/">lib</a></li>
-          <!--CURRENT:FTP:/GNUinVisualStudio/pdb/--><a href="//ftp.swpbox.info/GNUinVisualStudio/pdb/">pdb</a></li>
-          <!--CURRENT:FTP:/GNUinVisualStudio/project/--><a href="//ftp.swpbox.info/GNUinVisualStudio/project/">project</a></li>
-          <!--CURRENT:FTP:/GNUinVisualStudio/include/--><a href="//ftp.swpbox.info/GNUinVisualStudio/include/">include</a></li>
-         </ul>
-        </li>
-        <!--CURRENT:FTP:/home/--><a href="//ftp.swpbox.info/home/">home</a></li>
-        <!--CURRENT:FTP:/html/--><a href="//ftp.swpbox.info/html/">html</a></li>
-        <!--CURRENT:FTP:/software/--><a href="//ftp.swpbox.info/software/">software</a></li>
-        <!--CURRENT:DOWNLOAD--><a href="//download.swpbox.info/ftp/">Download</a></li>
-        <!--CURRENT:CA--><a href="//CA.swpbox.info/">swpustc CA</a>
-         <ul>
-          <!--CURRENT:CA:/rootcert.cer--><a href="//CA.swpbox.info/rootcert.cer">cer document</a></li>
-          <!--CURRENT:CA:/rootcert.crt--><a href="//CA.swpbox.info/rootcert.crt">crt document</a></li>
+          <li><!--CURRENT:ERR400--><a href="/400.html">400 Page</a></li>
+          <li><!--CURRENT:ERR403--><a href="/403.html">403 Page</a></li>
+          <li><!--CURRENT:ERR404--><a href="/404.html">404 Page</a></li>
+          <li><!--CURRENT:ERR414--><a href="/414.html">414 Page</a></li>
+          <li><!--CURRENT:ERR422--><a href="/422.html">422 Page</a></li>
+          <li><!--CURRENT:ERR500--><a href="/500.html">500 Page</a></li>
+          <li><!--CURRENT:ERR502--><a href="/502.html">502 Page</a></li>
+          <li><!--CURRENT:ERR503--><a href="/503.html">503 Page</a></li>
+          <li><!--CURRENT:ERR504--><a href="/504.html">504 Page</a></li>
          </ul>
         </li>
        </ul>
       </li>
-      <!--CURRENT:GIT--><a href="//git.swpbox.info/" target="_blank">GitLab</a>
+      <li><!--CURRENT:FTP--><a href="//ftp.swpbox.info/">FTP</a>
        <ul>
-        <!--CURRENT:GIT-USTC--><a href="https://git.ustclug.org" target="_blank">USTC GitLab</a>
+        <li><!--CURRENT:FTP:/GNUinVisualStudio/--><a href="//ftp.swpbox.info/GNUinVisualStudio/">GNUinVisualStudio</a>
          <ul>
-          <!--CURRENT:GIT-USTC-OLDDOMAIN--><a href="https://gitlab.lug.ustc.edu.cn" target="_blank">Old Domain</a></li>
+          <li><!--CURRENT:FTP:/GNUinVisualStudio/README.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/README.md">README.md</a></li>
+          <li><!--CURRENT:FTP:/GNUinVisualStudio/CHANGELOG.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/CHANGELOG.md">CHANGELOG.md</a></li>
+          <li><!--CURRENT:FTP:/GNUinVisualStudio/VERSION.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/VERSION.md">VERSION.md</a></li>
+          <li><!--CURRENT:FTP:/GNUinVisualStudio/BUG.md--><a href="//ftp.swpbox.info/GNUinVisualStudio/BUG.md">BUG.md</a></li>
+          <li><!--CURRENT:FTP:/GNUinVisualStudio/exe/--><a href="//ftp.swpbox.info/GNUinVisualStudio/exe/">exe</a></li>
+          <li><!--CURRENT:FTP:/GNUinVisualStudio/dll/--><a href="//ftp.swpbox.info/GNUinVisualStudio/dll/">dll</a></li>
+          <li><!--CURRENT:FTP:/GNUinVisualStudio/lib/--><a href="//ftp.swpbox.info/GNUinVisualStudio/lib/">lib</a></li>
+          <li><!--CURRENT:FTP:/GNUinVisualStudio/pdb/--><a href="//ftp.swpbox.info/GNUinVisualStudio/pdb/">pdb</a></li>
+          <li><!--CURRENT:FTP:/GNUinVisualStudio/project/--><a href="//ftp.swpbox.info/GNUinVisualStudio/project/">project</a></li>
+          <li><!--CURRENT:FTP:/GNUinVisualStudio/include/--><a href="//ftp.swpbox.info/GNUinVisualStudio/include/">include</a></li>
          </ul>
         </li>
-        <!--CURRENT:NEK--><a href="http://210.45.78.50:8888/" target="_blank">NEK</a>
+        <li><!--CURRENT:FTP:/home/--><a href="//ftp.swpbox.info/home/">home</a></li>
+        <li><!--CURRENT:FTP:/html/--><a href="//ftp.swpbox.info/html/">html</a></li>
+        <li><!--CURRENT:FTP:/software/--><a href="//ftp.swpbox.info/software/">software</a></li>
+        <li><!--CURRENT:DOWNLOAD--><a href="//download.swpbox.info/ftp/">Download</a></li>
+        <li><!--CURRENT:CA--><a href="//CA.swpbox.info/">swpustc CA</a>
          <ul>
-          <!--CURRENT:NEK-LOCAL--><a href="//nek.swpbox.info/" target="_blank">Local Proxy</a></li>
+          <li><!--CURRENT:CA:/rootcert.cer--><a href="//CA.swpbox.info/rootcert.cer">cer document</a></li>
+          <li><!--CURRENT:CA:/rootcert.crt--><a href="//CA.swpbox.info/rootcert.crt">crt document</a></li>
          </ul>
         </li>
-        <!--CURRENT:GITHUB--><a href="https://github.com/swpustc" target="_blank">GitHub</a></li>
        </ul>
       </li>
-      <!--CURRENT:MYSQL--><a href="//mysql.swpbox.info/" target="_blank">MySql</a>
+      <li><!--CURRENT:GIT--><a href="//git.swpbox.info/" target="_blank">GitLab</a>
        <ul>
-        <!--CURRENT:ROUTER--><a href="//router.swpbox.info/" target="_blank">Router</a></li>
-        <!--CURRENT:DNSPOD--><a href="https://www.dnspod.cn/" target="_blank">DNSPod</a></li>
+        <li><!--CURRENT:GIT-USTC--><a href="https://git.ustclug.org" target="_blank">USTC GitLab</a>
+         <ul>
+          <li><!--CURRENT:GIT-USTC-OLDDOMAIN--><a href="https://gitlab.lug.ustc.edu.cn" target="_blank">Old Domain</a></li>
+         </ul>
+        </li>
+        <li><!--CURRENT:NEK--><a href="http://210.45.78.50:8888/" target="_blank">NEK</a>
+         <ul>
+          <li><!--CURRENT:NEK-LOCAL--><a href="//nek.swpbox.info/" target="_blank">Local Proxy</a></li>
+         </ul>
+        </li>
+        <li><!--CURRENT:GITHUB--><a href="https://github.com/swpustc" target="_blank">GitHub</a></li>
        </ul>
       </li>
-      <!--CURRENT:BLOG--><a href="//blog.swpbox.info/" target="_blank">Blog</a>
+      <li><!--CURRENT:MYSQL--><a href="//mysql.swpbox.info/" target="_blank">MySql</a>
        <ul>
-        <!--CURRENT:BBS--><a href="//bbs.swpbox.info/" target="_blank">BBS</a></li>
+        <li><!--CURRENT:ROUTER--><a href="//router.swpbox.info/" target="_blank">Router</a></li>
+        <li><!--CURRENT:DNSPOD--><a href="https://www.dnspod.cn/" target="_blank">DNSPod</a></li>
        </ul>
       </li>
-      <!--CURRENT:STATUS--><a href="//status.swpbox.info/" target="_blank">Status</a>
+      <li><!--CURRENT:BLOG--><a href="//blog.swpbox.info/" target="_blank">Blog</a>
        <ul>
-        <!--CURRENT:PHPINFO--><a href="//status.swpbox.info/phpinfo.php" target="_blank">phpInfo</a></li>
-        <!--CURRENT:DDNS--><a href="//status.swpbox.info/ddns-log.html">DDNS</a></li>
+        <li><!--CURRENT:BBS--><a href="//bbs.swpbox.info/" target="_blank">BBS</a></li>
+       </ul>
+      </li>
+      <li><!--CURRENT:STATUS--><a href="//status.swpbox.info/" target="_blank">Status</a>
+       <ul>
+        <li><!--CURRENT:PHPINFO--><a href="//status.swpbox.info/phpinfo.php" target="_blank">phpInfo</a></li>
+        <li><!--CURRENT:DDNS--><a href="//status.swpbox.info/ddns-log.html">DDNS</a></li>
        </ul>
       </li>
      </ul>

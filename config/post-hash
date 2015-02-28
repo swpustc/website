@@ -23,7 +23,7 @@ function timestamp() {
     stamp=$(echo $TIMESTAMP | sed 's/\//\\\//g')
     replace=$(echo $stamp | sed 's/\./\\./g')
     echo "s/$replace/$time/g" >>$2
-    echo "Hash: $realurl"
+    echo "hash $realurl"
     return 0
   else
     return 2

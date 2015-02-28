@@ -5,90 +5,90 @@
 ## Generate HTML5 document
 ### Master
 cat 400_header.shtml       | tee 400.html    >/dev/null
-cat header.shtml           | sed "s/<!--CURRENT:ERR400-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR400-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                            | tee 400.html -a >/dev/null
 cat 400_body.shtml         | tee 400.html -a >/dev/null
 cat footer.shtml           | tee 400.html -a >/dev/null
 cat errorpage_footer.shtml | tee 400.html -a >/dev/null
 echo Generate 400.html
 cat 403_header.shtml       | tee 403.html    >/dev/null
-cat header.shtml           | sed "s/<!--CURRENT:ERR403-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR403-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                            | tee 403.html -a >/dev/null
 cat 403_body.shtml         | tee 403.html -a >/dev/null
 cat footer.shtml           | tee 403.html -a >/dev/null
 cat errorpage_footer.shtml | tee 403.html -a >/dev/null
 echo Generate 403.html
 cat 404_header.shtml       | tee 404.html    >/dev/null
-cat header.shtml           | sed "s/<!--CURRENT:ERR404-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR404-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                            | tee 404.html -a >/dev/null
 cat 404_body.shtml         | tee 404.html -a >/dev/null
 cat footer.shtml           | tee 404.html -a >/dev/null
 cat errorpage_footer.shtml | tee 404.html -a >/dev/null
 echo Generate 404.html
 cat 414_header.shtml       | tee 414.html    >/dev/null
-cat header.shtml           | sed "s/<!--CURRENT:ERR414-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR414-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                            | tee 414.html -a >/dev/null
 cat 414_body.shtml         | tee 414.html -a >/dev/null
 cat footer.shtml           | tee 414.html -a >/dev/null
 cat errorpage_footer.shtml | tee 414.html -a >/dev/null
 echo Generate 414.html
 cat 422_header.shtml       | tee 422.html    >/dev/null
-cat header.shtml           | sed "s/<!--CURRENT:ERR422-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR422-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                            | tee 422.html -a >/dev/null
 cat 422_body.shtml         | tee 422.html -a >/dev/null
 cat footer.shtml           | tee 422.html -a >/dev/null
 cat errorpage_footer.shtml | tee 422.html -a >/dev/null
 echo Generate 422.html
 cat 500_header.shtml       | tee 500.html    >/dev/null
-cat header.shtml           | sed "s/<!--CURRENT:ERR500-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR500-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                            | tee 500.html -a >/dev/null
 cat 500_body.shtml         | tee 500.html -a >/dev/null
 cat footer.shtml           | tee 500.html -a >/dev/null
 cat errorpage_footer.shtml | tee 500.html -a >/dev/null
 echo Generate 500.html
 cat 502_header.shtml       | tee 502.html    >/dev/null
-cat header.shtml           | sed "s/<!--CURRENT:ERR502-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                            | tee 502.html -a >/dev/null
 cat 502_body.shtml         | tee 502.html -a >/dev/null
 cat footer.shtml           | tee 502.html -a >/dev/null
 cat errorpage_footer.shtml | tee 502.html -a >/dev/null
 echo Generate 502.html
 cat 503_header.shtml       | tee 503.html    >/dev/null
-cat header.shtml           | sed "s/<!--CURRENT:ERR503-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR503-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                            | tee 503.html -a >/dev/null
 cat 503_body.shtml         | tee 503.html -a >/dev/null
 cat footer.shtml           | tee 503.html -a >/dev/null
 cat errorpage_footer.shtml | tee 503.html -a >/dev/null
 echo Generate 503.html
 cat 504_header.shtml       | tee 504.html    >/dev/null
-cat header.shtml           | sed "s/<!--CURRENT:ERR504-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR504-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                            | tee 504.html -a >/dev/null
 cat 504_body.shtml         | tee 504.html -a >/dev/null
 cat footer.shtml           | tee 504.html -a >/dev/null
@@ -96,10 +96,10 @@ cat errorpage_footer.shtml | tee 504.html -a >/dev/null
 echo Generate 504.html
 ### blog
 cat 502_header.shtml       | tee blog/502.html    >/dev/null
-cat header.shtml           | sed "s/<!--CURRENT:ERR502-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                            | tee blog/502.html -a >/dev/null
 cat blog/502_body.shtml    | tee blog/502.html -a >/dev/null
 cat footer.shtml           | tee blog/502.html -a >/dev/null
@@ -108,9 +108,9 @@ rm blog/502_body.shtml
 echo Generate blog/502.html
 ### CA
 cat CA/index_header.shtml  | tee CA/index.html    >/dev/null
-cat header.shtml           | sed "s/<!--CURRENT:CA-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:FTP-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml           | sed "s/<li><!--CURRENT:CA-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:FTP-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                            | tee CA/index.html -a >/dev/null
 cat CA/index_body.shtml    | tee CA/index.html -a >/dev/null
 cat footer.shtml           | tee CA/index.html -a >/dev/null
@@ -119,10 +119,10 @@ rm CA/index_header.shtml CA/index_body.shtml
 echo Generate CA/index.html
 ### nowhere
 cat nowhere/400_header.shtml | tee nowhere/400.html    >/dev/null
-cat header.shtml             | sed "s/<!--CURRENT:ERR400-->/<li class=\"current\">/g" \
-                             | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                             | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                             | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml             | sed "s/<li><!--CURRENT:ERR400-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                              | tee nowhere/400.html -a >/dev/null
 cat 400_body.shtml           | tee nowhere/400.html -a >/dev/null
 cat footer.shtml             | tee nowhere/400.html -a >/dev/null
@@ -130,10 +130,10 @@ cat errorpage_footer.shtml   | tee nowhere/400.html -a >/dev/null
 rm nowhere/400_header.shtml
 echo Generate nowhere/400.html
 cat nowhere/502_header.shtml | tee nowhere/502.html    >/dev/null
-cat header.shtml             | sed "s/<!--CURRENT:ERR502-->/<li class=\"current\">/g" \
-                             | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                             | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                             | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml             | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                              | tee nowhere/502.html -a >/dev/null
 cat nowhere/502_body.shtml   | tee nowhere/502.html -a >/dev/null
 cat footer.shtml             | tee nowhere/502.html -a >/dev/null
@@ -141,10 +141,19 @@ cat errorpage_footer.shtml   | tee nowhere/502.html -a >/dev/null
 rm nowhere/502_header.shtml nowhere/502_body.shtml
 echo Generate nowhere/502.html
 ### php
+cat php/ftpindex_header.phps | tee php/ftpindex.php    >/dev/null
+cat header.shtml             | sed "s/<li><!--CURRENT:FTP:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
+                             | sed "s/<li><!--CURRENT:FTP-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                             | tee php/ftpindex.php -a >/dev/null
+cat php/ftpindex_body.phps   | tee php/ftpindex.php -a >/dev/null
+cat footer.shtml             | tee php/ftpindex.php -a >/dev/null
+cat php/ftpindex_footer.phps | tee php/ftpindex.php -a >/dev/null
+echo Generate php/ftpindex.php
 cat php/prettify_header.phps | tee php/prettify.php    >/dev/null
-cat header.shtml             | sed "s/<!--CURRENT:FTP:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
-                             | sed "s/<!--CURRENT:FTP-->/<li class=\"current\">/g" \
-                             | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml             | sed "s/<li><!--CURRENT:FTP:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
+                             | sed "s/<li><!--CURRENT:FTP-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                              | tee php/prettify.php -a >/dev/null
 cat php/prettify_body.phps   | tee php/prettify.php -a >/dev/null
 cat footer.shtml             | tee php/prettify.php -a >/dev/null
@@ -152,19 +161,19 @@ cat php/prettify_footer.phps | tee php/prettify.php -a >/dev/null
 echo Generate php/prettify.php
 ### php/markdown
 cat php/markdown/md_header.phps | tee php/markdown/md.php    >/dev/null
-cat header.shtml                | sed "s/<!--CURRENT:FTP:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
-                                | sed "s/<!--CURRENT:FTP-->/<li class=\"current\">/g" \
-                                | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml                | sed "s/<li><!--CURRENT:FTP:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
+                                | sed "s/<li><!--CURRENT:FTP-->/<li class=\"current\">/g" \
+                                | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                                 | tee php/markdown/md.php -a >/dev/null
 cat php/markdown/md_body.phps   | tee php/markdown/md.php -a >/dev/null
 cat footer.shtml                | tee php/markdown/md.php -a >/dev/null
 cat php/markdown/md_footer.phps | tee php/markdown/md.php -a >/dev/null
 echo Generate php/markdown/md.php
 cat php/markdown/resume_header.phps | tee php/markdown/resume.php    >/dev/null
-cat header.shtml                    | sed "s/<!--CURRENT:RESUME:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
-                                    | sed "s/<!--CURRENT:RESUME-->/<li class=\"current\">/g" \
-                                    | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                                    | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml                    | sed "s/<li><!--CURRENT:RESUME:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
+                                    | sed "s/<li><!--CURRENT:RESUME-->/<li class=\"current\">/g" \
+                                    | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                                    | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                                     | tee php/markdown/resume.php -a >/dev/null
 cat php/markdown/resume_body.phps   | tee php/markdown/resume.php -a >/dev/null
 cat footer.shtml                    | tee php/markdown/resume.php -a >/dev/null
@@ -172,34 +181,44 @@ cat php/markdown/resume_footer.phps | tee php/markdown/resume.php -a >/dev/null
 echo Generate php/markdown/resume.php
 ### static
 cat static/403_header.shtml | tee static/403.html    >/dev/null
-cat header.shtml            | sed "s/<!--CURRENT:ERR403-->/<li class=\"current\">/g" \
-                            | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                            | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                            | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml            | sed "s/<li><!--CURRENT:ERR403-->/<li class=\"current\">/g" \
+                            | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                            | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                            | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                             | tee static/403.html -a >/dev/null
 cat 403_body.shtml          | tee static/403.html -a >/dev/null
 cat footer.shtml            | tee static/403.html -a >/dev/null
 cat errorpage_footer.shtml  | tee static/403.html -a >/dev/null
 rm static/403_header.shtml
 echo Generate static/403.html
-### static/download/static
-cat static/download/static/403-deny-files_header.shtml | tee static/download/static/403-deny-files.html    >/dev/null
-cat header.shtml                                       | sed "s/<!--CURRENT:ERR403-->/<li class=\"current\">/g" \
-                                                       | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                                                       | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                                                       | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
-                                                       | tee static/download/static/403-deny-files.html -a >/dev/null
-cat 403_body.shtml                                     | tee static/download/static/403-deny-files.html -a >/dev/null
-cat footer.shtml                                       | tee static/download/static/403-deny-files.html -a >/dev/null
-cat errorpage_footer.shtml                             | tee static/download/static/403-deny-files.html -a >/dev/null
-rm static/download/static/403-deny-files_header.shtml
-echo Generate static/download/static/403-deny-files.html
 ### static/ftp/static
+cat static/ftp/static/403-deny-files_header.shtml | tee static/ftp/static/403-deny-files.html    >/dev/null
+cat header.shtml                                  | sed "s/<li><!--CURRENT:ERR403-->/<li class=\"current\">/g" \
+                                                  | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                                                  | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                                                  | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                                                  | tee static/ftp/static/403-deny-files.html -a >/dev/null
+cat 403_body.shtml                                | tee static/ftp/static/403-deny-files.html -a >/dev/null
+cat footer.shtml                                  | tee static/ftp/static/403-deny-files.html -a >/dev/null
+cat errorpage_footer.shtml                        | tee static/ftp/static/403-deny-files.html -a >/dev/null
+rm static/ftp/static/403-deny-files_header.shtml
+echo Generate static/ftp/static/403-deny-files.html
+cat 502_header.shtml                       | tee static/ftp/static/502-index.html    >/dev/null
+cat header.shtml                           | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                                           | tee static/ftp/static/502-index.html -a >/dev/null
+cat static/ftp/static/502-index_body.shtml | tee static/ftp/static/502-index.html -a >/dev/null
+cat footer.shtml                           | tee static/ftp/static/502-index.html -a >/dev/null
+cat errorpage_footer.shtml                 | tee static/ftp/static/502-index.html -a >/dev/null
+rm static/ftp/static/502-index_body.shtml
+echo Generate static/ftp/static/502-index.html
 cat 502_header.shtml                          | tee static/ftp/static/502-markdown.html    >/dev/null
-cat header.shtml                              | sed "s/<!--CURRENT:ERR502-->/<li class=\"current\">/g" \
-                                              | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                                              | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                                              | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml                              | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                                              | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                                              | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                                              | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                                               | tee static/ftp/static/502-markdown.html -a >/dev/null
 cat static/ftp/static/502-markdown_body.shtml | tee static/ftp/static/502-markdown.html -a >/dev/null
 cat footer.shtml                              | tee static/ftp/static/502-markdown.html -a >/dev/null
@@ -207,10 +226,10 @@ cat errorpage_footer.shtml                    | tee static/ftp/static/502-markdo
 rm static/ftp/static/502-markdown_body.shtml
 echo Generate static/ftp/static/502-markdown.html
 cat 502_header.shtml                          | tee static/ftp/static/502-prettify.html    >/dev/null
-cat header.shtml                              | sed "s/<!--CURRENT:ERR502-->/<li class=\"current\">/g" \
-                                              | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                                              | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                                              | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml                              | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                                              | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                                              | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                                              | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                                               | tee static/ftp/static/502-prettify.html -a >/dev/null
 cat static/ftp/static/502-prettify_body.shtml | tee static/ftp/static/502-prettify.html -a >/dev/null
 cat footer.shtml                              | tee static/ftp/static/502-prettify.html -a >/dev/null
@@ -219,10 +238,10 @@ rm static/ftp/static/502-prettify_body.shtml
 echo Generate static/ftp/static/502-prettify.html
 ### status
 cat 502_header.shtml              | tee status/502-ganglia.html    >/dev/null
-cat header.shtml                  | sed "s/<!--CURRENT:ERR502-->/<li class=\"current\">/g" \
-                                  | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                                  | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                                  | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml                  | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                                  | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                                  | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                                  | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                                   | tee status/502-ganglia.html -a >/dev/null
 cat status/502-ganglia_body.shtml | tee status/502-ganglia.html -a >/dev/null
 cat footer.shtml                  | tee status/502-ganglia.html -a >/dev/null
@@ -230,10 +249,10 @@ cat errorpage_footer.shtml        | tee status/502-ganglia.html -a >/dev/null
 rm status/502-ganglia_body.shtml
 echo Generate status/502-ganglia.html
 cat 502_header.shtml              | tee status/502-phpinfo.html    >/dev/null
-cat header.shtml                  | sed "s/<!--CURRENT:ERR502-->/<li class=\"current\">/g" \
-                                  | sed "s/<!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                                  | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                                  | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml                  | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                                  | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                                  | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                                  | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                                   | tee status/502-phpinfo.html -a >/dev/null
 cat status/502-phpinfo_body.shtml | tee status/502-phpinfo.html -a >/dev/null
 cat footer.shtml                  | tee status/502-phpinfo.html -a >/dev/null
@@ -241,9 +260,9 @@ cat errorpage_footer.shtml        | tee status/502-phpinfo.html -a >/dev/null
 rm status/502-phpinfo_body.shtml
 echo Generate status/502-phpinfo.html
 cat ddns-log_header.shtml    | tee status/ddns-log-static.html    >/dev/null
-cat header.shtml             | sed "s/<!--CURRENT:DDNS-->/<li class=\"current\">/g" \
-                             | sed "s/<!--CURRENT:STATUS-->/<li class=\"current\">/g" \
-                             | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml             | sed "s/<li><!--CURRENT:DDNS-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:STATUS-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                              | tee status/ddns-log-static.html -a >/dev/null
 cat ddns-log_body.shtml      | sed "s/<!--UPDATETIME-->/1970-01-01 08:00:00/g" \
                              | sed "s/<!--DATA-CATEGORIES:TIME:1-->/<a data-categories=\"01-07\">01\/07<\/a>/g" \
@@ -260,9 +279,9 @@ cat ddns-log_footer.shtml    | tee status/ddns-log-static.html -a >/dev/null
 echo Generate status/ddns-log-static.html
 ### www
 cat www/index_header.shtml | tee www/index.html    >/dev/null
-cat header.shtml           | sed "s/<!--CURRENT:INDEX-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                           | sed "s/<!--CURRENT:[^>]*-->/<li>/g" \
+cat header.shtml           | sed "s/<li><!--CURRENT:INDEX-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                            | tee www/index.html -a >/dev/null
 cat www/index_body.shtml   | tee www/index.html -a >/dev/null
 cat footer.shtml           | tee www/index.html -a >/dev/null
