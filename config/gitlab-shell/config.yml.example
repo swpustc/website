@@ -6,7 +6,7 @@ user: git
 # You only have to change the default if you have configured Unicorn
 # to listen on a custom port, or if you have configured Unicorn to
 # only listen on a Unix domain socket.
-gitlab_url: "https://git.swpbox.info/"
+gitlab_url: "http://localhost:8080/"
 
 # See installation.md#using-https for additional HTTPS configuration details.
 http_settings:
@@ -46,3 +46,11 @@ log_level: INFO
 # Set to true to see real usernames in the logs instead of key ids, which is easier to follow, but
 # incurs an extra API call on every gitlab-shell command.
 audit_usernames: false
+
+# Enable git-annex support
+# git-annex allows managing files with git, without checking the file contents into git
+# See https://git-annex.branchable.com/ for documentation
+# If enabled, git-annex needs to be installed on the server where gitlab-shell is setup
+# For Debian and Ubuntu systems this can be done with: sudo apt-get install git-annex
+# For CentOS: sudo yum install epel-release && sudo yum install git-annex
+git_annex_enabled: false
