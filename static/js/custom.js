@@ -1247,14 +1247,14 @@ jQuery.cookie = function (name, value, options) {
 			var date;
 			if (typeof options.expires == 'number') {
 				date = new Date();
-				date.setTime(date.getTime() + (options.expires * 24 * 60 * 60 * 1000))
+				date.setTime(date.getTime() + (options.expires * 24 * 3600 * 1000))
 			} else {
 				date = options.expires
 			}
 			expires = '; expires=' + date.toUTCString()
 		} else {
 			date = new Date();
-			date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+			date.setTime('2147483647000');
 			expires = '; expires=' + date.toUTCString()
 		}
 		var path = options.path ? '; path=' + (options.path) : '; path=/';

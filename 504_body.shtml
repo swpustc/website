@@ -1,7 +1,7 @@
 <div class="content-wrapper clearfix">
- <div class="error404">
-  <h1>504</h1>
-  <div class="title-error">Gateway Timeout!</div>
-  <div class="description-error">Please contact <a href="m&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#119;&#112;&#53;&#x34;&#x33;&#x32;&#x31;&#x30;&#x40;&#x67;&#x6d;&#x61;i&#108;&#46;&#99;&#111;&#109;">administrator</a> if this problem persists.</div>
- </div><!--/ .error404-->
+  <div class="error404">
+    <h1>504</h1>
+    <div class="title-error">Gateway Timeout!</div>
+    <div class="description-error">Please contact <a href="m&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#119;&#112;&#53;&#x34;&#x33;&#x32;&#x31;&#x30;&#x40;&#x67;&#x6d;&#x61;i&#108;&#46;&#99;&#111;&#109;">administrator</a> if this problem persists.</div>
+  </div><!--/ .error404-->
 </div><!--/ .content-wrapper-->

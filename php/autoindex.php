@@ -6,12 +6,13 @@ $it  = new FilesystemIterator($pwd);
 ?>
 <html lang="zh-CN">
 <head>
- <meta charset="utf-8">
- <title>Index of <?php echo $cur ?></title>
+  <meta charset="utf-8">
+  <title>Index of <?php echo $cur ?></title>
 </head>
 <body bgcolor="white">
- <h1>Index of <?php echo $cur ?></h1><hr>
- <pre><?php
+  <h1>Index of <?php echo $cur ?></h1><hr>
+  <pre>
+<?php
 $left_part  = 74;
 $right_part = 18;
 $date_size  = 24;
@@ -57,6 +58,6 @@ for ($i = 0; $i < $dircount; $i++) {
 for ($i = 0; $i < $filecount; $i++) {
   echo $filehtml[$i];
 }
- ?></pre><hr>
+?></pre><hr>
 </body>
 </html>

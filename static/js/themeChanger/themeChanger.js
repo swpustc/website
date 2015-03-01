@@ -164,8 +164,12 @@ $(function() {
     /* Theme controller --> Begin */
 	
     var $body = $("body");
+	if ($("#wrapper_control_panel").length) {
+		$("#wrapper_control_panel").append('<div id="control_panel"><a href="#" id="control_label"></a></div>');
+	} else {
 		$("#wrapper").append('<div id="control_panel"><a href="#" id="control_label"></a></div>');
-		var $theme_control_panel = $('#control_panel');
+	}
+	var $theme_control_panel = $('#control_panel');
 	
 	var layout = jQuery.cookie('layout'),
 		skin = jQuery.cookie('skin'),

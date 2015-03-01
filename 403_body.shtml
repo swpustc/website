@@ -1,7 +1,7 @@
 <div class="content-wrapper clearfix">
- <div class="error404">
-  <h1>403</h1>
-  <div class="title-error">Page Forbidden!</div>
-  <div class="description-error">Sorry, you don't have permission to access this document on this server.</div>
- </div><!--/ .error404-->
+  <div class="error404">
+    <h1>403</h1>
+    <div class="title-error">Page Forbidden!</div>
+    <div class="description-error">Sorry, you don't have permission to access this document on this server.</div>
+  </div><!--/ .error404-->
 </div><!--/ .content-wrapper-->

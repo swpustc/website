@@ -1,7 +1,7 @@
 <div class="content-wrapper clearfix">
- <div class="error404">
-  <h1>400</h1>
-  <div class="title-error">Bad Request!</div>
-  <div class="description-error">The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modifications.</div>
- </div><!--/ .error404-->
+  <div class="error404">
+    <h1>400</h1>
+    <div class="title-error">Bad Request!</div>
+    <div class="description-error">The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modifications.</div>
+  </div><!--/ .error404-->
 </div><!--/ .content-wrapper-->
