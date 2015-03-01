@@ -1,0 +1,33 @@
+#!/bin/bash
+## Work Directory: /home/git/html/
+## User: git
+
+## Generate Template page
+cat nowhere/400.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                     | tee port_8000/400.html >/dev/null
+echo Generate port_8000/400.html
+cat nowhere/403.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                     | tee port_8000/403.html >/dev/null
+echo Generate port_8000/403.html
+cat nowhere/404.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                     | tee port_8000/404.html >/dev/null
+echo Generate port_8000/404.html
+cat nowhere/414.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                     | tee port_8000/414.html >/dev/null
+echo Generate port_8000/414.html
+cat nowhere/422.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                     | tee port_8000/422.html >/dev/null
+echo Generate port_8000/422.html
+cat nowhere/500.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                     | tee port_8000/500.html >/dev/null
+echo Generate port_8000/500.html
+cat nowhere/502.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                     | sed "s/Domain Unavailable/Port is Not Open/g" \
+                     | tee port_8000/502.html >/dev/null
+echo Generate port_8000/502.html
+cat nowhere/503.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                     | tee port_8000/503.html >/dev/null
+echo Generate port_8000/503.html
+cat nowhere/504.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                     | tee port_8000/504.html >/dev/null
+echo Generate port_8000/504.html

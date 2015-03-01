@@ -289,6 +289,10 @@ cat www/index_footer.shtml | tee www/index.html -a >/dev/null
 rm www/index_header.shtml www/index_body.shtml www/index_footer.shtml
 echo Generate www/index.html
 
+## port 8000 page
+echo call config/post-port_8000
+config/post-port_8000
+
 ## Create Hash
 echo call config/post-hash startup
 config/post-hash startup

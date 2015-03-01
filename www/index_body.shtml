@@ -36,7 +36,7 @@
     <h3>28 Jan 2015</h3>
    </div>
   </li>
- </ul><!-- ei-slider-large -->
+ </ul><!--/ .ei-slider-large -->
  <ul class="ei-slider-thumbs">
   <li class="ei-slider-element">Current</li>
   <li><a href="#">Slide 1</a><img src="//cdn.swpbox.info/images/thumbs/1.png" alt="thumb01"/></li>
@@ -44,7 +44,7 @@
   <li><a href="#">Slide 3</a><img src="//cdn.swpbox.info/images/thumbs/3.png" alt="thumb03"/></li>
   <li><a href="#">Slide 4</a><img src="//cdn.swpbox.info/images/thumbs/4.png" alt="thumb04"/></li>
   <li><a href="#">Slide 5</a><img src="//cdn.swpbox.info/images/thumbs/5.png" alt="thumb05"/></li>
- </ul><!-- ei-slider-thumbs -->
+ </ul><!--/ .ei-slider-thumbs -->
 </div><!--/ .container-->
 <div class="clear"></div>
 <!-- ************* - BEGIN Testimonials - *************** -->

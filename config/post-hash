@@ -18,7 +18,7 @@ function timestamp() {
     realurl=$(echo $3 | sed 's/^static\//\/\/cdn.swpbox.info\//g' )
     url=$(echo $realurl | sed 's/\//\\\//g')
     replace=$(echo $url | sed 's/\./\\./g')
-    echo "s/\\(\\\"$replace\\)\\\"/\\1?t=$time\\\"/g" >>$1
+    echo "s/\\(\\\"\\(https\?:\\)\?$replace\\)\\\"/\\1?t=$time\\\"/g" >>$1
     TIMESTAMP=$(echo $3 | sed  's/^static\/\(.*\)/TIMESTAMP:BEGIN:\1:END:TIMESTAMP/g')
     stamp=$(echo $TIMESTAMP | sed 's/\//\\\//g')
     replace=$(echo $stamp | sed 's/\./\\./g')
