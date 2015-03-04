@@ -1,13 +1,24 @@
 /* -- Theme controll panel --> Begin -- */
 
 #control_panel {
-	position: fixed;
+    position: fixed;
     top: 50px;
     left: -185px;
     z-index: 999;
     padding: 15px 20px;
     width: 145px;
     color: #b5b7b5;
+}
+#control_panel.control-wrapper {
+    position: relative;
+    top: inherit;
+    left: inherit;
+    display: block;
+}
+@media only screen and (max-width: 479px) {
+    #control_panel.control-wrapper {
+        margin: 0 auto;
+    }
 }
 
 .light #control_panel {background-color: rgba(31,34,30, .85);}
@@ -17,16 +28,16 @@
 .ie8 .dark #control_panel {background-color: #ebeeeb;}
 
 #control_panel .control_panel_title {
-	position: absolute;
-	left: 0;
-	top: 0;
-	padding-left: 20px;
-	padding-bottom: .48em;
-	padding-top: .6em;
-	width: 165px;
-	background-repeat: no-repeat;
-	background-position: 8px 0;
-	font-family: 'Droid Serif';
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 20px;
+    padding-bottom: .48em;
+    padding-top: .6em;
+    width: 165px;
+    background-repeat: no-repeat;
+    background-position: 8px 0;
+    font-family: 'Droid Serif';
 }
 
 .light #control_panel .control_panel_title {color: #b5b7b5;}
@@ -37,43 +48,43 @@
 
 #control_panel > div > span {
     display: block;
-	margin-bottom: .5em;
-	color: #b5b7b5;
-	font-size: 1em;
-	font-family: 'Droid Serif';
+    margin-bottom: .5em;
+    color: #b5b7b5;
+    font-size: 1em;
+    font-family: 'Droid Serif';
 }
 
 .light #control_panel > div > span {color: #bgb7b5;}
 .dark #control_panel > div > span {color: #121412;}
 
 #control_panel .layout {
-	margin-top: 2em;
-	margin-bottom: .9em;
+    margin-top: 2em;
+    margin-bottom: .9em;
 }
 
 #control_panel .skin {
-	margin-bottom: .9em;
+    margin-bottom: .9em;
 }
 
 #control_panel label:first-child {
-	margin: 0 15px 0 0;
-	text-align: left;
+    margin: 0 15px 0 0;
+    text-align: left;
 }
 
 #control_panel label {
-	color: #888c87;
+    color: #888c87;
 }
 
 .light #control_panel label {color: #888c87;}
 .dark #control_panel label {color: #50554e;}
 
 #control_panel > div input[type="radio"] {
-	margin: 0 4px 3px;
+    margin: 0 4px 3px;
 }
 
 #control_panel ul {
     overflow: hidden;
-	padding-bottom: 5px;
+    padding-bottom: 5px;
 }
 
 #control_panel li {
@@ -87,7 +98,7 @@
     display: block;
     width: 28px;
     height: 28px;
-	border: 1px solid #c7cfc8;
+    border: 1px solid #c7cfc8;
 }
 
 #control_panel li.active a {
@@ -96,8 +107,8 @@
 
 #patterns_liquid li a,
 #patterns_fixed li a {
-	background-image: url(../../images/themeChanger/patterns_sprite.png?t=TIMESTAMP:BEGIN:images/themeChanger/patterns_sprite.png:END:TIMESTAMP);
-	background-repeat: no-repeat;
+    background-image: url(../../images/themeChanger/patterns_sprite.png?t=TIMESTAMP:BEGIN:images/themeChanger/patterns_sprite.png:END:TIMESTAMP);
+    background-repeat: no-repeat;
 }
 
 /* Patterns Liquid --> Begin */
@@ -132,64 +143,64 @@
 /* Patterns Fixed --> End */
 
 #control_panel .restore_button_wrapper {
-	clear: both;
+    clear: both;
     padding: 10px 0 0 0;
-	text-align: center;
+    text-align: center;
 }
 
 #control_panel .restore_button_wrapper a {margin-bottom: 0;}
 
 #control_label {
     position: absolute;
-	z-index: 3;
+    z-index: 3;
     right: -35px;
     top: 0;
     width: 35px;
     height: 35px;
     background-image: url(../../images/themeChanger/theme_control_bg.png?t=TIMESTAMP:BEGIN:images/themeChanger/theme_control_bg.png:END:TIMESTAMP);
-	background-repeat: no-repeat;
-	background-color: rgba(31,34,30, .91);
-	-webkit-transition: background-color .25s linear;
-	   -moz-transition: background-color .25s linear;
-	    -ms-transition: background-color .25s linear;
-		 -o-transition: background-color .25s linear;
-			transition: background-color .25s linear;
+    background-repeat: no-repeat;
+    background-color: rgba(31,34,30, .91);
+    -webkit-transition: background-color .25s linear;
+       -moz-transition: background-color .25s linear;
+        -ms-transition: background-color .25s linear;
+         -o-transition: background-color .25s linear;
+    transition: background-color .25s linear;
 }
 
 .ie8 #control_label {background-color: #1f221e;}
 
 #control_label:hover {
-	background-position: bottom;
-	background-color: #a6412b;
+    background-position: bottom;
+    background-color: #a6412b;
 }
 
 .links_color_wrapper,
 .bg_color_wrapper {
-	margin-bottom: 1.4em;
+    margin-bottom: 1.4em;
 }
 
 .links_color_wrapper .link_hex_color,
 .bg_color_wrapper .bg_hex_color {
-	float: left;
-	margin-right: 5px;
-	padding: 0 10px 0 5px;
-	width: 60px;
-	height: 24px;
-	border: none;
-	color: #50554e;
-	background-color: #c7cfc8;
-	line-height: 24px;
-	font: italic 1em 'Droid Serif';
+    float: left;
+    margin-right: 5px;
+    padding: 0 10px 0 5px;
+    width: 60px;
+    height: 24px;
+    border: none;
+    color: #50554e;
+    background-color: #c7cfc8;
+    line-height: 24px;
+    font: italic 1em 'Droid Serif';
 }
 
 .links_color_wrapper .colorPicker,
 .bg_color_wrapper .bgPicker {
     position: relative;
-	float: left;
+    float: left;
     height: 24px;
     width: 24px;
-	background: url(../../images/themeChanger/colorpicker_mask.png?t=TIMESTAMP:BEGIN:images/themeChanger/colorpicker_mask.png:END:TIMESTAMP) no-repeat;
-	cursor: pointer;
+    background: url(../../images/themeChanger/colorpicker_mask.png?t=TIMESTAMP:BEGIN:images/themeChanger/colorpicker_mask.png:END:TIMESTAMP) no-repeat;
+    cursor: pointer;
 }
 
 

@@ -1,0 +1,5 @@
+<div class="content-wrapper clearfix">
+  <h1 class="content-title">Wrapper Setting</h1>
+  <div id="wrapper_control_panel">
+  </div><!--/ #wrapper_control_panel-->
+</div><!--/ .content-wrapper-->

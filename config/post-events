@@ -288,6 +288,16 @@ cat footer.shtml           | tee www/index.html -a >/dev/null
 cat www/index_footer.shtml | tee www/index.html -a >/dev/null
 rm www/index_header.shtml www/index_body.shtml www/index_footer.shtml
 echo Generate www/index.html
+cat www/setting_header.shtml | tee www/setting.html    >/dev/null
+cat header.shtml             | sed "s/<li><!--CURRENT:SETTING-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                             | tee www/setting.html -a >/dev/null
+cat www/setting_body.shtml   | tee www/setting.html -a >/dev/null
+cat footer.shtml             | tee www/setting.html -a >/dev/null
+cat errorpage_footer.shtml   | tee www/setting.html -a >/dev/null
+rm www/setting_header.shtml www/setting_body.shtml
+echo Generate www/setting.html
 
 ## port 8000 page
 echo call config/post-port_8000

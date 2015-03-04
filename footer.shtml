@@ -12,6 +12,7 @@
             </ul>
           </nav><!--/ #footer-nav-->
           <div class="copyright">&copy; 2015 swpustc. All rights reserved.</div><!--/ .copyright-->
+          <a class="footer-setting" href="//swpbox.info/setting.html">Setting</a>
         </div><!--/ .one-half-->
         <div class="one-half last">
           <ul data-description="Stay in touch via social networks:" class="social-links">

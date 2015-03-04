@@ -59,6 +59,7 @@
                     <li><!--CURRENT:ERR504--><a href="/504.html">504 Page</a></li>
                   </ul>
                 </li>
+                <li><!--CURRENT:SETTING--><a href="//swpbox.info/setting.html">setting.html</a></li>
               </ul>
             </li>
             <li><!--CURRENT:FTP--><a href="//ftp.swpbox.info/">FTP</a>
