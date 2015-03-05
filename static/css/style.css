@@ -68,6 +68,8 @@ Stylesheet Guide
 
 16. Code Prettify
 
+17. Autoindex
+
  */
 
 /* ---------------------------------------------------------------------- */
@@ -1314,6 +1316,7 @@ header.page-header {
     header.page-header h1 {
         float: left;
         margin: 0;
+        padding-bottom: 2px;
     }
 
 .section-title {
@@ -2010,13 +2013,17 @@ ul.related span.categories {color: #50554e; font-style: italic;}
         #portfolio-filter a:hover {color: #50554E;}
         #portfolio-filter a.active {color: #a6412b;}
 
-#portfolio-items {margin: 0 -20px 0 0;}
+#portfolio-items {
+    margin: 0 -20px 0 0;
+    width: 100%;
+}
 
     #portfolio-items article {
         position: relative;
         float: left;
         overflow: hidden;
         margin: 0 20px 35px 0;
+        width: 100%;
     }
 
         #portfolio-items article a {display: block; text-align: center;}
@@ -3878,7 +3885,8 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 .ddns div{
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 .ddns hr,.ddns h4,.ddns p ,#portfolio-items.ddns article{
   padding: 0;
@@ -4829,3 +4837,57 @@ background-color: rgba(49, 152, 48, 0.4);
 }
 
 /*  <!-- Code Prettify END -->  */
+
+/* ---------------------------------------------------------------------- */
+/*  Autoindex
+/* ---------------------------------------------------------------------- */
+
+.autoindex-title, #portfolio-items.autoindex article div.one-half{
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+.autoindex hr{
+  padding: 0;
+}
+.autoindex hr, #portfolio-items.autoindex article{
+  margin: 0;
+  border: 0;
+}
+#portfolio-items.autoindex article a{
+  display: inline;
+  text-align: left;
+}
+.light #portfolio-items.autoindex article a{
+  color: #127;
+}
+.dark #portfolio-items.autoindex article a{
+  color: #9af;
+}
+@media only screen and (min-width: 768px) {
+  .autoindex-title{
+    position: absolute;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .autohide{
+    display: none;
+  }
+  #portfolio-items.autoindex article div.one-half{
+    width: 100%;
+  }
+}
+.light #portfolio-items.autoindex article {
+  border-color: #ccd3cd;
+}
+.dark #portfolio-items.autoindex articlei {
+  border-color: #333732;
+}
+#portfolio-items.autoindex article {
+  padding: .25em 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+/*  <!-- Autoindex END -->  */

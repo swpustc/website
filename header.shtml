@@ -46,7 +46,7 @@
                     <li><!--CURRENT:MIRRORS--><a href="//mirrors.swpbox.info/" target="_blank">Local Proxy</a></li>
                   </ul>
                 </li>
-                <li><!--CURRENT:ERRPAGE--><a href="javascript:void(0)">ErrorPage</a>
+                <li><!--CURRENT:ERRPAGE--><a href="http://swpbox.info:8000/">ErrorPage</a>
                   <ul>
                     <li><!--CURRENT:ERR400--><a href="/400.html">400 Page</a></li>
                     <li><!--CURRENT:ERR403--><a href="/403.html">403 Page</a></li>

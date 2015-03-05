@@ -1,7 +1,7 @@
 <?php
 $pwd = $_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME'];
 $bgn = strlen($_SERVER['DOCUMENT_ROOT']);
-$cur = substr(dirname($pwd).'/'.basename($pwd), $bgn).'/';
+$cur = substr($pwd, $bgn);
 $it  = new FilesystemIterator($pwd);
 ?>
 <html lang="zh-CN">
@@ -18,7 +18,9 @@ $right_part = 18;
 $date_size  = 24;
 $dircount  = 0;
 $filecount = 0;
-$dirhtml[$dircount++] = '<a href="'.substr(dirname($pwd), $bgn).'/">../</a>'.str_pad('', $left_part - 3,' ',STR_PAD_LEFT).str_pad('_', $right_part, ' ', STR_PAD_LEFT)."\n";
+if (strlen($pwd) - $bgn > 1) {
+  $dirhtml[$dircount++] = '<a href="'.substr(dirname($pwd), $bgn).'/">../</a>'.str_pad('_', $left_part - 3,' ',STR_PAD_LEFT).str_pad('_', $right_part, ' ', STR_PAD_LEFT);
+}
 foreach ($it as $file){
   $date = date('Y-m-d H:i:s', $file->getCTime());
   if ($file->isDir()) {
@@ -30,7 +32,7 @@ foreach ($it as $file){
       $fileName = iconv("GBK", "UTF-8//IGNORE", $fileNameGBK);
     }
     $pathName = $file->getPathname().'/';
-    $dirhtml[$dircount++] = '<a href="'.substr($pathName, $bgn).'">'.$fileName.'</a>'.str_pad($date, $left_part - strlen($fileNameGBK),' ',STR_PAD_LEFT).str_pad($fileSize, $right_part, ' ', STR_PAD_LEFT)."\n";
+    $dirhtml[$dircount++] = '<a href="'.substr($pathName, $bgn).'">'.$fileName.'</a>'.str_pad($date, $left_part - strlen($fileNameGBK),' ',STR_PAD_LEFT).str_pad($fileSize, $right_part, ' ', STR_PAD_LEFT);
   } elseif ($file->isFile()) {
     $fileSize = $file->getSize();
     if ($fileSize < 0)
@@ -49,14 +51,14 @@ foreach ($it as $file){
       $fileName = iconv("GBK", "UTF-8//IGNORE", $fileNameGBK);
     }
     $pathName = $file->getPathname();
-    $filehtml[$filecount++] = '<a href="'.substr($pathName, $bgn).'">'.$fileName.'</a>'.str_pad($date, $left_part - strlen($fileNameGBK),' ',STR_PAD_LEFT).str_pad($fileSize, $right_part, ' ', STR_PAD_LEFT)."\n";
+    $filehtml[$filecount++] = '<a href="'.substr($pathName, $bgn).'">'.$fileName.'</a>'.str_pad($date, $left_part - strlen($fileNameGBK),' ',STR_PAD_LEFT).str_pad($fileSize, $right_part, ' ', STR_PAD_LEFT);
   }
 }
 for ($i = 0; $i < $dircount; $i++) {
-  echo $dirhtml[$i];
+  echo $dirhtml[$i]."\n";
 }
 for ($i = 0; $i < $filecount; $i++) {
-  echo $filehtml[$i];
+  echo $filehtml[$i]."\n";
 }
 ?></pre><hr>
 </body>

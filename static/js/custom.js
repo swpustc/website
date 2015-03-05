@@ -61,7 +61,7 @@
 WebFontConfig = {
     google: {
         families: ['Droid+Serif:400,700,400italic:latin', 'Love+Ya+Like+A+Sister::latin', 'Fredericka+the+Great::latin']
-        }
+    }
 };
 (function() {
     var wf = document.createElement('script');
@@ -965,13 +965,15 @@ jQuery(document).ready(function(){
 
     (function() {
 
-        var $cont = $('#portfolio-items');
-        var $container = $('.container');
+        var $cont = $('#portfolio-items'),
+            $container = $('.container'),
+            $autoindexTitle = $('.autoindex-title');
 
         if($cont.length) {
 
             var $itemsFilter = $('#portfolio-filter'),
-                mouseOver;
+                mouseOver,
+                autoindexNeedSetWidth = $('html').width() >= 768;
 
             // Copy categories to item classes
             $('article', $cont).each(function(i) {
@@ -1027,6 +1029,9 @@ jQuery(document).ready(function(){
                 $itemsFilter.find('a').first().addClass('active');
             }
             $itemsFilter.find('a').not('.active').hide();
+            if (autoindexNeedSetWidth)
+                $autoindexTitle.css("max-width", $container.width() - $itemsFilter.width() - 20);
+            var autoindexTitleWidth = $autoindexTitle.width();
 
             $itemsFilter.on('mouseenter', function() {
                 var $this = $(this);
@@ -1035,6 +1040,14 @@ jQuery(document).ready(function(){
 
                 mouseOver = setTimeout( function() {
                     $this.find('li a').stop(true,true).slideShow(300);
+                    if (autoindexNeedSetWidth) {
+                        $autoindexTitle.stop(true,true).delay(50).animate({
+                            width: $container.width() - 486
+                        }, {
+                            duration: 260,
+                            specialEasing: { width: 'linear' }
+                        });
+                    }
                 }, 100);
             }).on('mouseleave', function() {
                 var $this = $(this);
@@ -1042,6 +1055,14 @@ jQuery(document).ready(function(){
                 if($container.width() == 420 || $container.width() == 300) return false;
                 mouseOver = setTimeout( function() {
                     $this.find('li a').not('.active').stop(true,true).slideHide(150);
+                    if (autoindexNeedSetWidth) {
+                        $autoindexTitle.stop(true,true).delay(200).animate({
+                            width: autoindexTitleWidth
+                        }, {
+                            duration: 300,
+                            specialEasing: { width: 'linear' }
+                        });
+                    }
                 }, 500);
             });
 

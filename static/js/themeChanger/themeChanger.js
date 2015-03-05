@@ -135,7 +135,7 @@ $(function() {
     // Prettify projects
     $itemPrettify.on('click', 'a', function(e) {
         var $this = $(this),
-        prettify_code = $this.attr('id');
+            prettify_code = $this.attr('id');
         if($body.hasClass('light')) {
             $bodyCodeLight.removeClass().addClass(prettify_code);
             jQuery.cookie('code-light', prettify_code);
@@ -165,7 +165,7 @@ $(function() {
 
     var $body = $("body"),
         $wrapper_control_panel = $("#wrapper_control_panel");
-    if ($wrapper_control_panel) {
+    if ($wrapper_control_panel.length) {
         $wrapper_control_panel.append('<div id="control_panel" class="control-wrapper"></div>');
     } else {
         $("#wrapper").append('<div id="control_panel"><a href="#" id="control_label"></a></div>');
@@ -274,12 +274,12 @@ $(function() {
             var change_html = '<span>Layout Type</span>';
             change_html += '<form>';
             $.each(page_config.layout, function(idx, val) {
-                    if ($body.hasClass(val.className)) {
-                        change_html += '<label><input checked type="radio" name="'+ val.name +'" value="'+ val.title +'" class="'+ val.className +'">'+ val.title +'</label>';
-                        defaultSettings.pattern = idx;
-                    } else {
-                        change_html += '<label><input type="radio" name="'+ val.name +'" value="'+ val.title +'" class="'+ val.className +'">'+ val.title +'</label>';
-                    }
+                if ($body.hasClass(val.className)) {
+                    change_html += '<label><input checked type="radio" name="'+ val.name +'" value="'+ val.title +'" class="'+ val.className +'">'+ val.title +'</label>';
+                    defaultSettings.pattern = idx;
+                } else {
+                    change_html += '<label><input type="radio" name="'+ val.name +'" value="'+ val.title +'" class="'+ val.className +'">'+ val.title +'</label>';
+                }
                 layout_classes.push(val.className);
             });
 
@@ -334,12 +334,12 @@ $(function() {
             var change_skin_html = '<span>Layout Skin</span>';
             change_skin_html += '<form>';
             $.each(page_config.skin, function(idx, val) {
-                    if ($body.hasClass(val.className)) {
-                        change_skin_html += '<label><input checked type="radio" name="'+ val.name +'" value="'+ val.title +'" class="'+ val.className +'">'+ val.title +'</label>';
-                        defaultSettings.skin = idx;
-                    } else {
-                        change_skin_html += '<label><input type="radio" name="'+ val.name +'" value="'+ val.title +'" class="'+ val.className +'">'+ val.title +'</label>';
-                    }
+                if ($body.hasClass(val.className)) {
+                    change_skin_html += '<label><input checked type="radio" name="'+ val.name +'" value="'+ val.title +'" class="'+ val.className +'">'+ val.title +'</label>';
+                    defaultSettings.skin = idx;
+                } else {
+                    change_skin_html += '<label><input type="radio" name="'+ val.name +'" value="'+ val.title +'" class="'+ val.className +'">'+ val.title +'</label>';
+                }
                 skin_classes.push(val.className);
             });
 
@@ -394,33 +394,33 @@ $(function() {
 
         /* Background color --> Begin */
 
-        var $bg_color = $('<div/>').attr({id : 'bgpicker'}).addClass('bgPicker');
-            var $links_bg_wrapper = $('<div/>').addClass('bg_color_wrapper clearfix');
-                $links_bg_wrapper.append('<span>Background Color</span>', $bg_color);
-            var $input_bg_color = $('<input readonly type="text">').addClass('bg_hex_color').attr('value', '#3e443d');
-                $links_bg_wrapper.append($input_bg_color, $bg_color);
+        var $bg_color = $('<div/>').attr({id : 'bgpicker'}).addClass('bgPicker'),
+            $links_bg_wrapper = $('<div/>').addClass('bg_color_wrapper clearfix');
+        $links_bg_wrapper.append('<span>Background Color</span>', $bg_color);
+        var $input_bg_color = $('<input readonly type="text">').addClass('bg_hex_color').attr('value', '#3e443d');
+        $links_bg_wrapper.append($input_bg_color, $bg_color);
 
-                $theme_control_panel.append($links_bg_wrapper);
+        $theme_control_panel.append($links_bg_wrapper);
 
-                if($body.hasClass('liquid')) {
-                    $links_bg_wrapper.css('display','none');
-                } else {
-                    $links_bg_wrapper.css('display','block');
-                }
+        if($body.hasClass('liquid')) {
+            $links_bg_wrapper.css('display','none');
+        } else {
+            $links_bg_wrapper.css('display','block');
+        }
 
         var bg_picker = $('#bgpicker');
 
-            bg_picker.css('background-color','#3e443d').ColorPicker({
-                    color: '#3e443d',
-                    onChange: function (hsb, hex, rgb) {
-                        $input_bg_color.attr({value : '#' + hex})
-                        bg_picker.css('background-color','#' + hex);
-                        $body.css('background-color', '#' + hex);
+        bg_picker.css('background-color','#3e443d').ColorPicker({
+            color: '#3e443d',
+            onChange: function (hsb, hex, rgb) {
+                $input_bg_color.attr({value : '#' + hex})
+                bg_picker.css('background-color','#' + hex);
+                $body.css('background-color', '#' + hex);
 
-                        jQuery.cookie('bgcolor', "#" + hex);
+                jQuery.cookie('bgcolor', "#" + hex);
 
-                    }
-                });
+            }
+        });
 
         /* Background color --> End */
 

@@ -295,8 +295,8 @@ cat header.shtml             | sed "s/<li><!--CURRENT:SETTING-->/<li class=\"cur
                              | tee www/setting.html -a >/dev/null
 cat www/setting_body.shtml   | tee www/setting.html -a >/dev/null
 cat footer.shtml             | tee www/setting.html -a >/dev/null
-cat errorpage_footer.shtml   | tee www/setting.html -a >/dev/null
-rm www/setting_header.shtml www/setting_body.shtml
+cat www/setting_footer.shtml | tee www/setting.html -a >/dev/null
+rm www/setting_header.shtml www/setting_body.shtml www/setting_footer.shtml
 echo Generate www/setting.html
 
 ## port 8000 page

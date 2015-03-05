@@ -9,6 +9,9 @@
     width: 145px;
     color: #b5b7b5;
 }
+div#wrapper_control_panel {
+    margin-top: 40px;
+}
 #control_panel.control-wrapper {
     position: relative;
     top: inherit;
@@ -164,7 +167,7 @@
        -moz-transition: background-color .25s linear;
         -ms-transition: background-color .25s linear;
          -o-transition: background-color .25s linear;
-    transition: background-color .25s linear;
+            transition: background-color .25s linear;
 }
 
 .ie8 #control_label {background-color: #1f221e;}
