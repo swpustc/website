@@ -19,7 +19,7 @@ $date_size  = 24;
 $dircount  = 0;
 $filecount = 0;
 if (strlen($pwd) - $bgn > 1) {
-  $dirhtml[$dircount++] = '<a href="'.substr(dirname($pwd), $bgn).'/">../</a>'.str_pad('_', $left_part - 3,' ',STR_PAD_LEFT).str_pad('_', $right_part, ' ', STR_PAD_LEFT);
+  $dirhtml[$dircount++] = '<a href="'.substr(dirname($pwd), $bgn).'/">../</a>'.str_pad(' ', $left_part - 3, ' ', STR_PAD_LEFT).str_pad('_', $right_part, ' ', STR_PAD_LEFT);
 }
 foreach ($it as $file){
   $date = date('Y-m-d H:i:s', $file->getCTime());

@@ -13,7 +13,7 @@ $size_g1g  = ' size-g1G';
 $folder_class = 'type-folder';
 $file_class   = 'type-file';
 if (strlen($pwd) - $bgn > 1) {
-  $dirhtml[$dircount++] = '<article class="'.$folder_class.'"><div class="one-half"><a href="'.substr(dirname($pwd), $bgn).'/">../</a></div><div class="one-fourth autohide">_</div><div class="one-fourth last autohide">_</div></article><hr class="clear"/>';
+  $dirhtml[$dircount++] = '<article class="'.$folder_class.' '.$file_class.$size_1m.$size_10m.$size_100m.$size_1g.$size_g1g.'"><div class="one-half"><a href="'.substr(dirname($pwd), $bgn).'/">../</a></div><div class="one-fourth autohide">_</div><div class="one-fourth last autohide">_</div></article><hr class="clear"/>';
 }
 foreach ($it as $file){
   $date = date('Y-m-d H:i:s', $file->getMTime());

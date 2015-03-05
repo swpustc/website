@@ -4859,11 +4859,12 @@ background-color: rgba(49, 152, 48, 0.4);
   display: inline;
   text-align: left;
 }
-.light #portfolio-items.autoindex article a{
-  color: #127;
+.light .autoindex a{
+  font-weight: bold;
+  color: #268;
 }
-.dark #portfolio-items.autoindex article a{
-  color: #9af;
+.dark .autoindex a{
+  color: #8ce;
 }
 @media only screen and (min-width: 768px) {
   .autoindex-title{
@@ -4881,13 +4882,17 @@ background-color: rgba(49, 152, 48, 0.4);
 .light #portfolio-items.autoindex article {
   border-color: #ccd3cd;
 }
-.dark #portfolio-items.autoindex articlei {
+.dark #portfolio-items.autoindex article {
   border-color: #333732;
+}
+#portfolio-items.autoindex article:first-child {
+  padding-top: 0;
+  border-top: none;
 }
 #portfolio-items.autoindex article {
   padding: .25em 0;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+  border-top-width: 1px;
+  border-top-style: solid;
 }
 
 /*  <!-- Autoindex END -->  */
