@@ -1,5 +1,5 @@
 <?php
-$name = basename($_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME']);
+$name = basename($_SERVER['SCRIPT_NAME']);
 $src  = '//download.swpbox.info/ftp'.$_SERVER['SCRIPT_NAME'];
 function isChildDocument($thispath) {
   if(strncmp($_SERVER['SCRIPT_NAME'],$thispath,strlen($thispath))==0)

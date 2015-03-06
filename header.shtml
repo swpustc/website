@@ -30,7 +30,7 @@
       <!-- ***************** - Header - ***************** -->
       <header id="header" class="clearfix">
         <div id="logo">
-          <h1><a href="//swpbox.info/">swpustc</a></h1>
+          <h1><a href="//swpbox.info/"><span>s</span><span>w</span><span>p</span><span>u</span><span>s</span><span>t</span><span>c</span></a></h1>
           <div class="slogan"><span>Responsive Homepage</span></div><!--/ .slogan-->
         </div><!--/ #logo-->
         <nav id="navigation" class="navigation">

@@ -244,10 +244,11 @@ $(function() {
     var $cont = $('#portfolio-items'),
         $itemsFilter = $('#portfolio-filter'),
         $itemsFilterSub = $itemsFilter.find('ul');
-    if (skin == 'dark')
+    if (skin == 'dark') {
         currentOption = $itemsFilter.find('.code-dark .active').attr('data-categories');
-    else
+    } else {
         currentOption = $itemsFilter.find('.code-light .active').attr('data-categories');
+    }
     if(currentOption) {
         if(currentOption !== '*') currentOption = currentOption.replace(currentOption, '.' + currentOption)
             $cont.isotope({filter : currentOption});

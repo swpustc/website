@@ -825,8 +825,33 @@ blockquote {
 
             /*#logo a {font-family: 'Love Ya Like A Sister', cursive;}*/
 
-            body.light #logo a {color: #1f221e;}
-            body.dark #logo a {color: #ebeeeb;}
+            body.light #logo a, body.light #logo a > * {color: #1f221e;}
+            body.dark #logo a, body.dark #logo a > * {color: #ebeeeb;}
+
+            body.light #logo a:hover, body.light #logo a:hover > *,
+            body.dark #logo a:hover, body.dark #logo a:hover > * {color: #a6412b;}
+
+            #logo a > * {
+              position: relative;
+              top: 0;
+              font-size: 1em;
+              margin: 0;
+              -webkit-transition: all .6s ease;
+                 -moz-transition: all .6s ease;
+                  -ms-transition: all .6s ease;
+                   -o-transition: all .6s ease;
+                      transition: all .6s ease;
+            }
+            #logo a > *:hover {
+              top: -4px;
+              font-size: 1.1em;
+              margin: 0 -2px;
+              -webkit-transition: all .2s ease-in-out;
+                 -moz-transition: all .2s ease-in-out;
+                  -ms-transition: all .2s ease-in-out;
+                   -o-transition: all .2s ease-in-out;
+                      transition: all .2s ease-in-out;
+            }
 
             #logo .slogan {float: left; padding-top: 2em;}
 
@@ -841,6 +866,7 @@ blockquote {
     width: 100%;
     border-bottom-width: 4px;
     border-bottom-style: solid;
+    margin-bottom: -2px;
 }
 
     #header-top .container {
@@ -2386,6 +2412,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
     width: 100%;
     border-top-width: 4px;
     border-top-style: solid;
+    margin-top: -2px;
 }
 
 .light #footer-bottom {border-color: #1f221e; background-color: #1f221e;}
@@ -4230,11 +4257,13 @@ div.markdown {
   white-space: nowrap;
   display: none;
 }
+.code-licence a {
+  color: #888c87;
+}
 #portfolio-items.code-licence a {
   width: 116px;
   text-align: right;
-  color: #888c87;
-  font-style: italic;
+  font-family: 'Fredericka the Great',cursive;
 }
 
 .light .code-light { display: block !important; }

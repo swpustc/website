@@ -46,8 +46,8 @@
             $back.each(function(){
                 $(this).dequeue()
                 }).animate({
-                width:el.offsetWidth,
-                left:el.offsetLeft
+                    width:el.offsetWidth,
+                    left:el.offsetLeft
                 },o.speed,o.fx)
             }
         })
@@ -65,8 +65,7 @@ WebFontConfig = {
 };
 (function() {
     var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https:' : 'http:') +
-    '//ajax.lug.ustc.edu.cn/ajax/libs/webfont/1/webfont.js';
+    wf.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//ajax.lug.ustc.edu.cn/ajax/libs/webfont/1/webfont.js';
     wf.type = 'text/javascript';
     wf.async = 'true';
     var s = document.getElementsByTagName('body')[0];
@@ -359,10 +358,10 @@ jQuery(document).ready(function(){
 
         $('.container').each(function(){
             var target  = [
-            "iframe[src^='http://www.youtube.com']",
-            "iframe[src^='http://player.vimeo.com']",
-            "object",
-            "embed"
+                "iframe[src^='http://www.youtube.com']",
+                "iframe[src^='http://player.vimeo.com']",
+                "object",
+                "embed"
             ],
             $allVideos = $(this).find(target.join(','));
 
@@ -536,9 +535,9 @@ jQuery(document).ready(function(){
                 address: 'New York, USA',
                 zoom: 13,
                 markers: [
-                {
-                    'address' : 'Madison ST, New York'
-                }
+                    {
+                        'address' : 'Madison ST, New York'
+                    }
                 ]
             });
         }
@@ -620,7 +619,7 @@ jQuery(document).ready(function(){
             )
 
             $('html, body').animate({
-                scrollTop : $pos + $panelHeight
+                    scrollTop : $pos + $panelHeight
                 }, 1000);
             e.preventDefault();
         });
@@ -1223,8 +1222,9 @@ jQuery(document).ready(function(){
                             var regex = /<p>(.*?)<\/p>/g;
                             var input = item.description;
                             if (regex.test(input)) {
-                                item.description = input.match(regex)[2]
-                                if (item.description != undefined) item.description = item.description.replace('<p>', '').replace('</p>', '');
+                                item.description = input.match(regex)[2];
+                                if (item.description != undefined)
+                                    item.description = item.description.replace('<p>', '').replace('</p>', '');
                             }
                         }
                         item['image_s'] = item.media.m.replace('_m', '_s');
@@ -1308,10 +1308,10 @@ jQuery.cookie = function (name, value, options) {
                 var cookie = jQuery.trim(cookies[i]);
                 if (cookie.substring(0, name.length + 1) == (name + '=')) {
                     cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                    break
+                    break;
                 }
             }
         }
-        return cookieValue
+        return cookieValue;
     }
 };
