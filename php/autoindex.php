@@ -19,7 +19,7 @@ $date_size  = 24;
 $dircount  = 0;
 $filecount = 0;
 if (strlen($pwd) - $bgn > 1) {
-  $dirhtml[$dircount++] = '<a href="'.substr(dirname($pwd), $bgn).'/">../</a>'.str_pad(' ', $left_part - 3, ' ', STR_PAD_LEFT).str_pad('_', $right_part, ' ', STR_PAD_LEFT);
+  $dirhtml[$dircount++] = '<a href="'.substr(dirname($pwd), $bgn).'/" title="../">../</a>'.str_pad(' ', $left_part - 3, ' ', STR_PAD_LEFT).str_pad('_', $right_part, ' ', STR_PAD_LEFT);
 }
 foreach ($it as $file){
   $date = date('Y-m-d H:i:s', $file->getCTime());
@@ -32,7 +32,7 @@ foreach ($it as $file){
       $fileName = iconv("GBK", "UTF-8//IGNORE", $fileNameGBK);
     }
     $pathName = $file->getPathname().'/';
-    $dirhtml[$dircount++] = '<a href="'.substr($pathName, $bgn).'">'.$fileName.'</a>'.str_pad($date, $left_part - strlen($fileNameGBK),' ',STR_PAD_LEFT).str_pad($fileSize, $right_part, ' ', STR_PAD_LEFT);
+    $dirhtml[$dircount++] = '<a href="'.substr($pathName, $bgn).'" title="'.$fileName.'">'.$fileName.'</a>'.str_pad($date, $left_part - strlen($fileNameGBK),' ',STR_PAD_LEFT).str_pad($fileSize, $right_part, ' ', STR_PAD_LEFT);
   } elseif ($file->isFile()) {
     $fileSize = $file->getSize();
     if ($fileSize < 0)
@@ -51,7 +51,7 @@ foreach ($it as $file){
       $fileName = iconv("GBK", "UTF-8//IGNORE", $fileNameGBK);
     }
     $pathName = $file->getPathname();
-    $filehtml[$filecount++] = '<a href="'.substr($pathName, $bgn).'">'.$fileName.'</a>'.str_pad($date, $left_part - strlen($fileNameGBK),' ',STR_PAD_LEFT).str_pad($fileSize, $right_part, ' ', STR_PAD_LEFT);
+    $filehtml[$filecount++] = '<a href="'.substr($pathName, $bgn).'" title="'.$fileName.'">'.$fileName.'</a>'.str_pad($date, $left_part - strlen($fileNameGBK),' ',STR_PAD_LEFT).str_pad($fileSize, $right_part, ' ', STR_PAD_LEFT);
   }
 }
 for ($i = 0; $i < $dircount; $i++) {

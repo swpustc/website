@@ -150,6 +150,15 @@ cat php/ftpindex_body.phps   | tee php/ftpindex.php -a >/dev/null
 cat footer.shtml             | tee php/ftpindex.php -a >/dev/null
 cat php/ftpindex_footer.phps | tee php/ftpindex.php -a >/dev/null
 echo Generate php/ftpindex.php
+cat php/image_header.phps | tee php/image.php    >/dev/null
+cat header.shtml          | sed "s/<li><!--CURRENT:FTP:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
+                          | sed "s/<li><!--CURRENT:FTP-->/<li class=\"current\">/g" \
+                          | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                          | tee php/image.php -a >/dev/null
+cat php/image_body.phps   | tee php/image.php -a >/dev/null
+cat footer.shtml          | tee php/image.php -a >/dev/null
+cat php/image_footer.phps | tee php/image.php -a >/dev/null
+echo Generate php/image.php
 cat php/prettify_header.phps | tee php/prettify.php    >/dev/null
 cat header.shtml             | sed "s/<li><!--CURRENT:FTP:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
                              | sed "s/<li><!--CURRENT:FTP-->/<li class=\"current\">/g" \
@@ -203,6 +212,17 @@ cat footer.shtml                                  | tee static/ftp/static/403-de
 cat errorpage_footer.shtml                        | tee static/ftp/static/403-deny-files.html -a >/dev/null
 rm static/ftp/static/403-deny-files_header.shtml
 echo Generate static/ftp/static/403-deny-files.html
+cat 502_header.shtml                       | tee static/ftp/static/502-image.html    >/dev/null
+cat header.shtml                           | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                                           | tee static/ftp/static/502-image.html -a >/dev/null
+cat static/ftp/static/502-image_body.shtml | tee static/ftp/static/502-image.html -a >/dev/null
+cat footer.shtml                           | tee static/ftp/static/502-image.html -a >/dev/null
+cat errorpage_footer.shtml                 | tee static/ftp/static/502-image.html -a >/dev/null
+rm static/ftp/static/502-image_body.shtml
+echo Generate static/ftp/static/502-image.html
 cat 502_header.shtml                       | tee static/ftp/static/502-index.html    >/dev/null
 cat header.shtml                           | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
                                            | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \

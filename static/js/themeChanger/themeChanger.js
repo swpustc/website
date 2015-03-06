@@ -573,4 +573,11 @@ $(function() {
 
     /* Control Panel Label --> End */
 
+    try {
+        if (window.console && window.console.log) {
+            console.log("Contact Me: swpustc@mail.ustc.edu.cn\n");
+        }
+    } catch (e) {
+    }
+
 })

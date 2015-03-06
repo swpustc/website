@@ -70,6 +70,8 @@ Stylesheet Guide
 
 17. Autoindex
 
+18. Return & Image
+
  */
 
 /* ---------------------------------------------------------------------- */
@@ -121,14 +123,14 @@ a {
     vertical-align:baseline;
 }
 
-a, a > * {
+a, a > *, a:before, a:before > * {
     text-decoration: none;
 
-    -webkit-transition: background-color .25s ease 0s, border .25s ease 0s, color .25s ease 0s, opacity .25s ease-in-out 0s;
-       -moz-transition: background-color .25s ease 0s, border .25s ease 0s, color .25s ease 0s, opacity .25s ease-in-out 0s;
-        -ms-transition: background-color .25s ease 0s, border .25s ease 0s, color .25s ease 0s, opacity .25s ease-in-out 0s;
-         -o-transition: background-color .25s ease 0s, border .25s ease 0s, color .25s ease 0s, opacity .25s ease-in-out 0s;
-            transition: background-color .25s ease 0s, border .25s ease 0s, color .25s ease 0s, opacity .25s ease-in-out 0s;
+    -webkit-transition: background-image .25s ease 0s,background-color .25s ease 0s,border .25s ease 0s,color .25s ease 0s,opacity .25s ease-in-out 0s;
+       -moz-transition: background-image .25s ease 0s,background-color .25s ease 0s,border .25s ease 0s,color .25s ease 0s,opacity .25s ease-in-out 0s;
+        -ms-transition: background-image .25s ease 0s,background-color .25s ease 0s,border .25s ease 0s,color .25s ease 0s,opacity .25s ease-in-out 0s;
+         -o-transition: background-image .25s ease 0s,background-color .25s ease 0s,border .25s ease 0s,color .25s ease 0s,opacity .25s ease-in-out 0s;
+            transition: background-image .25s ease 0s,background-color .25s ease 0s,border .25s ease 0s,color .25s ease 0s,opacity .25s ease-in-out 0s;
 }
 
 body.light a, body.light a > * {color: #50554e;}
@@ -4842,6 +4844,45 @@ background-color: rgba(49, 152, 48, 0.4);
 /*  Autoindex
 /* ---------------------------------------------------------------------- */
 
+.autoindex div.one-half a:before {
+  content: "";
+  width: 6px;
+  padding-right: 8px;
+  float: left;
+  padding: 8px;
+  padding-bottom: 10px;
+  background-image: url(../images/icons/ftpindex.png?t=TIMESTAMP:BEGIN:images/icons/ftpindex.png:END:TIMESTAMP);
+  background-repeat: no-repeat;
+}
+.autoindex div.one-half a:hover:before {
+  background-image: url(../images/icons/ftpindex-hover.png?t=TIMESTAMP:BEGIN:images/icons/ftpindex-hover.png:END:TIMESTAMP);
+}
+.light .type-folder.type-file div.one-half a:before,
+.light .type-folder.type-file div.one-half a:hover:before{
+  background-position: 0 0;
+}
+.dark .type-folder.type-file div.one-half a:before,
+.dark .type-folder.type-file div.one-half a:hover:before{
+  background-position: 0 -18px;
+}
+.light .type-folder div.one-half a:before,
+.light .type-folder div.one-half a:hover:before{
+  background-position: 0 -36px;
+}
+.dark .type-folder div.one-half a:before,
+.dark .type-folder div.one-half a:hover:before{
+  background-position: 0 -54px;
+}
+.light .type-file div.one-half a:before,
+.light .type-file div.one-half a:hover:before{
+  background-position: 0 -72px;
+}
+.dark .type-file div.one-half a:before,
+.dark .type-file div.one-half a:hover:before{
+  background-position: 0 -90px;
+}
+
+
 .autoindex-title, #portfolio-items.autoindex article div.one-half{
   white-space: nowrap;
   overflow: hidden;
@@ -4861,10 +4902,10 @@ background-color: rgba(49, 152, 48, 0.4);
 }
 .light .autoindex a{
   font-weight: bold;
-  color: #268;
+  color: #258;
 }
 .dark .autoindex a{
-  color: #8ce;
+  color: #8be;
 }
 @media only screen and (min-width: 768px) {
   .autoindex-title{
@@ -4896,3 +4937,53 @@ background-color: rgba(49, 152, 48, 0.4);
 }
 
 /*  <!-- Autoindex END -->  */
+
+
+/* ---------------------------------------------------------------------- */
+/*  Return & Image
+/* ---------------------------------------------------------------------- */
+
+a.return{
+  display: inline;
+  float: left;
+  width: 24px;
+  height: 19px;
+  margin-right: 16px;
+  background-image: url(../images/icons/return.png?t=TIMESTAMP:BEGIN:images/icons/return.png:END:TIMESTAMP);
+  background-repeat: no-repeat;
+}
+a.return:hover{
+  background-image: url(../images/icons/return-hover.png?t=TIMESTAMP:BEGIN:images/icons/return-hover.png:END:TIMESTAMP);
+}
+.light a.return, .light a.return:hover{
+  background-position: 0 0;
+}
+.dark a.return, .dark a.return:hover{
+  background-position: -24px 0;
+}
+
+.ftp-image{
+  display: block;
+  text-align: center;
+  margin: 40px auto 0;
+  max-width: 70%;
+}
+.ftp-image img{
+  max-width: 100%;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .ftp-image{
+  max-width: 80%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .ftp-image{
+  max-width: 90%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .ftp-image{
+  max-width: 100%;
+  }
+}
+/*  <!-- Return & Image END -->  */
