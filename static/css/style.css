@@ -213,7 +213,7 @@ body.fixed.dark.f-pattern-12 {background-image: url(../images/bgs/fd-bg-12.png?t
 
 /* Body Pattern  --> End */
 
-body.light a:hover, body.light a > *:hover {color: #a6412b;}
+body.light a:hover, body.light a > *:hover,
 body.dark a:hover, body.dark a > *:hover {color: #a6412b;}
 
 p {
@@ -830,38 +830,30 @@ blockquote {
 
             body.light #logo a:hover, body.light #logo a:hover > *,
             body.dark #logo a:hover, body.dark #logo a:hover > * {color: #a6412b;}
+            body.light #logo a > *:hover, body.dark #logo a > *:hover {color: rgba(166, 65, 43, 0.8);}
 
-            #logo a > * {
-              margin: 0;
-              -webkit-transition: all .6s ease;
-                 -moz-transition: all .6s ease;
-                  -ms-transition: all .6s ease;
-                   -o-transition: all .6s ease;
-                      transition: all .6s ease;
-            }
             #logo a:hover > * {
-              -webkit-transition: all .6s ease-in-out;
-                 -moz-transition: all .6s ease-in-out;
-                  -ms-transition: all .6s ease-in-out;
-                   -o-transition: all .6s ease-in-out;
-                      transition: all .6s ease-in-out;
+              -webkit-transition: all .75s ease-in-out;
+                 -moz-transition: all .75s ease-in-out;
+                  -ms-transition: all .75s ease-in-out;
+                   -o-transition: all .75s ease-in-out;
+                      transition: all .75s ease-in-out;
             }
             #logo a > *:hover {
-              margin: 0 1px;
-              -webkit-transition: all .2s ease-in-out;
-                 -moz-transition: all .2s ease-in-out;
-                  -ms-transition: all .2s ease-in-out;
-                   -o-transition: all .2s ease-in-out;
-                      transition: all .2s ease-in-out;
+              -webkit-transition: all .25s ease-in-out;
+                 -moz-transition: all .25s ease-in-out;
+                  -ms-transition: all .25s ease-in-out;
+                   -o-transition: all .25s ease-in-out;
+                      transition: all .25s ease-in-out;
             }
 
             #logo .slogan {float: left; padding-top: 2em;}
 
-                #logo .slogan span {
-                    color: #888c87;
-                    font-style: italic;
-                    font-family: 'Droid Serif', serif;
-                }
+            #logo .slogan span {
+                color: #888c87;
+                font-style: italic;
+                font-family: 'Droid Serif', serif;
+            }
 
 #header-top {
     position: relative;

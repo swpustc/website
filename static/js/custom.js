@@ -1179,7 +1179,25 @@ jQuery(document).ready(function(){
 
     })();
 
-/* end Twitter */
+    /* end Twitter */
+
+    /* ---------------------------------------------------------------------- */
+    /*  SpanWords
+    /* ---------------------------------------------------------------------- */
+
+    (function(){
+        $('.spanwords').each(function(){
+            var $this = $(this),
+                nodeText = $this.text(),
+                spanText = '';
+            for(var i = 0; i < nodeText.length; i++) {
+                spanText += '<span>' + nodeText[i] + '</span>';
+            }
+            $this.html(spanText);
+        });
+    })();
+
+    /* end SpanWords */
 
 /***************************************/
 });/* DOM READY --> End                */
