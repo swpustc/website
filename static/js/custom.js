@@ -1041,7 +1041,7 @@ jQuery(document).ready(function(){
                     $this.find('li a').stop(true,true).slideShow(300);
                     if (autoindexNeedSetWidth) {
                         $autoindexTitle.stop(true,true).delay(50).animate({
-                            width: $container.width() - 486
+                            width: $container.width() - 406
                         }, {
                             duration: 260,
                             specialEasing: { width: 'linear' }

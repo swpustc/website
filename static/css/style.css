@@ -832,9 +832,6 @@ blockquote {
             body.dark #logo a:hover, body.dark #logo a:hover > * {color: #a6412b;}
 
             #logo a > * {
-              position: relative;
-              top: 0;
-              font-size: 1em;
               margin: 0;
               -webkit-transition: all .6s ease;
                  -moz-transition: all .6s ease;
@@ -842,10 +839,15 @@ blockquote {
                    -o-transition: all .6s ease;
                       transition: all .6s ease;
             }
+            #logo a:hover > * {
+              -webkit-transition: all .6s ease-in-out;
+                 -moz-transition: all .6s ease-in-out;
+                  -ms-transition: all .6s ease-in-out;
+                   -o-transition: all .6s ease-in-out;
+                      transition: all .6s ease-in-out;
+            }
             #logo a > *:hover {
-              top: -4px;
-              font-size: 1.1em;
-              margin: 0 -2px;
+              margin: 0 1px;
               -webkit-transition: all .2s ease-in-out;
                  -moz-transition: all .2s ease-in-out;
                   -ms-transition: all .2s ease-in-out;
@@ -878,7 +880,7 @@ blockquote {
     }
 
 .light #header-top {border-bottom-color: #1f221e; background-color: #1f221e;}
-.copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+.copyrights {text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
 .dark #header-top {border-bottom-color: #ebeeeb;  background-color: #ebeeeb;}
 
 #header-top #more,
@@ -1209,7 +1211,7 @@ ul.contact-info .email {background-position: 0 -25px;}
     .slide-content ul.social-links li:before {bottom: 40px;}
 
     footer ul.social-links li:hover:before,
-    .slide-content ul.social-links li:hover:before{bottom: 20px;}
+    .slide-content ul.social-links li:hover:before {bottom: 20px;}
 
     ul.social-links li:hover:before {opacity: 1; visibility: visible; filter: alpha(opacity=100);}
 
@@ -1709,7 +1711,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 
     .post-type.video {background-position: 0 0;}
 
-    .post-type.picture{background-position: -35px 0;}
+    .post-type.picture {background-position: -35px 0;}
 
     .post-type.list {background-position: -70px 0;}
 
@@ -3323,7 +3325,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 
     .comments-form input {width: 138px;}
 
-    .contacts-form textarea{width: 539px;}
+    .contacts-form textarea {width: 539px;}
 
     .comments-form textarea {width: 490px;}
 
@@ -3911,18 +3913,18 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 /*  DDNS
 /* ---------------------------------------------------------------------- */
 
-.ddns div{
+.ddns div {
   white-space: nowrap;
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
 }
-.ddns hr,.ddns h4,.ddns p ,#portfolio-items.ddns article{
+.ddns hr,.ddns h4,.ddns p ,#portfolio-items.ddns article {
   padding: 0;
   margin: 0;
   border: 0;
 }
-.ddns .vpn1,.ddns .vpn2,.ddns .vpn3,.ddns .vpn4,.ddns .vpn5,.ddns .fail,.ddns .good,.ddns .abuse,.ddns .unknow{
+.ddns .vpn1,.ddns .vpn2,.ddns .vpn3,.ddns .vpn4,.ddns .vpn5,.ddns .fail,.ddns .good,.ddns .abuse,.ddns .unknow {
   font-weight: bold;
 }
 .light .ddns .time {
@@ -4340,7 +4342,7 @@ background-color: rgba(49, 152, 48, 0.4);
   background-position: 0 -28px;
 }
 
-@media only screen and (max-width:999px){
+@media only screen and (max-width:999px) {
 .linenums {
   list-style: decimal-leading-zero inside;
   padding-left: 0;
@@ -4352,7 +4354,7 @@ background-color: rgba(49, 152, 48, 0.4);
   background-position: 0 -56px;
 }
 }
-@media only screen and (max-width:767px){
+@media only screen and (max-width:767px) {
 .prettyprint {
   overflow: auto;
   overflow-y: hidden;
@@ -4369,7 +4371,7 @@ background-color: rgba(49, 152, 48, 0.4);
 }
 }
 
-@media print,projection{
+@media print,projection {
 .kwd, .typ, .tag  {
   font-weight: bold;
 }
@@ -4383,7 +4385,7 @@ background-color: rgba(49, 152, 48, 0.4);
 .light .code-google .pln {
   color: #000;
 }
-@media screen{
+@media screen {
 .light .code-google .str {
   color: #080;
 }
@@ -4396,7 +4398,7 @@ background-color: rgba(49, 152, 48, 0.4);
 .light .code-google .typ {
   color: #606;
 }
-.light .code-google .lit{
+.light .code-google .lit {
   color: #066;
 }
 .light .code-google .pun,.light .code-google .opn,.light .code-google .clo {
@@ -4414,7 +4416,7 @@ background-color: rgba(49, 152, 48, 0.4);
 .light .code-google .dec,.light .code-google .var {
   color: #606;
 }
-.light .code-google .fun{
+.light .code-google .fun {
   color: red;
 }
 }
@@ -4887,66 +4889,85 @@ background-color: rgba(49, 152, 48, 0.4);
   background-image: url(../images/icons/ftpindex-hover.png?t=TIMESTAMP:BEGIN:images/icons/ftpindex-hover.png:END:TIMESTAMP);
 }
 .light .type-folder.type-file div.one-half a:before,
-.light .type-folder.type-file div.one-half a:hover:before{
+.light .type-folder.type-file div.one-half a:hover:before {
   background-position: 0 0;
 }
 .dark .type-folder.type-file div.one-half a:before,
-.dark .type-folder.type-file div.one-half a:hover:before{
+.dark .type-folder.type-file div.one-half a:hover:before {
   background-position: 0 -18px;
 }
 .light .type-folder div.one-half a:before,
-.light .type-folder div.one-half a:hover:before{
+.light .type-folder div.one-half a:hover:before {
   background-position: 0 -36px;
 }
 .dark .type-folder div.one-half a:before,
-.dark .type-folder div.one-half a:hover:before{
+.dark .type-folder div.one-half a:hover:before {
   background-position: 0 -54px;
 }
 .light .type-file div.one-half a:before,
-.light .type-file div.one-half a:hover:before{
+.light .type-file div.one-half a:hover:before {
   background-position: 0 -72px;
 }
 .dark .type-file div.one-half a:before,
-.dark .type-file div.one-half a:hover:before{
+.dark .type-file div.one-half a:hover:before {
   background-position: 0 -90px;
 }
 
 
-.autoindex-title, #portfolio-items.autoindex article div.one-half{
+.autoindex-title, #portfolio-items.autoindex article div.one-half {
   white-space: nowrap;
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
 }
-.autoindex hr{
+.autoindex hr {
   padding: 0;
 }
-.autoindex hr, #portfolio-items.autoindex article{
+.autoindex hr, #portfolio-items.autoindex article {
   margin: 0;
   border: 0;
 }
-#portfolio-items.autoindex article a{
+#portfolio-items.autoindex article a {
   display: inline;
   text-align: left;
 }
-.light .autoindex a{
+.light .autoindex a {
   font-weight: bold;
   color: #258;
 }
-.dark .autoindex a{
+.dark .autoindex a {
   color: #8be;
 }
 @media only screen and (min-width: 768px) {
-  .autoindex-title{
+  .autoindex-title {
     position: absolute;
+  }
+  #portfolio-items.autoindex article div.one-half {
+    width: 614px;
+    margin-left: 6px;
+  }
+  #portfolio-items.autoindex .autohide {
+    width: 140px;
+    text-align: right;
+  }
+  #portfolio-items.autoindex .last.autohide {
+    width: 134px;
+    margin-right: 6px;
   }
 }
 @media only screen and (max-width: 767px) {
-  .autohide{
+  #portfolio-items.autoindex article div.one-half {
+    width: 85%;
+    float: left;
+  }
+  .autohide {
     display: none;
   }
-  #portfolio-items.autoindex article div.one-half{
-    width: 100%;
+  #portfolio-items.autoindex .last.autohide {
+    display: block;
+    width: 15%;
+    float: right;
+    text-align: right;
   }
 }
 .light #portfolio-items.autoindex article {
@@ -4972,7 +4993,7 @@ background-color: rgba(49, 152, 48, 0.4);
 /*  Return & Image
 /* ---------------------------------------------------------------------- */
 
-a.return{
+a.return {
   display: inline;
   float: left;
   width: 24px;
@@ -4981,37 +5002,37 @@ a.return{
   background-image: url(../images/icons/return.png?t=TIMESTAMP:BEGIN:images/icons/return.png:END:TIMESTAMP);
   background-repeat: no-repeat;
 }
-a.return:hover{
+a.return:hover {
   background-image: url(../images/icons/return-hover.png?t=TIMESTAMP:BEGIN:images/icons/return-hover.png:END:TIMESTAMP);
 }
-.light a.return, .light a.return:hover{
+.light a.return, .light a.return:hover {
   background-position: 0 0;
 }
-.dark a.return, .dark a.return:hover{
+.dark a.return, .dark a.return:hover {
   background-position: -24px 0;
 }
 
-.ftp-image{
+.ftp-image {
   display: block;
   text-align: center;
   margin: 40px auto 0;
   max-width: 70%;
 }
-.ftp-image img{
+.ftp-image img {
   max-width: 100%;
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  .ftp-image{
+  .ftp-image {
   max-width: 80%;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .ftp-image{
+  .ftp-image {
   max-width: 90%;
   }
 }
 @media only screen and (max-width: 479px) {
-  .ftp-image{
+  .ftp-image {
   max-width: 100%;
   }
 }
