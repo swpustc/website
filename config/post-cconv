@@ -1,0 +1,10 @@
+#!/bin/bash
+## Work Directory: /home/git/html/
+## User: git
+
+## Generate Resume zh_TW page
+for file in $(find -L resume/zh_CN/ -type f -follow -print) ; do
+  file_tw=$(echo $file | sed 's/^resume\/zh_CN\//resume\/zh_TW\//g' )
+  cconv -f utf-8 -t utf8-tw $file -o $file_tw
+  echo Generate $file_tw
+done

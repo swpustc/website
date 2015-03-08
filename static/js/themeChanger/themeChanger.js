@@ -115,15 +115,28 @@ var page_config = {
 $(function() {
 
     /* ------------------------------------------------------------------- */
-    /*  Prettify & preventDefault
+    /*  Prettify, Resume & preventDefault
     /* ------------------------------------------------------------------- */
 
     var $bodyCodeLight = $("#code-prettify-light"),
         $bodyCodeDark = $("#code-prettify-dark"),
-        $itemPrettify = $('.code-prettify');
+        $itemPrettify = $('.code-prettify'),
+        $headTitle = $('#resume-title'),
+        $bodyResume = $('#resume-lang'),
+        $itemResume = $('.resume-lang');
 
     var codeLight = jQuery.cookie('code-light'),
-        codeDark = jQuery.cookie('code-dark');
+        codeDark = jQuery.cookie('code-dark'),
+        resumeLang = jQuery.cookie('resume-lang'),
+        resumeLangTemp = jQuery.cookie('resume-lang_tmp');
+
+    if (resumeLangTemp) {
+        resumeLang = resumeLangTemp;
+        jQuery.cookie('resume-lang_tmp', null, {
+            path   : null,
+            domain : null
+        });
+    }
 
     function addCookieCodeLight() {
         $bodyCodeLight.removeClass().addClass(codeLight);
@@ -131,20 +144,13 @@ $(function() {
     function addCookieCodeDark() {
         $bodyCodeDark.removeClass().addClass(codeDark);
     }
+    function addCookieResumeLang() {
+        $bodyResume.attr('href', $bodyResume.attr(resumeLang));
+        $bodyResume.attr('title', $bodyResume.attr(resumeLang + '_title'));
+        $headTitle.text($headTitle.attr(resumeLang));
+    }
 
     // Prettify projects
-    $itemPrettify.on('click', 'a', function(e) {
-        var $this = $(this),
-            prettify_code = $this.attr('id');
-        if($body.hasClass('light')) {
-            $bodyCodeLight.removeClass().addClass(prettify_code);
-            jQuery.cookie('code-light', prettify_code);
-        } else {
-            $bodyCodeDark.removeClass().addClass(prettify_code);
-            jQuery.cookie('code-dark', prettify_code);
-        }
-        e.preventDefault();
-    });
 
     if(codeLight) {
         addCookieCodeLight();
@@ -158,7 +164,41 @@ $(function() {
         $('.code-dark').find('#'+codeDark).addClass('active').show();
     }
 
+    $itemPrettify.on('click', 'a', function(e) {
+        var $this = $(this),
+            prettify_code = $this.attr('id');
+        if($body.hasClass('light')) {
+            codeLight = prettify_code;
+            addCookieCodeLight();
+            jQuery.cookie('code-light', prettify_code);
+        } else {
+            codeDark = prettify_code;
+            addCookieCodeDark();
+            jQuery.cookie('code-dark', prettify_code);
+        }
+        e.preventDefault();
+    });
+
     /* end Prettify  */
+
+
+    // Resume language
+
+    if(resumeLang) {
+        addCookieResumeLang();
+        $itemResume.find('a').removeClass('active').hide();
+        $itemResume.find('#'+resumeLang).addClass('active').show();
+    }
+
+    $itemResume.on('click', 'a', function(e) {
+        var $this = $(this);
+        resumeLang = $this.attr('id');
+        addCookieResumeLang();
+        jQuery.cookie('resume-lang', resumeLang);
+        e.preventDefault();
+    });
+
+    /* end Resume language  */
 
 
     /* Theme controller --> Begin */
@@ -249,9 +289,13 @@ $(function() {
     } else {
         currentOption = $itemsFilter.find('.code-light .active').attr('data-categories');
     }
+    if ($itemResume.length) {
+        currentOption = $itemResume.find('.active').attr('data-categories');
+    }
     if(currentOption) {
-        if(currentOption !== '*') currentOption = currentOption.replace(currentOption, '.' + currentOption)
-            $cont.isotope({filter : currentOption});
+        if(currentOption !== '*')
+            currentOption = currentOption.replace(currentOption, '.' + currentOption);
+        $cont.isotope({filter : currentOption});
     }
     $cont.find('article').show();
 
@@ -523,6 +567,7 @@ $(function() {
             $theme_control_panel.find('.active').removeClass();
             jQuery.cookie('code-light', null);
             jQuery.cookie('code-dark', null);
+            jQuery.cookie('resume-lang', null);
             $bodyCodeLight.removeClass().addClass('code-google');
             $bodyCodeDark.removeClass().addClass('code-vibrant-ink');
             $itemsFilter.find('a').removeClass('active').hide();
@@ -530,13 +575,19 @@ $(function() {
                 $itemsFilterSub.each(function(){
                     $(this).find('a').first().addClass('active').show();
                 });
+                currentOption = $itemsFilter.find('.code-light .active').attr('data-categories');
             } else {
                 $itemsFilter.find('a').first().addClass('active').show();
+                $itemResume_active = $itemResume.find('.active');
+                currentOption = $itemResume_active.attr('data-categories');
+                resumeLang = $itemResume_active.attr('id');
+                if (resumeLang)
+                    addCookieResumeLang();
             }
-            currentOption = $itemsFilter.find('.code-light .active').attr('data-categories');
             if(currentOption) {
-                if(currentOption !== '*') currentOption = currentOption.replace(currentOption, '.' + currentOption)
-                    $cont.isotope({filter : currentOption});
+                if(currentOption !== '*')
+                    currentOption = currentOption.replace(currentOption, '.' + currentOption);
+                $cont.isotope({filter : currentOption});
             }
             return false;
         };

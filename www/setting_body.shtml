@@ -40,7 +40,7 @@
   </section><!-- end #portfolio-items -->
   <div id="wrapper_control_panel">
   </div><!--/ #wrapper_control_panel-->
-  <div class="markdown">
+  <div class="markdown wrapper_control_panel">
     <div id="code-prettify-light" class="code-google">
       <div id="code-prettify-dark" class="code-vibrant-ink">
 <pre class="prettyprint">
@@ -73,5 +73,5 @@ int main() {
 </pre><!--/ .prettyprint-->
       </div><!--/ .code-prettify-dark-->
     </div><!--/ .code-prettify-light-->
-  </div><!--/ .markdown-->
+  </div><!--/ .markdown.wrapper_control_panel-->
 </div><!--/ .content-wrapper-->

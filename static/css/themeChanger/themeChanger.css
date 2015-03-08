@@ -9,8 +9,20 @@
     width: 145px;
     color: #b5b7b5;
 }
-div#wrapper_control_panel {
-    margin-top: 40px;
+@media only screen and (min-width: 480px) {
+    div#wrapper_control_panel {
+        margin-top: 24px;
+        display: inline;
+        float: left;
+    }
+    div.markdown.wrapper_control_panel {
+        padding-left: 209px;
+    }
+}
+@media only screen and (max-width: 479px) {
+    div#wrapper_control_panel {
+        margin-top: 40px;
+    }
 }
 #control_panel.control-wrapper {
     position: relative;

@@ -144,7 +144,7 @@ input, select {vertical-align:middle;}
 /* ---------------------------------------------------------------------- */
 
 body {
-    font: 81.3%/1.5em 'Droid Serif', serif;
+    font: 81.3%/1.5em 'Droid Serif',Lucida Sans Unicode,Hiragino Sans GB,WenQuanYi Micro Hei,Microsoft Yahei,Verdana,Aril,serif;
     -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
 }
@@ -1602,18 +1602,19 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 /* 404 Page --> Begin */
 
 .error404 {
-    margin: 3.5em 0;
-    text-align: center;
+    margin: 3.5em 0 !important;
+    text-align: center !important;
+    font-family: 'Droid Serif',Lucida Sans Unicode,Hiragino Sans GB,WenQuanYi Micro Hei,Microsoft Yahei,Verdana,Aril,serif !important;
 }
 
-.light .error404 {color: #282828;}
-.dark .error404 {color: #7e8a83;}
+.light .error404 > * {color: #282828}
+.dark .error404 > * {color: #7e8a83}
 
     .error404 h1 {
-        margin: 0;
-        font-weight: 700;
-        font-size: 21.923em;
-        line-height: .76em;
+        margin: 0 !important;
+        font-weight: 700 !important;
+        font-size: 21.923em !important;
+        line-height: .76em !important;
     }
 
     .error404 .title-error {
@@ -2387,7 +2388,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
     color: #7E8A83;
     font-style: italic;
     display: inline;
-    padding-right: 18px;
+    padding-right: 12px;
 }
 
 .light .copyright {color: #7e8a83;}
@@ -3393,7 +3394,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 
         /* 404 error */
 
-        .error404 h1 {font-size: 13em;}
+        .error404 h1 {font-size: 13em !important;}
         .error404 .title-error {font-size: 3em;}
 
         /* Related */
@@ -4010,6 +4011,9 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 div.markdown {
   margin-top: 40px;
 }
+div.markdown.resume {
+  margin-top: 16px;
+}
 .markdown {
   font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -4017,6 +4021,7 @@ div.markdown {
 .markdown h1 {
   margin: 16px 0 16px;
   font-size: 42px;
+  font-weight: bold;
   text-align: center;
   margin-bottom: 15px;
   line-height: 1;
@@ -4061,8 +4066,11 @@ div.markdown {
   line-height: 1.6;
   word-break: break-word;
 }
-.markdown p,.markdown ul,.markdown ol,.markdown li {
+.markdown p,.markdown ul,.markdown ol,.markdown li,.markdown table {
   font-size: 14px;
+}
+.markdown.resume a {
+  display: inline !important;
 }
 .markdown code {
   font-family: Consolas,Monaco,Andale Mono,monospace;
@@ -4099,35 +4107,43 @@ div.markdown {
 .markdown table {
   width: 100%;
 }
+.markdown.resume table {
+  border-top: solid;
+  border-bottom: solid;
+  border-color: #888c87;
+}
+.markdown table th, .markdown table td {
+  padding: 2px;
+}
 @media only screen and (max-width: 767px) {
-.markdown h2.resume:before {
-  width: 20%;
-  margin-right: 2%;
-}
-.markdown ul,.markdown ol {
-  margin-left: 0;
-}
-.markdown dt {
-  width: 22%;
-}
-.markdown dd {
-  margin-left: 22%;
-}
+  .markdown h2.resume:before {
+    width: 20%;
+    margin-right: 2%;
+  }
+  .markdown ul,.markdown ol {
+    margin-left: 0;
+  }
+  .markdown dt {
+    width: 22%;
+  }
+  .markdown dd {
+    margin-left: 22%;
+  }
 }
 @media only screen and (max-width: 479px) {
-.markdown h2.resume:before {
-  width: 24%;
-  margin-right: 3%;
-}
-.markdown ul,.markdown ol {
-  list-style-position: inside;
-}
-.markdown dt {
-  width: 27%;
-}
-.markdown dd {
-  margin-left: 27%;
-}
+  .markdown h2.resume:before {
+    width: 24%;
+    margin-right: 3%;
+  }
+  .markdown ul, .markdown ol {
+    list-style-position: inside;
+  }
+  .markdown dt {
+    width: 27%;
+  }
+  .markdown dd {
+    margin-left: 27%;
+  }
 }
 
 .light .markdown a, .light .markdown a > * {
@@ -5028,4 +5044,5 @@ a.return:hover {
   max-width: 100%;
   }
 }
+
 /*  <!-- Return & Image END -->  */

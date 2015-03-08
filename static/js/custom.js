@@ -1009,7 +1009,8 @@ jQuery(document).ready(function(){
                 $this.addClass('active');
 
                 if(currentOption) {
-                    if(currentOption !== '*') currentOption = currentOption.replace(currentOption, '.' + currentOption)
+                    if(currentOption !== '*')
+                        currentOption = currentOption.replace(currentOption, '.' + currentOption);
 
                     $cont.isotope({
                         filter : currentOption
@@ -1029,7 +1030,7 @@ jQuery(document).ready(function(){
             }
             $itemsFilter.find('a').not('.active').hide();
             if (autoindexNeedSetWidth)
-                $autoindexTitle.css("max-width", $container.width() - $itemsFilter.width() - 20);
+                $autoindexTitle.css("max-width", $container.width() - $itemsFilter.width() - 12);
             var autoindexTitleWidth = $autoindexTitle.width();
 
             $itemsFilter.on('mouseenter', function() {
@@ -1040,10 +1041,10 @@ jQuery(document).ready(function(){
                 mouseOver = setTimeout( function() {
                     $this.find('li a').stop(true,true).slideShow(300);
                     if (autoindexNeedSetWidth) {
-                        $autoindexTitle.stop(true,true).delay(50).animate({
-                            width: $container.width() - 406
+                        $autoindexTitle.stop(true,true).delay(100).animate({
+                            width: $container.width() - 414
                         }, {
-                            duration: 260,
+                            duration: 220,
                             specialEasing: { width: 'linear' }
                         });
                     }

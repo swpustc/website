@@ -59,7 +59,8 @@ DAY4="`date --date=@$UTC4 +%m-%d`"
 DAY5="`date --date=@$UTC5 +%m-%d`"
 DAY6="`date --date=@$UTC6 +%m-%d`"
 TME="`date --date=@$UTC1 '+%F %T'`"
-cat ddns-log_header.shtml    | tee /tmp/ddns.tmp    >/dev/null
+cat DOCTYPE.shtml            | tee /tmp/ddns.tmp    >/dev/null
+cat ddns-log_header.shtml    | tee /tmp/ddns.tmp -a >/dev/null
 cat header.shtml             | sed "s/<li><!--CURRENT:DDNS-->/<li class=\"current\">/g" \
                              | sed "s/<li><!--CURRENT:STATUS-->/<li class=\"current\">/g" \
                              | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
