@@ -19,19 +19,19 @@ if (!$file_enus_exist && !$file_zhcn_exist && ! $file_zhtw_exist) {
 $resume_lang = $_GET['lang'];
 $resume_lang_write = $_GET['write'];
 if (!$resume_lang || $resume_lang == '');
-elseif ($resume_lang == 'en_US' || $resume_lang == 'en_us' || $resume_lang == 'enus' || $resume_lang == 'ENUS') {
+elseif (preg_match('/^en[-_]?(us)?$/i', $resume_lang)) {
   if ($resume_lang_write)
     setcookie("resume-lang", 'lang-en_us', 2147483647, '/', 'swpbox.info');
   else
     setcookie("resume-lang_tmp", 'lang-en_us');
 }
-elseif ($resume_lang == 'zh_CN' || $resume_lang == 'zh_cn' || $resume_lang == 'zhcn' || $resume_lang == 'ZHCN') {
+elseif (preg_match('/^zh[-_]?(cn)?$/i', $resume_lang)) {
   if ($resume_lang_write)
     setcookie("resume-lang", 'lang-zh_cn', 2147483647, '/', 'swpbox.info');
   else
     setcookie("resume-lang_tmp", 'lang-zh_cn');
 }
-elseif ($resume_lang == 'zh_TW' || $resume_lang == 'zh_tw' || $resume_lang == 'zhtw' || $resume_lang == 'ZHTW') {
+elseif (preg_match('/^zh[-_]?tw$/i', $resume_lang)) {
   if ($resume_lang_write)
     setcookie("resume-lang", 'lang-zh_tw', 2147483647, '/', 'swpbox.info');
   else

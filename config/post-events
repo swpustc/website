@@ -128,7 +128,7 @@ cat errorpage_footer.shtml | tee CA/index.html -a >/dev/null
 rm CA/index_header.shtml CA/index_body.shtml
 echo Generate CA/index.html
 ### nowhere
-cat DOCTYPE.shtml            | tee mowhere/400.html    >/dev/null
+cat DOCTYPE.shtml            | tee nowhere/400.html    >/dev/null
 cat nowhere/400_header.shtml | tee nowhere/400.html -a >/dev/null
 cat header.shtml             | sed "s/<li><!--CURRENT:ERR400-->/<li class=\"current\">/g" \
                              | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \

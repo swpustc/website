@@ -1,6 +1,10 @@
 <div class="content-wrapper clearfix">
   <header class="page-header clearfix">
-    <a href="<?php echo dirname($_SERVER['SCRIPT_NAME']); ?>/" class="return" title="Return"></a>
+    <a href="<?php
+      $return = dirname($_SERVER['SCRIPT_NAME']);
+      if (strlen($return) > 1)
+        echo $return;
+      ?>/" class="return" title="Return"></a>
     <h1>
       <a href="<?php echo $file_enus_down; ?>"
         lang-en_us="<?php echo $file_enus_down; ?>"
