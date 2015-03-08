@@ -51,7 +51,7 @@ $file_text = file_get_contents($file);
 $file_enus_text = $file_enus_exist ? file_get_contents($file_enus) : '';
 $file_zhcn_text = $file_zhcn_exist ? file_get_contents($file_zhcn) : '';
 $file_zhtw_text = $file_zhtw_exist ? file_get_contents($file_zhtw) : '';
-$error_enus = '<div class="error404"><h1>404</h1><div class="title-error">Page Not Found</div><div class="description-error">Sorry, the specified language version does not exist.</div></div>'."\n";
+$error_enus = '<div class="error404"><h1>404</h1><div class="title-error">Page Not Found!</div><div class="description-error">Sorry, the specified language version does not exist.</div></div>'."\n";
 $error_zhcn = '<div class="error404"><h1>404</h1><div class="title-error">页面未找到</div><div class="description-error">抱歉，指定的语言版本不存在。</div></div>'."\n";
 $error_zhtw = '<div class="error404"><h1>404</h1><div class="title-error">頁面未找到</div><div class="description-error">抱歉，指定的語言版本不存在。</div></div>'."\n";
 $file_html = MarkdownExtra::defaultTransform(iconv(mb_detect_encoding($file_text, array('ASCII', 'UTF-8', 'GBK', 'BIG5')), "UTF-8//IGNORE", $file_text));
