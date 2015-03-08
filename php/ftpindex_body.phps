@@ -1,7 +1,9 @@
 <div class="content-wrapper clearfix">
   <header class="page-header clearfix">
     <h1 class="autoindex-title">
-      <a href="//download.swpbox.info/ftp<?php echo $_SERVER['SCRIPT_NAME']; ?>" title="Index of <?php echo $cur; ?>">Index of <?php echo $cur; ?></a>
+      <a href="//download.swpbox.info/ftp<?php echo $_SERVER['SCRIPT_NAME']; ?>"
+        title="Index of <?php echo $cur; ?>"
+        >Index of <?php echo $cur; ?></a>
     </h1>
     <ul id="portfolio-filter">
       <li>Filter:</li>

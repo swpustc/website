@@ -1,10 +1,5 @@
 <div class="content-wrapper clearfix">
   <header class="page-header clearfix">
-    <a href="<?php
-      $return = dirname($_SERVER['SCRIPT_NAME']);
-      if (strlen($return) > 1)
-        echo $return;
-      ?>/" class="return" title="Return"></a>
     <h1>
       <a href="<?php echo $file_enus_down; ?>"
         lang-en_us="<?php echo $file_enus_down; ?>"
@@ -14,7 +9,7 @@
         lang-en_us_title="<?php echo $file_enus_down_title; ?>"
         lang-zh_cn_title="<?php echo $file_zhcn_down_title; ?>"
         lang-zh_tw_title="<?php echo $file_zhtw_down_title; ?>"
-        id="resume-lang"><?php echo $name; ?></a>
+        id="resume-lang">Download <?php echo $name; ?></a>
     </h1>
     <ul id="portfolio-filter" class="resume-lang">
       <li>Language:</li>

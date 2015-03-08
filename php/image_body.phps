@@ -6,7 +6,9 @@
         echo $return;
       ?>/" class="return" title="Return"></a>
     <h1>
-      <a href="<?php echo $src; ?>" title="Download <?php echo $name; ?>"><?php echo $name; ?></a>
+      <a href="<?php echo $src; ?>"
+        title="Download <?php echo $name; ?>"
+        >Download <?php echo $name; ?></a>
     </h1>
   </header><!--/ .page-header-->
   <div class="ftp-image">
