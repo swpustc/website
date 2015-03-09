@@ -77,4 +77,6 @@ cat /var/log/ddns.log        | tee /tmp/ddns.tmp -a >/dev/null
 echo $' </section>\n</div>'  | tee /tmp/ddns.tmp -a >/dev/null
 cat footer.shtml             | tee /tmp/ddns.tmp -a >/dev/null
 cat ddns-log_footer.shtml    | tee /tmp/ddns.tmp -a >/dev/null
-cp /tmp/ddns.tmp /tmp/ddns-log.html
+config/post-hash STANDARD /tmp/ddns.tmp
+cat /tmp/ddns.tmp | sed 's/<!--\(\/\| end\| \*\)[^!<>]*-->//;s/^[[:space:]]*//;/^$/d' \
+                  | tee /tmp/ddns-log.html

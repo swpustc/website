@@ -78,6 +78,10 @@ Stylesheet Guide
 /*  Reset
 /* ---------------------------------------------------------------------- */
 
+html {
+  overflow-y: scroll;
+}
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -1346,12 +1350,14 @@ header.page-header {
     padding: .6em 0;
     border-top: 1px solid #ccd3cd;
     border-bottom: 1px solid #ccd3cd;
+    width: 100%;
 }
 
 .content-title {
     padding: .6em 0;
     border-bottom-width: 1px;
     border-bottom-style: solid;
+    width: 100%;
 }
 
 .light .content-title {border-color: #ccd3cd;}
@@ -2407,7 +2413,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
     width: 100%;
     border-top-width: 4px;
     border-top-style: solid;
-    margin-top: -2px;
+    margin-top: -1px;
 }
 
 .light #footer-bottom {border-color: #1f221e; background-color: #1f221e;}
@@ -3911,11 +3917,31 @@ ul.related span.categories {color: #50554e; font-style: italic;}
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
+  float: left;
 }
 .ddns hr,.ddns h4,.ddns p ,#portfolio-items.ddns article {
   padding: 0;
   margin: 0;
   border: 0;
+}
+@media only screen and (max-width: 767px) {
+  .ddns .one-fourth.time {
+    width: 22%;
+  }
+  .ddns .one-fourth {
+    width: 26%;
+  }
+  .ddns .three-fourth {
+    width: 78%;
+  }
+}
+@media only screen and (max-width: 669px) {
+  .ddns .one-fourth.time, .ddns .one-fourth, .ddns .three-fourth {
+    width: 48%;
+  }
+  .ddns .ddnshide {
+    display: none;
+  }
 }
 .ddns .vpn1,.ddns .vpn2,.ddns .vpn3,.ddns .vpn4,.ddns .vpn5,.ddns .fail,.ddns .good,.ddns .abuse,.ddns .unknow {
   font-weight: bold;
@@ -3985,6 +4011,9 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 }
 .dark .ddns .unknow {
   color :#0000c0;
+}
+.update-time {
+  display: inline-block;
 }
 .light .update-time {
   color: #525452;
@@ -4957,6 +4986,7 @@ background-color: rgba(49, 152, 48, 0.4);
   #portfolio-items.autoindex .autohide {
     width: 140px;
     text-align: right;
+    white-space: nowrap;
   }
   #portfolio-items.autoindex .last.autohide {
     width: 134px;

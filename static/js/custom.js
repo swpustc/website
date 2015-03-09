@@ -1200,6 +1200,29 @@ jQuery(document).ready(function(){
 
     /* end SpanWords */
 
+    /* ---------------------------------------------------------------------- */
+    /*  DDNS Autohide
+    /* ---------------------------------------------------------------------- */
+
+    (function(){
+        var hideClassName = 'ddnshide';
+        $('#portfolio-items.ddns article').each(function(){
+            var $this = $(this),
+                node = $this.children('div');
+            if (node.length == 4) {
+                node = node.first().next();
+                var nodeNext = node.next(),
+                    nodeEnd = nodeNext.next();
+                if (node.text() == nodeNext.text() && node.text() == nodeEnd.text()) {
+                    nodeNext.addClass(hideClassName);
+                    nodeEnd.addClass(hideClassName);
+                }
+            }
+        });
+    })();
+
+    /* end DDNS Autohide */
+
 /***************************************/
 });/* DOM READY --> End                */
 /***************************************/

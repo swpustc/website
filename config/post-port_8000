@@ -27,10 +27,20 @@ cat nowhere/500.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
                      | sed 's/https:\/\/\([^"\/<>]*\)\/setting.html/\/setting.html/g' \
                      | tee port_8000/500.html >/dev/null
 echo Generate port_8000/500.html
-cat nowhere/502.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
-                     | sed 's/https:\/\/\([^"\/<>]*\)\/setting.html/\/setting.html/g' \
-                     | sed "s/Domain Unavailable/Port is Not Open/g" \
-                     | tee port_8000/502.html >/dev/null
+cat DOCTYPE.shtml              | tee port_8000/502.shtml    >/dev/null
+cat port_8000/502_header.shtml | tee port_8000/502.shtml -a >/dev/null
+cat header.shtml               | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                               | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                               | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                               | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                               | tee port_8000/502.shtml -a >/dev/null
+cat port_8000/502_body.shtml   | tee port_8000/502.shtml -a >/dev/null
+cat footer.shtml               | tee port_8000/502.shtml -a >/dev/null
+cat errorpage_footer.shtml     | tee port_8000/502.shtml -a >/dev/null
+cat port_8000/502.shtml | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                        | sed 's/https:\/\/\([^"\/<>]*\)\/setting.html/\/setting.html/g' \
+                        | tee port_8000/502.html >/dev/null
+rm port_8000/502_header.shtml port_8000/502_body.shtml port_8000/502.shtml
 echo Generate port_8000/502.html
 cat nowhere/503.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
                      | sed 's/https:\/\/\([^"\/<>]*\)\/setting.html/\/setting.html/g' \

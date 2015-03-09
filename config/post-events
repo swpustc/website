@@ -117,7 +117,8 @@ cat errorpage_footer.shtml | tee blog/502.html -a >/dev/null
 rm blog/502_body.shtml
 echo Generate blog/502.html
 ### CA
-cat CA/index_header.shtml  | tee CA/index.html    >/dev/null
+cat DOCTYPE.shtml          | tee CA/index.html    >/dev/null
+cat CA/index_header.shtml  | tee CA/index.html -a >/dev/null
 cat header.shtml           | sed "s/<li><!--CURRENT:CA-->/<li class=\"current\">/g" \
                            | sed "s/<li><!--CURRENT:FTP-->/<li class=\"current\">/g" \
                            | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \

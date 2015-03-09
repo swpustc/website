@@ -82,7 +82,7 @@
                 <li><!--CURRENT:FTP:/home/--><a href="//ftp.swpbox.info/home/">home</a></li>
                 <li><!--CURRENT:FTP:/html/--><a href="//ftp.swpbox.info/html/">html</a></li>
                 <li><!--CURRENT:FTP:/software/--><a href="//ftp.swpbox.info/software/">software</a></li>
-                <li><!--CURRENT:DOWNLOAD--><a href="//download.swpbox.info/ftp/">Download</a></li>
+                <li><!--CURRENT:DOWNLOAD--><a href="//download.swpbox.info/ftp/" target="_blank">Download</a></li>
                 <li><!--CURRENT:CA--><a href="//CA.swpbox.info/">swpustc CA</a>
                   <ul>
                     <li><!--CURRENT:CA:/rootcert.cer--><a href="//CA.swpbox.info/rootcert.cer">cer document</a></li>
