@@ -322,8 +322,7 @@ echo Generate status/ddns-log-static.html
 ### www
 cat DOCTYPE.shtml          | tee www/index.html    >/dev/null
 cat www/index_header.shtml | tee www/index.html -a >/dev/null
-cat header.shtml           | sed "s/<li><!--CURRENT:INDEX-->/<li class=\"current\">/g" \
-                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+cat header.shtml           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
                            | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                            | tee www/index.html -a >/dev/null
 cat www/index_body.shtml   | tee www/index.html -a >/dev/null
@@ -370,3 +369,10 @@ for file in $(find -P ./ -type f \( -name '*.html' -or -name '*.php' \) -print) 
   fi
 done
 sed -i 's/<!--\(\/\| end\| \*\)[^!<>]*-->//;s/^[[:space:]]*//;/^$/d' DOCTYPE.shtml
+### Reset static resources timestamp (last modified)
+echo call config/post-touch
+for file in $(find -P static/ \( -type f -or -type d \) -print) ; do
+  if [ ! -L $file ] ; then
+    config/post-touch $file
+  fi
+done

@@ -1,0 +1,15 @@
+#!/bin/bash
+## Work Directory: /home/git/html/
+## User: git
+
+if [ "$1"x = x ] ; then
+  ## Error
+  echo $0: Too few arguments
+else
+  ## reset last modified time
+  if git log --no-color --date=raw -- $1 | grep Date >/dev/null 2>&1 ; then
+    time=$(git log --no-color --date=raw -- $1 | grep Date | awk 'NR==1' | awk '{print $2}')
+    touch $1 -hd "@$time"
+    echo Modified Time: $time, $1
+  fi
+fi

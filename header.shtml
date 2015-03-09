@@ -38,7 +38,6 @@
           <ul>
             <li><!--CURRENT:HOME--><a href="//swpbox.info/">Home</a>
               <ul>
-                <li><!--CURRENT:INDEX--><a href="//swpbox.info/index.html">index.html</a></li>
                 <li><!--CURRENT:RESUME--><a href="//resume.swpbox.info/">Resume</a></li>
                 <li><!--CURRENT:FREESHELL--><a href="//freeshell.swpbox.info/" target="_blank">freeshell</a>
                   <ul>
