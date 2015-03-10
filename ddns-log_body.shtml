@@ -12,11 +12,11 @@
       <li><!--DATA-CATEGORIES:TIME:1--></a></li>
     </ul><!-- end #portfolio-items-filter -->
   </header><!--/ .page-header-->
-  <div class="ddns">
+  <div class="ddns-title">
     <div class="one-fourth time"><h4>Update time</h4></div>
-    <div class="one-fourth"><h4>swpustc</h4></div>
-    <div class="one-fourth"><h4>swp543210</h4></div>
-    <div class="one-fourth last"><h4>router-swp</h4></div>
+    <div class="one-fourth"><h5>swpustc</h5></div>
+    <div class="one-fourth"><h5>swp543210</h5></div>
+    <div class="one-fourth last"><h5>router-swp</h5></div>
     <hr class="clear"/>
-  </div><!--/ .ddns-->
+  </div><!--/ .ddns-title-->
   <section id="portfolio-items" class="ddns">

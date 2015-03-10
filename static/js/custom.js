@@ -1205,19 +1205,84 @@ jQuery(document).ready(function(){
     /* ---------------------------------------------------------------------- */
 
     (function(){
-        var hideClassName = 'ddnshide';
-        $('#portfolio-items.ddns article').each(function(){
+        var hideClassName = 'ddns-hide',
+            showClassName = 'ddns-show',
+            itemAttrName = 'data-categories',
+            $itemArticle = $('#portfolio-items.ddns article'),
+            $itemPrev = null,
+            nodeThisText = '',
+            nodePrevText = nodeThisText,
+            nodeThisAttr = nodeThisText,
+            nodePrevAttr = nodeThisText,
+            nodeEqu;
+        $itemArticle.each(function(){
             var $this = $(this),
-                node = $this.children('div');
-            if (node.length == 4) {
-                node = node.first().next();
-                var nodeNext = node.next(),
-                    nodeEnd = nodeNext.next();
-                if (node.text() == nodeNext.text() && node.text() == nodeEnd.text()) {
-                    nodeNext.addClass(hideClassName);
-                    nodeEnd.addClass(hideClassName);
-                }
+                $node = $this.children('div');
+            nodeThisAttr = $this.attr(itemAttrName);
+            if (nodeThisAttr == nodePrevAttr) {
+                nodeEqu = true;
+            } else {
+                nodeEqu = false;
+                nodePrevAttr = nodeThisAttr;
             }
+            if ($node.length == 4) {
+                $node = $node.first().next();
+                nodeThisText = $node.text();
+                var $nodeNext = $node.next(),
+                    $nodeEnd = $nodeNext.next();
+                if (nodeThisText == $nodeNext.text() && nodeThisText == $nodeEnd.text()) {
+                    $nodeNext.addClass(hideClassName);
+                    $nodeEnd.addClass(hideClassName);
+                } else {
+                    nodeThisText = '';
+                    nodeEqu = false;
+                }
+            } else {
+                $node = $node.first().next();
+                nodeThisText = $node.text();
+            }
+            if (nodeEqu && nodeThisText == nodePrevText) {
+                $this.addClass(hideClassName);
+            } else {
+                if ($itemPrev) {
+                    $itemPrev.removeClass(hideClassName);
+                }
+                nodePrevText = nodeThisText;
+            }
+            $itemPrev = $this;
+        });
+        if ($itemPrev) {
+            $itemPrev.removeClass(hideClassName);
+        }
+        $itemPrev = null;
+        $itemArticle.each(function(){
+            var $this = $(this);
+            if ($itemPrev &&
+                $itemPrev.hasClass(hideClassName) &&
+                !$this.hasClass(hideClassName)) {
+                var itemPrevAttr = $itemPrev.attr(itemAttrName);
+                $itemPrev.after(
+                    $('<article/>').attr(
+                        itemAttrName,
+                        itemPrevAttr
+                    ).addClass(
+                        showClassName + ' ' + itemPrevAttr
+                    ).append(
+                        $('<div/>').addClass(
+                            'one-fourth time'
+                        ).text(
+                            $itemPrev.children('div.time').text().substring(0, 11) + '. . . . . .'
+                        ),
+                        $('<div/>').addClass(
+                            'three-fourth last'
+                        ).text(
+                            $itemPrev.children('div.last').text()
+                        ),
+                        $('<hr/>').addClass('clear')
+                    )
+                );
+            }
+            $itemPrev = $this;
         });
     })();
 
