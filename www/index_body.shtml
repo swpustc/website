@@ -2,35 +2,45 @@
 <div id="ei-slider" class="ei-slider">
   <ul class="ei-slider-large">
     <li>
-      <img src="//cdn.swpbox.info/images/sliders/img_01.jpg" alt="image01"/>
+      <img data-src="//cdn.swpbox.info/images/sliders/img_01.jpg" alt="image01"
+        src="//cdn.swpbox.info/images/thumbs/1.png"
+      />
       <div class="ei-title">
         <h2>一心亭, West USTC, Hefei, Anhui</h2>
         <h3>28 Jan 2015</h3>
       </div>
     </li>
     <li>
-      <img src="//cdn.swpbox.info/images/sliders/img_02.jpg" alt="image02"/>
+      <img data-src="//cdn.swpbox.info/images/sliders/img_02.jpg" alt="image02"
+        src="//cdn.swpbox.info/images/thumbs/2.png"
+      />
       <div class="ei-title">
         <h2>荷花塘, East USTC, Hefei, Anhui</h2>
         <h3>27 Jan 2015</h3>
       </div>
     </li>
     <li>
-      <img src="//cdn.swpbox.info/images/sliders/img_03.jpg" alt="image03"/>
+      <img data-src="//cdn.swpbox.info/images/sliders/img_03.jpg" alt="image03"
+        src="//cdn.swpbox.info/images/thumbs/3.png"
+      />
       <div class="ei-title">
         <h2>水上报告厅, East USTC, Hefei, Anhui</h2>
         <h3>28 Jan 2015</h3>
       </div>
     </li>
     <li>
-      <img src="//cdn.swpbox.info/images/sliders/img_04.jpg" alt="image04"/>
+      <img data-src="//cdn.swpbox.info/images/sliders/img_04.jpg" alt="image04"
+        src="//cdn.swpbox.info/images/thumbs/4.png"
+      />
       <div class="ei-title">
         <h2>中国科大, USTC, Hefei, Anhui</h2>
         <h3>28 Jan 2015</h3>
       </div>
     </li>
     <li>
-      <img src="//cdn.swpbox.info/images/sliders/img_05.jpg" alt="image05"/>
+      <img data-src="//cdn.swpbox.info/images/sliders/img_05.jpg" alt="image05"
+        src="//cdn.swpbox.info/images/thumbs/5.png"
+      />
       <div class="ei-title">
         <h2>中国科大, USTC, Hefei, Anhui</h2>
         <h3>28 Jan 2015</h3>

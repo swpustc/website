@@ -355,7 +355,7 @@ echo call config/post-hash startup
 config/post-hash startup
 #### Hash static directory
 echo call config/post-hash TIMESTAMP
-for file in $(find -P static/ -type f \( -name '*.css' -or -name '*.js' \) -print) ; do
+for file in $(find -P ./ -type f \( -name '*.html' -or -name '*.php' -or -name '*.css' -or -name '*.js' -or -name '*.md' \) -print) ; do
   if [ ! -L $file ] ; then
     config/post-hash TIMESTAMP $file
   fi
@@ -371,7 +371,7 @@ done
 sed -i 's/<!--\(\/\| end\| \*\)[^!<>]*-->//;s/^[[:space:]]*//;/^$/d' DOCTYPE.shtml
 ### Reset static resources timestamp (last modified)
 echo call config/post-touch
-for file in $(find -P static/ \( -type f -or -type d \) -print) ; do
+for file in $(find -P ./ \( -type f -or -type d \) -not \( -name '*.html' -or -name '*.php' \) -print) ; do
   if [ ! -L $file ] ; then
     config/post-touch $file
   fi

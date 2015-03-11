@@ -11,9 +11,9 @@
         >Download <?php echo $name; ?></a>
     </h1>
   </header><!--/ .page-header-->
-  <div class="ftp-image">
+  <div class="ftp-image aligncenter-with-title">
     <a href="<?php echo $src; ?>" class="single-image picture-icon" rel="group_portfolio">
       <img src="<?php echo $src; ?>" alt="">
     </a>
-  </div><!--/ .ftp-image-->
+  </div><!--/ .ftp-image.aligncenter-with-title-->
 </div><!--/ .content-wrapper-->

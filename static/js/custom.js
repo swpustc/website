@@ -911,6 +911,19 @@ jQuery(document).ready(function(){
                 });
             })()
         }
+        // resize box when all images are fully loaded
+        $(window).load(function() {
+            if($('.single-image').length || $('a.video').length) {
+                $('.single-image, .video').each(function() {
+                    var $this = $(this),
+                        $img = $this.find('.curtain').siblings('img');
+                    // makesure here is only one image
+                    if ($img.length == 1) {
+                        $this.width($img.outerWidth());
+                    }
+                });
+            }
+        });
 
         if($('a.video').length) {
             (function() {
@@ -958,6 +971,110 @@ jQuery(document).ready(function(){
 
     })();
 
+    /* end Fancybox */
+
+    /* ---------------------------------------------------------------------- */
+    /*  DDNS Autohide
+    /* ---------------------------------------------------------------------- */
+
+    (function(){
+        var hideClassName = 'ddns-hide',
+            showClassName = 'ddns-show',
+            ddnsThirdNode = 'one-fourth-third',
+            itemAttrName = 'data-categories',
+            $itemArticle = $('#portfolio-items.ddns article'),
+            $itemPrev = null,
+            nodeThisText = '',
+            nodePrevText = nodeThisText,
+            nodeThisAttr = nodeThisText,
+            nodePrevAttr = nodeThisText,
+            nodeEqu;
+        $itemArticle.each(function(){
+            var $this = $(this),
+                $node = $this.children('div');
+            nodeThisAttr = $this.attr(itemAttrName);
+            if (nodeThisAttr == nodePrevAttr) {
+                nodeEqu = true;
+            } else {
+                nodeEqu = false;
+                nodePrevAttr = nodeThisAttr;
+            }
+            if ($node.length == 4) {
+                $node = $node.first().next();
+                nodeThisText = $node.text();
+                var $nodeNext = $node.next(),
+                    $nodeEnd = $nodeNext.next();
+                $nodeNext.addClass(ddnsThirdNode);
+                if (nodeThisText == $nodeNext.text() && nodeThisText == $nodeEnd.text()) {
+                    $nodeNext.addClass(hideClassName);
+                    $nodeEnd.addClass(hideClassName);
+                } else {
+                    nodeThisText = '';
+                    nodeEqu = false;
+                }
+            } else {
+                $node = $node.first().next();
+                nodeThisText = $node.text();
+            }
+            if (nodeEqu && nodeThisText == nodePrevText) {
+                $this.addClass(hideClassName);
+            } else {
+                if ($itemPrev) {
+                    $itemPrev.removeClass(hideClassName);
+                }
+                nodePrevText = nodeThisText;
+            }
+            $itemPrev = $this;
+        });
+        if ($itemPrev) {
+            $itemPrev.removeClass(hideClassName);
+        }
+        $itemPrev = null;
+        $itemArticle.each(function(){
+            var $this = $(this);
+            if ($itemPrev &&
+                $itemPrev.hasClass(hideClassName) &&
+                !$this.hasClass(hideClassName)) {
+                var $prevDivTime = $itemPrev.children('div.time'),
+                    $prevDivLast = $itemPrev.children('div.last'),
+                    testClassName = 'nochg',
+                    additionalClassName = '';
+                if (!$prevDivTime) {
+                    $prevDivTime = $('<div/>').text('1970-01-01 ');
+                }
+                if (!$prevDivLast) {
+                    $prevDivLast = $('<div/>').text(testClassName + ' 0.0.0.0').addClass(testClassName);
+                }
+                if ($prevDivLast.hasClass(testClassName)) {
+                    additionalClassName = ' ' + testClassName;
+                }
+                $itemPrev.after(
+                    $('<article/>').attr(
+                        itemAttrName,
+                        $itemPrev.attr(itemAttrName)
+                    ).addClass(
+                        showClassName
+                    ).append(
+                        $('<div/>').addClass(
+                            'one-fourth time'
+                        ).text(
+                            $prevDivTime.text().substring(0, 11) + '. . . . . .'
+                        ),
+                        $('<div/>').addClass(
+                            'three-fourth last' + additionalClassName
+                        ).text(
+                            $prevDivLast.text()
+                        ),
+                        $('<hr/>').addClass('clear')
+                    )
+                );
+            }
+            $itemPrev = $this;
+        });
+    })();
+
+    /* end DDNS Autohide */
+
     /* ------------------------------------------------------------------- */
     /*  Portfolio
     /* ------------------------------------------------------------------- */
@@ -966,13 +1083,12 @@ jQuery(document).ready(function(){
 
         var $cont = $('#portfolio-items'),
             $container = $('.container'),
-            $autoindexTitle = $('.autoindex-title');
+            $itemsFilter = $('#portfolio-filter'),
+            $autoindexTitle = $('.autoindex-title'),
+            autoindexTitleWidth = '100%',
+            mouseOver;
 
-        if($cont.length) {
-
-            var $itemsFilter = $('#portfolio-filter'),
-                mouseOver,
-                autoindexNeedSetWidth = $('html').width() >= 768;
+        if ($cont.length) {
 
             // Copy categories to item classes
             $('article', $cont).each(function(i) {
@@ -982,23 +1098,50 @@ jQuery(document).ready(function(){
 
             // Run Isotope when all images are fully loaded
             $(window).on('load', function() {
-
                 $cont.isotope({
                     itemSelector : 'article',
                     layoutMode   : 'fitRows'
-
                 });
-
             });
+
+        }
+
+        if ($itemsFilter.length) {
+
+            var $itemsFilterSub = $itemsFilter.find('ul');
+            if ($itemsFilterSub.length) {
+                $itemsFilterSub.each(function() {
+                    $(this).find('a').first().addClass('active');
+                });
+            } else {
+                $itemsFilter.find('a').first().addClass('active');
+            }
+            $itemsFilter.find('a').not('.active').hide();
+
+            if ($autoindexTitle.length) {
+                var $resizeTitleFun = function() {
+                    var $itemsFilterNode = $itemsFilter.find('a.active');
+                        deviceWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width,
+                        newWidth = $container.width() - $itemsFilterNode.width() - 57 /*37+20*/;
+                    if ($itemsFilterNode && deviceWidth >= 768) {
+                        $autoindexTitle.width(newWidth);
+                    } else {
+                        $autoindexTitle.width('100%');
+                    }
+                    autoindexTitleWidth = newWidth;
+                }
+                $resizeTitleFun();
+                $(window).load($resizeTitleFun).resize($resizeTitleFun);
+            }
 
             // Filter projects
             $itemsFilter.on('click', 'a', function(e) {
                 var $this         = $(this),
-                currentOption = $this.attr('data-categories');
+                    currentOption = $this.attr('data-categories');
 
                 var $itemsFilterSub = $itemsFilter.find('ul');
                 if ($itemsFilterSub.length) {
-                    $itemsFilterSub.each(function(){
+                    $itemsFilterSub.each(function() {
                         if($(this).find($this).length) {
                             $(this).find('a').removeClass('active');
                         }
@@ -1017,53 +1160,45 @@ jQuery(document).ready(function(){
                     });
                 }
 
+                if ($autoindexTitle.length) {
+                    autoindexTitleWidth = $container.width() - $this.width() - 57 /*37+20*/;
+                }
                 e.preventDefault();
-            });
 
-            var $itemsFilterSub = $itemsFilter.find('ul');
-            if ($itemsFilterSub.length) {
-                $itemsFilterSub.each(function(){
-                    $(this).find('a').first().addClass('active');
-                });
-            } else {
-                $itemsFilter.find('a').first().addClass('active');
-            }
-            $itemsFilter.find('a').not('.active').hide();
-            if (autoindexNeedSetWidth)
-                $autoindexTitle.css("max-width", $container.width() - $itemsFilter.width() - 12);
-            var autoindexTitleWidth = $autoindexTitle.width();
-
-            $itemsFilter.on('mouseenter', function() {
-                var $this = $(this);
+            }).on('mouseenter', function() {
+                var $this = $(this),
+                    deviceWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
                 clearTimeout(mouseOver);
+                if (deviceWidth < 768) return false;
 
                 mouseOver = setTimeout( function() {
                     $this.find('li a').stop(true,true).slideShow(300);
-                    if (autoindexNeedSetWidth) {
-                        $autoindexTitle.stop(true,true).delay(100).animate({
-                            width: $container.width() - 414
-                        }, {
-                            duration: 220,
-                            specialEasing: { width: 'linear' }
-                        });
-                    }
+                    $autoindexTitle.stop(true,true).delay(100).animate({
+                        width: $container.width() - 400
+                    }, {
+                        duration: 220,
+                        specialEasing: { width: 'linear' }
+                    });
                 }, 100);
+
             }).on('mouseleave', function() {
-                var $this = $(this);
+                var $this = $(this),
+                    deviceWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
                 clearTimeout(mouseOver);
-                if($container.width() == 420 || $container.width() == 300) return false;
+                if (deviceWidth < 768) return false;
+
                 mouseOver = setTimeout( function() {
                     $this.find('li a').not('.active').stop(true,true).slideHide(150);
-                    if (autoindexNeedSetWidth) {
-                        $autoindexTitle.stop(true,true).delay(200).animate({
-                            width: autoindexTitleWidth
-                        }, {
-                            duration: 300,
-                            specialEasing: { width: 'linear' }
-                        });
-                    }
+                    $autoindexTitle.stop(true,true).delay(200).animate({
+                        width: autoindexTitleWidth
+                    }, {
+                        duration: 300,
+                        specialEasing: { width: 'linear' }
+                    });
                 }, 500);
+
             });
 
         }
@@ -1183,6 +1318,32 @@ jQuery(document).ready(function(){
     /* end Twitter */
 
     /* ---------------------------------------------------------------------- */
+    /*  Resume Align Image
+    /* ---------------------------------------------------------------------- */
+
+    (function() {
+        var $itemBody = $('.markdown'),
+            $itemImage = $itemBody.find('.alignright-image');
+        if ($itemImage.length) {
+            var $resizeFun = function() {
+                $itemImage.each(function() {
+                    var $this = $(this),
+                        $next = $this.next();
+                    if ($next) {
+                        $next.width(
+                            $itemBody.width() - $this.outerWidth() - 24
+                        );
+                    }
+                });
+            };
+            $resizeFun();
+            $(window).load($resizeFun).resize($resizeFun);
+        }
+    })();
+
+    /* end Resume Align Image */
+
+    /* ---------------------------------------------------------------------- */
     /*  SpanWords
     /* ---------------------------------------------------------------------- */
 
@@ -1199,94 +1360,6 @@ jQuery(document).ready(function(){
     })();
 
     /* end SpanWords */
-
-    /* ---------------------------------------------------------------------- */
-    /*  DDNS Autohide
-    /* ---------------------------------------------------------------------- */
-
-    (function(){
-        var hideClassName = 'ddns-hide',
-            showClassName = 'ddns-show',
-            itemAttrName = 'data-categories',
-            $itemArticle = $('#portfolio-items.ddns article'),
-            $itemPrev = null,
-            nodeThisText = '',
-            nodePrevText = nodeThisText,
-            nodeThisAttr = nodeThisText,
-            nodePrevAttr = nodeThisText,
-            nodeEqu;
-        $itemArticle.each(function(){
-            var $this = $(this),
-                $node = $this.children('div');
-            nodeThisAttr = $this.attr(itemAttrName);
-            if (nodeThisAttr == nodePrevAttr) {
-                nodeEqu = true;
-            } else {
-                nodeEqu = false;
-                nodePrevAttr = nodeThisAttr;
-            }
-            if ($node.length == 4) {
-                $node = $node.first().next();
-                nodeThisText = $node.text();
-                var $nodeNext = $node.next(),
-                    $nodeEnd = $nodeNext.next();
-                if (nodeThisText == $nodeNext.text() && nodeThisText == $nodeEnd.text()) {
-                    $nodeNext.addClass(hideClassName);
-                    $nodeEnd.addClass(hideClassName);
-                } else {
-                    nodeThisText = '';
-                    nodeEqu = false;
-                }
-            } else {
-                $node = $node.first().next();
-                nodeThisText = $node.text();
-            }
-            if (nodeEqu && nodeThisText == nodePrevText) {
-                $this.addClass(hideClassName);
-            } else {
-                if ($itemPrev) {
-                    $itemPrev.removeClass(hideClassName);
-                }
-                nodePrevText = nodeThisText;
-            }
-            $itemPrev = $this;
-        });
-        if ($itemPrev) {
-            $itemPrev.removeClass(hideClassName);
-        }
-        $itemPrev = null;
-        $itemArticle.each(function(){
-            var $this = $(this);
-            if ($itemPrev &&
-                $itemPrev.hasClass(hideClassName) &&
-                !$this.hasClass(hideClassName)) {
-                var itemPrevAttr = $itemPrev.attr(itemAttrName);
-                $itemPrev.after(
-                    $('<article/>').attr(
-                        itemAttrName,
-                        itemPrevAttr
-                    ).addClass(
-                        showClassName + ' ' + itemPrevAttr
-                    ).append(
-                        $('<div/>').addClass(
-                            'one-fourth time'
-                        ).text(
-                            $itemPrev.children('div.time').text().substring(0, 11) + '. . . . . .'
-                        ),
-                        $('<div/>').addClass(
-                            'three-fourth last'
-                        ).text(
-                            $itemPrev.children('div.last').text()
-                        ),
-                        $('<hr/>').addClass('clear')
-                    )
-                );
-            }
-            $itemPrev = $this;
-        });
-    })();
-
-    /* end DDNS Autohide */
 
 /***************************************/
 });/* DOM READY --> End                */
@@ -1368,7 +1441,7 @@ jQuery.cookie = function (name, value, options) {
         options = options || {};
         if (value === null) {
             value = '';
-            options.expires = -1
+            options.expires = -1;
         }
         var expires, path, domain, secure;
         if (typeof options.expires != 'undefined' && options.expires === null) {
@@ -1377,13 +1450,13 @@ jQuery.cookie = function (name, value, options) {
             var date;
             if (typeof options.expires == 'number') {
                 date = new Date();
-                date.setTime(date.getTime() + (options.expires * 24 * 3600 * 1000))
+                date.setTime(date.getTime() + (options.expires * 86400000/*24*3600*1000*/));
             } else {
-                date = options.expires
+                date = options.expires;
             }
-            expires = '; expires=' + date.toUTCString()
+            expires = '; expires=' + date.toUTCString();
         } else {
-            expires = '; expires=Fri, 01 Jan 2100 00:00:00 GMT'
+            expires = '; expires=Fri, 01 Jan 2100 00:00:00 GMT';
         }
         if (typeof options.path != 'undefined' && options.path === null) {
             path = '';
@@ -1406,7 +1479,7 @@ jQuery.cookie = function (name, value, options) {
         } else {
             secure = '';
         }
-        document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('')
+        document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
     } else {
         var cookieValue = null;
         if (document.cookie && document.cookie != '') {
