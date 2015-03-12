@@ -189,6 +189,19 @@ cat php/markdown/resume_body.phps   | tee php/markdown/resume.php -a >/dev/null
 cat footer.shtml                    | tee php/markdown/resume.php -a >/dev/null
 cat php/markdown/resume_footer.phps | tee php/markdown/resume.php -a >/dev/null
 echo Generate php/markdown/resume.php
+### resume
+cat DOCTYPE.shtml                | tee resume/502-resume.html    >/dev/null
+cat 502_header.shtml             | tee resume/502-resume.html -a >/dev/null
+cat header.shtml                 | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                                 | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                                 | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                                 | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                                 | tee resume/502-resume.html -a >/dev/null
+cat resume/502-resume_body.shtml | tee resume/502-resume.html -a >/dev/null
+cat footer.shtml                 | tee resume/502-resume.html -a >/dev/null
+cat errorpage_footer.shtml       | tee resume/502-resume.html -a >/dev/null
+rm resume/502-resume_body.shtml
+echo Generate resume/502-resume.html
 ### static
 cat DOCTYPE.shtml           | tee static/403.html    >/dev/null
 cat static/403_header.shtml | tee static/403.html -a >/dev/null
