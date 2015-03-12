@@ -16,9 +16,9 @@
     a.flexslider = function (c, b) {
 
         var d = a(c);
-		
+
         a.data(c, "flexslider", d);
-		
+
         d.init = function () {
 
             d.vars = a.extend({}, a.flexslider.defaults, b);
@@ -26,24 +26,24 @@
             a.data(c, "flexsliderInit", true);
 
             d.container = a(".slides", d).eq(0);
-			
-			d.wrap = a(".slides-wrap",d);
-			
+
+            d.wrap = a(".slides-wrap",d);
+
             d.slides = a(".slides:first > li", d);
-			
-			d.ch = d.container.height(d.slides.find('img:visible').height());
-			
-			function resize() {
-				
-				$(window).resize(function() {
-					 d.container.height(d.slides.find('img:visible').height());
-				});
-			}
-			
-			resize();
-			
-			d.entry = a(".slides:first > li .slides-entry", d);
-			
+
+            d.ch = d.container.height(d.slides.find('img:visible').height());
+
+            function resize() {
+
+                $(window).resize(function() {
+                     d.container.height(d.slides.find('img:visible').height());
+                });
+            }
+
+            resize();
+
+            d.entry = a(".slides:first > li .slides-entry", d);
+
             d.count = d.slides.length;
 
             d.animating = false;
@@ -81,7 +81,7 @@
                 d.controlsContainer = a(d.vars.controlsContainer).eq(a(".slides").index(d.container));
 
                 d.containerExists = d.controlsContainer.length > 0
-				
+
             }
 
             if (d.vars.manualControls != "") {
@@ -145,7 +145,7 @@
                     });
 
                     d.container.height((d.count + d.cloneCount) * 200 + "%").css("position", "absolute").width("100%");
-					
+
                     setTimeout(function () {
 
                         d.css({
@@ -193,23 +193,23 @@
                     marginRight: "-100%"
 
                 }).eq(d.currentSlide).fadeIn(d.vars.animationDuration);
-				
+
             }
 
             if (d.vars.entry) {
-				
+
                     var entry = a('<div class="flex-entry"></div>');
 
                     var currenthtml = d.slides.eq(d.currentSlide).find('.slides-entry').html();
-					
-					entry.html(currenthtml)	
-					
-					d.append(entry);
-					 
+
+                    entry.html(currenthtml)
+
+                    d.append(entry);
+
             }
 
             if (d.vars.controlNav) {
-				
+
                 if (d.manualExists) {
 
                     d.controlNav = d.manualControls
@@ -255,15 +255,15 @@
                         (d.controlNav.index(a(this)) > d.currentSlide) ? d.direction = "next" : d.direction = "prev";
 
                         d.flexAnimate(d.controlNav.index(a(this)), d.vars.pauseOnAction)
-						
-						var $eq = d.controlNav.index(a(this));
-								
-					var currenthtml = d.slides.eq($eq).find('.slides-entry').html();
-					entry.html(currenthtml);
+
+                        var $eq = d.controlNav.index(a(this));
+
+                    var currenthtml = d.slides.eq($eq).find('.slides-entry').html();
+                    entry.html(currenthtml);
 
                     }
-			
-					
+
+
                 })
 
             }
@@ -315,22 +315,22 @@
                         d.flexAnimate(j, d.vars.pauseOnAction)
 
                     }
-					
-					var cur;
-					
-						if ($(this).hasClass("next")) {
 
-							cur = (d.currentSlide == d.count - 1) ? 0 : d.currentSlide + 1
+                    var cur;
 
-						} else {
+                        if ($(this).hasClass("next")) {
 
-							cur = (d.currentSlide == 0) ? d.count - 1 : d.currentSlide - 1
+                            cur = (d.currentSlide == d.count - 1) ? 0 : d.currentSlide + 1
 
-						}
-					
-					var currenthtml = d.slides.eq(cur).find('.slides-entry').html();
-					
-					entry.html(currenthtml)	
+                        } else {
+
+                            cur = (d.currentSlide == 0) ? d.count - 1 : d.currentSlide - 1
+
+                        }
+
+                    var currenthtml = d.slides.eq(cur).find('.slides-entry').html();
+
+                    entry.html(currenthtml)
 
                 })
 
@@ -488,7 +488,7 @@
 
                 });
 
- 
+
 
                 function g(i) {
 
@@ -899,7 +899,7 @@
         d.init()
 
     };
-	
+
 
     a.flexslider.defaults = {
 
@@ -918,8 +918,8 @@
         controlNav: true,
 
         keyboardNav: true,
-		
-		entry: true,
+
+        entry: true,
 
         mousewheel: false,
 
@@ -961,7 +961,7 @@
 
     };
 
-    a.fn.flexslider = function (b) { 
+    a.fn.flexslider = function (b) {
 
         return this.each(function () {
 

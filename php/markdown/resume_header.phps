@@ -37,12 +37,12 @@ elseif (preg_match('/^zh[-_]?tw$/i', $resume_lang)) {
   else
     setcookie("resume-lang_tmp", 'lang-zh_tw');
 }
-$file_enus_down = '//download.swpbox.info/ftp/html/resume/en_US'.$_SERVER['SCRIPT_NAME'];
-$file_zhcn_down = '//download.swpbox.info/ftp/html/resume/zh_CN'.$_SERVER['SCRIPT_NAME'];
-$file_zhtw_down = '//download.swpbox.info/ftp/html/resume/zh_TW'.$_SERVER['SCRIPT_NAME'];
-$file_enus_down_title = 'Download '.$name.' (en_US)';
-$file_zhcn_down_title = 'Download '.$name.' (zh_CN)';
-$file_zhtw_down_title = 'Download '.$name.' (zh_TW)';
+$file_enus_down = '//ftp.swpbox.info/html/resume/en_US'.$_SERVER['SCRIPT_NAME'].'?src=1';
+$file_zhcn_down = '//ftp.swpbox.info/html/resume/zh_CN'.$_SERVER['SCRIPT_NAME'].'?src=1';
+$file_zhtw_down = '//ftp.swpbox.info/html/resume/zh_TW'.$_SERVER['SCRIPT_NAME'].'?src=1';
+$file_enus_down_title = 'View Source: '.$name.' (en_US)';
+$file_zhcn_down_title = 'View Source: '.$name.' (zh_CN)';
+$file_zhtw_down_title = 'View Source: '.$name.' (zh_TW)';
 $file_title = 'swpustc | Resume - '.$name;
 $file_enus_title = 'swpustc | Resume - '.$name.' (en_US)';
 $file_zhcn_title = 'swpustc | Resume - '.$name.' (zh_CN)';

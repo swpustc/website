@@ -129,18 +129,6 @@ cat errorpage_footer.shtml | tee CA/index.html -a >/dev/null
 rm CA/index_header.shtml CA/index_body.shtml
 echo Generate CA/index.html
 ### nowhere
-cat DOCTYPE.shtml            | tee nowhere/400.html    >/dev/null
-cat nowhere/400_header.shtml | tee nowhere/400.html -a >/dev/null
-cat header.shtml             | sed "s/<li><!--CURRENT:ERR400-->/<li class=\"current\">/g" \
-                             | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
-                             | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
-                             | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
-                             | tee nowhere/400.html -a >/dev/null
-cat 400_body.shtml           | tee nowhere/400.html -a >/dev/null
-cat footer.shtml             | tee nowhere/400.html -a >/dev/null
-cat errorpage_footer.shtml   | tee nowhere/400.html -a >/dev/null
-rm nowhere/400_header.shtml
-echo Generate nowhere/400.html
 cat DOCTYPE.shtml            | tee nowhere/502.html    >/dev/null
 cat nowhere/502_header.shtml | tee nowhere/502.html -a >/dev/null
 cat header.shtml             | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
@@ -342,9 +330,9 @@ cat www/setting_footer.shtml | tee www/setting.html -a >/dev/null
 rm www/setting_header.shtml www/setting_body.shtml www/setting_footer.shtml
 echo Generate www/setting.html
 
-## port 8000 page
-echo call config/post-port_8000
-config/post-port_8000
+## port another page
+echo call config/post-port_another
+config/post-port_another
 
 ## resume zh_TW page
 echo call config/post-cconv

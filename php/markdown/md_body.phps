@@ -6,9 +6,9 @@
         echo $return;
       ?>/" class="return" title="Return"></a>
     <h1>
-      <a href="//download.swpbox.info/ftp<?php echo $_SERVER['SCRIPT_NAME']; ?>"
-        title="Download <?php echo $name; ?>"
-        >Download <?php echo $name; ?></a>
+      <a href="<?php echo $_SERVER['SCRIPT_NAME']; ?>?src=1"
+        title="View Source: <?php echo $name; ?>"
+        >Source <?php echo $name; ?></a>
     </h1>
     <ul id="portfolio-filter" class="code-prettify">
       <li style="display: block!important;">

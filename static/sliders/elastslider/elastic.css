@@ -89,7 +89,7 @@
     -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0), 0px 1px 0px 1px rgba(255,255,255,0.5);
        -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0), 0px 1px 0px 1px rgba(255,255,255,0.5);
             box-shadow: 0px 1px 1px 0px rgba(0,0,0,0), 0px 1px 0px 1px rgba(255,255,255,0.5);
-    
+
     -webkit-transition: background 0.2s ease;
        -moz-transition: background 0.2s ease;
         -ms-transition: background 0.2s ease;
@@ -120,7 +120,7 @@
     bottom: 10px;
 }
 @media screen and (max-width: 830px) {
-    
+
     .ei-title{
         position: absolute;
         right: 0px;

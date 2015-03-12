@@ -408,7 +408,7 @@
 
             });
 
-        } 
+        }
         else {
 
             this.each(function() {

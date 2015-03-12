@@ -43,10 +43,9 @@
                   <ul>
                     <li><!--CURRENT:FREESHELL-IPV6--><a href="http://swpustc.6.freeshell.ustc.edu.cn/" target="_blank">ipv6 Entry</a></li>
                     <li><!--CURRENT:FREESHELL-USTC--><a href="https://swp.freeshell.ustc.edu.cn/" target="_blank">USTC Proxy</a></li>
-                    <li><!--CURRENT:MIRRORS--><a href="//mirrors.swpbox.info/" target="_blank">Local Proxy</a></li>
                   </ul>
                 </li>
-                <li><!--CURRENT:ERRPAGE--><a href="http://swpbox.info:8000/">ErrorPage</a>
+                <li><!--CURRENT:ERRPAGE--><a href="http://swpbox.info:56080/">ErrorPage</a>
                   <ul>
                     <li><!--CURRENT:ERR400--><a href="/400.html">400 Page</a></li>
                     <li><!--CURRENT:ERR403--><a href="/403.html">403 Page</a></li>

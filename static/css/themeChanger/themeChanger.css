@@ -52,7 +52,6 @@
     width: 165px;
     background-repeat: no-repeat;
     background-position: 8px 0;
-    font-family: 'Droid Serif';
 }
 
 .light #control_panel .control_panel_title {color: #b5b7b5;}
@@ -66,7 +65,6 @@
     margin-bottom: .5em;
     color: #b5b7b5;
     font-size: 1em;
-    font-family: 'Droid Serif';
 }
 
 .light #control_panel > div > span {color: #bgb7b5;}
@@ -205,7 +203,7 @@
     color: #50554e;
     background-color: #c7cfc8;
     line-height: 24px;
-    font: italic 1em 'Droid Serif';
+    font: italic 1em;
 }
 
 .links_color_wrapper .colorPicker,
@@ -217,7 +215,6 @@
     background: url(../../images/themeChanger/colorpicker_mask.png?t=TIMESTAMP:BEGIN:images/themeChanger/colorpicker_mask.png:END:TIMESTAMP) no-repeat;
     cursor: pointer;
 }
-
 
 
 /* -- Theme controll panel --> End -- */

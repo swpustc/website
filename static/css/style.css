@@ -405,7 +405,6 @@ blockquote {
         background: url(../images/arrowsclass.png?t=TIMESTAMP:BEGIN:images/arrowsclass.png:END:TIMESTAMP) no-repeat right -30px;
         color: #7e8a83;
         font-style: italic;
-        font-family: 'Droid Serif', serif;
     }
 
     .button-style-1:hover {background-position: right -49px;}
@@ -419,7 +418,6 @@ blockquote {
         text-decoration: none;
         text-transform: uppercase;
         cursor:pointer;
-        font-family: 'Droid Serif', serif;
     }
 
     .light .button-style-2 {
@@ -474,7 +472,6 @@ blockquote {
 
         ul.feature-menu li {
             font-style: italic;
-            font-family: 'Droid Serif', serif;
             line-height: 2.3em;
         }
 
@@ -497,7 +494,6 @@ blockquote {
 
         ul.list li {
             font-style: italic;
-            font-family: 'Droid Serif', serif;
             line-height: 2.2em;
         }
 
@@ -855,7 +851,6 @@ blockquote {
             #logo .slogan span {
                 color: #888c87;
                 font-style: italic;
-                font-family: 'Droid Serif', serif;
             }
 
 #header-top {
@@ -951,7 +946,6 @@ ul.contact-info li {
     padding-left: 26px;
     color: #888c87;
     font-size: 0.923em;
-    font-family: 'Droid Serif', serif;
     font-style: italic;
 }
 
@@ -1029,7 +1023,6 @@ ul.contact-info .email {background-position: 0 -25px;}
 
                 .navigation > ul > li > a {
                     font-size: 1.077em;
-                    font-family: 'Droid Serif', serif;
                     font-style: italic;
                 }
 
@@ -1115,7 +1108,6 @@ ul.contact-info .email {background-position: 0 -25px;}
     #header-top ul.social-links:before {
         float: left;
         color: #888c87;
-        font-family: 'Droid Serif', serif;
         line-height: 22px;
         font-style: italic;
         content: attr(data-description);
@@ -1136,7 +1128,6 @@ ul.contact-info .email {background-position: 0 -25px;}
         margin-bottom: 5px;
         color: #50554e;
         text-align: right;
-        font-family: 'Droid Serif', serif;
         line-height: 22px;
         font-style: italic;
         content: attr(data-description);
@@ -1157,7 +1148,6 @@ ul.contact-info .email {background-position: 0 -25px;}
         content: attr(data-tooltip);
         font-style: italic;
         font-size: 0.923em;
-        font-family: 'Droid Serif', serif;
         opacity: 0;
 
         -webkit-transition: all .25s linear;
@@ -1510,7 +1500,6 @@ ul.related span.categories {color: #50554e; font-style: italic;}
     margin-left: 7px;
     margin-right: 5px;
     content: "/";
-    font-family: 'Droid Serif', serif;
 }
 
 .jcarousel-prev:hover,
@@ -1586,7 +1575,6 @@ ul.related span.categories {color: #50554e; font-style: italic;}
             margin-right: 20px;
         }
 
-            .accordion span {font-family: 'Droid Serif', serif;}
             .accordion .slide-name {font-size: 1.154em;}
 
             .light .accordion .slide-name {color: #121412;}
@@ -1751,7 +1739,6 @@ ul.related span.categories {color: #50554e; font-style: italic;}
         border-style: solid;
         color: #50554e;
         font-style: italic;
-        font-family: 'Droid Serif';
         line-height: 28px;
 
         -webkit-transition: all .25s linear;
@@ -1922,7 +1909,6 @@ ul.related span.categories {color: #50554e; font-style: italic;}
                 border-style: solid;
                 background-color: #fff;
                 font-style: italic;
-                font-family: 'Droid Serif';
                 line-height: 32px;
             }
 
@@ -1972,7 +1958,6 @@ ul.related span.categories {color: #50554e; font-style: italic;}
                 border-style: solid;
                 font-style: italic;
                 font-size: 1em;
-                font-family: 'Droid Serif';
             }
 
             .light .comments-form textarea,
@@ -2607,7 +2592,6 @@ ul.related span.categories {color: #50554e; font-style: italic;}
         border: none;
         background-color: #c7cfc8;
         font-style: italic;
-        font-family: 'Droid Serif', serif;
     }
 
     #signup #signup_submit {
@@ -2615,7 +2599,6 @@ ul.related span.categories {color: #50554e; font-style: italic;}
         height: 33px;
         border: none;
         text-transform: uppercase;
-        font-family: 'Droid Serif', serif;
         cursor: pointer;
         vertical-align: top;
 
@@ -2657,7 +2640,6 @@ ul.related span.categories {color: #50554e; font-style: italic;}
         padding: 10px 20px 10px 24px;
         color: #50554e;
         font-size: 1.154em;
-        font-family: 'Droid Serif', serif;
         outline: medium none;
         text-decoration: none;
     }
@@ -2753,7 +2735,6 @@ ul.related span.categories {color: #50554e; font-style: italic;}
             content: attr(data-tooltip);
             font-style: italic;
             font-size: 0.923em;
-            font-family: 'Droid Serif',serif;
             opacity: 0;
 
             -webkit-transition: all 0.25s linear 0s;
@@ -2891,7 +2872,6 @@ ul.related span.categories {color: #50554e; font-style: italic;}
         border-bottom-width: 1px;
         border-bottom-style: solid;
         font-size: 1.154em;
-        font-family: 'Droid Serif', serif;
         outline: medium none;
         cursor: pointer;
         text-decoration: none;
@@ -2979,7 +2959,6 @@ ul.related span.categories {color: #50554e; font-style: italic;}
                 .pricing-table li {
                     border-bottom-width: 1px;
                     border-bottom-style: solid;
-                    font-family: 'Droid Serif', serif;
                 }
 
                 .light .pricing-table li,
@@ -3183,7 +3162,6 @@ ul.related span.categories {color: #50554e; font-style: italic;}
             display: block;
             content: attr(data-feature) !important;
             font-size: 1em;
-            font-family: 'Droid Serif',serif;
             font-weight: 700;
             text-align: center;
         }
@@ -3461,7 +3439,6 @@ ul.related span.categories {color: #50554e; font-style: italic;}
                 background-repeat: no-repeat;
                 background-position: right top;
                 font-style: italic;
-                font-family: 'Droid Serif';
             }
 
             .light .nav-responsove {background-color: #fff;}
@@ -4146,7 +4123,8 @@ div.markdown.resume {
   line-height: 1.6;
   word-break: break-word;
 }
-.markdown p,.markdown ul,.markdown ol,.markdown li,.markdown table {
+.markdown p,.markdown ul,.markdown ol,.markdown li,.markdown table,
+.markdown dd,.markdown dt {
   font-size: 14px;
 }
 .markdown.resume a {
@@ -4194,6 +4172,13 @@ div.markdown.resume {
 }
 .markdown table th, .markdown table td {
   padding: 2px;
+  line-height: 1.6;
+}
+.markdown table th {
+  padding-bottom: 0;
+}
+.markdown table td {
+  padding-top: 0;
 }
 @media only screen and (max-width: 767px) {
   .markdown h2.resume:before {
