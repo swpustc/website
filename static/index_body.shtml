@@ -1,28 +1,28 @@
 <div class="content-wrapper clearfix">
-  <div id="map" data-markers="中国科技大学东校区-图书馆, Hefei"></div>
+  <div id="map" json-src="/gmap.json?t=TIMESTAMP:BEGIN:gmap.json:END:TIMESTAMP?f=TIMESTAMP:BEGIN:gmap-freeshell.json:END:TIMESTAMP?s=TIMESTAMP:BEGIN:gmap-static.json:END:TIMESTAMP"></div>
   <div class="image-title clearfix">
     <a href="//cdn.swpbox.info">
-      <h2 class="highlight4">
+      <h2 class="highlight4" id="domain-status-cdn">
         <span class="post-type quote"></span>
-        <span class="highlight4">cdn.swpbox.info</span>
+        <span class="highlight4" id="domain-status-cdn">cdn.swpbox.info</span>
         This domain stores static resources, and have two servers.
       </h2>
     </a>
   <div class="image-title clearfix">
   </div><!--/ .image-title-->
     <a href="//freeshell.swpbox.info">
-      <h2 class="highlight2">
+      <h2 class="highlight2" id="domain-status-freeshell">
         <span class="post-type quote"></span>
-        <span class=highlight2>freeshell.swpbox.info</span>
+        <span class="highlight2" id="domain-status-freeshell">freeshell.swpbox.info</span>
         This is the master server.
       </h2>
     </a>
   </div><!--/ .image-title-->
   <div class="image-title clearfix">
     <a href="//static.swpbox.info">
-      <h2 class="highlight2">
+      <h2 class="highlight2" id="domain-status-static">
         <span class="post-type quote"></span>
-        <span class=highlight2>static.swpbox.info</span>
+        <span class="highlight2" id="domain-status-static">static.swpbox.info</span>
         This is the backup server.
       </h2>
     </a>

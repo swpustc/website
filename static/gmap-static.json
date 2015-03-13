@@ -1,0 +1,12 @@
+{
+  "latitude"  : 31.13,
+  "longitude" : 119.20,
+  "zoom"      : 13,
+  "markers"   : [
+    {
+      "latitude"  : 31.129,
+      "longitude" : 119.197,
+      "html"      : "My Home"
+    }
+  ]
+}

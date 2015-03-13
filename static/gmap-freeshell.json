@@ -1,0 +1,12 @@
+{
+  "latitude"  : 31.84,
+  "longitude" : 117.27,
+  "zoom"      : 13,
+  "markers"   : [
+    {
+      "latitude"  : 31.837,
+      "longitude" : 117.27,
+      "html"      : "University of Science and Techonogly of China - East Campus"
+     }
+  ]
+}

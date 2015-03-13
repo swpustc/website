@@ -1,1 +1,25 @@
-../../download/static/robots.txt
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: baiduspider
+Disallow: /
+
+User-agent: *
+Disallow: /*.7z$
+Disallow: /*.ape$
+Disallow: /*.apk$
+Disallow: /*.cab$
+Disallow: /*.cue$
+Disallow: /*.dll$
+Disallow: /*.exe$
+Disallow: /*.EXE$
+Disallow: /*.flac$
+Disallow: /*.idb$
+Disallow: /*.iso$
+Disallow: /*.ISO$
+Disallow: /*.mdf$
+Disallow: /*.msi$
+Disallow: /*.pdb$
+Disallow: /*.rar$
+Disallow: /*.wv$
+Disallow: /*.zip$

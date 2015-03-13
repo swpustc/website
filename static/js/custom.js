@@ -81,6 +81,27 @@ WebFontConfig = {
 jQuery(document).ready(function(){
 
     /* ---------------------------------------------------------------------- */
+    /*  jQuery Load
+    /* ---------------------------------------------------------------------- */
+
+    (function(){
+        $('#jquery-load').each(function(){
+            var $this = $(this),
+                loadSrc = $this.addr('data-load'),
+                loadAttr = $this.addr('data-attr');
+            if (loadSrc) {
+                if (loadAttr)
+                    loadAttr = ' ' + loadAttr;
+                else
+                    loadAttr = '';
+                $this.load(loadSrc + loadAttr);
+            }
+        });
+    })();
+
+    /* end jQuery Load */
+
+    /* ---------------------------------------------------------------------- */
     /*  Flex Slider
     /* ---------------------------------------------------------------------- */
 
@@ -531,18 +552,17 @@ jQuery(document).ready(function(){
     (function() {
 
         $('#map').each(function() {
-            var $this = $(this),
-                mapAddress = $this.attr('data-address'),
-                mapMarkers = $this.attr('data-markers');
-            $this.gMap({
-                address: mapAddress ? mapAddress : (mapMarkers ? mapMarkers : 'Anhui, China'),
-                zoom: 14,
-                markers: [
-                    {
-                        'address' : mapMarkers ? mapMarkers : 'Hefei'
-                    }
-                ]
-            });
+            var $this   = $(this),
+                mapJson = $this.attr('json-src');
+            if (mapJson) {
+                $.getJSON(mapJson, function(result) {
+                    $this.gMap(result);
+                });
+            } else {
+                $this.gMap({
+                    address : 'China'
+                });
+            }
         });
 
     })();
@@ -1353,11 +1373,7 @@ jQuery(document).ready(function(){
     (function(){
         $('.spanwords').each(function(){
             var $this = $(this),
-                nodeText = $this.text(),
-                spanText = '';
-            for(var i = 0; i < nodeText.length; i++) {
-                spanText += '<span>' + nodeText[i] + '</span>';
-            }
+                spanText = $this.text().replace(/./g, '<span>$&</span>');
             $this.html(spanText);
         });
     })();
