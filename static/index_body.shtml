@@ -1,0 +1,30 @@
+<div class="content-wrapper clearfix">
+  <div id="map" data-markers="中国科技大学东校区-图书馆, Hefei"></div>
+  <div class="image-title clearfix">
+    <a href="//cdn.swpbox.info">
+      <h2 class="highlight4">
+        <span class="post-type quote"></span>
+        <span class="highlight4">cdn.swpbox.info</span>
+        This domain stores static resources, and have two servers.
+      </h2>
+    </a>
+  <div class="image-title clearfix">
+  </div><!--/ .image-title-->
+    <a href="//freeshell.swpbox.info">
+      <h2 class="highlight2">
+        <span class="post-type quote"></span>
+        <span class=highlight2>freeshell.swpbox.info</span>
+        This is the master server.
+      </h2>
+    </a>
+  </div><!--/ .image-title-->
+  <div class="image-title clearfix">
+    <a href="//static.swpbox.info">
+      <h2 class="highlight2">
+        <span class="post-type quote"></span>
+        <span class=highlight2>static.swpbox.info</span>
+        This is the backup server.
+      </h2>
+    </a>
+  </div><!--/ .image-title-->
+</div><!--/ .content-wrapper-->

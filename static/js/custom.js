@@ -530,17 +530,20 @@ jQuery(document).ready(function(){
 
     (function() {
 
-        if($('#map').length) {
-            $('#map').gMap({
-                address: 'New York, USA',
-                zoom: 13,
+        $('#map').each(function() {
+            var $this = $(this),
+                mapAddress = $this.attr('data-address'),
+                mapMarkers = $this.attr('data-markers');
+            $this.gMap({
+                address: mapAddress ? mapAddress : (mapMarkers ? mapMarkers : 'Anhui, China'),
+                zoom: 14,
                 markers: [
                     {
-                        'address' : 'Madison ST, New York'
+                        'address' : mapMarkers ? mapMarkers : 'Hefei'
                     }
                 ]
             });
-        }
+        });
 
     })();
 

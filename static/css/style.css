@@ -4411,9 +4411,6 @@ background-color: rgba(127, 230, 127, 0.4);
 .dark .linenums li.hrefline {
 background-color: rgba(49, 152, 48, 0.4);
 }
-.linenums li:hover {
-  font-weight: bold;
-}
 .linelink {
   display: inline-block;
 }

@@ -40,8 +40,8 @@ cat errorpage_footer.shtml        | tee port_another/502.shtml -a >/dev/null
 cat port_another/502.shtml | sed 's/\([^:]\)\/\//\1https:\/\//g' \
                            | sed 's/https:\/\/\([^"\/<>]*\)\/setting.html/\/setting.html/g' \
                            | tee port_another/502.html >/dev/null
-rm port_another/502_header.shtml port_another/502_body.shtml port_another/502.shtml
 echo Generate port_another/502.html
+rm port_another/502_header.shtml port_another/502_body.shtml port_another/502.shtml
 cat nowhere/503.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
                      | sed 's/https:\/\/\([^"\/<>]*\)\/setting.html/\/setting.html/g' \
                      | tee port_another/503.html >/dev/null
