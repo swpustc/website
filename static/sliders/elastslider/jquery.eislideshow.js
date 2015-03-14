@@ -158,15 +158,39 @@
                             imgSrcOri  = $img.attr('src'),
                             imgSrc     = imgSrcData ? imgSrcData : imgSrcOri;
 
-                        $('<img/>').load( function() {
+                        if (imgSrc) {
+
+                            $('<img/>').load( function() {
+
+                                if( ++loaded === _self.itemsCount ) {
+
+                                    dfd.resolve();
+
+                                }
+
+                            }).error( function() {
+
+                                if( !imgSrcOri ) {
+                                    $img.attr('src', imgSrcData);
+                                }
+
+                                if (imgSrcData) {
+                                    $img.removeAttr('data-src');
+                                }
+
+                                if( ++loaded === _self.itemsCount ) {
+                                    dfd.resolve();
+                                }
+
+                            }).attr( 'src', imgSrc );
+
+                        } else {
 
                             if( ++loaded === _self.itemsCount ) {
-
                                 dfd.resolve();
-
                             }
 
-                        }).attr( 'src', imgSrc );
+                        }
 
                     });
 
