@@ -126,32 +126,37 @@ cat header.shtml              | sed "s/<li><!--CURRENT:CDN-->/<li class=\"curren
                               | sed "s/<li><!--CURRENT:STATUS-->/<li class=\"current\">/g" \
                               | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                               | tee static/index.html -a >/dev/null
-cat static/index_body.shtml   | tee static/index.html -a >/dev/null
+cat static/index_body_1.shtml | tee static/index.html -a >/dev/null
+cat static/index_body_2.shtml | tee static/index.html -a >/dev/null
 cat footer.shtml              | tee static/index.html -a >/dev/null
 cat static/jquery.shtml       | tee static/index.html -a >/dev/null
 cat static/index_footer.shtml | tee static/index.html -a >/dev/null
 echo Generate static/index.html
-cat DOCTYPE.shtml             | tee static/index-freeshell.html    >/dev/null
-cat static/index_header.shtml | tee static/index-freeshell.html -a >/dev/null
-cat header.shtml              | sed "s/<li><!--CURRENT:FREESHELL-->/<li class=\"current\">/g" \
-                              | sed "s/<li><!--CURRENT:STATUS-->/<li class=\"current\">/g" \
-                              | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
-                              | tee static/index-freeshell.html -a >/dev/null
-cat static/index_body.shtml   | tee static/index-freeshell.html -a >/dev/null
-cat footer.shtml              | tee static/index-freeshell.html -a >/dev/null
-cat static/jquery.shtml       | tee static/index-freeshell.html -a >/dev/null
-cat static/index_footer.shtml | tee static/index-freeshell.html -a >/dev/null
+cat DOCTYPE.shtml                       | tee static/index-freeshell.html    >/dev/null
+cat static/index_header.shtml           | tee static/index-freeshell.html -a >/dev/null
+cat header.shtml                        | sed "s/<li><!--CURRENT:FREESHELL-->/<li class=\"current\">/g" \
+                                        | sed "s/<li><!--CURRENT:STATUS-->/<li class=\"current\">/g" \
+                                        | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                                        | tee static/index-freeshell.html -a >/dev/null
+cat static/index_body_1-freeshell.shtml | tee static/index-freeshell.html -a >/dev/null
+cat static/index_body_2.shtml           | tee static/index-freeshell.html -a >/dev/null
+cat footer.shtml                        | tee static/index-freeshell.html -a >/dev/null
+cat static/jquery.shtml                 | tee static/index-freeshell.html -a >/dev/null
+cat static/index_footer.shtml           | tee static/index-freeshell.html -a >/dev/null
 echo Generate static/index-freeshell.html
-cat DOCTYPE.shtml             | tee static/index-static.html    >/dev/null
-cat static/index_header.shtml | tee static/index-static.html -a >/dev/null
-cat header.shtml              | sed "s/<li><!--CURRENT:STATIC-->/<li class=\"current\">/g" \
-                              | sed "s/<li><!--CURRENT:STATUS-->/<li class=\"current\">/g" \
-                              | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
-                              | tee static/index-static.html -a >/dev/null
-cat static/index_body.shtml   | tee static/index-static.html -a >/dev/null
-cat footer.shtml              | tee static/index-static.html -a >/dev/null
-cat static/jquery.shtml       | tee static/index-static.html -a >/dev/null
-cat static/index_footer.shtml | tee static/index-static.html -a >/dev/null
+rm static/index_body_1-freeshell.shtml
+cat DOCTYPE.shtml                    | tee static/index-static.html    >/dev/null
+cat static/index_header.shtml        | tee static/index-static.html -a >/dev/null
+cat header.shtml                     | sed "s/<li><!--CURRENT:STATIC-->/<li class=\"current\">/g" \
+                                     | sed "s/<li><!--CURRENT:STATUS-->/<li class=\"current\">/g" \
+                                     | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                                     | tee static/index-static.html -a >/dev/null
+cat static/index_body_1-static.shtml | tee static/index-static.html -a >/dev/null
+cat static/index_body_2.shtml        | tee static/index-static.html -a >/dev/null
+cat footer.shtml                     | tee static/index-static.html -a >/dev/null
+cat static/jquery.shtml              | tee static/index-static.html -a >/dev/null
+cat static/index_footer.shtml        | tee static/index-static.html -a >/dev/null
 echo Generate static/index-static.html
+rm static/index_body_1-static.shtml
 rm static/jquery.shtml static/errorpage_footer.shtml
-rm static/index_header.shtml static/index_body.shtml static/index_footer.shtml
+rm static/index_header.shtml static/index_body_1.shtml static/index_body_2.shtml static/index_footer.shtml

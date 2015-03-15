@@ -552,15 +552,23 @@ jQuery(document).ready(function(){
     (function() {
 
         $('#map').each(function() {
-            var $this   = $(this),
-                mapJson = $this.attr('json-src');
-            if (mapJson) {
-                $.getJSON(mapJson, function(result) {
+            var $this     = $(this),
+                mapCenter = $this.attr('json-center'),
+                mapMarker = $this.attr('json-marker');
+            if (mapCenter) {
+                $.getJSON(mapCenter, function(result) {
                     $this.gMap(result);
                 });
             } else {
                 $this.gMap({
                     address : 'China'
+                });
+            }
+            if (mapMarker) {
+                $.getJSON(mapMarker, function(result) {
+                    $.each(result, function(index, content) {
+                        $this.gMap('addMarker', content);
+                    });
                 });
             }
         });
@@ -1375,15 +1383,18 @@ jQuery(document).ready(function(){
         var domainStatusClass = '.domain-status-',
             $cdnBody          = $(domainStatusClass + 'cdn'),
             $freeshellBody    = $(domainStatusClass + 'freeshell'),
-            $staticBody       = $(domainStatusClass + 'static');
+            $staticBody       = $(domainStatusClass + 'static'),
+            $mapBody          = $('.cdn-map');
 
         if ($cdnBody.length || $freeshellBody.length || $staticBody.length) {
 
             var testPngURL      = '/domain-test.png?t=',
                 freeshellDomain = '//freeshell.swpbox.info' + testPngURL,
                 staticDomain    = '//static.swpbox.info' + testPngURL,
-                freeshellStatus = false,
-                staticStatus    = false,
+
+                freeshellStatus = null,
+                staticStatus    = null,
+
                 highlight       = 'highlight',
                 highlight_none  = highlight + '1',
                 highlight_ok    = highlight + '2',
@@ -1395,6 +1406,7 @@ jQuery(document).ready(function(){
                     highlight_ok   + highlight_spit +
                     highlight_fail + highlight_spit +
                     highlight_part,
+
                 testImageFun    = function(testImageSrc) {
                     return $.Deferred(function(dfd) {
                         $('<img/>').load(function() {
@@ -1404,59 +1416,148 @@ jQuery(document).ready(function(){
                         }).attr('src', testImageSrc + (new Date()).getTime());
                     }).promise();
                 },
-                testTimeval     = 40000;
-            function freeshellTest() {
-                $.when(
-                    testImageFun(freeshellDomain)
-                ).done( function() {
-                    freeshellStatus = true;
-                    $freeshellBody.each(function() {
-                        $(this).removeClass(highlight_all).addClass(highlight_ok);
-                    });
-                    $cdnBody.each(function() {
-                        $(this).removeClass(highlight_all).addClass(staticStatus ? highlight_ok : highlight_part);
-                    });
-                }).fail( function() {
-                    freeshellStatus = false;
-                    $freeshellBody.each(function() {
-                        $(this).removeClass(highlight_all).addClass(highlight_fail);
-                    });
-                    $cdnBody.each(function() {
-                        $(this).removeClass(highlight_all).addClass(staticStatus ? highlight_part : highlight_fail);
-                    });
-                });
-                setTimeout(freeshellTest, testTimeval);
-            };
-            function staticTest() {
-                $.when(
-                    testImageFun(staticDomain)
-                ).done( function() {
-                    staticStatus = true;
-                    $staticBody.each(function() {
-                        $(this).removeClass(highlight_all).addClass(highlight_ok);
-                    });
-                    $cdnBody.each(function() {
-                        $(this).removeClass(highlight_all).addClass(freeshellStatus ? highlight_ok : highlight_part);
-                    });
-                }).fail( function() {
-                    staticStatus = false;
-                    $staticBody.each(function() {
-                        $(this).removeClass(highlight_all).addClass(highlight_fail);
-                    });
-                    $cdnBody.each(function() {
-                        $(this).removeClass(highlight_all).addClass(freeshellStatus ? highlight_part : highlight_fail);
-                    });
-                });
-                setTimeout(staticTest, testTimeval);
-            };
 
-            if ($cdnBody.length || $freeshellBody.length) {
-                freeshellTest();
-            }
-            if ($cdnBody.length || $staticBody.length) {
-                staticTest();
-            }
+                testTimeval     = 40000,
+                testDelay       = 5000,
+                mapMarker_hash  = $mapBody.attr('marker-json-hash'),
+                mapMarker_bgn   = '/gmap',
+                mapMarker_end   = '.json' + (mapMarker_hash ? ('?t=' + mapMarker_hash) : ''),
+                mapMarker_none  = '_null',
+                mapMarker_ok    = '_up',
+                mapMarker_down  = '_down',
 
+                gmap_addMarker  = 'addMarker',
+                gmap_delMarker  = 'removeAllMarkers',
+
+                functionTable   = {
+                    a : function () {
+                        setTimeout(functionTable.b, testDelay);
+                    },
+
+                    b : function () {
+                        $.when(
+                            testImageFun(freeshellDomain)
+                        ).done( function() {
+                            if (freeshellStatus !== true) {
+                                freeshellStatus = true;
+                                $freeshellBody.each(function() {
+                                    $(this).removeClass(highlight_all).addClass(highlight_ok);
+                                });
+                                $cdnBody.each(function() {
+                                    $(this).removeClass(highlight_all).addClass(
+                                        staticStatus === null ? highlight_part :
+                                            (staticStatus ? highlight_ok : highlight_part)
+                                        );
+                                });
+                                $mapBody.each(function() {
+                                    var $this     = $(this),
+                                        markerURL = mapMarker_bgn +
+                                            mapMarker_ok +
+                                            (staticStatus === null ? mapMarker_none :
+                                                (staticStatus ? mapMarker_ok : mapMarker_down)
+                                            ) + mapMarker_end;
+                                    $this.gMap(gmap_delMarker);
+                                    $.getJSON(markerURL, function(result) {
+                                        $.each(result, function(index, content) {
+                                            $this.gMap(gmap_addMarker, content);
+                                        });
+                                    });
+                                });
+                            }
+                        }).fail( function() {
+                            if (freeshellStatus !== false) {
+                                freeshellStatus = false;
+                                $freeshellBody.each(function() {
+                                    $(this).removeClass(highlight_all).addClass(highlight_fail);
+                                });
+                                $cdnBody.each(function() {
+                                    $(this).removeClass(highlight_all).addClass(
+                                        staticStatus === null ? highlight_none :
+                                            (staticStatus ? highlight_part : highlight_fail)
+                                        );
+                                });
+                                $mapBody.each(function() {
+                                    var $this     = $(this),
+                                        markerURL = mapMarker_bgn +
+                                            mapMarker_down +
+                                            (staticStatus === null ? mapMarker_none :
+                                                (staticStatus ? mapMarker_ok : mapMarker_down)
+                                            ) + mapMarker_end;
+                                    $this.gMap(gmap_delMarker);
+                                    $.getJSON(markerURL, function(result) {
+                                        $.each(result, function(index, content) {
+                                            $this.gMap(gmap_addMarker, content);
+                                        });
+                                    });
+                                });
+                            }
+                        });
+                        setTimeout(functionTable.c, testDelay);
+                    },
+
+                    c : function () {
+                        $.when(
+                            testImageFun(staticDomain)
+                        ).done( function() {
+                            if (staticStatus !== true) {
+                                staticStatus = true;
+                                $staticBody.each(function() {
+                                    $(this).removeClass(highlight_all).addClass(highlight_ok);
+                                });
+                                $cdnBody.each(function() {
+                                    $(this).removeClass(highlight_all).addClass(
+                                        freeshellStatus === null ? highlight_part :
+                                            (freeshellStatus ? highlight_ok : highlight_part)
+                                        );
+                                });
+                                $mapBody.each(function() {
+                                    var $this     = $(this),
+                                        markerURL = mapMarker_bgn +
+                                            (freeshellStatus === null ? mapMarker_none :
+                                                (freeshellStatus ? mapMarker_ok : mapMarker_down)
+                                            ) + mapMarker_ok +
+                                            mapMarker_end;
+                                    $this.gMap(gmap_delMarker);
+                                    $.getJSON(markerURL, function(result) {
+                                        $.each(result, function(index, content) {
+                                            $this.gMap(gmap_addMarker, content);
+                                        });
+                                    });
+                                });
+                            }
+                        }).fail( function() {
+                            if (staticStatus !== false) {
+                                staticStatus = false;
+                                $staticBody.each(function() {
+                                    $(this).removeClass(highlight_all).addClass(highlight_fail);
+                                });
+                                $cdnBody.each(function() {
+                                    $(this).removeClass(highlight_all).addClass(
+                                        freeshellStatus === null ? highlight_none :
+                                            (freeshellStatus ? highlight_part : highlight_fail)
+                                        );
+                                });
+                                $mapBody.each(function() {
+                                    var $this     = $(this),
+                                        markerURL = mapMarker_bgn +
+                                            (freeshellStatus === null ? mapMarker_none :
+                                                (freeshellStatus ? mapMarker_ok : mapMarker_down)
+                                            ) + mapMarker_down +
+                                            mapMarker_end;
+                                    $this.gMap(gmap_delMarker);
+                                    $.getJSON(markerURL, function(result) {
+                                        $.each(result, function(index, content) {
+                                            $this.gMap(gmap_addMarker, content);
+                                        });
+                                    });
+                                });
+                            }
+                        });
+                        setTimeout(functionTable.a, testTimeval);
+                    }
+                };
+
+            functionTable.a();
         }
 
     })();

@@ -1,16 +1,5 @@
 {
   "latitude"  : 31.5,
   "longitude" : 118.2,
-  "zoom"      : 7,
-  "markers"   : [
-    {
-      "latitude"  : 31.837,
-      "longitude" : 117.27,
-      "html"      : "University of Science and Techonogly of China - East Campus"
-    }, {
-      "latitude"  : 31.129,
-      "longitude" : 119.197,
-      "html"      : "My Home"
-    }
-  ]
+  "zoom"      : 7
 }

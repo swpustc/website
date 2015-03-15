@@ -1,0 +1,21 @@
+[
+  {
+    "latitude"  : 31.837,
+    "longitude" : 117.27,
+    "html"      : "University of Science and Techonogly of China - East Campus",
+    "icon"      : {
+      "image"      : "//maps.google.com/mapfiles/marker_grey.png",
+      "iconsize"   : [20, 34],
+      "iconanchor" : [9, 34]
+    }
+  }, {
+    "latitude"  : 31.129,
+    "longitude" : 119.197,
+    "html"      : "My Home",
+    "icon"      : {
+      "image"      : "//maps.google.com/mapfiles/marker_grey.png",
+      "iconsize"   : [20, 34],
+      "iconanchor" : [9, 34]
+    }
+  }
+]

@@ -1,5 +1,3 @@
-<div class="content-wrapper clearfix">
-  <div id="map" json-src="/gmap.json?t=TIMESTAMP:BEGIN:gmap.json:END:TIMESTAMP&f=TIMESTAMP:BEGIN:gmap-freeshell.json:END:TIMESTAMP&s=TIMESTAMP:BEGIN:gmap-static.json:END:TIMESTAMP"></div>
   <div class="image-title clearfix">
     <a href="//cdn.swpbox.info">
       <h2 class="highlight1 domain-status-cdn">
