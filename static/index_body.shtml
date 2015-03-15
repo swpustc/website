@@ -2,27 +2,27 @@
   <div id="map" json-src="/gmap.json?t=TIMESTAMP:BEGIN:gmap.json:END:TIMESTAMP&f=TIMESTAMP:BEGIN:gmap-freeshell.json:END:TIMESTAMP&s=TIMESTAMP:BEGIN:gmap-static.json:END:TIMESTAMP"></div>
   <div class="image-title clearfix">
     <a href="//cdn.swpbox.info">
-      <h2 class="highlight2 domain-status-cdn">
+      <h2 class="highlight1 domain-status-cdn">
         <span class="post-type quote"></span>
-        <span class="highlight2 domain-status-cdn">cdn.swpbox.info</span>
+        <span class="highlight1 domain-status-cdn">cdn.swpbox.info</span>
         This domain stores static resources, and have two servers.
       </h2>
     </a>
   <div class="image-title clearfix">
   </div><!--/ .image-title-->
     <a href="//freeshell.swpbox.info">
-      <h2 class="highlight2 domain-status-freeshell">
+      <h2 class="highlight1 domain-status-freeshell">
         <span class="post-type quote"></span>
-        <span class="highlight2 domain-status-freeshell">freeshell.swpbox.info</span>
+        <span class="highlight1 domain-status-freeshell">freeshell.swpbox.info</span>
         This is the master server.
       </h2>
     </a>
   </div><!--/ .image-title-->
   <div class="image-title clearfix">
     <a href="//static.swpbox.info">
-      <h2 class="highlight2 domain-status-static">
+      <h2 class="highlight1 domain-status-static">
         <span class="post-type quote"></span>
-        <span class="highlight2 domain-status-static">static.swpbox.info</span>
+        <span class="highlight1 domain-status-static">static.swpbox.info</span>
         This is the backup server.
       </h2>
     </a>

@@ -76,6 +76,7 @@ cat ddns-log_body.shtml      | sed "s/<!--UPDATETIME-->/$TME/g" \
 cat /var/log/ddns.log        | tee /tmp/ddns.tmp -a >/dev/null
 echo $' </section>\n</div>'  | tee /tmp/ddns.tmp -a >/dev/null
 cat footer.shtml             | tee /tmp/ddns.tmp -a >/dev/null
+cat jquery.shtml             | tee /tmp/ddns.tmp -a >/dev/null
 cat ddns-log_footer.shtml    | tee /tmp/ddns.tmp -a >/dev/null
 config/post-hash STANDARD /tmp/ddns.tmp
 cat /tmp/ddns.tmp | sed 's/<!--\(\/\| end\| \*\)[^!<>]*-->//;s/^[[:space:]]*//;/^$/d' \

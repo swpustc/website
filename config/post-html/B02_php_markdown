@@ -1,0 +1,26 @@
+#!/bin/bash
+## Work Directory: /home/git/html/
+## User: git
+
+### php/markdown
+cat php/markdown/md_header.phps | tee php/markdown/md.php    >/dev/null
+cat header.shtml                | sed "s/<li><!--CURRENT:FTP:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
+                                | sed "s/<li><!--CURRENT:FTP-->/<li class=\"current\">/g" \
+                                | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                                | tee php/markdown/md.php -a >/dev/null
+cat php/markdown/md_body.phps   | tee php/markdown/md.php -a >/dev/null
+cat footer.shtml                | tee php/markdown/md.php -a >/dev/null
+cat jquery.shtml                | tee php/markdown/md.php -a >/dev/null
+cat php/markdown/md_footer.phps | tee php/markdown/md.php -a >/dev/null
+echo Generate php/markdown/md.php
+cat php/markdown/resume_header.phps | tee php/markdown/resume.php    >/dev/null
+cat header.shtml                    | sed "s/<li><!--CURRENT:RESUME:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
+                                    | sed "s/<li><!--CURRENT:RESUME-->/<li class=\"current\">/g" \
+                                    | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                                    | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                                    | tee php/markdown/resume.php -a >/dev/null
+cat php/markdown/resume_body.phps   | tee php/markdown/resume.php -a >/dev/null
+cat footer.shtml                    | tee php/markdown/resume.php -a >/dev/null
+cat jquery.shtml                    | tee php/markdown/resume.php -a >/dev/null
+cat php/markdown/resume_footer.phps | tee php/markdown/resume.php -a >/dev/null
+echo Generate php/markdown/resume.php

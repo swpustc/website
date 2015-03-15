@@ -1,0 +1,18 @@
+#!/bin/bash
+## Work Directory: /home/git/html/
+## User: git
+
+### nowhere
+cat DOCTYPE.shtml            | tee nowhere/502.html    >/dev/null
+cat nowhere/502_header.shtml | tee nowhere/502.html -a >/dev/null
+cat header.shtml             | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                             | tee nowhere/502.html -a >/dev/null
+cat nowhere/502_body.shtml   | tee nowhere/502.html -a >/dev/null
+cat footer.shtml             | tee nowhere/502.html -a >/dev/null
+cat jquery.shtml             | tee nowhere/502.html -a >/dev/null
+cat errorpage_footer.shtml   | tee nowhere/502.html -a >/dev/null
+echo Generate nowhere/502.html
+rm nowhere/502_header.shtml nowhere/502_body.shtml

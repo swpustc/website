@@ -1,2 +1,3 @@
 <title>swpustc | CDN Page</title>
-<link rel="stylesheet" href="//cdn.swpbox.info/sliders/elastslider/elastic.min.css" media="screen"/>
+<link rel="stylesheet" href="/sliders/elastslider/elastic.min.css?t=TIMESTAMP:BEGIN:sliders/elastslider/elastic.min.css:END:TIMESTAMP" media="screen"/>
+<link rel="stylesheet" href="/css/style.min.css?t=TIMESTAMP:BEGIN:css/style.min.css:END:TIMESTAMP" media="screen"/>

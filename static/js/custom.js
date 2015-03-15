@@ -1367,6 +1367,103 @@ jQuery(document).ready(function(){
     /* end Resume Align Image */
 
     /* ---------------------------------------------------------------------- */
+    /*  CDN Domain Status
+    /* ---------------------------------------------------------------------- */
+
+    (function() {
+
+        var domainStatusClass = '.domain-status-',
+            $cdnBody          = $(domainStatusClass + 'cdn'),
+            $freeshellBody    = $(domainStatusClass + 'freeshell'),
+            $staticBody       = $(domainStatusClass + 'static');
+
+        if ($cdnBody.length || $freeshellBody.length || $staticBody.length) {
+
+            var testPngURL      = '/domain-test.png?t=',
+                freeshellDomain = '//freeshell.swpbox.info' + testPngURL,
+                staticDomain    = '//static.swpbox.info' + testPngURL,
+                freeshellStatus = false,
+                staticStatus    = false,
+                highlight       = 'highlight',
+                highlight_none  = highlight + '1',
+                highlight_ok    = highlight + '2',
+                highlight_fail  = highlight + '3',
+                highlight_part  = highlight + '4',
+                highlight_spit  = ' ',
+                highlight_all   =
+                    highlight_none + highlight_spit +
+                    highlight_ok   + highlight_spit +
+                    highlight_fail + highlight_spit +
+                    highlight_part,
+                testImageFun    = function(testImageSrc) {
+                    return $.Deferred(function(dfd) {
+                        $('<img/>').load(function() {
+                            dfd.resolve();
+                        }).error(function() {
+                            dfd.reject();
+                        }).attr('src', testImageSrc + (new Date()).getTime());
+                    }).promise();
+                },
+                testTimeval     = 40000;
+            function freeshellTest() {
+                $.when(
+                    testImageFun(freeshellDomain)
+                ).done( function() {
+                    freeshellStatus = true;
+                    $freeshellBody.each(function() {
+                        $(this).removeClass(highlight_all).addClass(highlight_ok);
+                    });
+                    $cdnBody.each(function() {
+                        $(this).removeClass(highlight_all).addClass(staticStatus ? highlight_ok : highlight_part);
+                    });
+                }).fail( function() {
+                    freeshellStatus = false;
+                    $freeshellBody.each(function() {
+                        $(this).removeClass(highlight_all).addClass(highlight_fail);
+                    });
+                    $cdnBody.each(function() {
+                        $(this).removeClass(highlight_all).addClass(staticStatus ? highlight_part : highlight_fail);
+                    });
+                });
+                setTimeout(freeshellTest, testTimeval);
+            };
+            function staticTest() {
+                $.when(
+                    testImageFun(staticDomain)
+                ).done( function() {
+                    staticStatus = true;
+                    $staticBody.each(function() {
+                        $(this).removeClass(highlight_all).addClass(highlight_ok);
+                    });
+                    $cdnBody.each(function() {
+                        $(this).removeClass(highlight_all).addClass(freeshellStatus ? highlight_ok : highlight_part);
+                    });
+                }).fail( function() {
+                    staticStatus = false;
+                    $staticBody.each(function() {
+                        $(this).removeClass(highlight_all).addClass(highlight_fail);
+                    });
+                    $cdnBody.each(function() {
+                        $(this).removeClass(highlight_all).addClass(freeshellStatus ? highlight_part : highlight_fail);
+                    });
+                });
+                setTimeout(staticTest, testTimeval);
+            };
+
+            if ($cdnBody.length || $freeshellBody.length) {
+                freeshellTest();
+            }
+            if ($cdnBody.length || $staticBody.length) {
+                staticTest();
+            }
+
+        }
+
+    })();
+
+    /* end CDN Domain Status */
+
+    /* ---------------------------------------------------------------------- */
     /*  SpanWords
     /* ---------------------------------------------------------------------- */
 

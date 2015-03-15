@@ -1,0 +1,35 @@
+#!/bin/bash
+## Work Directory: /home/git/html/
+## User: git
+
+### php
+cat php/ftpindex_header.phps | tee php/ftpindex.php    >/dev/null
+cat header.shtml             | sed "s/<li><!--CURRENT:FTP:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
+                             | sed "s/<li><!--CURRENT:FTP-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                             | tee php/ftpindex.php -a >/dev/null
+cat php/ftpindex_body.phps   | tee php/ftpindex.php -a >/dev/null
+cat footer.shtml             | tee php/ftpindex.php -a >/dev/null
+cat jquery.shtml             | tee php/ftpindex.php -a >/dev/null
+cat php/ftpindex_footer.phps | tee php/ftpindex.php -a >/dev/null
+echo Generate php/ftpindex.php
+cat php/image_header.phps | tee php/image.php    >/dev/null
+cat header.shtml          | sed "s/<li><!--CURRENT:FTP:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
+                          | sed "s/<li><!--CURRENT:FTP-->/<li class=\"current\">/g" \
+                          | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                          | tee php/image.php -a >/dev/null
+cat php/image_body.phps   | tee php/image.php -a >/dev/null
+cat footer.shtml          | tee php/image.php -a >/dev/null
+cat jquery.shtml          | tee php/image.php -a >/dev/null
+cat php/image_footer.phps | tee php/image.php -a >/dev/null
+echo Generate php/image.php
+cat php/prettify_header.phps | tee php/prettify.php    >/dev/null
+cat header.shtml             | sed "s/<li><!--CURRENT:FTP:\([^>]*\)-->/<li<?php isChildDocument(\"\1\"); ?>>/g" \
+                             | sed "s/<li><!--CURRENT:FTP-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                             | tee php/prettify.php -a >/dev/null
+cat php/prettify_body.phps   | tee php/prettify.php -a >/dev/null
+cat footer.shtml             | tee php/prettify.php -a >/dev/null
+cat jquery.shtml             | tee php/prettify.php -a >/dev/null
+cat php/prettify_footer.phps | tee php/prettify.php -a >/dev/null
+echo Generate php/prettify.php

@@ -75,3 +75,4 @@ include("../../DOCTYPE.shtml");
   lang-zh_cn="<?php echo $file_zhcn_title; ?>"
   lang-zh_tw="<?php echo $file_zhtw_title; ?>"
   ><?php echo $file_title; ?></title>
+<link rel="stylesheet" href="//cdn.swpbox.info/css/style.min.css" media="screen"/>

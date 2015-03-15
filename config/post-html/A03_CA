@@ -1,0 +1,17 @@
+#!/bin/bash
+## Work Directory: /home/git/html/
+## User: git
+
+### CA
+cat DOCTYPE.shtml          | tee CA/index.html    >/dev/null
+cat CA/index_header.shtml  | tee CA/index.html -a >/dev/null
+cat header.shtml           | sed "s/<li><!--CURRENT:CA-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:FTP-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                           | tee CA/index.html -a >/dev/null
+cat CA/index_body.shtml    | tee CA/index.html -a >/dev/null
+cat footer.shtml           | tee CA/index.html -a >/dev/null
+cat jquery.shtml           | tee CA/index.html -a >/dev/null
+cat errorpage_footer.shtml | tee CA/index.html -a >/dev/null
+echo Generate CA/index.html
+rm CA/index_header.shtml CA/index_body.shtml

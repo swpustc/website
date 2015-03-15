@@ -1,0 +1,18 @@
+#!/bin/bash
+## Work Directory: /home/git/html/
+## User: git
+
+### resume
+cat DOCTYPE.shtml                | tee resume/502-resume.html    >/dev/null
+cat 502_header.shtml             | tee resume/502-resume.html -a >/dev/null
+cat header.shtml                 | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                                 | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                                 | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                                 | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                                 | tee resume/502-resume.html -a >/dev/null
+cat resume/502-resume_body.shtml | tee resume/502-resume.html -a >/dev/null
+cat footer.shtml                 | tee resume/502-resume.html -a >/dev/null
+cat jquery.shtml                 | tee resume/502-resume.html -a >/dev/null
+cat errorpage_footer.shtml       | tee resume/502-resume.html -a >/dev/null
+echo Generate resume/502-resume.html
+rm resume/502-resume_body.shtml

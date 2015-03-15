@@ -1,0 +1,70 @@
+#!/bin/bash
+## Work Directory: /home/git/html/
+## User: git
+
+### static/ftp/static
+cat DOCTYPE.shtml                                 | tee static/ftp/static/403-deny-files.html    >/dev/null
+cat static/ftp/static/403-deny-files_header.shtml | tee static/ftp/static/403-deny-files.html -a >/dev/null
+cat header.shtml                                  | sed "s/<li><!--CURRENT:ERR403-->/<li class=\"current\">/g" \
+                                                  | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                                                  | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                                                  | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                                                  | tee static/ftp/static/403-deny-files.html -a >/dev/null
+cat 403_body.shtml                                | tee static/ftp/static/403-deny-files.html -a >/dev/null
+cat footer.shtml                                  | tee static/ftp/static/403-deny-files.html -a >/dev/null
+cat jquery.shtml                                  | tee static/ftp/static/403-deny-files.html -a >/dev/null
+cat errorpage_footer.shtml                        | tee static/ftp/static/403-deny-files.html -a >/dev/null
+echo Generate static/ftp/static/403-deny-files.html
+rm static/ftp/static/403-deny-files_header.shtml
+cat DOCTYPE.shtml                          | tee static/ftp/static/502-image.html    >/dev/null
+cat 502_header.shtml                       | tee static/ftp/static/502-image.html -a >/dev/null
+cat header.shtml                           | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                                           | tee static/ftp/static/502-image.html -a >/dev/null
+cat static/ftp/static/502-image_body.shtml | tee static/ftp/static/502-image.html -a >/dev/null
+cat footer.shtml                           | tee static/ftp/static/502-image.html -a >/dev/null
+cat jquery.shtml                           | tee static/ftp/static/502-image.html -a >/dev/null
+cat errorpage_footer.shtml                 | tee static/ftp/static/502-image.html -a >/dev/null
+echo Generate static/ftp/static/502-image.html
+rm static/ftp/static/502-image_body.shtml
+cat DOCTYPE.shtml                          | tee static/ftp/static/502-index.html    >/dev/null
+cat 502_header.shtml                       | tee static/ftp/static/502-index.html -a >/dev/null
+cat header.shtml                           | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                                           | tee static/ftp/static/502-index.html -a >/dev/null
+cat static/ftp/static/502-index_body.shtml | tee static/ftp/static/502-index.html -a >/dev/null
+cat footer.shtml                           | tee static/ftp/static/502-index.html -a >/dev/null
+cat jquery.shtml                           | tee static/ftp/static/502-index.html -a >/dev/null
+cat errorpage_footer.shtml                 | tee static/ftp/static/502-index.html -a >/dev/null
+echo Generate static/ftp/static/502-index.html
+rm static/ftp/static/502-index_body.shtml
+cat DOCTYPE.shtml                             | tee static/ftp/static/502-markdown.html    >/dev/null
+cat 502_header.shtml                          | tee static/ftp/static/502-markdown.html -a >/dev/null
+cat header.shtml                              | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                                              | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                                              | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                                              | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                                              | tee static/ftp/static/502-markdown.html -a >/dev/null
+cat static/ftp/static/502-markdown_body.shtml | tee static/ftp/static/502-markdown.html -a >/dev/null
+cat footer.shtml                              | tee static/ftp/static/502-markdown.html -a >/dev/null
+cat jquery.shtml                              | tee static/ftp/static/502-markdown.html -a >/dev/null
+cat errorpage_footer.shtml                    | tee static/ftp/static/502-markdown.html -a >/dev/null
+echo Generate static/ftp/static/502-markdown.html
+rm static/ftp/static/502-markdown_body.shtml
+cat DOCTYPE.shtml                             | tee static/ftp/static/502-prettify.html    >/dev/null
+cat 502_header.shtml                          | tee static/ftp/static/502-prettify.html -a >/dev/null
+cat header.shtml                              | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                                              | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                                              | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                                              | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                                              | tee static/ftp/static/502-prettify.html -a >/dev/null
+cat static/ftp/static/502-prettify_body.shtml | tee static/ftp/static/502-prettify.html -a >/dev/null
+cat footer.shtml                              | tee static/ftp/static/502-prettify.html -a >/dev/null
+cat jquery.shtml                              | tee static/ftp/static/502-prettify.html -a >/dev/null
+cat errorpage_footer.shtml                    | tee static/ftp/static/502-prettify.html -a >/dev/null
+echo Generate static/ftp/static/502-prettify.html
+rm static/ftp/static/502-prettify_body.shtml

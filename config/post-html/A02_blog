@@ -1,0 +1,18 @@
+#!/bin/bash
+## Work Directory: /home/git/html/
+## User: git
+
+### blog
+cat DOCTYPE.shtml          | tee blog/502.html    >/dev/null
+cat 502_header.shtml       | tee blog/502.html -a >/dev/null
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                           | tee blog/502.html -a >/dev/null
+cat blog/502_body.shtml    | tee blog/502.html -a >/dev/null
+cat footer.shtml           | tee blog/502.html -a >/dev/null
+cat jquery.shtml           | tee blog/502.html -a >/dev/null
+cat errorpage_footer.shtml | tee blog/502.html -a >/dev/null
+echo Generate blog/502.html
+rm blog/502_body.shtml

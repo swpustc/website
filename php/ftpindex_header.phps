@@ -56,3 +56,4 @@ function isChildDocument($thispath) {
 include("../DOCTYPE.shtml");
 ?>
 <title>swpustc | Index of <?php echo $cur; ?></title>
+<link rel="stylesheet" href="//cdn.swpbox.info/css/style.min.css" media="screen"/>

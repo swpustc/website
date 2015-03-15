@@ -36,6 +36,7 @@ cat header.shtml                  | sed "s/<li><!--CURRENT:ERR502-->/<li class=\
                                   | tee port_another/502.shtml -a >/dev/null
 cat port_another/502_body.shtml   | tee port_another/502.shtml -a >/dev/null
 cat footer.shtml                  | tee port_another/502.shtml -a >/dev/null
+cat jquery.shtml                  | tee port_another/502.shtml -a >/dev/null
 cat errorpage_footer.shtml        | tee port_another/502.shtml -a >/dev/null
 cat port_another/502.shtml | sed 's/\([^:]\)\/\//\1https:\/\//g' \
                            | sed 's/https:\/\/\([^"\/<>]*\)\/setting.html/\/setting.html/g' \

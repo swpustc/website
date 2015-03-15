@@ -1,0 +1,113 @@
+#!/bin/bash
+## Work Directory: /home/git/html/
+## User: git
+
+### Master
+cat DOCTYPE.shtml          | tee 400.html    >/dev/null
+cat 400_header.shtml       | tee 400.html -a >/dev/null
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR400-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                           | tee 400.html -a >/dev/null
+cat 400_body.shtml         | tee 400.html -a >/dev/null
+cat footer.shtml           | tee 400.html -a >/dev/null
+cat jquery.shtml           | tee 400.html -a >/dev/null
+cat errorpage_footer.shtml | tee 400.html -a >/dev/null
+echo Generate 400.html
+cat DOCTYPE.shtml          | tee 403.html    >/dev/null
+cat 403_header.shtml       | tee 403.html -a >/dev/null
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR403-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                           | tee 403.html -a >/dev/null
+cat 403_body.shtml         | tee 403.html -a >/dev/null
+cat footer.shtml           | tee 403.html -a >/dev/null
+cat jquery.shtml           | tee 403.html -a >/dev/null
+cat errorpage_footer.shtml | tee 403.html -a >/dev/null
+echo Generate 403.html
+cat DOCTYPE.shtml          | tee 404.html    >/dev/null
+cat 404_header.shtml       | tee 404.html -a >/dev/null
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR404-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                           | tee 404.html -a >/dev/null
+cat 404_body.shtml         | tee 404.html -a >/dev/null
+cat footer.shtml           | tee 404.html -a >/dev/null
+cat jquery.shtml           | tee 404.html -a >/dev/null
+cat errorpage_footer.shtml | tee 404.html -a >/dev/null
+echo Generate 404.html
+cat DOCTYPE.shtml          | tee 414.html    >/dev/null
+cat 414_header.shtml       | tee 414.html -a >/dev/null
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR414-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                           | tee 414.html -a >/dev/null
+cat 414_body.shtml         | tee 414.html -a >/dev/null
+cat footer.shtml           | tee 414.html -a >/dev/null
+cat jquery.shtml           | tee 414.html -a >/dev/null
+cat errorpage_footer.shtml | tee 414.html -a >/dev/null
+echo Generate 414.html
+cat DOCTYPE.shtml          | tee 422.html    >/dev/null
+cat 422_header.shtml       | tee 422.html -a >/dev/null
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR422-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                           | tee 422.html -a >/dev/null
+cat 422_body.shtml         | tee 422.html -a >/dev/null
+cat footer.shtml           | tee 422.html -a >/dev/null
+cat jquery.shtml           | tee 422.html -a >/dev/null
+cat errorpage_footer.shtml | tee 422.html -a >/dev/null
+echo Generate 422.html
+cat DOCTYPE.shtml          | tee 500.html    >/dev/null
+cat 500_header.shtml       | tee 500.html -a >/dev/null
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR500-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                           | tee 500.html -a >/dev/null
+cat 500_body.shtml         | tee 500.html -a >/dev/null
+cat footer.shtml           | tee 500.html -a >/dev/null
+cat jquery.shtml           | tee 500.html -a >/dev/null
+cat errorpage_footer.shtml | tee 500.html -a >/dev/null
+echo Generate 500.html
+cat DOCTYPE.shtml          | tee 502.html    >/dev/null
+cat 502_header.shtml       | tee 502.html -a >/dev/null
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                           | tee 502.html -a >/dev/null
+cat 502_body.shtml         | tee 502.html -a >/dev/null
+cat footer.shtml           | tee 502.html -a >/dev/null
+cat jquery.shtml           | tee 502.html -a >/dev/null
+cat errorpage_footer.shtml | tee 502.html -a >/dev/null
+echo Generate 502.html
+cat DOCTYPE.shtml          | tee 503.html    >/dev/null
+cat 503_header.shtml       | tee 503.html -a >/dev/null
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR503-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                           | tee 503.html -a >/dev/null
+cat 503_body.shtml         | tee 503.html -a >/dev/null
+cat footer.shtml           | tee 503.html -a >/dev/null
+cat jquery.shtml           | tee 503.html -a >/dev/null
+cat errorpage_footer.shtml | tee 503.html -a >/dev/null
+echo Generate 503.html
+cat DOCTYPE.shtml          | tee 504.html    >/dev/null
+cat 504_header.shtml       | tee 504.html -a >/dev/null
+cat header.shtml           | sed "s/<li><!--CURRENT:ERR504-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                           | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                           | tee 504.html -a >/dev/null
+cat 504_body.shtml         | tee 504.html -a >/dev/null
+cat footer.shtml           | tee 504.html -a >/dev/null
+cat jquery.shtml           | tee 504.html -a >/dev/null
+cat errorpage_footer.shtml | tee 504.html -a >/dev/null
+echo Generate 504.html
