@@ -1418,7 +1418,7 @@ jQuery(document).ready(function(){
                 },
 
                 testTimeval     = 40000,
-                testDelay       = 5000,
+                testDelay       = 1000,
                 mapMarker_hash  = $mapBody.attr('marker-json-hash'),
                 mapMarker_bgn   = '/gmap',
                 mapMarker_end   = '.json' + (mapMarker_hash ? ('?t=' + mapMarker_hash) : ''),
@@ -1431,7 +1431,7 @@ jQuery(document).ready(function(){
 
                 functionTable   = {
                     a : function () {
-                        setTimeout(functionTable.b, testDelay);
+                        setTimeout(functionTable.b, testDelay * 3);
                     },
 
                     b : function () {
@@ -1456,8 +1456,8 @@ jQuery(document).ready(function(){
                                             (staticStatus === null ? mapMarker_none :
                                                 (staticStatus ? mapMarker_ok : mapMarker_down)
                                             ) + mapMarker_end;
-                                    $this.gMap(gmap_delMarker);
                                     $.getJSON(markerURL, function(result) {
+                                        $this.gMap(gmap_delMarker);
                                         $.each(result, function(index, content) {
                                             $this.gMap(gmap_addMarker, content);
                                         });
@@ -1483,8 +1483,8 @@ jQuery(document).ready(function(){
                                             (staticStatus === null ? mapMarker_none :
                                                 (staticStatus ? mapMarker_ok : mapMarker_down)
                                             ) + mapMarker_end;
-                                    $this.gMap(gmap_delMarker);
                                     $.getJSON(markerURL, function(result) {
+                                        $this.gMap(gmap_delMarker);
                                         $.each(result, function(index, content) {
                                             $this.gMap(gmap_addMarker, content);
                                         });
@@ -1517,8 +1517,8 @@ jQuery(document).ready(function(){
                                                 (freeshellStatus ? mapMarker_ok : mapMarker_down)
                                             ) + mapMarker_ok +
                                             mapMarker_end;
-                                    $this.gMap(gmap_delMarker);
                                     $.getJSON(markerURL, function(result) {
+                                        $this.gMap(gmap_delMarker);
                                         $.each(result, function(index, content) {
                                             $this.gMap(gmap_addMarker, content);
                                         });
@@ -1544,8 +1544,8 @@ jQuery(document).ready(function(){
                                                 (freeshellStatus ? mapMarker_ok : mapMarker_down)
                                             ) + mapMarker_down +
                                             mapMarker_end;
-                                    $this.gMap(gmap_delMarker);
                                     $.getJSON(markerURL, function(result) {
+                                        $this.gMap(gmap_delMarker);
                                         $.each(result, function(index, content) {
                                             $this.gMap(gmap_addMarker, content);
                                         });
