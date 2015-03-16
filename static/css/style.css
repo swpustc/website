@@ -3926,9 +3926,9 @@ ul.related span.categories {color: #50554e; font-style: italic;}
     padding-left: 0;
     width: 44%;
   }
-  .ddns-title .one-fourth, .ddns .one-fourth {
+  .ddns-title .one-fourth, .ddns .one-fourth, .ddns .three-fourth {
     padding-left: 2%;
-    width: 48%;
+    width: 54%;
   }
   .ddns-title .one-fourth-third, .ddns .one-fourth-third {
     width: 42%;
@@ -3936,10 +3936,6 @@ ul.related span.categories {color: #50554e; font-style: italic;}
   }
   .ddns-title .one-fourth.last, .ddns .one-fourth.last {
     margin-left: -6%;
-  }
-  .ddns .three-fourth {
-    padding-left: 2%;
-    width: 54%;
   }
   .ddns .ddns-hide {
     display: none !important;

@@ -1384,7 +1384,8 @@ jQuery(document).ready(function(){
             $cdnBody          = $(domainStatusClass + 'cdn'),
             $freeshellBody    = $(domainStatusClass + 'freeshell'),
             $staticBody       = $(domainStatusClass + 'static'),
-            $mapBody          = $('.cdn-map');
+            $mapBody          = $('.cdn-map'),
+            mapBody_length    = $mapBody.length;
 
         if ($cdnBody.length || $freeshellBody.length || $staticBody.length) {
 
@@ -1417,8 +1418,24 @@ jQuery(document).ready(function(){
                     }).promise();
                 },
 
+                gmap_addMarker  = 'addMarker',
+                gmap_delMarker  = 'removeAllMarkers',
+                addMarkers      = function(mapItem, markerURL) {
+                    return $.Deferred(function(dfd) {
+                        $.getJSON(markerURL, function(result) {
+                            mapItem.gMap(gmap_delMarker);
+                            $.each(result, function(index, content) {
+                                mapItem.gMap(gmap_addMarker, content);
+                            });
+                            dfd.resolve();
+                        }).error(function() {
+                            dfd.resolve();
+                        });
+                    }).promise();
+                },
+
                 testTimeval     = 40000,
-                testDelay       = 1000,
+                testDelay       = 500,
                 mapMarker_hash  = $mapBody.attr('marker-json-hash'),
                 mapMarker_bgn   = '/gmap',
                 mapMarker_end   = '.json' + (mapMarker_hash ? ('?t=' + mapMarker_hash) : ''),
@@ -1426,15 +1443,9 @@ jQuery(document).ready(function(){
                 mapMarker_ok    = '_up',
                 mapMarker_down  = '_down',
 
-                gmap_addMarker  = 'addMarker',
-                gmap_delMarker  = 'removeAllMarkers',
-
                 functionTable   = {
-                    a : function () {
-                        setTimeout(functionTable.b, testDelay * 3);
-                    },
 
-                    b : function () {
+                    a : function () {
                         $.when(
                             testImageFun(freeshellDomain)
                         ).done( function() {
@@ -1449,20 +1460,26 @@ jQuery(document).ready(function(){
                                             (staticStatus ? highlight_ok : highlight_part)
                                         );
                                 });
-                                $mapBody.each(function() {
-                                    var $this     = $(this),
-                                        markerURL = mapMarker_bgn +
-                                            mapMarker_ok +
-                                            (staticStatus === null ? mapMarker_none :
-                                                (staticStatus ? mapMarker_ok : mapMarker_down)
-                                            ) + mapMarker_end;
-                                    $.getJSON(markerURL, function(result) {
-                                        $this.gMap(gmap_delMarker);
-                                        $.each(result, function(index, content) {
-                                            $this.gMap(gmap_addMarker, content);
+                                if (mapBody_length) {
+                                    var mapPos = 0;
+                                    $mapBody.each(function() {
+                                        var $this     = $(this),
+                                            markerURL = mapMarker_bgn +
+                                                mapMarker_ok +
+                                                (staticStatus === null ? mapMarker_none :
+                                                    (staticStatus ? mapMarker_ok : mapMarker_down)
+                                                ) + mapMarker_end;
+                                        $.when(
+                                            addMarkers($this, markerURL)
+                                        ).done( function() {
+                                            if (++mapPos == mapBody_length) {
+                                                setTimeout(functionTable.b, testDelay);
+                                            }
                                         });
                                     });
-                                });
+                                } else {
+                                    setTimeout(functionTable.b, testDelay);
+                                }
                             }
                         }).fail( function() {
                             if (freeshellStatus !== false) {
@@ -1476,26 +1493,31 @@ jQuery(document).ready(function(){
                                             (staticStatus ? highlight_part : highlight_fail)
                                         );
                                 });
-                                $mapBody.each(function() {
-                                    var $this     = $(this),
-                                        markerURL = mapMarker_bgn +
-                                            mapMarker_down +
-                                            (staticStatus === null ? mapMarker_none :
-                                                (staticStatus ? mapMarker_ok : mapMarker_down)
-                                            ) + mapMarker_end;
-                                    $.getJSON(markerURL, function(result) {
-                                        $this.gMap(gmap_delMarker);
-                                        $.each(result, function(index, content) {
-                                            $this.gMap(gmap_addMarker, content);
+                                if (mapBody_length) {
+                                    var mapPos = 0;
+                                    $mapBody.each(function() {
+                                        var $this     = $(this),
+                                            markerURL = mapMarker_bgn +
+                                                mapMarker_down +
+                                                (staticStatus === null ? mapMarker_none :
+                                                    (staticStatus ? mapMarker_ok : mapMarker_down)
+                                                ) + mapMarker_end;
+                                        $.when(
+                                            addMarkers($this, markerURL)
+                                        ).done( function() {
+                                            if (++mapPos == mapBody_length) {
+                                                setTimeout(functionTable.b, testDelay);
+                                            }
                                         });
                                     });
-                                });
+                                } else {
+                                    setTimeout(functionTable.b, testDelay);
+                                }
                             }
                         });
-                        setTimeout(functionTable.c, testDelay);
                     },
 
-                    c : function () {
+                    b : function () {
                         $.when(
                             testImageFun(staticDomain)
                         ).done( function() {
@@ -1510,20 +1532,26 @@ jQuery(document).ready(function(){
                                             (freeshellStatus ? highlight_ok : highlight_part)
                                         );
                                 });
-                                $mapBody.each(function() {
-                                    var $this     = $(this),
-                                        markerURL = mapMarker_bgn +
-                                            (freeshellStatus === null ? mapMarker_none :
-                                                (freeshellStatus ? mapMarker_ok : mapMarker_down)
-                                            ) + mapMarker_ok +
-                                            mapMarker_end;
-                                    $.getJSON(markerURL, function(result) {
-                                        $this.gMap(gmap_delMarker);
-                                        $.each(result, function(index, content) {
-                                            $this.gMap(gmap_addMarker, content);
+                                if (mapBody_length) {
+                                    var mapPos = 0;
+                                    $mapBody.each(function() {
+                                        var $this     = $(this),
+                                            markerURL = mapMarker_bgn +
+                                                (freeshellStatus === null ? mapMarker_none :
+                                                    (freeshellStatus ? mapMarker_ok : mapMarker_down)
+                                                ) + mapMarker_ok +
+                                                mapMarker_end;
+                                        $.when(
+                                            addMarkers($this, markerURL)
+                                        ).done( function() {
+                                            if (++mapPos == mapBody_length) {
+                                                setTimeout(functionTable.a, testTimeval);
+                                            }
                                         });
                                     });
-                                });
+                                } else {
+                                    setTimeout(functionTable.a, testTimeval);
+                                }
                             }
                         }).fail( function() {
                             if (staticStatus !== false) {
@@ -1537,27 +1565,32 @@ jQuery(document).ready(function(){
                                             (freeshellStatus ? highlight_part : highlight_fail)
                                         );
                                 });
-                                $mapBody.each(function() {
-                                    var $this     = $(this),
-                                        markerURL = mapMarker_bgn +
-                                            (freeshellStatus === null ? mapMarker_none :
-                                                (freeshellStatus ? mapMarker_ok : mapMarker_down)
-                                            ) + mapMarker_down +
-                                            mapMarker_end;
-                                    $.getJSON(markerURL, function(result) {
-                                        $this.gMap(gmap_delMarker);
-                                        $.each(result, function(index, content) {
-                                            $this.gMap(gmap_addMarker, content);
+                                if (mapBody_length) {
+                                    var mapPos = 0;
+                                    $mapBody.each(function() {
+                                        var $this     = $(this),
+                                            markerURL = mapMarker_bgn +
+                                                (freeshellStatus === null ? mapMarker_none :
+                                                    (freeshellStatus ? mapMarker_ok : mapMarker_down)
+                                                ) + mapMarker_down +
+                                                mapMarker_end;
+                                        $.when(
+                                            addMarkers($this, markerURL)
+                                        ).done( function() {
+                                            if (++mapPos == mapBody_length) {
+                                                setTimeout(functionTable.a, testTimeval);
+                                            }
                                         });
                                     });
-                                });
+                                } else {
+                                    setTimeout(functionTable.a, testTimeval);
+                                }
                             }
                         });
-                        setTimeout(functionTable.a, testTimeval);
                     }
                 };
 
-            functionTable.a();
+            setTimeout(functionTable.a, testDelay * 8);
         }
 
     })();
