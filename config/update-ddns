@@ -8,32 +8,32 @@ if host mirrors.lug >/tmp/ddns.tmp; then
   UTC="`date +%s`"
   DAY="`date --date=@$UTC +%m-%d`"
   TME="`date --date=@$UTC '+%F %T'`"
-  echo "<article data-categories=\"$DAY\"><div class=\"one-fourth time\">$TME</div><div class=\"three-fourth last vpn1\">`cat /tmp/ddns.tmp | awk 'NR==1'`</div><hr class=\"clear\"/></article>" >>/var/log/ddns.log
+  echo "<article data-categories=\"$DAY\"><div class=\"one-fourth time\">$TME</div><div class=\"three-fourth last vpn1\">`cat /tmp/ddns.tmp | awk 'NR==1'`</div></article>" >>/var/log/ddns.log
 elif host mirrors.lug >/tmp/ddns.tmp; then
   UTC="`date +%s`"
   DAY="`date --date=@$UTC +%m-%d`"
   TME="`date --date=@$UTC '+%F %T'`"
-  echo "<article data-categories=\"$DAY\"><div class=\"one-fourth time\">$TME</div><div class=\"three-fourth last vpn2\">`cat /tmp/ddns.tmp | awk 'NR==1'`</div><hr class=\"clear\"/></article>" >>/var/log/ddns.log
+  echo "<article data-categories=\"$DAY\"><div class=\"one-fourth time\">$TME</div><div class=\"three-fourth last vpn2\">`cat /tmp/ddns.tmp | awk 'NR==1'`</div></article>" >>/var/log/ddns.log
 elif host mirrors.lug >/tmp/ddns.tmp; then
   UTC="`date +%s`"
   DAY="`date --date=@$UTC +%m-%d`"
   TME="`date --date=@$UTC '+%F %T'`"
-  echo "<article data-categories=\"$DAY\"><div class=\"one-fourth time\">$TME</div><div class=\"three-fourth last vpn3\">`cat /tmp/ddns.tmp | awk 'NR==1'`</div><hr class=\"clear\"/></article>" >>/var/log/ddns.log
+  echo "<article data-categories=\"$DAY\"><div class=\"one-fourth time\">$TME</div><div class=\"three-fourth last vpn3\">`cat /tmp/ddns.tmp | awk 'NR==1'`</div></article>" >>/var/log/ddns.log
 elif host mirrors.lug >/tmp/ddns.tmp; then
   UTC="`date +%s`"
   DAY="`date --date=@$UTC +%m-%d`"
   TME="`date --date=@$UTC '+%F %T'`"
-  echo "<article data-categories=\"$DAY\"><div class=\"one-fourth time\">$TME</div><div class=\"three-fourth last vpn4\">`cat /tmp/ddns.tmp | awk 'NR==1'`</div><hr class=\"clear\"/></article>" >>/var/log/ddns.log
+  echo "<article data-categories=\"$DAY\"><div class=\"one-fourth time\">$TME</div><div class=\"three-fourth last vpn4\">`cat /tmp/ddns.tmp | awk 'NR==1'`</div></article>" >>/var/log/ddns.log
 elif host mirrors.lug >/tmp/ddns.tmp; then
   UTC="`date +%s`"
   DAY="`date --date=@$UTC +%m-%d`"
   TME="`date --date=@$UTC '+%F %T'`"
-  echo "<article data-categories=\"$DAY\"><div class=\"one-fourth time\">$TME</div><div class=\"three-fourth last vpn5\">`cat /tmp/ddns.tmp | awk 'NR==1'`</div><hr class=\"clear\"/></article>" >>/var/log/ddns.log
+  echo "<article data-categories=\"$DAY\"><div class=\"one-fourth time\">$TME</div><div class=\"three-fourth last vpn5\">`cat /tmp/ddns.tmp | awk 'NR==1'`</div></article>" >>/var/log/ddns.log
 else
   UTC="`date +%s`"
   DAY="`date --date=@$UTC +%m-%d`"
   TME="`date --date=@$UTC '+%F %T'`"
-  echo "<article data-categories=\"$DAY\"><div class=\"one-fourth time\">$TME</div>`/home/git/update-ddns 1``/home/git/update-ddns 2``/home/git/update-ddns 3`<hr class=\"clear\"/></article>" >>/var/log/ddns.log
+  echo "<article data-categories=\"$DAY\"><div class=\"one-fourth time\">$TME</div>`/home/git/update-ddns 1``/home/git/update-ddns 2``/home/git/update-ddns 3`</article>" >>/var/log/ddns.log
 fi
 tail -n 864 /var/log/ddns.log >/tmp/ddns.tmp
 cat /tmp/ddns.tmp | tee /var/log/ddns.log >/dev/null
