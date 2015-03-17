@@ -1478,6 +1478,8 @@ jQuery(document).ready(function(){
                                 } else {
                                     setTimeout(functionTable.b, testDelay);
                                 }
+                            } else {
+                                setTimeout(functionTable.b, testDelay);
                             }
                         }).fail( function() {
                             if (freeshellStatus !== false) {
@@ -1511,6 +1513,8 @@ jQuery(document).ready(function(){
                                 } else {
                                     setTimeout(functionTable.b, testDelay);
                                 }
+                            } else {
+                                setTimeout(functionTable.b, testDelay);
                             }
                         });
                     },
@@ -1550,6 +1554,8 @@ jQuery(document).ready(function(){
                                 } else {
                                     setTimeout(functionTable.a, testTimeval);
                                 }
+                            } else {
+                                setTimeout(functionTable.a, testTimeval);
                             }
                         }).fail( function() {
                             if (staticStatus !== false) {
@@ -1583,6 +1589,8 @@ jQuery(document).ready(function(){
                                 } else {
                                     setTimeout(functionTable.a, testTimeval);
                                 }
+                            } else {
+                                setTimeout(functionTable.a, testTimeval);
                             }
                         });
                     }
