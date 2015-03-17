@@ -546,39 +546,6 @@ jQuery(document).ready(function(){
     /* end AudioPlayerV1 */
 
     /* ---------------------------------------------------------------------- */
-    /*  Google Maps
-    /* ---------------------------------------------------------------------- */
-
-    (function() {
-
-        $('#map').each(function() {
-            var $this     = $(this),
-                mapCenter = $this.attr('json-center'),
-                mapMarker = $this.attr('json-marker');
-            if (mapCenter) {
-                $.getJSON(mapCenter, function(result) {
-                    $this.gMap(result);
-                });
-            } else {
-                $this.gMap({
-                    address : 'China'
-                });
-            }
-            if (mapMarker) {
-                $.getJSON(mapMarker, function(result) {
-                    $.each(result, function(index, content) {
-                        $this.gMap('addMarker', content);
-                    });
-                });
-            }
-        });
-
-    })();
-
-    /* end Google Maps */
-
-
-    /* ---------------------------------------------------------------------- */
     /*  Top and Bottom Holder
     /* ---------------------------------------------------------------------- */
 
@@ -1375,7 +1342,7 @@ jQuery(document).ready(function(){
     /* end Resume Align Image */
 
     /* ---------------------------------------------------------------------- */
-    /*  CDN Domain Status
+    /*  Google Maps & CDN Domain Status
     /* ---------------------------------------------------------------------- */
 
     (function() {
@@ -1384,10 +1351,59 @@ jQuery(document).ready(function(){
             $cdnBody          = $(domainStatusClass + 'cdn'),
             $freeshellBody    = $(domainStatusClass + 'freeshell'),
             $staticBody       = $(domainStatusClass + 'static'),
-            $mapBody          = $('.cdn-map'),
-            mapBody_length    = $mapBody.length;
+            $mapBody          = $('#map.cdn-map'),
+            mapBody_length    = $mapBody.length,
 
-        if ($cdnBody.length || $freeshellBody.length || $staticBody.length) {
+            gmap_addMarker    = 'addMarker',
+            gmap_delMarker    = 'removeAllMarkers',
+
+            setupGmap         = function(mapItem, centerURL) {
+                return $.Deferred(function(dfd) {
+                    var default_addr = "China";
+                    if (centerURL && centerURL != '') {
+                        $.getJSON(centerURL, function(result) {
+                            mapItem.gMap(result);
+                            dfd.resolve();
+                        }).error(function() {
+                            mapItem.gMap({
+                                address : default_addr
+                            });
+                            dfd.resolve();
+                        });
+                    } else {
+                        mapItem.gMap({
+                            address : default_addr
+                        });
+                        dfd.resolve();
+                    }
+                }).promise();
+            },
+
+            addMarkers        = function(mapItem, markerURL) {
+                return $.Deferred(function(dfd) {
+                    if (markerURL && markerURL != '') {
+                        $.getJSON(markerURL, function(result) {
+                            mapItem.gMap(gmap_delMarker);
+                            $.each(result, function(index, content) {
+                                mapItem.gMap(gmap_addMarker, content);
+                            });
+                            dfd.resolve();
+                        }).error(function() {
+                            dfd.resolve();
+                        });
+                    } else {
+                        dfd.resolve();
+                    }
+                }).promise();
+            },
+
+            attrJsonCenter    = 'json-center',
+            attrJsonMarker    = 'json-marker',
+
+            testTimeval       = 40000,
+            testDelay         = 500;
+
+        if ($cdnBody.length || $freeshellBody.length || $staticBody.length || mapBody_length) {
 
             var testPngURL      = '/domain-test.png?t=',
                 freeshellDomain = '//freeshell.swpbox.info' + testPngURL,
@@ -1418,25 +1434,7 @@ jQuery(document).ready(function(){
                     }).promise();
                 },
 
-                gmap_addMarker  = 'addMarker',
-                gmap_delMarker  = 'removeAllMarkers',
-                addMarkers      = function(mapItem, markerURL) {
-                    return $.Deferred(function(dfd) {
-                        $.getJSON(markerURL, function(result) {
-                            mapItem.gMap(gmap_delMarker);
-                            $.each(result, function(index, content) {
-                                mapItem.gMap(gmap_addMarker, content);
-                            });
-                            dfd.resolve();
-                        }).error(function() {
-                            dfd.resolve();
-                        });
-                    }).promise();
-                },
-
-                testTimeval     = 40000,
-                testDelay       = 500,
-                mapMarker_hash  = $mapBody.attr('marker-json-hash'),
+                mapMarker_hash  = $mapBody.attr(attrJsonMarker + '-hash'),
                 mapMarker_bgn   = '/gmap',
                 mapMarker_end   = '.json' + (mapMarker_hash ? ('?t=' + mapMarker_hash) : ''),
                 mapMarker_none  = '_null',
@@ -1590,12 +1588,49 @@ jQuery(document).ready(function(){
                     }
                 };
 
-            setTimeout(functionTable.a, testDelay * 8);
+            if (mapBody_length) {
+                var mapPos = 0;
+                $mapBody.each(function() {
+                    var $this     = $(this),
+                        mapCenter = $this.attr(attrJsonCenter),
+                        mapMarker = $this.attr(attrJsonMarker);
+
+                    $.when(
+                        setupGmap($this, mapCenter)
+                    ).done( function() {
+                        $.when(
+                            addMarkers($this, mapMarker)
+                        ).done( function() {
+                            if (++mapPos == mapBody_length) {
+                                setTimeout(functionTable.a, testDelay + testDelay);
+                            }
+                        });
+                    });
+                });
+            } else {
+                setTimeout(functionTable.a, testDelay + testDelay);
+            }
+
+
+        } else {
+
+            $('#map').each(function() {
+                var $this     = $(this),
+                    mapCenter = $this.attr(attrJsonCenter),
+                    mapMarker = $this.attr(attrJsonMarker);
+
+                $.when(
+                    setupGmap($this, mapCenter)
+                ).done( function() {
+                    addMarkers($this, mapMarker);
+                });
+            });
+
         }
 
     })();
 
-    /* end CDN Domain Status */
+    /* end Google Maps & CDN Domain Status */
 
     /* ---------------------------------------------------------------------- */
     /*  SpanWords
