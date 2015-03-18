@@ -1360,14 +1360,14 @@ jQuery(document).ready(function(){
 
             setupGmap         = function(mapItem, centerURL) {
                 return $.Deferred(function(dfd) {
-                    var default_gmap = {
-                            address : "China"
-                        },
-                        onComplete   = function() {
+                    var onComplete   = function() {
                             mapItem.addClass(gmap_isSetup);
                             dfd.resolve();
+                        },
+                        default_gmap = {
+                            address    : "China",
+                            onComplete : onComplete
                         };
-                    default_gmap.onComplete = onComplete;
                     if (centerURL && centerURL != '') {
                         $.getJSON(centerURL, function(result) {
                             result.onComplete = onComplete;
@@ -1525,7 +1525,7 @@ jQuery(document).ready(function(){
                                 });
                                 $cdnBody.each(function() {
                                     $(this).removeClass(highlight_all).addClass(
-                                            (freeshellStatus ? highlight_ok : highlight_part)
+                                            freeshellStatus ? highlight_ok : highlight_part
                                         );
                                 });
                                 if (mapBody_length) {
@@ -1558,7 +1558,7 @@ jQuery(document).ready(function(){
                                 });
                                 $cdnBody.each(function() {
                                     $(this).removeClass(highlight_all).addClass(
-                                            (freeshellStatus ? highlight_part : highlight_fail)
+                                            freeshellStatus ? highlight_part : highlight_fail
                                         );
                                 });
                                 if (mapBody_length) {

@@ -480,7 +480,7 @@ $(function() {
                 if ($body.hasClass(val.className)) {
                     defaultSettings.pattern = idx;
                 }
-                change_html_liquid += '<li><a href="' + val.className + '" title="' + val.name + '" class="' + val.className + '"></a></li>';
+                change_html_liquid += '<li><a href="#" id="' + val.className + '" title="' + val.name + '" class="' + val.className + '"></a></li>';
                 pattern_classes_liquid.push(val.className);
             });
             change_html_liquid += '</ul>';
@@ -489,7 +489,7 @@ $(function() {
 
             $layout_block_liquid.find('a').click(function() {
 
-                var nextClassName = $(this).attr('href');
+                var nextClassName = $(this).attr('id');
                 if (!$body.hasClass(nextClassName)) {
                     changeBodyClass(nextClassName, pattern_classes_liquid);
                     $layout_block_liquid.find('.active').removeClass('active');
@@ -515,7 +515,7 @@ $(function() {
                 if ($body.hasClass(val.className)) {
                     defaultSettings.pattern = idx;
                 }
-                change_html_fixed += '<li><a href="' + val.className + '" title="' + val.name + '" class="' + val.className + '"></a></li>';
+                change_html_fixed += '<li><a href="#" id="' + val.className + '" title="' + val.name + '" class="' + val.className + '"></a></li>';
                 pattern_classes_fixed.push(val.className);
             });
             change_html_fixed += '</ul>';
@@ -524,7 +524,7 @@ $(function() {
 
             $layout_block_fixed.find('a').click(function() {
 
-                var nextClassName = $(this).attr('href');
+                var nextClassName = $(this).attr('id');
                 if (!$body.hasClass(nextClassName)) {
                     changeBodyClass(nextClassName, pattern_classes_fixed);
                     $layout_block_fixed.find('.active').removeClass('active');
