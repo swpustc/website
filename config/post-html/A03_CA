@@ -14,4 +14,3 @@ cat footer.shtml           | tee CA/index.html -a >/dev/null
 cat jquery.shtml           | tee CA/index.html -a >/dev/null
 cat errorpage_footer.shtml | tee CA/index.html -a >/dev/null
 echo Generate CA/index.html
-rm CA/index_header.shtml CA/index_body.shtml

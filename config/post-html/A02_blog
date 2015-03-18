@@ -15,4 +15,3 @@ cat footer.shtml           | tee blog/502.html -a >/dev/null
 cat jquery.shtml           | tee blog/502.html -a >/dev/null
 cat errorpage_footer.shtml | tee blog/502.html -a >/dev/null
 echo Generate blog/502.html
-rm blog/502_body.shtml

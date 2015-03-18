@@ -15,7 +15,6 @@ cat footer.shtml                  | tee status/502-ganglia.html -a >/dev/null
 cat jquery.shtml                  | tee status/502-ganglia.html -a >/dev/null
 cat errorpage_footer.shtml        | tee status/502-ganglia.html -a >/dev/null
 echo Generate status/502-ganglia.html
-rm status/502-ganglia_body.shtml
 cat DOCTYPE.shtml                 | tee status/502-phpinfo.html    >/dev/null
 cat 502_header.shtml              | tee status/502-phpinfo.html -a >/dev/null
 cat header.shtml                  | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
@@ -28,7 +27,6 @@ cat footer.shtml                  | tee status/502-phpinfo.html -a >/dev/null
 cat jquery.shtml                  | tee status/502-phpinfo.html -a >/dev/null
 cat errorpage_footer.shtml        | tee status/502-phpinfo.html -a >/dev/null
 echo Generate status/502-phpinfo.html
-rm status/502-phpinfo_body.shtml
 cat DOCTYPE.shtml            | tee status/ddns-log-static.html    >/dev/null
 cat ddns-log_header.shtml    | tee status/ddns-log-static.html -a >/dev/null
 cat header.shtml             | sed "s/<li><!--CURRENT:DDNS-->/<li class=\"current\">/g" \

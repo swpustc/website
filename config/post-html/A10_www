@@ -35,7 +35,6 @@ cat footer.shtml           | tee www/index-ipv6.html -a >/dev/null
 cat jquery.shtml           | tee www/index-ipv6.html -a >/dev/null
 cat www/index_footer.shtml | tee www/index-ipv6.html -a >/dev/null
 echo Generate www/index-ipv6.html
-rm www/index_header.shtml www/index_body.shtml www/index_footer.shtml
 cat DOCTYPE.shtml            | tee www/setting.html    >/dev/null
 cat www/setting_header.shtml | tee www/setting.html -a >/dev/null
 cat header.shtml             | sed "s/<li><!--CURRENT:SETTING-->/<li class=\"current\">/g" \
@@ -47,4 +46,3 @@ cat footer.shtml             | tee www/setting.html -a >/dev/null
 cat jquery.shtml             | tee www/setting.html -a >/dev/null
 cat www/setting_footer.shtml | tee www/setting.html -a >/dev/null
 echo Generate www/setting.html
-rm www/setting_header.shtml www/setting_body.shtml www/setting_footer.shtml

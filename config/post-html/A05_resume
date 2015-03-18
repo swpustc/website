@@ -15,4 +15,3 @@ cat footer.shtml                 | tee resume/502-resume.html -a >/dev/null
 cat jquery.shtml                 | tee resume/502-resume.html -a >/dev/null
 cat errorpage_footer.shtml       | tee resume/502-resume.html -a >/dev/null
 echo Generate resume/502-resume.html
-rm resume/502-resume_body.shtml

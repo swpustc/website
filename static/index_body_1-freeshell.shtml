@@ -1,6 +1,0 @@
-<div class="content-wrapper clearfix">
-  <div id="map" class="cdn-map"
-    json-center="/gmap-freeshell.json?t=TIMESTAMP:BEGIN:gmap-freeshell.json:END:TIMESTAMP"
-    json-marker="/gmap_null_null.json?t=TIMESTAMP:BEGIN:gmap_null_null.json:END:TIMESTAMP"
-    json-marker-hash="TIMESTAMP:BEGIN:gmap_down_down.json:END:TIMESTAMP_TIMESTAMP:BEGIN:gmap_down_null.json:END:TIMESTAMP_TIMESTAMP:BEGIN:gmap_down_up.json:END:TIMESTAMP_TIMESTAMP:BEGIN:gmap_up_down.json:END:TIMESTAMP_TIMESTAMP:BEGIN:gmap_up_null.json:END:TIMESTAMP_TIMESTAMP:BEGIN:gmap_up_up.json:END:TIMESTAMP"
-  ></div>

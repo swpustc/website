@@ -1353,28 +1353,30 @@ jQuery(document).ready(function(){
             $staticBody       = $(domainStatusClass + 'static'),
             $mapBody          = $('#map.cdn-map'),
             mapBody_length    = $mapBody.length,
+            gmap_isSetup      = 'gmap-setup',
 
-            gmap_addMarker    = 'addMarker',
-            gmap_delMarker    = 'removeAllMarkers',
+            gMap_addMarkers   = 'addMarkers',
+            gMap_delMarkers   = 'removeAllMarkers',
 
             setupGmap         = function(mapItem, centerURL) {
                 return $.Deferred(function(dfd) {
-                    var default_addr = "China";
+                    var default_gmap = {
+                            address : "China"
+                        },
+                        onComplete   = function() {
+                            mapItem.addClass(gmap_isSetup);
+                            dfd.resolve();
+                        };
+                    default_gmap.onComplete = onComplete;
                     if (centerURL && centerURL != '') {
                         $.getJSON(centerURL, function(result) {
+                            result.onComplete = onComplete;
                             mapItem.gMap(result);
-                            dfd.resolve();
                         }).error(function() {
-                            mapItem.gMap({
-                                address : default_addr
-                            });
-                            dfd.resolve();
+                            mapItem.gMap(default_gmap);
                         });
                     } else {
-                        mapItem.gMap({
-                            address : default_addr
-                        });
-                        dfd.resolve();
+                        mapItem.gMap(default_gmap);
                     }
                 }).promise();
             },
@@ -1383,10 +1385,8 @@ jQuery(document).ready(function(){
                 return $.Deferred(function(dfd) {
                     if (markerURL && markerURL != '') {
                         $.getJSON(markerURL, function(result) {
-                            mapItem.gMap(gmap_delMarker);
-                            $.each(result, function(index, content) {
-                                mapItem.gMap(gmap_addMarker, content);
-                            });
+                            mapItem.gMap(gMap_delMarkers);
+                            mapItem.gMap(gMap_addMarkers, result);
                             dfd.resolve();
                         }).error(function() {
                             dfd.resolve();
@@ -1400,7 +1400,7 @@ jQuery(document).ready(function(){
             attrJsonCenter    = 'json-center',
             attrJsonMarker    = 'json-marker',
 
-            testTimeval       = 40000,
+            testTimeval       = 10000,
             testDelay         = 500;
 
         if ($cdnBody.length || $freeshellBody.length || $staticBody.length || mapBody_length) {
@@ -1434,12 +1434,9 @@ jQuery(document).ready(function(){
                     }).promise();
                 },
 
-                mapMarker_hash  = $mapBody.attr(attrJsonMarker + '-hash'),
-                mapMarker_bgn   = '/gmap',
-                mapMarker_end   = '.json' + (mapMarker_hash ? ('?t=' + mapMarker_hash) : ''),
-                mapMarker_none  = '_null',
-                mapMarker_ok    = '_up',
-                mapMarker_down  = '_down',
+                mapMarker_none  = '-nl',
+                mapMarker_up    = '-up',
+                mapMarker_down  = '-dn',
 
                 functionTable   = {
 
@@ -1461,14 +1458,13 @@ jQuery(document).ready(function(){
                                 if (mapBody_length) {
                                     var mapPos = 0;
                                     $mapBody.each(function() {
-                                        var $this     = $(this),
-                                            markerURL = mapMarker_bgn +
-                                                mapMarker_ok +
-                                                (staticStatus === null ? mapMarker_none :
-                                                    (staticStatus ? mapMarker_ok : mapMarker_down)
-                                                ) + mapMarker_end;
+                                        var $this      = $(this),
+                                            markerAttr = attrJsonMarker
+                                                    + mapMarker_up
+                                                    + ( staticStatus === null ? mapMarker_none : (staticStatus ? mapMarker_up : mapMarker_down) )
+                                                ;
                                         $.when(
-                                            addMarkers($this, markerURL)
+                                            addMarkers($this, $this.attr(markerAttr))
                                         ).done( function() {
                                             if (++mapPos == mapBody_length) {
                                                 setTimeout(functionTable.b, testDelay);
@@ -1496,14 +1492,13 @@ jQuery(document).ready(function(){
                                 if (mapBody_length) {
                                     var mapPos = 0;
                                     $mapBody.each(function() {
-                                        var $this     = $(this),
-                                            markerURL = mapMarker_bgn +
-                                                mapMarker_down +
-                                                (staticStatus === null ? mapMarker_none :
-                                                    (staticStatus ? mapMarker_ok : mapMarker_down)
-                                                ) + mapMarker_end;
+                                        var $this      = $(this),
+                                            markerAttr = attrJsonMarker
+                                                    + mapMarker_down
+                                                    + ( staticStatus === null ? mapMarker_none : (staticStatus ? mapMarker_up : mapMarker_down) )
+                                                ;
                                         $.when(
-                                            addMarkers($this, markerURL)
+                                            addMarkers($this, $this.attr(markerAttr))
                                         ).done( function() {
                                             if (++mapPos == mapBody_length) {
                                                 setTimeout(functionTable.b, testDelay);
@@ -1530,21 +1525,19 @@ jQuery(document).ready(function(){
                                 });
                                 $cdnBody.each(function() {
                                     $(this).removeClass(highlight_all).addClass(
-                                        freeshellStatus === null ? highlight_part :
                                             (freeshellStatus ? highlight_ok : highlight_part)
                                         );
                                 });
                                 if (mapBody_length) {
                                     var mapPos = 0;
                                     $mapBody.each(function() {
-                                        var $this     = $(this),
-                                            markerURL = mapMarker_bgn +
-                                                (freeshellStatus === null ? mapMarker_none :
-                                                    (freeshellStatus ? mapMarker_ok : mapMarker_down)
-                                                ) + mapMarker_ok +
-                                                mapMarker_end;
+                                        var $this      = $(this),
+                                            markerAttr = attrJsonMarker
+                                                    + (freeshellStatus ? mapMarker_up : mapMarker_down)
+                                                    + mapMarker_up
+                                                ;
                                         $.when(
-                                            addMarkers($this, markerURL)
+                                            addMarkers($this, $this.attr(markerAttr))
                                         ).done( function() {
                                             if (++mapPos == mapBody_length) {
                                                 setTimeout(functionTable.a, testTimeval);
@@ -1565,21 +1558,19 @@ jQuery(document).ready(function(){
                                 });
                                 $cdnBody.each(function() {
                                     $(this).removeClass(highlight_all).addClass(
-                                        freeshellStatus === null ? highlight_none :
                                             (freeshellStatus ? highlight_part : highlight_fail)
                                         );
                                 });
                                 if (mapBody_length) {
                                     var mapPos = 0;
                                     $mapBody.each(function() {
-                                        var $this     = $(this),
-                                            markerURL = mapMarker_bgn +
-                                                (freeshellStatus === null ? mapMarker_none :
-                                                    (freeshellStatus ? mapMarker_ok : mapMarker_down)
-                                                ) + mapMarker_down +
-                                                mapMarker_end;
+                                        var $this      = $(this),
+                                            markerAttr = attrJsonMarker
+                                                    + (freeshellStatus ? mapMarker_up : mapMarker_down)
+                                                    + mapMarker_down
+                                                ;
                                         $.when(
-                                            addMarkers($this, markerURL)
+                                            addMarkers($this, $this.attr(markerAttr))
                                         ).done( function() {
                                             if (++mapPos == mapBody_length) {
                                                 setTimeout(functionTable.a, testTimeval);
@@ -1597,6 +1588,7 @@ jQuery(document).ready(function(){
                 };
 
             if (mapBody_length) {
+
                 var mapPos = 0;
                 $mapBody.each(function() {
                     var $this     = $(this),
@@ -1610,15 +1602,15 @@ jQuery(document).ready(function(){
                             addMarkers($this, mapMarker)
                         ).done( function() {
                             if (++mapPos == mapBody_length) {
-                                setTimeout(functionTable.a, testDelay + testDelay);
+                                setTimeout(functionTable.a, testDelay);
                             }
                         });
                     });
                 });
-            } else {
-                setTimeout(functionTable.a, testDelay + testDelay);
-            }
 
+            } else {
+                setTimeout(functionTable.a, testDelay);
+            }
 
         } else {
 

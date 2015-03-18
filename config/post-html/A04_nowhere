@@ -15,4 +15,3 @@ cat footer.shtml             | tee nowhere/502.html -a >/dev/null
 cat jquery.shtml             | tee nowhere/502.html -a >/dev/null
 cat errorpage_footer.shtml   | tee nowhere/502.html -a >/dev/null
 echo Generate nowhere/502.html
-rm nowhere/502_header.shtml nowhere/502_body.shtml

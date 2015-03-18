@@ -14,6 +14,15 @@ config/post-port_another
 echo call config/post-cconv
 config/post-cconv
 
+## remove Intermediate files
+echo "remove *.shtml and *.phps"
+for file in $(find -P */ -type f \( -name '*.shtml' -or -name '*.phps' \) -print) ; do
+  if [ -f $file ] ; then
+    rm $file
+    echo "rm: $file"
+  fi
+done
+
 ## Create Hash
 echo call config/post-hash startup
 config/post-hash startup
