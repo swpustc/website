@@ -6,4 +6,4 @@
 
 ## 关于
 
-服务器上此文件会自动删除，其他说明请见[配置文件](config/README.md)。
+网站文件源码，通过GitLab Hook自动生成网站目录。其他说明请见[配置文件](config/README.md)。
