@@ -40,6 +40,7 @@
                 <li><!--CURRENT:HOME-IPV4--><a href="//ipv4.swpbox.info/">IPv4 Only</a></li>
                 <li><!--CURRENT:HOME-IPV6--><a href="//ipv6.swpbox.info/">IPv6 Only</a></li>
                 <li><!--CURRENT:RESUME--><a href="//resume.swpbox.info/">Resume</a></li>
+                <li><!--CURRENT:SETTING--><a href="//swpbox.info/setting.html">setting.html</a></li>
                 <li><!--CURRENT:ERRPAGE--><a href="http://swpbox.info:56080/">ErrorPage</a>
                   <ul>
                     <li><!--CURRENT:ERR400--><a href="/400.html">400 Page</a></li>
@@ -53,7 +54,6 @@
                     <li><!--CURRENT:ERR504--><a href="/504.html">504 Page</a></li>
                   </ul>
                 </li>
-                <li><!--CURRENT:SETTING--><a href="//swpbox.info/setting.html">setting.html</a></li>
               </ul>
             </li>
             <li><!--CURRENT:FTP--><a href="//ftp.swpbox.info/">FTP</a>
@@ -113,7 +113,7 @@
             <li><!--CURRENT:STATUS--><a href="//status.swpbox.info/" target="_blank">Status</a>
               <ul>
                 <li><!--CURRENT:PHPINFO--><a href="//status.swpbox.info/phpinfo.php" target="_blank">phpInfo</a></li>
-                <li><!--CURRENT:DDNS--><a href="//status.swpbox.info/ddns-log.html">Oray DDNS</a></li>
+                <li><!--CURRENT:DDNS--><a href="//status.swpbox.info/ddns-log.html">DDNS</a></li>
                 <li><!--CURRENT:CDN--><a href="//cdn.swpbox.info/">CDN</a></li>
                 <li><!--CURRENT:FREESHELL--><a href="//freeshell.swpbox.info/">Freeshell</a></li>
                 <li><!--CURRENT:STATIC--><a href="//static.swpbox.info/">Static</a></li>
