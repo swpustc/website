@@ -1,0 +1,19 @@
+#!/bin/bash
+if [ "upgrade"x == "$1"x ]; then
+  echo git pull remote branch
+  git pull --all
+else
+  CURDIR=$(pwd)
+  GITDIR=$CURDIR/.git/
+  WOKDIR=/home/git/html
+  echo calling config/make
+  if [ -e $WOKDIR ] ; then
+    rm -fr $WOKDIR
+  fi
+  mkdir $WOKDIR
+  cp $CURDIR/* $WOKDIR/ -PR
+  cd $WOKDIR/
+  echo calling config/post-events
+  GIT_WORK_TREE=$WOKDIR GIT_DIR=$GITDIR $WOKDIR/config/post-events
+  echo complate!
+fi

@@ -94,3 +94,17 @@
 ## Push事件
 
 - 每次push events会通过Gitlab hook调用[config/post-receive](post-receive)文件，其将更新配置和网站文件，并调用[config/post-events](post-events)完成结束工作。
+
+## 自动更新
+
+- 建立自动更新日志文件
+
+	sudo touch /var/log/website.log
+	sudo chown swp:adm /var/log/website.log
+	sudo chmod 644 /var/log/website.log
+
+- 添加自动更新到定时器`crontab`脚本。
+
+	# crontab
+	#   0 4  *   *   *     HOME=/home/swp/project/website/ make upgrade >/var/log/website.log 2>&1
+	crontab -e                     # Add this line at the end

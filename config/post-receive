@@ -1,14 +1,14 @@
 #!/bin/bash
-curdir=$(pwd)
+CURDIR=$(pwd)
+WOKDIR=/home/git/html
 echo calling post-receive
-rm -fr /home/git/html/
-mkdir /home/git/html/
-GIT_WORK_TREE=/home/git/html git checkout -f
-cp -f /home/git/html/config/post-receive $0
-chmod 755 $0
-cd /tmp/
-cd /home/git/html/
-echo calling post-events
-chmod 755 /home/git/html/config/post-events
-GIT_WORK_TREE=/home/git/html GIT_DIR=$curdir /home/git/html/config/post-events
+if [ -e $WOKDIR ] ; then
+  rm -fr $WOKDIR
+fi
+mkdir $WOKDIR
+GIT_WORK_TREE=$WOKDIR git checkout -f
+cp -f $WOKDIR/config/post-receive $0
+cd $WOKDIR/
+echo calling config/post-events
+GIT_WORK_TREE=$WOKDIR GIT_DIR=$GITDIR $WOKDIR/config/post-events
 echo complate!
