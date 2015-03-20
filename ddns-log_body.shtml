@@ -1,6 +1,6 @@
 <div class="content-wrapper clearfix">
   <header class="page-header clearfix">
-    <h1>Update time: <a class="update-time"><!--UPDATETIME--></a></h1>
+    <h1>Update time: <a href="/ddns-log.html" class="update-time"><!--UPDATETIME--></a></h1>
     <ul id="portfolio-filter">
       <li>Show:</li>
       <li><a data-categories="*">All</a></li>
