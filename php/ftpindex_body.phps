@@ -3,6 +3,7 @@
     <h1 class="autoindex-title">
       <a href="//download.swpbox.info/ftp<?php echo $_SERVER['SCRIPT_NAME']; ?>"
         title="Index of <?php echo $cur; ?>"
+        target="_blank"
         >Index of <?php echo $cur; ?></a>
     </h1>
     <ul id="portfolio-filter">
