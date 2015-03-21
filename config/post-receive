@@ -10,5 +10,5 @@ GIT_WORK_TREE=$WOKDIR git checkout -f
 cp -f $WOKDIR/config/post-receive $0
 cd $WOKDIR/
 echo calling config/post-events
-GIT_WORK_TREE=$WOKDIR GIT_DIR=$GITDIR $WOKDIR/config/post-events
+GIT_WORK_TREE=$WOKDIR GIT_DIR=$CURDIR $WOKDIR/config/post-events
 echo complate!

@@ -112,7 +112,7 @@ var page_config = {
 
 /* Page config --> End */
 
-$(function() {
+$( function() {
 
     /* ------------------------------------------------------------------- */
     /*  Prettify, Resume & preventDefault
@@ -246,7 +246,7 @@ $(function() {
             pat.push(pattern_list);
         });
         var $join = pat.join(" ");
-        $body.removeClass(function() {
+        $body.removeClass( function() {
             var $join = pat.join(" ");
             return $join;
         }).addClass(patternfixed);
@@ -259,7 +259,7 @@ $(function() {
             pat.push(pattern_list);
         });
 
-        $body.removeClass(function() {
+        $body.removeClass( function() {
             var $join = pat.join(" ");
             return $join;
         }).addClass(patternliquid);
@@ -334,7 +334,7 @@ $(function() {
             $theme_control_panel.append($layout_block);
 
 
-            $layout_block.find('input[type=radio]').change(function() {
+            $layout_block.find('input[type=radio]').change( function() {
                 var $this = $(this),
                     $checked = $this.attr('checked'),
                     nextClassName = $this.attr('value');
@@ -393,7 +393,7 @@ $(function() {
             $skin_block.html(change_skin_html);
             $theme_control_panel.append($skin_block);
 
-            $skin_block.find('input[type=radio]').change(function() {
+            $skin_block.find('input[type=radio]').change( function() {
                 var $this = $(this),
                     $checked = $this.attr('checked'),
                     nextClassName = $this.attr('value');
@@ -487,7 +487,7 @@ $(function() {
             $layout_block_liquid.html(change_html_liquid);
             $theme_control_panel.append($layout_block_liquid);
 
-            $layout_block_liquid.find('a').click(function() {
+            $layout_block_liquid.find('a').click( function() {
 
                 var nextClassName = $(this).attr('id');
                 if (!$body.hasClass(nextClassName)) {
@@ -522,7 +522,7 @@ $(function() {
             $layout_block_fixed.html(change_html_fixed);
             $theme_control_panel.append($layout_block_fixed);
 
-            $layout_block_fixed.find('a').click(function() {
+            $layout_block_fixed.find('a').click( function() {
 
                 var nextClassName = $(this).attr('id');
                 if (!$body.hasClass(nextClassName)) {
@@ -572,7 +572,7 @@ $(function() {
             $bodyCodeDark.removeClass().addClass('code-vibrant-ink');
             $itemsFilter.find('a').removeClass('active').hide();
             if ($itemsFilterSub.length) {
-                $itemsFilterSub.each(function(){
+                $itemsFilterSub.each( function() {
                     $(this).find('a').first().addClass('active').show();
                 });
                 currentOption = $itemsFilter.find('.code-light .active').attr('data-categories');
@@ -606,7 +606,7 @@ $(function() {
     /* Control Panel Label --> Begin */
 
     var $theme_control_panel_label = $('#control_label');
-    $theme_control_panel_label.click(function() {
+    $theme_control_panel_label.click( function() {
 
         if ($theme_control_panel.hasClass('visible')) {
             $(this).stop(true,false).animate({right : '-35px'});

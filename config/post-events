@@ -26,13 +26,15 @@ done
 ## Create Hash
 echo call config/post-hash startup
 config/post-hash startup
+
 #### Hash static directory
 echo call config/post-hash TIMESTAMP
-for file in $(find -P ./ -type f \( -name '*.html' -or -name '*.php' -or -name '*.css' -or -name '*.js' -or -name '*.md' \) -print) ; do
+for file in $(find -P ./ -type f \( -name '*.html' -or -name '*.php' -or -name '*.css' -or -name '*.js' -or -name '*.json' -or -name '*.md' \) -print) ; do
   if [ ! -L $file ] ; then
     config/post-hash TIMESTAMP $file
   fi
 done
+
 ### Hash static resources
 echo call config/post-hash STANDARD
 for file in $(find -P ./ -type f \( -name '*.html' -or -name '*.php' \) -print) ; do
@@ -42,6 +44,7 @@ for file in $(find -P ./ -type f \( -name '*.html' -or -name '*.php' \) -print) 
   fi
 done
 sed -i 's/<!--\(\/\| end\| \*\)[^!<>]*-->//;s/^[[:space:]]*//;/^$/d' DOCTYPE.shtml
+
 ### Reset static resources timestamp (last modified)
 echo call config/post-touch
 for file in $(find -P ./ \( -type f -or -type d \) -not \( -name '*.html' -or -name '*.php' \) -print) ; do

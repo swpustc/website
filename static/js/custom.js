@@ -19,14 +19,14 @@
         o=$.extend({
             fx:"linear",
             speed:500,
-            click:function(){}
+            click:function() {}
         },o||{});
-    return this.each(function(){
-        var me=$(this),noop=function(){},$parent_me=me.parent(),$back=$('<div id="marker" class="back"></div>').appendTo($parent_me),$li=$("> li",this),curr=$("> li.current",this)[0]||$($li[0]).addClass("current")[0];
-        $li.not(".back").hover(function(){
+    return this.each( function() {
+        var me=$(this),noop=function() {},$parent_me=me.parent(),$back=$('<div id="marker" class="back"></div>').appendTo($parent_me),$li=$("> li",this),curr=$("> li.current",this)[0]||$($li[0]).addClass("current")[0];
+        $li.not(".back").hover( function() {
             move(this)
             },noop);
-        $(this).hover(noop,function(){
+        $(this).hover(noop,function() {
             move(curr)
             });
         function setCurr(el){
@@ -43,7 +43,7 @@
             });
         setCurr(curr);
         function move(el){
-            $back.each(function(){
+            $back.each( function() {
                 $(this).dequeue()
                 }).animate({
                     width:el.offsetWidth,
@@ -63,7 +63,7 @@ WebFontConfig = {
         families: ['Droid+Serif:400,700,400italic:latin', 'Love+Ya+Like+A+Sister::latin', 'Fredericka+the+Great::latin']
     }
 };
-(function() {
+( function() {
     var wf = document.createElement('script');
     wf.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//ajax.lug.ustc.edu.cn/ajax/libs/webfont/1/webfont.js';
     wf.type = 'text/javascript';
@@ -78,14 +78,14 @@ WebFontConfig = {
 /* DOM READY --> Begin                 */
 /***************************************/
 
-jQuery(document).ready(function(){
+jQuery(document).ready( function() {
 
     /* ---------------------------------------------------------------------- */
     /*  jQuery Load
     /* ---------------------------------------------------------------------- */
 
-    (function(){
-        $('#jquery-load').each(function(){
+    ( function() {
+        $('#jquery-load').each( function() {
             var $this = $(this),
                 loadSrc = $this.addr('data-load'),
                 loadAttr = $this.addr('data-attr');
@@ -105,10 +105,10 @@ jQuery(document).ready(function(){
     /*  Flex Slider
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
         if ($('#slider').length) {
-            $(window).load(function() {
+            $(window).load( function() {
                 $('#slider img').css('visibility','visible').fadeIn();
                 $('#slider').flexslider({
                     directionNav: true
@@ -124,7 +124,7 @@ jQuery(document).ready(function(){
     /*  Elastic Slider
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
         if($('#ei-slider').length) {
 
@@ -144,7 +144,7 @@ jQuery(document).ready(function(){
     /*  jCarousel
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
         var $carousel = $('.projects-carousel');
         if($carousel.length) {
@@ -174,7 +174,7 @@ jQuery(document).ready(function(){
     /*  Main Navigation
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
         var arrowimages = {
             down: 'downarrowclass',
@@ -196,7 +196,7 @@ jQuery(document).ready(function(){
         });
 
         // Navigation Responsive
-        $mainNav.find('li').each(function() {
+        $mainNav.find('li').each( function() {
             var $this   = $(this),
             $anchor = $this.children('a'),
             depth   = $this.parents('ul').length - 1,
@@ -226,7 +226,7 @@ jQuery(document).ready(function(){
     /*  Cycle Latest
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
         var $latest = $("ul.latest");
 
@@ -288,14 +288,14 @@ jQuery(document).ready(function(){
     /*  Cycle Testimonials
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
         var $quotes = $("ul.quoteBox");
 
         if($quotes.length) {
 
             // Run slider when all images are fully loaded
-            $(window).load(function() {
+            $(window).load( function() {
 
                 $quotes.each(function(i) {
                     var $this = $(this);
@@ -375,9 +375,9 @@ jQuery(document).ready(function(){
     /*  Fit Videos
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
-        $('.container').each(function(){
+        $('.container').each( function() {
             var target  = [
                 "iframe[src^='http://www.youtube.com']",
                 "iframe[src^='http://player.vimeo.com']",
@@ -386,7 +386,7 @@ jQuery(document).ready(function(){
             ],
             $allVideos = $(this).find(target.join(','));
 
-            $allVideos.each(function(){
+            $allVideos.each( function() {
                 var $this = $(this);
                 if (this.tagName.toLowerCase() == 'embed' && $this.parent('object').length || $this.parent('.liquid-video-wrapper').length) {
                     return;
@@ -410,7 +410,7 @@ jQuery(document).ready(function(){
     /*  VideoJS
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
         var $player = $('.video-js');
 
@@ -468,7 +468,7 @@ jQuery(document).ready(function(){
     /*  AudioPlayerV1
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
         var $player = $('.AudioPlayerV1');
 
@@ -514,7 +514,7 @@ jQuery(document).ready(function(){
                         $this.removeClass('APV1_player_width_200');
                     }
 
-                    $lis.each(function() {
+                    $lis.each( function() {
 
                         var $li = $(this);
                         lisWidth += $li.width();
@@ -532,7 +532,7 @@ jQuery(document).ready(function(){
 
             $(window).on('resize', function() {
 
-                var timer = window.setTimeout(function() {
+                var timer = window.setTimeout( function() {
                     window.clearTimeout( timer );
                     adjustPlayer(resize = true);
                 }, 30);
@@ -561,7 +561,7 @@ jQuery(document).ready(function(){
             },200)
         }
 
-        $tpanel.slideToggle(600, function(){
+        $tpanel.slideToggle(600, function() {
             $target.toggleClass('hide');
 
             if($(this).css('display') == 'block') {
@@ -585,7 +585,7 @@ jQuery(document).ready(function(){
     /*  Bottom Toogle Panel
     /* ---------------------------------------------------------------------- */
 
-    (function(){
+    ( function() {
 
         var $panel = $(".panel");
 
@@ -602,7 +602,7 @@ jQuery(document).ready(function(){
             var $pos = $(window).scrollTop();
             $panelHeight = $('.panel').outerHeight(true);
 
-            $panel.slideToggle(600, function(){
+            $panel.slideToggle(600, function() {
                 $target.toggleClass('hide');
                 if($(this).css('display') == 'block') {
                     $(this).animate({
@@ -630,7 +630,7 @@ jQuery(document).ready(function(){
     /*  Min-height
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
         $('.content-wrapper')
         .css('min-height', $(window).outerHeight(true)
@@ -645,7 +645,7 @@ jQuery(document).ready(function(){
     /*  Accordion Content
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
         if($('.acc-container').length) {
 
@@ -684,7 +684,7 @@ jQuery(document).ready(function(){
     /* ---------------------------------------------------------------------- */
 
 
-    (function() {
+    ( function() {
 
         if($('#contactform').length) {
 
@@ -764,7 +764,7 @@ jQuery(document).ready(function(){
     /*  Content Tabs
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
         if($('.content-tabs').length || $('.aside-tabs').length) {
 
@@ -802,12 +802,12 @@ jQuery(document).ready(function(){
     /*  Content Toggle
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
         if($('.toggle-container').length) {
             $(".toggle-container").hide(); //Hide (Collapse) the toggle containers on load
             //Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
-            $(".trigger").click(function(){
+            $(".trigger").click( function() {
                 $(this).toggleClass("active").next().slideToggle("slow");
                 return false; //Prevent the browser jump to the link anchor
             });
@@ -821,24 +821,24 @@ jQuery(document).ready(function(){
     /*  Placeholder
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
         $.fn.placeholder = function() {
             if(typeof document.createElement("input").placeholder == 'undefined') {
-                $('[placeholder]').focus(function() {
+                $('[placeholder]').focus( function() {
                     var input = $(this);
                     if (input.val() == input.attr('placeholder')) {
                         input.val('');
                         input.removeClass('placeholder');
                     }
-                }).blur(function() {
+                }).blur( function() {
                     var input = $(this);
                     if (input.val() == '' || input.val() == input.attr('placeholder')) {
                         input.addClass('placeholder');
                         input.val(input.attr('placeholder'));
                     }
-                }).blur().parents('form').submit(function() {
-                    $(this).find('[placeholder]').each(function() {
+                }).blur().parents('form').submit( function() {
+                    $(this).find('[placeholder]').each( function() {
                         var input = $(this);
                         if (input.val() == input.attr('placeholder')) {
                             input.val('');
@@ -858,7 +858,7 @@ jQuery(document).ready(function(){
     /*  Back to Top
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
         var extend = {
             button      : '#back-top',
@@ -872,7 +872,7 @@ jQuery(document).ready(function(){
 
         $('body').append('<a href="#" id="' + extend.button.substring(1) + '" title="' + extend.text + '">' + extend.text + '</a>');
 
-        $(window).scroll(function() {
+        $(window).scroll( function() {
             var pos = $(window).scrollTop();
 
             if (pos > extend.min)
@@ -896,23 +896,23 @@ jQuery(document).ready(function(){
     /*  Fancybox
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
         if($('.single-image').length || $('a.video').length) {
-            (function() {
+            ( function() {
                 $('.single-image, .video').fancybox({
                     'titlePosition' : 'over',
                     'transitionIn'  : 'fade',
                     'transitionOut' : 'fade'
-                }).each(function() {
+                }).each( function() {
                     $(this).append('<span class="curtain">&nbsp;</span>');
                 });
             })()
         }
         // resize box when all images are fully loaded
-        $(window).load(function() {
+        $(window).load( function() {
             if($('.single-image').length || $('a.video').length) {
-                $('.single-image, .video').each(function() {
+                $('.single-image, .video').each( function() {
                     var $this = $(this),
                         $img = $this.find('.curtain').siblings('img');
                     // makesure here is only one image
@@ -924,7 +924,7 @@ jQuery(document).ready(function(){
         });
 
         if($('a.video').length) {
-            (function() {
+            ( function() {
                 $('a.video').on('click',function() {
                     $.fancybox({
                         'type' : 'iframe',
@@ -975,7 +975,7 @@ jQuery(document).ready(function(){
     /*  DDNS Autohide
     /* ---------------------------------------------------------------------- */
 
-    (function(){
+    ( function() {
         var hideClassName = 'ddns-hide',
             showClassName = 'ddns-show',
             ddnsThirdNode = 'one-fourth-third',
@@ -987,7 +987,7 @@ jQuery(document).ready(function(){
             nodeThisAttr = nodeThisText,
             nodePrevAttr = nodeThisText,
             nodeEqu;
-        $itemArticle.each(function(){
+        $itemArticle.each( function() {
             var $this = $(this),
                 $node = $this.children('div');
             nodeThisAttr = $this.attr(itemAttrName);
@@ -1028,7 +1028,7 @@ jQuery(document).ready(function(){
             $itemPrev.removeClass(hideClassName);
         }
         $itemPrev = null;
-        $itemArticle.each(function(){
+        $itemArticle.each( function() {
             var $this = $(this);
             if ($itemPrev &&
                 $itemPrev.hasClass(hideClassName) &&
@@ -1077,7 +1077,7 @@ jQuery(document).ready(function(){
     /*  Portfolio
     /* ------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
         var $cont = $('#portfolio-items'),
             $container = $('.container'),
@@ -1108,7 +1108,7 @@ jQuery(document).ready(function(){
 
             var $itemsFilterSub = $itemsFilter.find('ul');
             if ($itemsFilterSub.length) {
-                $itemsFilterSub.each(function() {
+                $itemsFilterSub.each( function() {
                     $(this).find('a').first().addClass('active');
                 });
             } else {
@@ -1139,7 +1139,7 @@ jQuery(document).ready(function(){
 
                 var $itemsFilterSub = $itemsFilter.find('ul');
                 if ($itemsFilterSub.length) {
-                    $itemsFilterSub.each(function() {
+                    $itemsFilterSub.each( function() {
                         if($(this).find($this).length) {
                             $(this).find('a').removeClass('active');
                         }
@@ -1209,14 +1209,14 @@ jQuery(document).ready(function(){
     /*  Image Gallery Slider
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
         var $slider = $('.image-gallery-slider ul');
 
         if($slider.length) {
 
             // Run slider when all images are fully loaded
-            $(window).load(function() {
+            $(window).load( function() {
 
                 $slider.each(function(i) {
                     var $this = $(this);
@@ -1297,7 +1297,7 @@ jQuery(document).ready(function(){
     /*  Twitter
     /* ---------------------------------------------------------------------- */
 
-    (function(){
+    ( function() {
 
         if($('.tweet').length) {
             $(".tweet").tweet({
@@ -1319,12 +1319,12 @@ jQuery(document).ready(function(){
     /*  Resume Align Image
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
         var $itemBody = $('.markdown'),
             $itemImage = $itemBody.find('.alignright-image');
         if ($itemImage.length) {
             var $resizeFun = function() {
-                $itemImage.each(function() {
+                $itemImage.each( function() {
                     var $this = $(this),
                         $next = $this.next();
                     if ($next) {
@@ -1345,7 +1345,7 @@ jQuery(document).ready(function(){
     /*  Google Maps & CDN Domain Status
     /* ---------------------------------------------------------------------- */
 
-    (function() {
+    ( function() {
 
         var domainStatusClass = '.domain-status-',
             $cdnBody          = $(domainStatusClass + 'cdn'),
@@ -1357,6 +1357,61 @@ jQuery(document).ready(function(){
 
             gMap_addMarkers   = 'addMarkers',
             gMap_delMarkers   = 'removeAllMarkers',
+
+            preLoadOnce       = function(attr, value) {
+                return $.Deferred(function(dfd) {
+                    if (value && value != '') {
+                        if (attr.match("image") !== null) {
+                            $('<img/>').load( function() {
+                                dfd.resolve();
+                            }).error( function() {
+                                dfd.reject();
+                            }).attr('src', value);
+                        } else if (attr.match("json") !== null) {
+                            $.getJSON(value, function(result) {
+                                dfd.resolve();
+                            }).error( function() {
+                                dfd.reject();
+                            });
+                        } else {
+                            $.get(value, function(result) {
+                                dfd.resolve();
+                            }).error( function() {
+                                dfd.reject();
+                            });
+                        }
+                    } else {
+                        dfd.reject();
+                    }
+                }).promise();
+            },
+
+            preLoadGmap       = function(preloadURL) {
+                return $.Deferred(function(dfd) {
+                    if (preloadURL && preloadURL != '') {
+                        $.getJSON(preloadURL, function(result) {
+                            var mapPos = 0,
+                                jsonLength = 0;
+                            for (var i in result) {
+                                jsonLength++;
+                            }
+                            $.each(result, function(attr, value) {
+                                $.when(
+                                    preLoadOnce(attr, value)
+                                ).always( function() {
+                                    if (++mapPos == jsonLength) {
+                                        dfd.resolve();
+                                    }
+                                });
+                            });
+                        }).error( function() {
+                            dfd.reject();
+                        });
+                    } else {
+                        dfd.reject();
+                    }
+                }).promise();
+            },
 
             setupGmap         = function(mapItem, centerURL) {
                 return $.Deferred(function(dfd) {
@@ -1372,7 +1427,7 @@ jQuery(document).ready(function(){
                         $.getJSON(centerURL, function(result) {
                             result.onComplete = onComplete;
                             mapItem.gMap(result);
-                        }).error(function() {
+                        }).error( function() {
                             mapItem.gMap(default_gmap);
                         });
                     } else {
@@ -1388,15 +1443,16 @@ jQuery(document).ready(function(){
                             mapItem.gMap(gMap_delMarkers);
                             mapItem.gMap(gMap_addMarkers, result);
                             dfd.resolve();
-                        }).error(function() {
-                            dfd.resolve();
+                        }).error( function() {
+                            dfd.reject();
                         });
                     } else {
-                        dfd.resolve();
+                        dfd.reject();
                     }
                 }).promise();
             },
 
+            attrJsonPreload   = 'json-preload',
             attrJsonCenter    = 'json-center',
             attrJsonMarker    = 'json-marker',
 
@@ -1426,11 +1482,15 @@ jQuery(document).ready(function(){
 
                 testImageFun    = function(testImageSrc) {
                     return $.Deferred(function(dfd) {
-                        $('<img/>').load(function() {
-                            dfd.resolve();
-                        }).error(function() {
+                        if (testImageSrc && testImageSrc != '') {
+                            $('<img/>').load( function() {
+                                dfd.resolve();
+                            }).error( function() {
+                                dfd.reject();
+                            }).attr('src', testImageSrc + (new Date()).getTime());
+                        } else {
                             dfd.reject();
-                        }).attr('src', testImageSrc + (new Date()).getTime());
+                        }
                     }).promise();
                 },
 
@@ -1446,10 +1506,10 @@ jQuery(document).ready(function(){
                         ).done( function() {
                             if (freeshellStatus !== true) {
                                 freeshellStatus = true;
-                                $freeshellBody.each(function() {
+                                $freeshellBody.each( function() {
                                     $(this).removeClass(highlight_all).addClass(highlight_ok);
                                 });
-                                $cdnBody.each(function() {
+                                $cdnBody.each( function() {
                                     $(this).removeClass(highlight_all).addClass(
                                         staticStatus === null ? highlight_part :
                                             (staticStatus ? highlight_ok : highlight_part)
@@ -1457,7 +1517,7 @@ jQuery(document).ready(function(){
                                 });
                                 if (mapBody_length) {
                                     var mapPos = 0;
-                                    $mapBody.each(function() {
+                                    $mapBody.each( function() {
                                         var $this      = $(this),
                                             markerAttr = attrJsonMarker
                                                     + mapMarker_up
@@ -1465,7 +1525,9 @@ jQuery(document).ready(function(){
                                                 ;
                                         $.when(
                                             addMarkers($this, $this.attr(markerAttr))
-                                        ).done( function() {
+                                        ).fail( function() {
+                                            freeshellStatus = false;
+                                        }).always( function() {
                                             if (++mapPos == mapBody_length) {
                                                 setTimeout(functionTable.b, testDelay);
                                             }
@@ -1480,10 +1542,10 @@ jQuery(document).ready(function(){
                         }).fail( function() {
                             if (freeshellStatus !== false) {
                                 freeshellStatus = false;
-                                $freeshellBody.each(function() {
+                                $freeshellBody.each( function() {
                                     $(this).removeClass(highlight_all).addClass(highlight_fail);
                                 });
-                                $cdnBody.each(function() {
+                                $cdnBody.each( function() {
                                     $(this).removeClass(highlight_all).addClass(
                                         staticStatus === null ? highlight_none :
                                             (staticStatus ? highlight_part : highlight_fail)
@@ -1491,7 +1553,7 @@ jQuery(document).ready(function(){
                                 });
                                 if (mapBody_length) {
                                     var mapPos = 0;
-                                    $mapBody.each(function() {
+                                    $mapBody.each( function() {
                                         var $this      = $(this),
                                             markerAttr = attrJsonMarker
                                                     + mapMarker_down
@@ -1499,7 +1561,9 @@ jQuery(document).ready(function(){
                                                 ;
                                         $.when(
                                             addMarkers($this, $this.attr(markerAttr))
-                                        ).done( function() {
+                                        ).fail( function() {
+                                            freeshellStatus = true;
+                                        }).always( function() {
                                             if (++mapPos == mapBody_length) {
                                                 setTimeout(functionTable.b, testDelay);
                                             }
@@ -1520,17 +1584,17 @@ jQuery(document).ready(function(){
                         ).done( function() {
                             if (staticStatus !== true) {
                                 staticStatus = true;
-                                $staticBody.each(function() {
+                                $staticBody.each( function() {
                                     $(this).removeClass(highlight_all).addClass(highlight_ok);
                                 });
-                                $cdnBody.each(function() {
+                                $cdnBody.each( function() {
                                     $(this).removeClass(highlight_all).addClass(
                                             freeshellStatus ? highlight_ok : highlight_part
                                         );
                                 });
                                 if (mapBody_length) {
                                     var mapPos = 0;
-                                    $mapBody.each(function() {
+                                    $mapBody.each( function() {
                                         var $this      = $(this),
                                             markerAttr = attrJsonMarker
                                                     + (freeshellStatus ? mapMarker_up : mapMarker_down)
@@ -1538,7 +1602,9 @@ jQuery(document).ready(function(){
                                                 ;
                                         $.when(
                                             addMarkers($this, $this.attr(markerAttr))
-                                        ).done( function() {
+                                        ).fail( function() {
+                                            staticStatus = false;
+                                        }).always( function() {
                                             if (++mapPos == mapBody_length) {
                                                 setTimeout(functionTable.a, testTimeval);
                                             }
@@ -1553,17 +1619,17 @@ jQuery(document).ready(function(){
                         }).fail( function() {
                             if (staticStatus !== false) {
                                 staticStatus = false;
-                                $staticBody.each(function() {
+                                $staticBody.each( function() {
                                     $(this).removeClass(highlight_all).addClass(highlight_fail);
                                 });
-                                $cdnBody.each(function() {
+                                $cdnBody.each( function() {
                                     $(this).removeClass(highlight_all).addClass(
                                             freeshellStatus ? highlight_part : highlight_fail
                                         );
                                 });
                                 if (mapBody_length) {
                                     var mapPos = 0;
-                                    $mapBody.each(function() {
+                                    $mapBody.each( function() {
                                         var $this      = $(this),
                                             markerAttr = attrJsonMarker
                                                     + (freeshellStatus ? mapMarker_up : mapMarker_down)
@@ -1571,7 +1637,9 @@ jQuery(document).ready(function(){
                                                 ;
                                         $.when(
                                             addMarkers($this, $this.attr(markerAttr))
-                                        ).done( function() {
+                                        ).fail( function() {
+                                            staticStatus = true;
+                                        }).always( function() {
                                             if (++mapPos == mapBody_length) {
                                                 setTimeout(functionTable.a, testTimeval);
                                             }
@@ -1585,25 +1653,31 @@ jQuery(document).ready(function(){
                             }
                         });
                     }
+
                 };
 
             if (mapBody_length) {
 
                 var mapPos = 0;
-                $mapBody.each(function() {
-                    var $this     = $(this),
-                        mapCenter = $this.attr(attrJsonCenter),
-                        mapMarker = $this.attr(attrJsonMarker);
+                $mapBody.each( function() {
+                    var $this      = $(this),
+                        mapPreload = $this.attr(attrJsonPreload),
+                        mapCenter  = $this.attr(attrJsonCenter),
+                        mapMarker  = $this.attr(attrJsonMarker);
 
                     $.when(
-                        setupGmap($this, mapCenter)
-                    ).done( function() {
+                        preLoadGmap(mapPreload)
+                    ).always( function() {
                         $.when(
-                            addMarkers($this, mapMarker)
-                        ).done( function() {
-                            if (++mapPos == mapBody_length) {
-                                setTimeout(functionTable.a, testDelay);
-                            }
+                            setupGmap($this, mapCenter)
+                        ).always( function() {
+                            $.when(
+                                addMarkers($this, mapMarker)
+                            ).always( function() {
+                                if (++mapPos == mapBody_length) {
+                                    setTimeout(functionTable.a, testDelay);
+                                }
+                            });
                         });
                     });
                 });
@@ -1614,15 +1688,20 @@ jQuery(document).ready(function(){
 
         } else {
 
-            $('#map').each(function() {
-                var $this     = $(this),
-                    mapCenter = $this.attr(attrJsonCenter),
-                    mapMarker = $this.attr(attrJsonMarker);
+            $('#map').each( function() {
+                var $this      = $(this),
+                    mapPreload = $this.attr(attrJsonPreload),
+                    mapCenter  = $this.attr(attrJsonCenter),
+                    mapMarker  = $this.attr(attrJsonMarker);
 
                 $.when(
-                    setupGmap($this, mapCenter)
-                ).done( function() {
-                    addMarkers($this, mapMarker);
+                    preLoadGmap(mapPreload)
+                ).always( function() {
+                    $.when(
+                        setupGmap($this, mapCenter)
+                    ).always( function() {
+                        addMarkers($this, mapMarker);
+                    });
                 });
             });
 
@@ -1636,8 +1715,8 @@ jQuery(document).ready(function(){
     /*  SpanWords
     /* ---------------------------------------------------------------------- */
 
-    (function(){
-        $('.spanwords').each(function(){
+    ( function() {
+        $('.spanwords').each( function() {
             var $this = $(this),
                 spanText = $this.text().replace(/./g, '<span>$&</span>');
             $this.html(spanText);

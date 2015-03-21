@@ -99,12 +99,16 @@
 
 - 建立自动更新日志文件
 
+替换`swp`为当前用户，注意当前用户不为`git`时，需要具备管理员权限。
+
 	sudo touch /var/log/website.log
 	sudo chown swp:adm /var/log/website.log
 	sudo chmod 644 /var/log/website.log
 
 - 添加自动更新到定时器`crontab`脚本。
 
+如果当前用户无管理员权限，将不能重启`nginx`进程，不能切换到`git`用户。
+
 	# crontab
-	#   0 4  *   *   *     HOME=/home/swp/project/website/ make upgrade >/var/log/website.log 2>&1
+	#   0 4  *   *   *     cd /home/swp/project/website/ && make upgrade >/var/log/website.log 2>&1
 	crontab -e                     # Add this line at the end
