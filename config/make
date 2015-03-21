@@ -1,7 +1,9 @@
 #!/bin/bash
-if [ "upgrade"x == "$1"x ]; then
+if [ "upgrade"x == "$1"x ] ; then
   echo git pull remote branch
-  git pull --all
+  while ! git pull --all ; do
+    echo pull remote branch again
+  done
 else
   CURDIR=$(pwd)
   GITDIR=$CURDIR/.git/

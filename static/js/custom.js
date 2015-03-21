@@ -1353,27 +1353,40 @@ jQuery(document).ready( function() {
             $staticBody       = $(domainStatusClass + 'static'),
             $mapBody          = $('#map.cdn-map'),
             mapBody_length    = $mapBody.length,
-            gmap_isSetup      = 'gmap-setup',
+            gmap_complete     = 'gmap-complete',
 
             gMap_addMarkers   = 'addMarkers',
             gMap_delMarkers   = 'removeAllMarkers',
 
+            // preload one resource
             preLoadOnce       = function(attr, value) {
                 return $.Deferred(function(dfd) {
                     if (value && value != '') {
-                        if (attr.match("image") !== null) {
-                            $('<img/>').load( function() {
-                                dfd.resolve();
-                            }).error( function() {
-                                dfd.reject();
-                            }).attr('src', value);
-                        } else if (attr.match("json") !== null) {
-                            $.getJSON(value, function(result) {
-                                dfd.resolve();
-                            }).error( function() {
-                                dfd.reject();
-                            });
+                        if (attr && attr != '') {
+                            if (attr.match("image") !== null) {
+                                // Image
+                                $('<img/>').load( function() {
+                                    dfd.resolve();
+                                }).error( function() {
+                                    dfd.reject();
+                                }).attr('src', value);
+                            } else if (attr.match("json") !== null) {
+                                // Json
+                                $.getJSON(value, function(result) {
+                                    dfd.resolve();
+                                }).error( function() {
+                                    dfd.reject();
+                                });
+                            } else {
+                                // HTML
+                                $.get(value, function(result) {
+                                    dfd.resolve();
+                                }).error( function() {
+                                    dfd.reject();
+                                });
+                            }
                         } else {
+                            // HTML
                             $.get(value, function(result) {
                                 dfd.resolve();
                             }).error( function() {
@@ -1386,15 +1399,18 @@ jQuery(document).ready( function() {
                 }).promise();
             },
 
+            // preload All static resources
             preLoadGmap       = function(preloadURL) {
                 return $.Deferred(function(dfd) {
                     if (preloadURL && preloadURL != '') {
                         $.getJSON(preloadURL, function(result) {
-                            var mapPos = 0,
+                            var mapPos     = 0,
                                 jsonLength = 0;
+                            // Get Json length
                             for (var i in result) {
                                 jsonLength++;
                             }
+                            // preload for each line
                             $.each(result, function(attr, value) {
                                 $.when(
                                     preLoadOnce(attr, value)
@@ -1415,6 +1431,7 @@ jQuery(document).ready( function() {
 
             setupGmap         = function(mapItem, centerURL) {
                 return $.Deferred(function(dfd) {
+                    // complete function
                     var onComplete   = function() {
                             mapItem.addClass(gmap_isSetup);
                             dfd.resolve();
@@ -1424,6 +1441,7 @@ jQuery(document).ready( function() {
                             onComplete : onComplete
                         };
                     if (centerURL && centerURL != '') {
+                        // map center
                         $.getJSON(centerURL, function(result) {
                             result.onComplete = onComplete;
                             mapItem.gMap(result);
@@ -1439,6 +1457,7 @@ jQuery(document).ready( function() {
             addMarkers        = function(mapItem, markerURL) {
                 return $.Deferred(function(dfd) {
                     if (markerURL && markerURL != '') {
+                        // Add makers by Json
                         $.getJSON(markerURL, function(result) {
                             mapItem.gMap(gMap_delMarkers);
                             mapItem.gMap(gMap_addMarkers, result);
@@ -1452,22 +1471,25 @@ jQuery(document).ready( function() {
                 }).promise();
             },
 
-            attrJsonPreload   = 'json-preload',
-            attrJsonCenter    = 'json-center',
-            attrJsonMarker    = 'json-marker',
+            attrJson          = 'json-',
+            attrJsonPreload   = attrJson + 'preload',
+            attrJsonCenter    = attrJson + 'center',
+            attrJsonMarker    = attrJson + 'marker',
 
             testTimeval       = 10000,
             testDelay         = 500;
 
         if ($cdnBody.length || $freeshellBody.length || $staticBody.length || mapBody_length) {
 
-            var testPngURL      = '/domain-test.png?t=',
-                freeshellDomain = '//freeshell.swpbox.info' + testPngURL,
-                staticDomain    = '//static.swpbox.info' + testPngURL,
+            var domain          = '.swpbox.info',
+                testPngURL      = '/domain-test.png?t=',
+                freeshellDomain = '//freeshell' + domain + testPngURL,
+                staticDomain    = '//static'    + domain + testPngURL,
 
                 freeshellStatus = null,
                 staticStatus    = null,
 
+                // domain status word className
                 highlight       = 'highlight',
                 highlight_none  = highlight + '1',
                 highlight_ok    = highlight + '2',
@@ -1483,6 +1505,7 @@ jQuery(document).ready( function() {
                 testImageFun    = function(testImageSrc) {
                     return $.Deferred(function(dfd) {
                         if (testImageSrc && testImageSrc != '') {
+                            // load image without cache
                             $('<img/>').load( function() {
                                 dfd.resolve();
                             }).error( function() {
@@ -1494,12 +1517,15 @@ jQuery(document).ready( function() {
                     }).promise();
                 },
 
+                // markers tags
                 mapMarker_none  = '-nl',
                 mapMarker_up    = '-up',
                 mapMarker_down  = '-dn',
 
+                // status function array for each domian
                 functionTable   = {
 
+                    // freeshell
                     a : function () {
                         $.when(
                             testImageFun(freeshellDomain)
@@ -1515,6 +1541,7 @@ jQuery(document).ready( function() {
                                             (staticStatus ? highlight_ok : highlight_part)
                                         );
                                 });
+                                // setup map
                                 if (mapBody_length) {
                                     var mapPos = 0;
                                     $mapBody.each( function() {
@@ -1539,6 +1566,7 @@ jQuery(document).ready( function() {
                             } else {
                                 setTimeout(functionTable.b, testDelay);
                             }
+
                         }).fail( function() {
                             if (freeshellStatus !== false) {
                                 freeshellStatus = false;
@@ -1551,6 +1579,7 @@ jQuery(document).ready( function() {
                                             (staticStatus ? highlight_part : highlight_fail)
                                         );
                                 });
+                                // setup map
                                 if (mapBody_length) {
                                     var mapPos = 0;
                                     $mapBody.each( function() {
@@ -1578,6 +1607,7 @@ jQuery(document).ready( function() {
                         });
                     },
 
+                    // static
                     b : function () {
                         $.when(
                             testImageFun(staticDomain)
@@ -1592,6 +1622,7 @@ jQuery(document).ready( function() {
                                             freeshellStatus ? highlight_ok : highlight_part
                                         );
                                 });
+                                // setup map
                                 if (mapBody_length) {
                                     var mapPos = 0;
                                     $mapBody.each( function() {
@@ -1616,6 +1647,7 @@ jQuery(document).ready( function() {
                             } else {
                                 setTimeout(functionTable.a, testTimeval);
                             }
+
                         }).fail( function() {
                             if (staticStatus !== false) {
                                 staticStatus = false;
@@ -1627,6 +1659,7 @@ jQuery(document).ready( function() {
                                             freeshellStatus ? highlight_part : highlight_fail
                                         );
                                 });
+                                // setup map
                                 if (mapBody_length) {
                                     var mapPos = 0;
                                     $mapBody.each( function() {
@@ -1665,6 +1698,7 @@ jQuery(document).ready( function() {
                         mapCenter  = $this.attr(attrJsonCenter),
                         mapMarker  = $this.attr(attrJsonMarker);
 
+                    // load gmap one by one
                     $.when(
                         preLoadGmap(mapPreload)
                     ).always( function() {
@@ -1675,6 +1709,7 @@ jQuery(document).ready( function() {
                                 addMarkers($this, mapMarker)
                             ).always( function() {
                                 if (++mapPos == mapBody_length) {
+                                    // load domian status function
                                     setTimeout(functionTable.a, testDelay);
                                 }
                             });
@@ -1683,6 +1718,7 @@ jQuery(document).ready( function() {
                 });
 
             } else {
+                // load domian status function
                 setTimeout(functionTable.a, testDelay);
             }
 
@@ -1694,6 +1730,7 @@ jQuery(document).ready( function() {
                     mapCenter  = $this.attr(attrJsonCenter),
                     mapMarker  = $this.attr(attrJsonMarker);
 
+                // setup gmap item
                 $.when(
                     preLoadGmap(mapPreload)
                 ).always( function() {
