@@ -16,13 +16,8 @@ $it  = new FilesystemIterator($pwd);
 $left_part  = 74;
 $right_part = 18;
 $date_size  = 24;
-$dircount  = 0;
-$filecount = 0;
-if (strlen($pwd) - $bgn > 1) {
-  $dirhtml[$dircount++] = '<a href="'.substr(dirname($pwd), $bgn).'/" title="../">../</a>'.str_pad(' ', $left_part - 3, ' ', STR_PAD_LEFT).str_pad('_', $right_part, ' ', STR_PAD_LEFT);
-}
 foreach ($it as $file){
-  $date = date('Y-m-d H:i:s', $file->getCTime());
+  $date = date('Y-m-d H:i:s', $file->getMTime());
   if ($file->isDir()) {
     $fileSize = '_';
     $fileName = $file->getFilename().'/';
@@ -32,7 +27,7 @@ foreach ($it as $file){
       $fileName = iconv("GBK", "UTF-8//IGNORE", $fileNameGBK);
     }
     $pathName = $file->getPathname().'/';
-    $dirhtml[$dircount++] = '<a href="'.substr($pathName, $bgn).'" title="'.$fileName.'">'.$fileName.'</a>'.str_pad($date, $left_part - strlen($fileNameGBK),' ',STR_PAD_LEFT).str_pad($fileSize, $right_part, ' ', STR_PAD_LEFT);
+    $dirhtml[$fileName] = '<a href="'.substr($pathName, $bgn).'" title="'.$fileName.'">'.$fileName.'</a>'.str_pad($date, $left_part - strlen($fileNameGBK),' ',STR_PAD_LEFT).str_pad($fileSize, $right_part, ' ', STR_PAD_LEFT);
   } elseif ($file->isFile()) {
     $fileSize = $file->getSize();
     if ($fileSize < 0)
@@ -51,14 +46,19 @@ foreach ($it as $file){
       $fileName = iconv("GBK", "UTF-8//IGNORE", $fileNameGBK);
     }
     $pathName = $file->getPathname();
-    $filehtml[$filecount++] = '<a href="'.substr($pathName, $bgn).'" title="'.$fileName.'">'.$fileName.'</a>'.str_pad($date, $left_part - strlen($fileNameGBK),' ',STR_PAD_LEFT).str_pad($fileSize, $right_part, ' ', STR_PAD_LEFT);
+    $filehtml[$fileName] = '<a href="'.substr($pathName, $bgn).'" title="'.$fileName.'">'.$fileName.'</a>'.str_pad($date, $left_part - strlen($fileNameGBK),' ',STR_PAD_LEFT).str_pad($fileSize, $right_part, ' ', STR_PAD_LEFT);
   }
 }
-for ($i = 0; $i < $dircount; $i++) {
-  echo $dirhtml[$i]."\n";
+ksort($dirhtml);
+ksort($filehtml);
+if (strlen($pwd) - $bgn > 1) {
+  echo '<a href="'.substr(dirname($pwd), $bgn).'/" title="../">../</a>'.str_pad(' ', $left_part - 3, ' ', STR_PAD_LEFT).str_pad('_', $right_part, ' ', STR_PAD_LEFT)."\n";
 }
-for ($i = 0; $i < $filecount; $i++) {
-  echo $filehtml[$i]."\n";
+foreach($dirhtml as $name=>$value) {
+  echo $value."\n";
+}
+foreach($filehtml as $name=>$value) {
+  echo $value."\n";
 }
 ?></pre><hr>
 </body>

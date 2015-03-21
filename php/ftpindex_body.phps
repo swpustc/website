@@ -20,11 +20,14 @@
   </header><!--/ .page-header-->
   <section id="portfolio-items" class="autoindex">
 <?php
-for ($i = 0; $i < $dircount; $i++) {
-  echo $dirhtml[$i]."\n";
+if (strlen($pwd) - $bgn > 1) {
+  echo '<article class="'.$folder_class.' '.$file_class.$size_1m.$size_10m.$size_100m.$size_1g.$size_g1g.'"><div class="one-half"><a href="'.substr(dirname($pwd), $bgn).'/" title="../">../</a></div><div class="one-fourth autohide">_</div><div class="one-fourth last autohide">_</div></article><hr class="clear"/>'."\n";
 }
-for ($i = 0; $i < $filecount; $i++) {
-  echo $filehtml[$i]."\n";
+foreach($dirhtml as $name=>$value) {
+  echo $value."\n";
+}
+foreach($filehtml as $name=>$value) {
+  echo $value."\n";
 }
 ?>
   </section><!-- end #portfolio-items -->
