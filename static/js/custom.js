@@ -1433,7 +1433,7 @@ jQuery(document).ready( function() {
                 return $.Deferred(function(dfd) {
                     // complete function
                     var onComplete   = function() {
-                            mapItem.addClass(gmap_isSetup);
+                            mapItem.addClass(gmap_complete);
                             dfd.resolve();
                         },
                         default_gmap = {
