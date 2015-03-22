@@ -555,7 +555,8 @@ blockquote {
     .highlight1::-moz-selection,
     .highlight2::-moz-selection,
     .highlight3::-moz-selection,
-    .highlight4::-moz-selection {
+    .highlight4::-moz-selection,
+    .highlight5::-moz-selection {
         padding: 1px 3px;
         color: #fff;
     }
@@ -563,7 +564,8 @@ blockquote {
     .highlight1::selection,
     .highlight2::selection,
     .highlight3::selection,
-    .highlight4::selection {
+    .highlight4::selection,
+    .highlight5::selection {
         padding: 1px 3px;
         color: #fff;
     }
@@ -571,7 +573,8 @@ blockquote {
     span.highlight1,
     span.highlight2,
     span.highlight3,
-    span.highlight4 {
+    span.highlight4,
+    span.highlight5 {
         padding: 1px 3px;
         color: #fff;
     }
@@ -582,6 +585,7 @@ blockquote {
     span.highlight2 {background-color: #457935;}
     span.highlight3 {background-color: #a6412b;}
     span.highlight4 {background-color: #2b65a6;}
+    span.highlight5 {background-color: #c36900;}
 
     .light .highlight1::selection {background-color: #1f221e;}
     .dark .highlight1::selection {background-color: #313430;}
@@ -589,6 +593,7 @@ blockquote {
     .highlight2::selection {background-color: #457935;}
     .highlight3::selection {background-color: #a6412b;}
     .highlight4::selection {background-color: #2b65a6;}
+    .highlight5::selection {background-color: #c36900;}
 
     .light .highlight1::-moz-selection {background-color: #1f221e;}
     .dark .highlight1::-moz-selection {background-color: #313430;}
@@ -596,6 +601,7 @@ blockquote {
     .highlight2::-moz-selection {background-color: #457935;}
     .highlight3::-moz-selection {background-color: #a6412b;}
     .highlight4::-moz-selection {background-color: #2b65a6;}
+    .highlight5::-moz-selection {background-color: #c36900;}
 
     /* -------------------------------------------------- */
     /*  Alert Boxes

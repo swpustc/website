@@ -1362,29 +1362,30 @@ jQuery(document).ready( function() {
             preLoadOnce       = function(attr, value) {
                 return $.Deferred(function(dfd) {
                     if (value && value != '') {
-                        if (attr && attr != '') {
-                            if (attr.match("image") !== null) {
-                                // Image
-                                $('<img/>').load( function() {
-                                    dfd.resolve();
-                                }).error( function() {
-                                    dfd.reject();
-                                }).attr('src', value);
-                            } else if (attr.match("json") !== null) {
-                                // Json
-                                $.getJSON(value, function(result) {
-                                    dfd.resolve();
-                                }).error( function() {
-                                    dfd.reject();
-                                });
-                            } else {
-                                // HTML
-                                $.get(value, function(result) {
-                                    dfd.resolve();
-                                }).error( function() {
-                                    dfd.reject();
-                                });
-                            }
+                        if (!attr || attr == '') {
+                            attr = 'html';
+                        }
+                        if (attr.match("image") !== null) {
+                            // Image
+                            $('<img/>').load( function() {
+                                dfd.resolve();
+                            }).error( function() {
+                                dfd.reject();
+                            }).attr('src', value);
+                        } else if (attr.match("json") !== null) {
+                            // Json
+                            $.getJSON(value, function(result) {
+                                dfd.resolve();
+                            }).error( function() {
+                                dfd.reject();
+                            });
+                        } else if (attr.match("load") !== null) {
+                            // Load
+                            $('<div/>').load(value, function() {
+                                dfd.resolve();
+                            }).error( function() {
+                                dfd.reject();
+                            });
                         } else {
                             // HTML
                             $.get(value, function(result) {
@@ -1495,12 +1496,14 @@ jQuery(document).ready( function() {
                 highlight_ok    = highlight + '2',
                 highlight_fail  = highlight + '3',
                 highlight_part  = highlight + '4',
+                highlight_wait  = highlight + '5',
                 highlight_spit  = ' ',
                 highlight_all   =
                     highlight_none + highlight_spit +
                     highlight_ok   + highlight_spit +
                     highlight_fail + highlight_spit +
-                    highlight_part,
+                    highlight_part + highlight_spit +
+                    highlight_wait,
 
                 testImageFun    = function(testImageSrc) {
                     return $.Deferred(function(dfd) {
@@ -1532,15 +1535,20 @@ jQuery(document).ready( function() {
                         ).done( function() {
                             if (freeshellStatus !== true) {
                                 freeshellStatus = true;
-                                $freeshellBody.each( function() {
-                                    $(this).removeClass(highlight_all).addClass(highlight_ok);
-                                });
                                 $cdnBody.each( function() {
                                     $(this).removeClass(highlight_all).addClass(
                                         staticStatus === null ? highlight_part :
                                             (staticStatus ? highlight_ok : highlight_part)
                                         );
                                 });
+                                $freeshellBody.each( function() {
+                                    $(this).removeClass(highlight_all).addClass(highlight_ok);
+                                });
+                                if (staticStatus === null) {
+                                    $staticBody.each( function() {
+                                        $(this).removeClass(highlight_all).addClass(highlight_wait);
+                                    });
+                                }
                                 // setup map
                                 if (mapBody_length) {
                                     var mapPos = 0;
@@ -1570,15 +1578,20 @@ jQuery(document).ready( function() {
                         }).fail( function() {
                             if (freeshellStatus !== false) {
                                 freeshellStatus = false;
-                                $freeshellBody.each( function() {
-                                    $(this).removeClass(highlight_all).addClass(highlight_fail);
-                                });
                                 $cdnBody.each( function() {
                                     $(this).removeClass(highlight_all).addClass(
                                         staticStatus === null ? highlight_none :
                                             (staticStatus ? highlight_part : highlight_fail)
                                         );
                                 });
+                                $freeshellBody.each( function() {
+                                    $(this).removeClass(highlight_all).addClass(highlight_fail);
+                                });
+                                if (staticStatus === null) {
+                                    $staticBody.each( function() {
+                                        $(this).removeClass(highlight_all).addClass(highlight_wait);
+                                    });
+                                }
                                 // setup map
                                 if (mapBody_length) {
                                     var mapPos = 0;
@@ -1614,13 +1627,13 @@ jQuery(document).ready( function() {
                         ).done( function() {
                             if (staticStatus !== true) {
                                 staticStatus = true;
-                                $staticBody.each( function() {
-                                    $(this).removeClass(highlight_all).addClass(highlight_ok);
-                                });
                                 $cdnBody.each( function() {
                                     $(this).removeClass(highlight_all).addClass(
                                             freeshellStatus ? highlight_ok : highlight_part
                                         );
+                                });
+                                $staticBody.each( function() {
+                                    $(this).removeClass(highlight_all).addClass(highlight_ok);
                                 });
                                 // setup map
                                 if (mapBody_length) {
@@ -1651,13 +1664,13 @@ jQuery(document).ready( function() {
                         }).fail( function() {
                             if (staticStatus !== false) {
                                 staticStatus = false;
-                                $staticBody.each( function() {
-                                    $(this).removeClass(highlight_all).addClass(highlight_fail);
-                                });
                                 $cdnBody.each( function() {
                                     $(this).removeClass(highlight_all).addClass(
                                             freeshellStatus ? highlight_part : highlight_fail
                                         );
+                                });
+                                $staticBody.each( function() {
+                                    $(this).removeClass(highlight_all).addClass(highlight_fail);
                                 });
                                 // setup map
                                 if (mapBody_length) {

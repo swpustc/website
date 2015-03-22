@@ -112,3 +112,4 @@
 	# crontab
 	#   0 4  *   *   *     cd /home/swp/project/website/ && make upgrade >/var/log/website.log 2>&1
 	crontab -e                     # Add this line at the end
+	sudo crontab -e                # If sudo need input password
