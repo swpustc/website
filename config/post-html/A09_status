@@ -42,7 +42,6 @@ cat ddns-log_body.shtml      | sed "s/<!--UPDATETIME-->/1970-01-01 08:00:00/g" \
                              | sed "s/<!--DATA-CATEGORIES:TIME:6-->/<a data-categories=\"01-02\">01\/02<\/a>/g" \
                              | sed "s/<!--DATA-CATEGORIES:TIME:7-->/<a data-categories=\"01-01\">01\/01<\/a>/g" \
                              | tee status/ddns-log-static.html -a >/dev/null
-echo $' </section>\n</div>'  | tee status/ddns-log-static.html -a >/dev/null
 cat footer.shtml             | tee status/ddns-log-static.html -a >/dev/null
 cat jquery.shtml             | tee status/ddns-log-static.html -a >/dev/null
 cat ddns-log_footer.shtml    | tee status/ddns-log-static.html -a >/dev/null

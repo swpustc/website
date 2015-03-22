@@ -10,7 +10,7 @@
       <li><!--DATA-CATEGORIES:TIME:3--></a></li>
       <li><!--DATA-CATEGORIES:TIME:2--></a></li>
       <li><!--DATA-CATEGORIES:TIME:1--></a></li>
-    </ul><!-- end #portfolio-items-filter -->
+    </ul><!--/ #portfolio-items-filter-->
   </header><!--/ .page-header-->
   <div class="ddns-title">
     <div class="one-fourth time"><h4>Update time</h4></div>
@@ -19,4 +19,11 @@
     <div class="one-fourth last"><h5>router-swp</h5></div>
     <hr class="clear"/>
   </div><!--/ .ddns-title-->
-  <section id="portfolio-items" class="ddns">
+  <section
+    id="portfolio-items"
+    class="ddns jquery-load"
+    data-load="/ddns.log.html"
+    timestamp="?t="
+  >
+  </section><!--/ #portfolio-items-->
+</div><!--/ .content-wrapper-->
