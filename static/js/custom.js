@@ -1043,8 +1043,7 @@ jQuery(document).ready( function() {
                                 'three-fourth last' + additionalClassName
                             ).text(
                                 $prevDivLast.text()
-                            ),
-                            $('<hr/>').addClass('clear')
+                            )
                         )
                     );
                 }
