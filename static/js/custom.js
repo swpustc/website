@@ -1785,12 +1785,8 @@ jQuery(document).ready( function() {
                 loadPos = 0;
 
             $jquery_load.each( function() {
-                var $this     = $(this),
-                    loadSrc   = $this.attr('data-load'),
-                    timestamp = $this.attr('timestamp');
-                if (loadSrc && loadSrc != '' && timestamp && timestamp != '') {
-                    loadSrc = loadSrc + timestamp + (new Date()).getTime();
-                }
+                var $this   = $(this),
+                    loadSrc = $this.attr('data-load');
                 $.when(
                     loadHtml($this, loadSrc)
                 ).always( function() {

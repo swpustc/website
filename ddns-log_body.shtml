@@ -23,7 +23,6 @@
     id="portfolio-items"
     class="ddns jquery-load"
     data-load="/ddns.log.html"
-    timestamp="?t="
   >
   </section><!--/ #portfolio-items-->
 </div><!--/ .content-wrapper-->
