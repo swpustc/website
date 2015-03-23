@@ -1,0 +1,56 @@
+#!/bin/bash
+## Work Directory: /home/git/html/
+## User: git
+
+## Generate Template page
+cat nowhere/400.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                     | sed 's/https:\/\/\([^"\/<>]*\)\/setting.html/\/setting.html/g' \
+                     | tee another/400.html >/dev/null
+echo Generate another/400.html
+cat nowhere/403.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                     | sed 's/https:\/\/\([^"\/<>]*\)\/setting.html/\/setting.html/g' \
+                     | tee another/403.html >/dev/null
+echo Generate another/403.html
+cat nowhere/404.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                     | sed 's/https:\/\/\([^"\/<>]*\)\/setting.html/\/setting.html/g' \
+                     | tee another/404.html >/dev/null
+echo Generate another/404.html
+cat nowhere/414.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                     | sed 's/https:\/\/\([^"\/<>]*\)\/setting.html/\/setting.html/g' \
+                     | tee another/414.html >/dev/null
+echo Generate another/414.html
+cat nowhere/422.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                     | sed 's/https:\/\/\([^"\/<>]*\)\/setting.html/\/setting.html/g' \
+                     | tee another/422.html >/dev/null
+echo Generate another/422.html
+cat nowhere/500.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                     | sed 's/https:\/\/\([^"\/<>]*\)\/setting.html/\/setting.html/g' \
+                     | tee another/500.html >/dev/null
+echo Generate another/500.html
+cat DOCTYPE.shtml            | tee another/502.shtml    >/dev/null
+cat another/502_header.shtml | tee another/502.shtml -a >/dev/null
+cat header.shtml             | sed "s/<li><!--CURRENT:ERR502-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:ERRPAGE-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:HOME-->/<li class=\"current\">/g" \
+                             | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                             | tee another/502.shtml -a >/dev/null
+cat another/502_body.shtml   | tee another/502.shtml -a >/dev/null
+cat footer.shtml             | tee another/502.shtml -a >/dev/null
+cat jquery.shtml             | tee another/502.shtml -a >/dev/null
+cat errorpage_footer.shtml   | tee another/502.shtml -a >/dev/null
+cat another/502.shtml | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                      | sed 's/https:\/\/\([^"\/<>]*\)\/setting.html/\/setting.html/g' \
+                      | tee another/502.html >/dev/null
+echo Generate another/502.html
+cat nowhere/503.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                     | sed 's/https:\/\/\([^"\/<>]*\)\/setting.html/\/setting.html/g' \
+                     | tee another/503.html >/dev/null
+echo Generate another/503.html
+cat nowhere/504.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                     | sed 's/https:\/\/\([^"\/<>]*\)\/setting.html/\/setting.html/g' \
+                     | tee another/504.html >/dev/null
+echo Generate another/504.html
+cat www/setting.html | sed 's/\([^:]\)\/\//\1https:\/\//g' \
+                     | sed 's/https:\/\/\([^"\/<>]*\)\/setting.html/\/setting.html/g' \
+                     | tee another/setting.html >/dev/null
+echo Generate another/setting.html
