@@ -47,8 +47,6 @@ sed -i 's/<!--\(\/\| end\| \*\)[^!<>]*-->//;s/^[[:space:]]*//;/^$/d' DOCTYPE.sht
 
 ### Reset static resources timestamp (last modified)
 echo call config/post-touch
-for file in $(find -P ./ \( -type f -or -type d \) -not \( -name '*.html' -or -name '*.php' \) -print) ; do
-  if [ ! -L $file ] ; then
-    config/post-touch $file
-  fi
+for file in $(find -P ./ \( -type f -or -type d \) -print) ; do
+  config/post-touch $file
 done
