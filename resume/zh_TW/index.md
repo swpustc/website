@@ -8,7 +8,7 @@
 
 我的信息  |  聯繫方式
 :-------- | --------:
-**姓名：**宋萬鵬<br/>**性別：**男<br/>**出生年月：**1991年11月<br/>**職業方向：**軟件工程師<br/>**畢業學校：**中國科學技術大學<br/>**家庭住址：**安徽省宣城市郎溪縣郎濤路溫馨嘉苑小區 | <swpustc@mail.ustc.edu.cn><br/>**Facebook:** [@swpustc](https://www.facebook.com/swpustc "Facebook @swpustc")<br/>**GitHub:** [@swpustc](https://github.com/swpustc "GitHub @swpustc")<br/>**QQ:** [378124792](tencent://message/?uin=378124792&Site=resume.swpbox.info&Menu=yes "QQ @378124792")<br/>**電話：**(86)13956936382
+**姓名：**宋萬鵬<br/>**性別：**男<br/>**出生年月：**1991年11月<br/>**職業方向：**軟件工程師<br/>**畢業學校：**中國科學技術大學<br/>**家庭住址：**安徽省宣城市郎溪縣郎濤路溫馨嘉苑小區 | <swpustc@mail.ustc.edu.cn><br/>**Facebook:** [@swpustc](https://www.facebook.com/swpustc "Facebook @swpustc")<br/>**GitHub:** [@swpustc](https://github.com/swpustc "GitHub @swpustc")<br/>**QQ:** [378124792](tencent://message/?uin=378124792&Site=resume.swpbox.info&Menu=yes "QQ @378124792")<br/>**電話：**<tel:+86-139-5693-6382>
 
 教育 {.resume}
 ---------

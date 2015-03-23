@@ -8,7 +8,7 @@
 
 我的信息  |  联系方式
 :-------- | --------:
-**姓名：**宋万鹏<br/>**性别：**男<br/>**出生年月：**1991年11月<br/>**职业方向：**软件工程师<br/>**毕业学校：**中国科学技术大学<br/>**家庭住址：**安徽省宣城市郎溪县郎涛路温馨嘉苑小区 | <swpustc@mail.ustc.edu.cn><br/>**Facebook:** [@swpustc](https://www.facebook.com/swpustc "Facebook @swpustc")<br/>**GitHub:** [@swpustc](https://github.com/swpustc "GitHub @swpustc")<br/>**QQ:** [378124792](tencent://message/?uin=378124792&Site=resume.swpbox.info&Menu=yes "QQ @378124792")<br/>**电话：**(86)13956936382
+**姓名：**宋万鹏<br/>**性别：**男<br/>**出生年月：**1991年11月<br/>**职业方向：**软件工程师<br/>**毕业学校：**中国科学技术大学<br/>**家庭住址：**安徽省宣城市郎溪县郎涛路温馨嘉苑小区 | <swpustc@mail.ustc.edu.cn><br/>**Facebook:** [@swpustc](https://www.facebook.com/swpustc "Facebook @swpustc")<br/>**GitHub:** [@swpustc](https://github.com/swpustc "GitHub @swpustc")<br/>**QQ:** [378124792](tencent://message/?uin=378124792&Site=resume.swpbox.info&Menu=yes "QQ @378124792")<br/>**电话：**<tel:+86-139-5693-6382>
 
 教育 {.resume}
 ---------

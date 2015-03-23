@@ -981,9 +981,9 @@ ul.contact-info .email {background-position: 0 -25px;}
     .navigation {
         position: relative;
         z-index: 999;
-        top: -4px;
+        top: -2px;
         float: right;
-        padding-top: 74px;
+        padding-top: 72px;
         padding-bottom: 5px;
     }
 
@@ -1694,6 +1694,11 @@ ul.related span.categories {color: #50554e; font-style: italic;}
         font-size: 1.538em;
         line-height: 35px;
         vertical-align: top;
+        -webkit-transition: background-image .25s ease 0s,background-color .25s ease 0s,color .25s ease 0s;
+           -moz-transition: background-image .25s ease 0s,background-color .25s ease 0s,color .25s ease 0s;
+            -ms-transition: background-image .25s ease 0s,background-color .25s ease 0s,color .25s ease 0s;
+             -o-transition: background-image .25s ease 0s,background-color .25s ease 0s,color .25s ease 0s;
+                transition: background-image .25s ease 0s,background-color .25s ease 0s,color .25s ease 0s;
     }
 
     .light .post-type {background-color: #1f221e;}
