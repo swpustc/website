@@ -1,0 +1,17 @@
+#!/bin/bash
+
+### php/markdown
+config/sign-commit php/markdown/md_header.phps | tee php/markdown/md.php    >/dev/null
+config/sign-commit header.shtml                | tee php/markdown/md.php -a >/dev/null
+config/sign-commit php/markdown/md_body.phps   | tee php/markdown/md.php -a >/dev/null
+config/sign-commit footer.shtml                | tee php/markdown/md.php -a >/dev/null
+config/sign-commit jquery.shtml                | tee php/markdown/md.php -a >/dev/null
+config/sign-commit php/markdown/md_footer.phps | tee php/markdown/md.php -a >/dev/null
+echo Sign php/markdown/md.php
+config/sign-commit php/markdown/resume_header.phps | tee php/markdown/resume.php    >/dev/null
+config/sign-commit header.shtml                    | tee php/markdown/resume.php -a >/dev/null
+config/sign-commit php/markdown/resume_body.phps   | tee php/markdown/resume.php -a >/dev/null
+config/sign-commit footer.shtml                    | tee php/markdown/resume.php -a >/dev/null
+config/sign-commit jquery.shtml                    | tee php/markdown/resume.php -a >/dev/null
+config/sign-commit php/markdown/resume_footer.phps | tee php/markdown/resume.php -a >/dev/null
+echo Sign php/markdown/resume.php

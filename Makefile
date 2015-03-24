@@ -8,3 +8,6 @@ upgrade:
 	sudo service nginx stop
 	sudo -u git -H config/make
 	sudo service nginx start
+
+sign:
+	config/sign-event

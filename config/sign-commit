@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ "$1"x = x ] ; then
+  ## Error
+  exit 1
+else
+  ## Output commit information
+  if git log --no-color --date=raw -- $1 | grep commit >/dev/null 2>&1 ; then
+    commit=$(git log --no-color --date=raw -- $1 | grep commit | awk 'NR==1' | awk '{print $2}')
+    echo "$commit ($1)"
+  fi
+fi

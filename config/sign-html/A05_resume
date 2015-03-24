@@ -1,0 +1,11 @@
+#!/bin/bash
+
+### resume
+config/sign-commit DOCTYPE.shtml                | tee resume/502-resume.html    >/dev/null
+config/sign-commit 502_header.shtml             | tee resume/502-resume.html -a >/dev/null
+config/sign-commit header.shtml                 | tee resume/502-resume.html -a >/dev/null
+config/sign-commit resume/502-resume_body.shtml | tee resume/502-resume.html -a >/dev/null
+config/sign-commit footer.shtml                 | tee resume/502-resume.html -a >/dev/null
+config/sign-commit jquery.shtml                 | tee resume/502-resume.html -a >/dev/null
+config/sign-commit errorpage_footer.shtml       | tee resume/502-resume.html -a >/dev/null
+echo Sign resume/502-resume.html

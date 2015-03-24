@@ -5,6 +5,7 @@
 if [ "$1"x = x ] ; then
   ## Error
   echo $0: Too few arguments
+  exit 1
 else
   ## reset last modified time
   if git log --no-color --date=raw -- $1 | grep Date >/dev/null 2>&1 ; then

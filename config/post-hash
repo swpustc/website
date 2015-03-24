@@ -7,11 +7,11 @@ function timestamp() {
   if [ ! -w $1 ] ; then
     ##Error1
     echo $1: Input file error1
-    exit
+    exit 1
   elif [ ! -w $2 ] ; then
     ##Error2
     echo $2: Input file error2
-    exit
+    exit 2
   elif [ -f $3 ] ; then
     time=($(cksum $3))
     time=$(echo "obase=16;$time" | bc)
@@ -34,9 +34,9 @@ function timestamp() {
 sed_std=config/hash_standard.sed
 sed_inl=config/hash_inline.sed
 if [ "$1"x = x ] ; then
-  ## Error
+  ## Error3
   echo $0: Too few arguments
-  exit
+  exit 3
 elif [ "$1"x = startupx ] ; then
   ## Create sed Script
   tee $sed_std </dev/null

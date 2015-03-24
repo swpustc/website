@@ -6,10 +6,6 @@
 echo call config/post-html/
 run-parts --report config/post-html
 
-## port another page
-echo call config/post-another
-config/post-another
-
 ## resume zh_TW page
 echo call config/post-cconv
 config/post-cconv

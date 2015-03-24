@@ -1,0 +1,11 @@
+#!/bin/bash
+
+### blog
+config/sign-commit DOCTYPE.shtml          | tee blog/502.html    >/dev/null
+config/sign-commit 502_header.shtml       | tee blog/502.html -a >/dev/null
+config/sign-commit header.shtml           | tee blog/502.html -a >/dev/null
+config/sign-commit blog/502_body.shtml    | tee blog/502.html -a >/dev/null
+config/sign-commit footer.shtml           | tee blog/502.html -a >/dev/null
+config/sign-commit jquery.shtml           | tee blog/502.html -a >/dev/null
+config/sign-commit errorpage_footer.shtml | tee blog/502.html -a >/dev/null
+echo Sign blog/502.html

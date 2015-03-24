@@ -1,0 +1,35 @@
+#!/bin/bash
+
+### www
+config/sign-commit DOCTYPE.shtml          | tee www/index.html    >/dev/null
+config/sign-commit www/index_header.shtml | tee www/index.html -a >/dev/null
+config/sign-commit header.shtml           | tee www/index.html -a >/dev/null
+config/sign-commit www/index_body.shtml   | tee www/index.html -a >/dev/null
+config/sign-commit footer.shtml           | tee www/index.html -a >/dev/null
+config/sign-commit jquery.shtml           | tee www/index.html -a >/dev/null
+config/sign-commit www/index_footer.shtml | tee www/index.html -a >/dev/null
+echo Sign www/index.html
+config/sign-commit DOCTYPE.shtml          | tee www/index-ipv4.html    >/dev/null
+config/sign-commit www/index_header.shtml | tee www/index-ipv4.html -a >/dev/null
+config/sign-commit header.shtml           | tee www/index-ipv4.html -a >/dev/null
+config/sign-commit www/index_body.shtml   | tee www/index-ipv4.html -a >/dev/null
+config/sign-commit footer.shtml           | tee www/index-ipv4.html -a >/dev/null
+config/sign-commit jquery.shtml           | tee www/index-ipv4.html -a >/dev/null
+config/sign-commit www/index_footer.shtml | tee www/index-ipv4.html -a >/dev/null
+echo Sign www/index-ipv4.html
+config/sign-commit DOCTYPE.shtml          | tee www/index-ipv6.html    >/dev/null
+config/sign-commit www/index_header.shtml | tee www/index-ipv6.html -a >/dev/null
+config/sign-commit header.shtml           | tee www/index-ipv6.html -a >/dev/null
+config/sign-commit www/index_body.shtml   | tee www/index-ipv6.html -a >/dev/null
+config/sign-commit footer.shtml           | tee www/index-ipv6.html -a >/dev/null
+config/sign-commit jquery.shtml           | tee www/index-ipv6.html -a >/dev/null
+config/sign-commit www/index_footer.shtml | tee www/index-ipv6.html -a >/dev/null
+echo Sign www/index-ipv6.html
+config/sign-commit DOCTYPE.shtml            | tee www/setting.html    >/dev/null
+config/sign-commit www/setting_header.shtml | tee www/setting.html -a >/dev/null
+config/sign-commit header.shtml             | tee www/setting.html -a >/dev/null
+config/sign-commit www/setting_body.shtml   | tee www/setting.html -a >/dev/null
+config/sign-commit footer.shtml             | tee www/setting.html -a >/dev/null
+config/sign-commit jquery.shtml             | tee www/setting.html -a >/dev/null
+config/sign-commit www/setting_footer.shtml | tee www/setting.html -a >/dev/null
+echo Sign www/setting.html

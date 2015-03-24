@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo Generate commit information
+run-parts --report config/sign-html

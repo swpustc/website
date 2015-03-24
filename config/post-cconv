@@ -5,7 +5,7 @@
 ## Generate Resume zh_TW page
 for file in $(find -L resume/zh_CN/ -type f -follow -print) ; do
   file_tw=$(echo $file | sed 's/^resume\/zh_CN\//resume\/zh_TW\//g' )
-  if [ ! -f $file_tw ] ; then
+  if [ ! -e $file_tw ] ; then
     cconv -f utf-8 -t utf8-tw $file -o $file_tw
     echo Generate $file_tw
   fi

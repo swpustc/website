@@ -1,0 +1,11 @@
+#!/bin/bash
+
+### CA
+config/sign-commit DOCTYPE.shtml          | tee CA/index.html    >/dev/null
+config/sign-commit CA/index_header.shtml  | tee CA/index.html -a >/dev/null
+config/sign-commit header.shtml           | tee CA/index.html -a >/dev/null
+config/sign-commit CA/index_body.shtml    | tee CA/index.html -a >/dev/null
+config/sign-commit footer.shtml           | tee CA/index.html -a >/dev/null
+config/sign-commit jquery.shtml           | tee CA/index.html -a >/dev/null
+config/sign-commit errorpage_footer.shtml | tee CA/index.html -a >/dev/null
+echo Sign CA/index.html

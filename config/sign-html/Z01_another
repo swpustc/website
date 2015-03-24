@@ -1,0 +1,29 @@
+#!/bin/bash
+
+## Sign Template page
+cat nowhere/400.html | tee another/400.html >/dev/null
+echo Sign another/400.html
+cat nowhere/403.html | tee another/403.html >/dev/null
+echo Sign another/403.html
+cat nowhere/404.html | tee another/404.html >/dev/null
+echo Sign another/404.html
+cat nowhere/414.html | tee another/414.html >/dev/null
+echo Sign another/414.html
+cat nowhere/422.html | tee another/422.html >/dev/null
+echo Sign another/422.html
+cat nowhere/500.html | tee another/500.html >/dev/null
+echo Sign another/500.html
+config/sign-commit DOCTYPE.shtml            | tee another/502.html    >/dev/null
+config/sign-commit another/502_header.shtml | tee another/502.html -a >/dev/null
+config/sign-commit header.shtml             | tee another/502.html -a >/dev/null
+config/sign-commit another/502_body.shtml   | tee another/502.html -a >/dev/null
+config/sign-commit footer.shtml             | tee another/502.html -a >/dev/null
+config/sign-commit jquery.shtml             | tee another/502.html -a >/dev/null
+config/sign-commit errorpage_footer.shtml   | tee another/502.html -a >/dev/null
+echo Sign another/502.html
+cat nowhere/503.html | tee another/503.html >/dev/null
+echo Sign another/503.html
+cat nowhere/504.html | tee another/504.html >/dev/null
+echo Sign another/504.html
+cat www/setting.html | tee another/setting.html >/dev/null
+echo Sign another/setting.html
