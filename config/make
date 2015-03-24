@@ -3,7 +3,7 @@ if [ "upgrade"x == "$1"x ] ; then
   echo git pull remote branch
   commit1=$(git show --summary | grep commit | awk '{print $2}')
   for (( i=0 ; i < 5 ; i++ )) ; do
-    if git pull --all ; then
+    if git pull ; then
       commit2=$(git show --summary | grep commit | awk '{print $2}')
       if [ "$commit1"x == "$commit2"x ] ; then
         exit 16
