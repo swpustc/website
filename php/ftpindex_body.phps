@@ -21,12 +21,9 @@
   <section id="portfolio-items" class="autoindex">
 <?php
 if (strlen($pwd) - $bgn > 1) {
-  echo '<article class="'.$folder_class.' '.$file_class.$size_1m.$size_10m.$size_100m.$size_1g.$size_g1g.'"><div class="one-half"><a href="'.substr(dirname($pwd), $bgn).'/" title="../">../</a></div><div class="one-fourth autohide">_</div><div class="one-fourth last autohide">_</div></article><hr class="clear"/>'."\n";
+  echo '<article class="'.$folder_class.' '.$file_class.$size_1m.$size_10m.$size_100m.$size_1g.$size_g1g.'"><div class="one-half"><a href="'.substr(dirname($pwd), $bgn).'/" title="../">../</a></div><div class="one-fourth autohide">_</div><div class="one-fourth last autohide">_</div></article>'."\n";
 }
-foreach($dirhtml as $name=>$value) {
-  echo $value."\n";
-}
-foreach($filehtml as $name=>$value) {
+foreach($html as $name=>$value) {
   echo $value."\n";
 }
 ?>

@@ -28,7 +28,7 @@ foreach ($it as $file){
       $fileName = iconv("GBK", "UTF-8//TRANSLIT", $fileNameGBK);
     }
     $pathName = $file->getPathname().'/';
-    $dirhtml[$fileNameSrc] = '<a href="'.substr($pathName, $bgn).'" title="'.$fileNameSrc.'">'.$fileName.'</a>'.str_pad($date, $left_part - strlen($fileNameGBK),' ',STR_PAD_LEFT).str_pad($fileSize, $right_part, ' ', STR_PAD_LEFT);
+    $html['A'.$fileNameSrc] = '<a href="'.substr($pathName, $bgn).'" title="'.$fileNameSrc.'">'.$fileName.'</a>'.str_pad($date, $left_part - strlen($fileNameGBK),' ',STR_PAD_LEFT).str_pad($fileSize, $right_part, ' ', STR_PAD_LEFT);
   } elseif ($file->isFile()) {
     $fileSize = $file->getSize();
     if ($fileSize < 0)
@@ -48,18 +48,16 @@ foreach ($it as $file){
       $fileName = iconv("GBK", "UTF-8//TRANSLIT", $fileNameGBK);
     }
     $pathName = $file->getPathname();
-    $filehtml[$fileNameSrc] = '<a href="'.substr($pathName, $bgn).'" title="'.$fileNameSrc.'">'.$fileName.'</a>'.str_pad($date, $left_part - strlen($fileNameGBK),' ',STR_PAD_LEFT).str_pad($fileSize, $right_part, ' ', STR_PAD_LEFT);
+    $html['B'.$fileNameSrc] = '<a href="'.substr($pathName, $bgn).'" title="'.$fileNameSrc.'">'.$fileName.'</a>'.str_pad($date, $left_part - strlen($fileNameGBK),' ',STR_PAD_LEFT).str_pad($fileSize, $right_part, ' ', STR_PAD_LEFT);
   }
 }
-ksort($dirhtml);
-ksort($filehtml);
+if (!empty($html)) {
+  ksort($html);
+}
 if (strlen($pwd) - $bgn > 1) {
   echo '<a href="'.substr(dirname($pwd), $bgn).'/" title="../">../</a>'.str_pad(' ', $left_part - 3, ' ', STR_PAD_LEFT).str_pad('_', $right_part, ' ', STR_PAD_LEFT)."\n";
 }
-foreach($dirhtml as $name=>$value) {
-  echo $value."\n";
-}
-foreach($filehtml as $name=>$value) {
+foreach($html as $name=>$value) {
   echo $value."\n";
 }
 ?></pre><hr>

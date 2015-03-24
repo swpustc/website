@@ -5013,10 +5013,7 @@ background-color: rgba(49, 152, 48, 0.4);
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
 }
-.autoindex hr {
-  padding: 0;
-}
-.autoindex hr, #portfolio-items.autoindex article {
+#portfolio-items.autoindex article {
   margin: 0;
   border: 0;
 }
@@ -5084,7 +5081,7 @@ background-color: rgba(49, 152, 48, 0.4);
   border-top: none;
 }
 #portfolio-items.autoindex article {
-  padding: .25em 0;
+  padding: 3px 0;
   border-top-width: 1px;
   border-top-style: solid;
 }

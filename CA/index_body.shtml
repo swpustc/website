@@ -1,10 +1,10 @@
 <div class="content-wrapper clearfix">
   <h1 class="content-title">swpustc CA - Certificate Authority Download</h1>
   <div class="one-half">
-    <h4>cer document: <a href="/rootcert.cer">Download</a></h4>
+    <h4>cer document: <a href="//cdn.swpbox.info/CA/rootcert.cer">Download</a></h4>
   </div><!--/ .one-half-->
   <div class="one-half last">
-    <h4>crt document: <a href="/rootcert.crt">Download</a></h4>
+    <h4>crt document: <a href="//cdn.swpbox.info/CA/rootcert.crt">Download</a></h4>
   </div><!--/ .one-half.last-->
   <hr class="clear"/>
   <div class="one-half">

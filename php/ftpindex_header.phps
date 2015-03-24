@@ -16,7 +16,7 @@ foreach ($it as $file){
     $fileSize = '_';
     $fileName = $file->getFilename().'/';
     $pathName = $file->getPathname().'/';
-    $dirhtml[$fileName] = '<article class="'.$folder_class.'"><div class="one-half"><a href="'.substr($pathName, $bgn).'" title="'.$fileName.'">'.$fileName.'</a></div><div class="one-fourth autohide">'.$date.'</div><div class="one-fourth last autohide">_</div></article><hr class="clear"/>';
+    $html['A'.$fileName] = '<article class="'.$folder_class.'"><div class="one-half"><a href="'.substr($pathName, $bgn).'" title="'.$fileName.'">'.$fileName.'</a></div><div class="one-fourth autohide">'.$date.'</div><div class="one-fourth last autohide">_</div></article>';
   } elseif ($file->isFile()) {
     $fileSize = $file->getSize();
     if ($fileSize < 0)
@@ -41,11 +41,12 @@ foreach ($it as $file){
       $fileSize  = round($fileSize / 1024 / 1024 / 1024, 2).'G';
     $fileName = $file->getFilename();
     $pathName = $file->getPathname();
-    $filehtml[$fileName] = '<article class="'.$file_class_current.'"><div class="one-half"><a href="'.substr($pathName, $bgn).'" title="'.$fileName.'">'.$fileName.'</a></div><div class="one-fourth autohide">'.$date.'</div><div class="one-fourth last autohide">'.$fileSize.'</div></article><hr class="clear"/>';
+    $html['B'.$fileName] = '<article class="'.$file_class_current.'"><div class="one-half"><a href="'.substr($pathName, $bgn).'" title="'.$fileName.'">'.$fileName.'</a></div><div class="one-fourth autohide">'.$date.'</div><div class="one-fourth last autohide">'.$fileSize.'</div></article>';
   }
 }
-ksort($dirhtml);
-ksort($filehtml);
+if (!empty($html)) {
+  ksort($html);
+}
 function isChildDocument($thispath) {
   if(strncmp($_SERVER['SCRIPT_NAME'],$thispath,strlen($thispath))==0)
     echo " class=\"current\"";

@@ -82,8 +82,8 @@
                 <li><!--CURRENT:DOWNLOAD--><a href="//download.swpbox.info/ftp/" target="_blank">Download</a></li>
                 <li><!--CURRENT:CA--><a href="//CA.swpbox.info/">swpustc CA</a>
                   <ul>
-                    <li><!--CURRENT:CA:/rootcert.cer--><a href="//CA.swpbox.info/rootcert.cer">cer document</a></li>
-                    <li><!--CURRENT:CA:/rootcert.crt--><a href="//CA.swpbox.info/rootcert.crt">crt document</a></li>
+                    <li><!--CURRENT:CA:/rootcert.cer--><a href="//cdn.swpbox.info/CA/rootcert.cer">cer document</a></li>
+                    <li><!--CURRENT:CA:/rootcert.crt--><a href="//cdn.swpbox.info/CA/rootcert.crt">crt document</a></li>
                   </ul>
                 </li>
               </ul>
