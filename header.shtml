@@ -41,8 +41,8 @@
           <ul>
             <li><!--CURRENT:HOME--><a href="//swpbox.info/">Home</a>
               <ul>
-                <li><!--CURRENT:HOME-IPV4--><a href="//ipv4.swpbox.info/">IPv4 Only</a></li>
-                <li><!--CURRENT:HOME-IPV6--><a href="//ipv6.swpbox.info/">IPv6 Only</a></li>
+                <li><!--CURRENT:HOME-IPV4--><a href="//4.swpbox.info/">IPv4 Only</a></li>
+                <li><!--CURRENT:HOME-IPV6--><a href="//6.swpbox.info/">IPv6 Only</a></li>
                 <li><!--CURRENT:RESUME--><a href="//resume.swpbox.info/">Resume</a></li>
                 <li><!--CURRENT:SETTING--><a href="//swpbox.info/setting.html">setting.html</a></li>
                 <li><!--CURRENT:ERRPAGE--><a href="http://swpbox.info:56080/">ErrorPage</a>
