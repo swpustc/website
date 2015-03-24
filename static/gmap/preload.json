@@ -1,8 +1,8 @@
 {
-  "image"        : "//maps.google.com/mapfiles/marker.png",
-  "image_orange" : "//maps.google.com/mapfiles/marker_orange.png",
-  "image_green"  : "//maps.google.com/mapfiles/marker_green.png",
-  "image_grey"   : "//maps.google.com/mapfiles/marker_grey.png",
+  "image"        : "//proxy.swpbox.info/maps.google.com/mapfiles/marker.png",
+  "image_orange" : "//proxy.swpbox.info/maps.google.com/mapfiles/marker_orange.png",
+  "image_green"  : "//proxy.swpbox.info/maps.google.com/mapfiles/marker_green.png",
+  "image_grey"   : "//proxy.swpbox.info/maps.google.com/mapfiles/marker_grey.png",
 
   "json-marker"       : "/gmap/marker_nl_nl.json?t=TIMESTAMP:BEGIN:gmap/marker_nl_nl.json:END:TIMESTAMP",
   "json-marker-dn-dn" : "/gmap/marker_dn_dn.json?t=TIMESTAMP:BEGIN:gmap/marker_dn_dn.json:END:TIMESTAMP",

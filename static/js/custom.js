@@ -65,7 +65,7 @@ WebFontConfig = {
 };
 ( function() {
     var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//ajax.lug.ustc.edu.cn/ajax/libs/webfont/1/webfont.js';
+    wf.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//proxy.swpbox.info/ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
     wf.type = 'text/javascript';
     wf.async = 'true';
     var s = document.getElementsByTagName('body')[0];
