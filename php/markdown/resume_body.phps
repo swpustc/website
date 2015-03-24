@@ -9,8 +9,11 @@
         lang-en_us_title="<?php echo $file_enus_down_title; ?>"
         lang-zh_cn_title="<?php echo $file_zhcn_down_title; ?>"
         lang-zh_tw_title="<?php echo $file_zhtw_down_title; ?>"
-        id="resume-lang">Source <?php echo $name; ?></a>
+        id="resume-lang"
+        class="index-title"
+        >Source <?php echo $name; ?></a>
     </h1>
+    <br class="index-title"/>
     <ul id="portfolio-filter" class="resume-lang">
       <li>Language:</li>
       <li><a id="lang-en_us" data-categories="lang-en_us">English</a></li>

@@ -1,17 +1,19 @@
 <div class="content-wrapper clearfix">
   <header class="page-header clearfix">
-    <a href="<?php
-      $return = dirname($_SERVER['SCRIPT_NAME']);
-      if (strlen($return) > 1)
-        echo $return;
-      ?>/" class="return" title="Return"></a>
     <h1>
+      <a href="<?php
+        $return = dirname($_SERVER['SCRIPT_NAME']);
+        if (strlen($return) > 1)
+          echo $return;
+        ?>/" class="return" title="Return"></a>
       <a href="<?php echo $_SERVER['SCRIPT_NAME']; ?>?src=1"
         title="View Source: <?php echo $name; ?>"
+        class="index-title"
         >Source <?php echo $name; ?></a>
     </h1>
+    <br class="index-title"/>
     <ul id="portfolio-filter" class="code-prettify">
-      <li style="display: block!important;">
+      <li class="first-block">
         <ul class="code-light">
           <li>Code Prettify:</li>
           <li><a id="code-google" data-categories="data-google">Google</a></li>

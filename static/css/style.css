@@ -2026,6 +2026,11 @@ ul.related span.categories {color: #50554e; font-style: italic;}
         margin: 0;
     }
 
+    #portfolio-filter li:first-child.first-block {
+        display: block !important;
+        margin: 0;
+    }
+
         #portfolio-filter a {
             display: block;
             margin: 0 0 0 5px;
@@ -5007,6 +5012,20 @@ background-color: rgba(49, 152, 48, 0.4);
 }
 
 
+.index-title {
+  display: inline;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+br.index-title {
+  display: block;
+}
+@media only screen and (max-width: 767px) {
+  br.index-title {
+    display: none;
+  }
+}
 .autoindex-title, #portfolio-items.autoindex article div.one-half {
   white-space: nowrap;
   overflow: hidden;

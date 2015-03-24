@@ -2,7 +2,7 @@
   <header class="page-header clearfix">
     <h1>Wrapper Setting</h1>
     <ul id="portfolio-filter" class="code-prettify">
-      <li style="display: block!important;">
+      <li class="first-block">
         <ul class="code-light">
           <li>Code Prettify:</li>
           <li><a id="code-google" data-categories="data-google">Google</a></li>

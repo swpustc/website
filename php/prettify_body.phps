@@ -1,17 +1,19 @@
 <div class="content-wrapper clearfix">
   <header class="page-header clearfix">
-    <a href="<?php
-      $return = dirname($_SERVER['SCRIPT_NAME']);
-      if (strlen($return) > 1)
-        echo $return;
-      ?>/" class="return" title="Return"></a>
     <h1>
+      <a href="<?php
+        $return = dirname($_SERVER['SCRIPT_NAME']);
+        if (strlen($return) > 1)
+          echo $return;
+        ?>/" class="return" title="Return"></a>
       <a href="//download.swpbox.info/ftp<?php echo $_SERVER['SCRIPT_NAME']; ?>"
         title="Download <?php echo $name; ?>"
+        class="index-title"
         >Download <?php echo $name; ?></a>
     </h1>
+    <br class="index-title"/>
     <ul id="portfolio-filter" class="code-prettify">
-      <li style="display: block!important;">
+      <li class="first-block">
         <ul class="code-light">
           <li>Code Prettify:</li>
           <li><a id="code-google" data-categories="data-google">Google</a></li>
