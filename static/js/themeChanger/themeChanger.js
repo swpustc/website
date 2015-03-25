@@ -1,118 +1,119 @@
-/* Page config --> Begin */
-var page_config = {
-    layout : {
-        0 : {
-            name : 'layout',
-            title : 'liquid',
-            className : 'liquid'
+$( function() {
+
+    /* Page config --> Begin */
+    var page_config = {
+        layout : {
+            0 : {
+                name : 'layout',
+                title : 'liquid',
+                className : 'liquid'
+            },
+            1 : {
+                name : 'layout',
+                title : 'fixed',
+                className : 'fixed'
+            }
         },
-        1 : {
-            name : 'layout',
-            title : 'fixed',
-            className : 'fixed'
-        }
-    },
-    skin : {
-        0 : {
-            name : 'skin',
-            title : 'light',
-            className : 'light'
+        skin : {
+            0 : {
+                name : 'skin',
+                title : 'light',
+                className : 'light'
+            },
+            1 : {
+                name : 'skin',
+                title : 'dark',
+                className : 'dark'
+            }
         },
-        1 : {
-            name : 'skin',
-            title : 'dark',
-            className : 'dark'
-        }
-    },
-    patterns_liquid : {
-        0 : {
-            name : 'Pattern 1',
-            className : 'l-pattern-1'
+        patterns_liquid : {
+            0 : {
+                name : 'Pattern 1',
+                className : 'l-pattern-1'
+            },
+            1 : {
+                name : 'Pattern 2',
+                className : 'l-pattern-2'
+            },
+            2 : {
+                name : 'Pattern 3',
+                className : 'l-pattern-3'
+            },
+            3 : {
+                name : 'Pattern 4',
+                className : 'l-pattern-4'
+            },
+            4 : {
+                name : 'Pattern 5',
+                className : 'l-pattern-5'
+            },
+            5 : {
+                name : 'Pattern 6',
+                className : 'l-pattern-6'
+            },
+            6 : {
+                name : 'Pattern 7',
+                className : 'l-pattern-7'
+            },
+            7 : {
+                name : 'Pattern 8',
+                className : 'l-pattern-8'
+            }
         },
-        1 : {
-            name : 'Pattern 2',
-            className : 'l-pattern-2'
-        },
-        2 : {
-            name : 'Pattern 3',
-            className : 'l-pattern-3'
-        },
-        3 : {
-            name : 'Pattern 4',
-            className : 'l-pattern-4'
-        },
-        4 : {
-            name : 'Pattern 5',
-            className : 'l-pattern-5'
-        },
-        5 : {
-            name : 'Pattern 6',
-            className : 'l-pattern-6'
-        },
-        6 : {
-            name : 'Pattern 7',
-            className : 'l-pattern-7'
-        },
-        7 : {
-            name : 'Pattern 8',
-            className : 'l-pattern-8'
-        }
-    },
-    patterns_fixed : {
-        0 : {
-            name : 'Pattern 1',
-            className : 'f-pattern-1'
-        },
-        1 : {
-            name : 'Pattern 2',
-            className : 'f-pattern-2'
-        },
-        2 : {
-            name : 'Pattern 3',
-            className : 'f-pattern-3'
-        },
-        3 : {
-            name : 'Pattern 4',
-            className : 'f-pattern-4'
-        },
-        4 : {
-            name : 'Pattern 5',
-            className : 'f-pattern-5'
-        },
-        5 : {
-            name : 'Pattern 6',
-            className : 'f-pattern-6'
-        },
-        6 : {
-            name : 'Pattern 7',
-            className : 'f-pattern-7'
-        },
-        7 : {
-            name : 'Pattern 8',
-            className : 'f-pattern-8'
-        },
-        8 : {
-            name : 'Pattern 9',
-            className : 'f-pattern-9'
-        },
-        9 : {
-            name : 'Pattern 10',
-            className : 'f-pattern-10'
-        },
-        10 : {
-            name : 'Pattern 11',
-            className : 'f-pattern-11'
-        },
-        11 : {
-            name : 'Pattern 12',
-            className : 'f-pattern-12'
+        patterns_fixed : {
+            0 : {
+                name : 'Pattern 1',
+                className : 'f-pattern-1'
+            },
+            1 : {
+                name : 'Pattern 2',
+                className : 'f-pattern-2'
+            },
+            2 : {
+                name : 'Pattern 3',
+                className : 'f-pattern-3'
+            },
+            3 : {
+                name : 'Pattern 4',
+                className : 'f-pattern-4'
+            },
+            4 : {
+                name : 'Pattern 5',
+                className : 'f-pattern-5'
+            },
+            5 : {
+                name : 'Pattern 6',
+                className : 'f-pattern-6'
+            },
+            6 : {
+                name : 'Pattern 7',
+                className : 'f-pattern-7'
+            },
+            7 : {
+                name : 'Pattern 8',
+                className : 'f-pattern-8'
+            },
+            8 : {
+                name : 'Pattern 9',
+                className : 'f-pattern-9'
+            },
+            9 : {
+                name : 'Pattern 10',
+                className : 'f-pattern-10'
+            },
+            10 : {
+                name : 'Pattern 11',
+                className : 'f-pattern-11'
+            },
+            11 : {
+                name : 'Pattern 12',
+                className : 'f-pattern-12'
+            }
         }
     }
-}
 
-/* Page config --> End */
+    /* Page config --> End */
 
-$( function() {
 
     /* ------------------------------------------------------------------- */
     /*  Prettify, Resume & preventDefault

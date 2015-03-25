@@ -1,3 +1,1 @@
-<script src="/js/custom.min.js?t=TIMESTAMP:BEGIN:js/custom.min.js:END:TIMESTAMP"></script>
-<script src="/js/themeChanger/colorpicker.min.js?t=TIMESTAMP:BEGIN:js/themeChanger/colorpicker.min.js:END:TIMESTAMP"></script>
-<script src="/js/themeChanger/themeChanger.min.js?t=TIMESTAMP:BEGIN:js/themeChanger/themeChanger.min.js:END:TIMESTAMP"></script>
+<script src="/js/custom.themeChanger.min.js?t=TIMESTAMP:BEGIN:js/custom.themeChanger.min.js:END:TIMESTAMP"></script>

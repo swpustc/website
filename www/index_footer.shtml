@@ -2,6 +2,4 @@
 <script src="//cdn.swpbox.info/js/jquery.touchSwipe-1.2.5.min.js"></script>
 <script src="//cdn.swpbox.info/js/jquery.jcarousel.min.js"></script>
 <script src="//cdn.swpbox.info/js/jquery.cycle.all.min.js"></script>
-<script src="//cdn.swpbox.info/js/custom.min.js"></script>
-<script src="//cdn.swpbox.info/js/themeChanger/colorpicker.min.js"></script>
-<script src="//cdn.swpbox.info/js/themeChanger/themeChanger.min.js"></script>
+<script src="//cdn.swpbox.info/js/custom.themeChanger.min.js"></script>
