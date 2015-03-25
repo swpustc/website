@@ -110,6 +110,6 @@
 如果当前用户无管理员权限，将不能重启`nginx`进程，不能切换到`git`用户。
 
 	# crontab
-	#   0 4  *   *   *     cd /home/swp/project/website/ && make upgrade >/var/log/website.log 2>&1 && mail -s "website Upgrade Log" swp543210@126.com</var/log/website.log
+	#   0 4  *   *   *     cd /home/swp/project/website/ && make upgrade >/var/log/website.log 2>&1 || mail -s "website Upgrade Log" swp543210@126.com</var/log/website.log
 	crontab -e                     # Add this line at the end
 	sudo crontab -e                # If sudo need input password

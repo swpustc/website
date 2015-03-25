@@ -80,7 +80,10 @@ WebFontConfig = {
 
 jQuery(document).ready( function() {
 
-    var nextFunction = function() {
+    var clickEvent    = 'click',
+        resizeEvent   = 'resize',
+
+        nextFunction = function() {
 
         /* ---------------------------------------------------------------------- */
         /*  Flex Slider
@@ -90,7 +93,7 @@ jQuery(document).ready( function() {
 
             if ($('#slider').length) {
                 $(window).load( function() {
-                    $('#slider img').css('visibility','visible').fadeIn();
+                    $('#slider img').css('visibility', 'visible').fadeIn();
                     $('#slider').flexslider({
                         directionNav: true
                     });
@@ -430,7 +433,7 @@ jQuery(document).ready( function() {
 
                 adjustPlayer();
 
-                $(window).on('resize', function() {
+                $(window).on(resizeEvent, function() {
 
                     var timer = window.setTimeout( function() {
                         window.clearTimeout( timer );
@@ -511,7 +514,7 @@ jQuery(document).ready( function() {
 
                 adjustPlayer();
 
-                $(window).on('resize', function() {
+                $(window).on(resizeEvent, function() {
 
                     var timer = window.setTimeout( function() {
                         window.clearTimeout( timer );
@@ -539,7 +542,7 @@ jQuery(document).ready( function() {
             if($target.hasClass('hide')) {
                 $tpanel.animate({
                     opacity: '0'
-                },200)
+                }, 200)
             }
 
             $tpanel.slideToggle(600, function() {
@@ -549,13 +552,13 @@ jQuery(document).ready( function() {
                     marker.animate({opacity : 0});
                     $(this).animate({
                         opacity:'1'
-                    },200);
+                    }, 200);
 
                 } else {
                     marker.animate({opacity : 1});
                     $(this).animate({
                         opacity:'0'
-                    },200);
+                    }, 200);
 
                 }
             });
@@ -577,7 +580,7 @@ jQuery(document).ready( function() {
                 if($target.hasClass('hide')) {
                     $panel.animate({
                         opacity: '0'
-                    },200)
+                    }, 200)
                 }
 
                 var $pos = $(window).scrollTop();
@@ -588,11 +591,11 @@ jQuery(document).ready( function() {
                     if($(this).css('display') == 'block') {
                         $(this).animate({
                             opacity:'1'
-                        },200);
+                        }, 200);
                     } else {
                         $(this).animate({
                             opacity:'0'
-                        },200);
+                        }, 200);
                     }
                 }
                 )
@@ -640,7 +643,7 @@ jQuery(document).ready( function() {
                 $trigger.css('width', fullWidth);
                 $container.css('width', fullWidth);
 
-                $trigger.on('click', function(e) {
+                $trigger.on(clickEvent, function(e) {
                     if( $(this).next().is(':hidden') ) {
                         $trigger.removeClass('active').next().slideUp(300);
                         $(this).toggleClass('active').next().slideDown(300);
@@ -649,7 +652,7 @@ jQuery(document).ready( function() {
                 });
 
                 // Resize
-                $(window).on('resize', function() {
+                $(window).on(resizeEvent, function() {
                     fullWidth = $container.outerWidth(true)
                     $trigger.css('width', $trigger.parent().width() );
                     $container.css('width', $container.parent().width() );
@@ -696,7 +699,7 @@ jQuery(document).ready( function() {
                         if(response.is_errors){
 
                             $response.find('blockquote').removeClass().addClass("error");
-                            $.each(response.info,function(input_name, input_label) {
+                            $.each(response.info, function(input_name, input_label) {
 
                                 $("[name="+input_name+"]").addClass("wrong-data");
                                 $response.find('blockquote').append('Please enter correctly "'+input_label+'"!'+ '</br>');
@@ -759,7 +762,7 @@ jQuery(document).ready( function() {
                     $tabsNavLis.first().addClass('active').show();
                     $tabContent.first().show();
 
-                    $obj.find('ul.tabs-nav li').on('click', function(e) {
+                    $obj.find('ul.tabs-nav li').on(clickEvent, function(e) {
                         var $this = $(this);
 
                         $obj.find('ul.tabs-nav li').removeClass('active');
@@ -891,22 +894,28 @@ jQuery(document).ready( function() {
                 })()
             }
             // resize box when all images are fully loaded
-            $(window).load( function() {
-                if($('.single-image').length || $('a.video').length) {
-                    $('.single-image, .video').each( function() {
-                        var $this = $(this),
-                            $img = $this.find('.curtain').siblings('img');
-                        // makesure here is only one image
-                        if ($img.length == 1) {
-                            $this.width($img.outerWidth());
-                        }
-                    });
-                }
-            });
+            if($('.single-image').length || $('a.video').length) {
+                $('.single-image, .video').each( function() {
+                    var $this = $(this),
+                        $img = $this.find('.curtain').siblings('img');
+                    // makesure here is only one image
+                    if ($img.length == 1) {
+                        var resizeFun = function() {
+                                $this.width('100%');
+                                $this.width($img.outerWidth());
+                            },
+                            resizeLoad = function() {
+                                resizeFun();
+                                $(window).on(resizeEvent, resizeFun);
+                            };
+                        $img.load(resizeLoad);
+                    }
+                });
+            }
 
             if($('a.video').length) {
                 ( function() {
-                    $('a.video').on('click',function() {
+                    $('a.video').on(clickEvent, function() {
                         $.fancybox({
                             'type' : 'iframe',
                             'href' : this.href.replace(new RegExp('watch\\?v=', 'i'), 'embed/') + '&autoplay=1',
@@ -1109,11 +1118,11 @@ jQuery(document).ready( function() {
                         autoindexTitleWidth = newWidth;
                     }
                     $resizeTitleFun();
-                    $(window).load($resizeTitleFun).resize($resizeTitleFun);
+                    $(window).load($resizeTitleFun).on(resizeEvent, $resizeTitleFun);
                 }
 
                 // Filter projects
-                $itemsFilter.on('click', 'a', function(e) {
+                $itemsFilter.on(clickEvent, 'a', function(e) {
                     var $this         = $(this),
                         currentOption = $this.attr('data-categories');
 
@@ -1151,8 +1160,8 @@ jQuery(document).ready( function() {
                     if (deviceWidth < 768) return false;
 
                     mouseOver = setTimeout( function() {
-                        $this.find('li a').stop(true,true).slideShow(300);
-                        $autoindexTitle.stop(true,true).delay(100).animate({
+                        $this.find('li a').stop(true, true).slideShow(300);
+                        $autoindexTitle.stop(true, true).delay(100).animate({
                             width: $container.width() - 400
                         }, {
                             duration: 220,
@@ -1168,8 +1177,8 @@ jQuery(document).ready( function() {
                     if (deviceWidth < 768) return false;
 
                     mouseOver = setTimeout( function() {
-                        $this.find('li a').not('.active').stop(true,true).slideHide(150);
-                        $autoindexTitle.stop(true,true).delay(200).animate({
+                        $this.find('li a').not('.active').stop(true, true).slideHide(150);
+                        $autoindexTitle.stop(true, true).delay(200).animate({
                             width: autoindexTitleWidth
                         }, {
                             duration: 300,
@@ -1236,7 +1245,7 @@ jQuery(document).ready( function() {
                 });
 
                 // Resize
-                $(window).on('resize', function() {
+                $(window).on(resizeEvent, function() {
                     $slider.css('height', $slider.find('li:visible img').height());
                 });
 
@@ -1315,7 +1324,7 @@ jQuery(document).ready( function() {
                     });
                 };
                 $resizeFun();
-                $(window).load($resizeFun).resize($resizeFun);
+                $(window).load($resizeFun).on(resizeEvent, $resizeFun);
             }
         })();
 
