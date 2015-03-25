@@ -1,5 +1,5 @@
-@import url(themeChanger/colorpicker.min.css?t=TIMESTAMP:BEGIN:css/themeChanger/colorpicker.min.css:END:TIMESTAMP);
-@import url(themeChanger/themeChanger.min.css?t=TIMESTAMP:BEGIN:css/themeChanger/themeChanger.min.css:END:TIMESTAMP);
+@import url(themeChanger/colorpicker.min.css?h=HASH:B:css/themeChanger/colorpicker.min.css:E:HASH);
+@import url(themeChanger/themeChanger.min.css?h=HASH:B:css/themeChanger/themeChanger.min.css:E:HASH);
 
 /* ----------------------
 Stylesheet Guide
@@ -167,53 +167,53 @@ body.fixed {background-repeat: repeat;}
 
 /* Body Liquid  --> Begin */
 
-body.liquid.light.l-pattern-1 {background-image: url(../images/bgs/l-bg-1.png?t=TIMESTAMP:BEGIN:images/bgs/l-bg-1.png:END:TIMESTAMP);}
-body.liquid.light.l-pattern-2 {background-image: url(../images/bgs/l-bg-2.png?t=TIMESTAMP:BEGIN:images/bgs/l-bg-2.png:END:TIMESTAMP);}
-body.liquid.light.l-pattern-3 {background-image: url(../images/bgs/l-bg-3.png?t=TIMESTAMP:BEGIN:images/bgs/l-bg-3.png:END:TIMESTAMP);}
-body.liquid.light.l-pattern-4 {background-image: url(../images/bgs/l-bg-4.png?t=TIMESTAMP:BEGIN:images/bgs/l-bg-4.png:END:TIMESTAMP);}
-body.liquid.light.l-pattern-5 {background-image: url(../images/bgs/l-bg-5.png?t=TIMESTAMP:BEGIN:images/bgs/l-bg-5.png:END:TIMESTAMP);}
-body.liquid.light.l-pattern-6 {background-image: url(../images/bgs/l-bg-6.png?t=TIMESTAMP:BEGIN:images/bgs/l-bg-6.png:END:TIMESTAMP);}
-body.liquid.light.l-pattern-7 {background-image: url(../images/bgs/l-bg-7.png?t=TIMESTAMP:BEGIN:images/bgs/l-bg-7.png:END:TIMESTAMP);}
-body.liquid.light.l-pattern-8 {background-image: url(../images/bgs/l-bg-8.png?t=TIMESTAMP:BEGIN:images/bgs/l-bg-8.png:END:TIMESTAMP);}
+body.liquid.light.l-pattern-1 {background-image: url(../images/bgs/l-bg-1.png?h=HASH:B:images/bgs/l-bg-1.png:E:HASH);}
+body.liquid.light.l-pattern-2 {background-image: url(../images/bgs/l-bg-2.png?h=HASH:B:images/bgs/l-bg-2.png:E:HASH);}
+body.liquid.light.l-pattern-3 {background-image: url(../images/bgs/l-bg-3.png?h=HASH:B:images/bgs/l-bg-3.png:E:HASH);}
+body.liquid.light.l-pattern-4 {background-image: url(../images/bgs/l-bg-4.png?h=HASH:B:images/bgs/l-bg-4.png:E:HASH);}
+body.liquid.light.l-pattern-5 {background-image: url(../images/bgs/l-bg-5.png?h=HASH:B:images/bgs/l-bg-5.png:E:HASH);}
+body.liquid.light.l-pattern-6 {background-image: url(../images/bgs/l-bg-6.png?h=HASH:B:images/bgs/l-bg-6.png:E:HASH);}
+body.liquid.light.l-pattern-7 {background-image: url(../images/bgs/l-bg-7.png?h=HASH:B:images/bgs/l-bg-7.png:E:HASH);}
+body.liquid.light.l-pattern-8 {background-image: url(../images/bgs/l-bg-8.png?h=HASH:B:images/bgs/l-bg-8.png:E:HASH);}
 
-body.liquid.dark.l-pattern-1 {background-image: url(../images/bgs/ld-bg-1.png?t=TIMESTAMP:BEGIN:images/bgs/ld-bg-1.png:END:TIMESTAMP);}
-body.liquid.dark.l-pattern-2 {background-image: url(../images/bgs/ld-bg-2.png?t=TIMESTAMP:BEGIN:images/bgs/ld-bg-2.png:END:TIMESTAMP);}
-body.liquid.dark.l-pattern-3 {background-image: url(../images/bgs/ld-bg-3.png?t=TIMESTAMP:BEGIN:images/bgs/ld-bg-3.png:END:TIMESTAMP);}
-body.liquid.dark.l-pattern-4 {background-image: url(../images/bgs/ld-bg-4.png?t=TIMESTAMP:BEGIN:images/bgs/ld-bg-4.png:END:TIMESTAMP);}
-body.liquid.dark.l-pattern-5 {background-image: url(../images/bgs/ld-bg-5.png?t=TIMESTAMP:BEGIN:images/bgs/ld-bg-5.png:END:TIMESTAMP);}
-body.liquid.dark.l-pattern-6 {background-image: url(../images/bgs/ld-bg-6.png?t=TIMESTAMP:BEGIN:images/bgs/ld-bg-6.png:END:TIMESTAMP);}
-body.liquid.dark.l-pattern-7 {background-image: url(../images/bgs/ld-bg-7.png?t=TIMESTAMP:BEGIN:images/bgs/ld-bg-7.png:END:TIMESTAMP);}
-body.liquid.dark.l-pattern-8 {background-image: url(../images/bgs/ld-bg-8.png?t=TIMESTAMP:BEGIN:images/bgs/ld-bg-8.png:END:TIMESTAMP);}
+body.liquid.dark.l-pattern-1 {background-image: url(../images/bgs/ld-bg-1.png?h=HASH:B:images/bgs/ld-bg-1.png:E:HASH);}
+body.liquid.dark.l-pattern-2 {background-image: url(../images/bgs/ld-bg-2.png?h=HASH:B:images/bgs/ld-bg-2.png:E:HASH);}
+body.liquid.dark.l-pattern-3 {background-image: url(../images/bgs/ld-bg-3.png?h=HASH:B:images/bgs/ld-bg-3.png:E:HASH);}
+body.liquid.dark.l-pattern-4 {background-image: url(../images/bgs/ld-bg-4.png?h=HASH:B:images/bgs/ld-bg-4.png:E:HASH);}
+body.liquid.dark.l-pattern-5 {background-image: url(../images/bgs/ld-bg-5.png?h=HASH:B:images/bgs/ld-bg-5.png:E:HASH);}
+body.liquid.dark.l-pattern-6 {background-image: url(../images/bgs/ld-bg-6.png?h=HASH:B:images/bgs/ld-bg-6.png:E:HASH);}
+body.liquid.dark.l-pattern-7 {background-image: url(../images/bgs/ld-bg-7.png?h=HASH:B:images/bgs/ld-bg-7.png:E:HASH);}
+body.liquid.dark.l-pattern-8 {background-image: url(../images/bgs/ld-bg-8.png?h=HASH:B:images/bgs/ld-bg-8.png:E:HASH);}
 
 /* Body Liquid  --> End */
 
 /* Body Pattern  --> Begin */
 
-body.fixed.light.f-pattern-1 {background-image: url(../images/bgs/f-bg-1.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-1.png:END:TIMESTAMP);}
-body.fixed.light.f-pattern-2 {background-image: url(../images/bgs/f-bg-2.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-2.png:END:TIMESTAMP);}
-body.fixed.light.f-pattern-3 {background-image: url(../images/bgs/f-bg-3.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-3.png:END:TIMESTAMP);}
-body.fixed.light.f-pattern-4 {background-image: url(../images/bgs/f-bg-4.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-4.png:END:TIMESTAMP);}
-body.fixed.light.f-pattern-5 {background-image: url(../images/bgs/f-bg-5.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-5.png:END:TIMESTAMP);}
-body.fixed.light.f-pattern-6 {background-image: url(../images/bgs/f-bg-6.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-6.png:END:TIMESTAMP);}
-body.fixed.light.f-pattern-7 {background-image: url(../images/bgs/f-bg-7.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-7.png:END:TIMESTAMP);}
-body.fixed.light.f-pattern-8 {background-image: url(../images/bgs/f-bg-8.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-8.png:END:TIMESTAMP);}
-body.fixed.light.f-pattern-9 {background-image: url(../images/bgs/f-bg-9.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-9.png:END:TIMESTAMP);}
-body.fixed.light.f-pattern-10 {background-image: url(../images/bgs/f-bg-10.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-10.png:END:TIMESTAMP);}
-body.fixed.light.f-pattern-11 {background-image: url(../images/bgs/f-bg-11.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-11.png:END:TIMESTAMP);}
-body.fixed.light.f-pattern-12 {background-image: url(../images/bgs/f-bg-12.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-12.png:END:TIMESTAMP);}
+body.fixed.light.f-pattern-1 {background-image: url(../images/bgs/f-bg-1.png?h=HASH:B:images/bgs/f-bg-1.png:E:HASH);}
+body.fixed.light.f-pattern-2 {background-image: url(../images/bgs/f-bg-2.png?h=HASH:B:images/bgs/f-bg-2.png:E:HASH);}
+body.fixed.light.f-pattern-3 {background-image: url(../images/bgs/f-bg-3.png?h=HASH:B:images/bgs/f-bg-3.png:E:HASH);}
+body.fixed.light.f-pattern-4 {background-image: url(../images/bgs/f-bg-4.png?h=HASH:B:images/bgs/f-bg-4.png:E:HASH);}
+body.fixed.light.f-pattern-5 {background-image: url(../images/bgs/f-bg-5.png?h=HASH:B:images/bgs/f-bg-5.png:E:HASH);}
+body.fixed.light.f-pattern-6 {background-image: url(../images/bgs/f-bg-6.png?h=HASH:B:images/bgs/f-bg-6.png:E:HASH);}
+body.fixed.light.f-pattern-7 {background-image: url(../images/bgs/f-bg-7.png?h=HASH:B:images/bgs/f-bg-7.png:E:HASH);}
+body.fixed.light.f-pattern-8 {background-image: url(../images/bgs/f-bg-8.png?h=HASH:B:images/bgs/f-bg-8.png:E:HASH);}
+body.fixed.light.f-pattern-9 {background-image: url(../images/bgs/f-bg-9.png?h=HASH:B:images/bgs/f-bg-9.png:E:HASH);}
+body.fixed.light.f-pattern-10 {background-image: url(../images/bgs/f-bg-10.png?h=HASH:B:images/bgs/f-bg-10.png:E:HASH);}
+body.fixed.light.f-pattern-11 {background-image: url(../images/bgs/f-bg-11.png?h=HASH:B:images/bgs/f-bg-11.png:E:HASH);}
+body.fixed.light.f-pattern-12 {background-image: url(../images/bgs/f-bg-12.png?h=HASH:B:images/bgs/f-bg-12.png:E:HASH);}
 
-body.fixed.dark.f-pattern-1 {background-image: url(../images/bgs/fd-bg-1.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-1.png:END:TIMESTAMP);}
-body.fixed.dark.f-pattern-2 {background-image: url(../images/bgs/fd-bg-2.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-2.png:END:TIMESTAMP);}
-body.fixed.dark.f-pattern-3 {background-image: url(../images/bgs/fd-bg-3.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-3.png:END:TIMESTAMP);}
-body.fixed.dark.f-pattern-4 {background-image: url(../images/bgs/fd-bg-4.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-4.png:END:TIMESTAMP);}
-body.fixed.dark.f-pattern-5 {background-image: url(../images/bgs/fd-bg-5.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-5.png:END:TIMESTAMP);}
-body.fixed.dark.f-pattern-6 {background-image: url(../images/bgs/fd-bg-6.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-6.png:END:TIMESTAMP);}
-body.fixed.dark.f-pattern-7 {background-image: url(../images/bgs/fd-bg-7.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-7.png:END:TIMESTAMP);}
-body.fixed.dark.f-pattern-8 {background-image: url(../images/bgs/fd-bg-8.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-8.png:END:TIMESTAMP);}
-body.fixed.dark.f-pattern-9 {background-image: url(../images/bgs/fd-bg-9.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-9.png:END:TIMESTAMP);}
-body.fixed.dark.f-pattern-10 {background-image: url(../images/bgs/fd-bg-10.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-10.png:END:TIMESTAMP);}
-body.fixed.dark.f-pattern-11 {background-image: url(../images/bgs/fd-bg-11.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-11.png:END:TIMESTAMP);}
-body.fixed.dark.f-pattern-12 {background-image: url(../images/bgs/fd-bg-12.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-12.png:END:TIMESTAMP);}
+body.fixed.dark.f-pattern-1 {background-image: url(../images/bgs/fd-bg-1.png?h=HASH:B:images/bgs/fd-bg-1.png:E:HASH);}
+body.fixed.dark.f-pattern-2 {background-image: url(../images/bgs/fd-bg-2.png?h=HASH:B:images/bgs/fd-bg-2.png:E:HASH);}
+body.fixed.dark.f-pattern-3 {background-image: url(../images/bgs/fd-bg-3.png?h=HASH:B:images/bgs/fd-bg-3.png:E:HASH);}
+body.fixed.dark.f-pattern-4 {background-image: url(../images/bgs/fd-bg-4.png?h=HASH:B:images/bgs/fd-bg-4.png:E:HASH);}
+body.fixed.dark.f-pattern-5 {background-image: url(../images/bgs/fd-bg-5.png?h=HASH:B:images/bgs/fd-bg-5.png:E:HASH);}
+body.fixed.dark.f-pattern-6 {background-image: url(../images/bgs/fd-bg-6.png?h=HASH:B:images/bgs/fd-bg-6.png:E:HASH);}
+body.fixed.dark.f-pattern-7 {background-image: url(../images/bgs/fd-bg-7.png?h=HASH:B:images/bgs/fd-bg-7.png:E:HASH);}
+body.fixed.dark.f-pattern-8 {background-image: url(../images/bgs/fd-bg-8.png?h=HASH:B:images/bgs/fd-bg-8.png:E:HASH);}
+body.fixed.dark.f-pattern-9 {background-image: url(../images/bgs/fd-bg-9.png?h=HASH:B:images/bgs/fd-bg-9.png:E:HASH);}
+body.fixed.dark.f-pattern-10 {background-image: url(../images/bgs/fd-bg-10.png?h=HASH:B:images/bgs/fd-bg-10.png:E:HASH);}
+body.fixed.dark.f-pattern-11 {background-image: url(../images/bgs/fd-bg-11.png?h=HASH:B:images/bgs/fd-bg-11.png:E:HASH);}
+body.fixed.dark.f-pattern-12 {background-image: url(../images/bgs/fd-bg-12.png?h=HASH:B:images/bgs/fd-bg-12.png:E:HASH);}
 
 /* Body Pattern  --> End */
 
@@ -340,7 +340,7 @@ blockquote {
             display: block;
             margin: 10px 0;
             padding: 10px 0 10px 44px;
-            background-image: url(../images/icons/warning.png?t=TIMESTAMP:BEGIN:images/icons/warning.png:END:TIMESTAMP);
+            background-image: url(../images/icons/warning.png?h=HASH:B:images/icons/warning.png:E:HASH);
             background-position: 0 50%;
             background-repeat: no-repeat;
             color: #1f221e;
@@ -402,7 +402,7 @@ blockquote {
         display: inline-block;
         margin-bottom: 1.5em;
         padding-right: 15px;
-        background: url(../images/arrowsclass.png?t=TIMESTAMP:BEGIN:images/arrowsclass.png:END:TIMESTAMP) no-repeat right -30px;
+        background: url(../images/arrowsclass.png?h=HASH:B:images/arrowsclass.png:E:HASH) no-repeat right -30px;
         color: #7e8a83;
         font-style: italic;
     }
@@ -461,12 +461,12 @@ blockquote {
     .not-ie .dark ul.feature-menu {background-color: rgba(235,238,235, .09);}
 
     .ie8 .light ul.feature-menu {
-        background-image: url(../images/bg-light-feature-menu.png?t=TIMESTAMP:BEGIN:images/bg-light-feature-menu.png:END:TIMESTAMP);
+        background-image: url(../images/bg-light-feature-menu.png?h=HASH:B:images/bg-light-feature-menu.png:E:HASH);
         background-repeat: repeat;
     }
 
     .ie8 .dark ul.feature-menu {
-        background-image: url(../images/bg-dark-feature-menu.png?t=TIMESTAMP:BEGIN:images/bg-dark-feature-menu.png:END:TIMESTAMP);
+        background-image: url(../images/bg-dark-feature-menu.png?h=HASH:B:images/bg-dark-feature-menu.png:E:HASH);
         background-repeat: repeat;
     }
 
@@ -479,7 +479,7 @@ blockquote {
 
                 ul.feature-menu a {
                     padding-left: 13px;
-                    background: url(../images/arrowsclass.png?t=TIMESTAMP:BEGIN:images/arrowsclass.png:END:TIMESTAMP) no-repeat left -32px;
+                    background: url(../images/arrowsclass.png?h=HASH:B:images/arrowsclass.png:E:HASH) no-repeat left -32px;
                 }
 
                     ul.feature-menu span {color: #888c87;}
@@ -505,7 +505,7 @@ blockquote {
         ul.type-6 li,
         ul.type-7 li,
         ul.type-8 li {
-            background: url(../images/arrowsclass.png?t=TIMESTAMP:BEGIN:images/arrowsclass.png:END:TIMESTAMP) no-repeat 0 0;
+            background: url(../images/arrowsclass.png?h=HASH:B:images/arrowsclass.png:E:HASH) no-repeat 0 0;
             padding-left: 13px;
         }
 
@@ -914,14 +914,14 @@ blockquote {
 .light #header-top #more:after,
 .light #header-top #more.less:after,
 .light #footer-bottom #footer-more:after,
-.light #footer-bottom #footer-more.less:after {background-image: url(../images/corner-but-light.png?t=TIMESTAMP:BEGIN:images/corner-but-light.png:END:TIMESTAMP);}
+.light #footer-bottom #footer-more.less:after {background-image: url(../images/corner-but-light.png?h=HASH:B:images/corner-but-light.png:E:HASH);}
 
 .dark #header-top #more,
 .dark #footer-bottom #footer-more,
 .dark #header-top #more:after,
 .dark #header-top #more.less:after,
 .dark #footer-bottom #footer-more:after,
-.dark #footer-bottom #footer-more.less:after {background-image: url(../images/corner-but-dark.png?t=TIMESTAMP:BEGIN:images/corner-but-dark.png:END:TIMESTAMP);}
+.dark #footer-bottom #footer-more.less:after {background-image: url(../images/corner-but-dark.png?h=HASH:B:images/corner-but-dark.png:E:HASH);}
 
 #header-top #more:after,
 #header-top #more.less:after {
@@ -965,10 +965,10 @@ ul.contact-info .phone,
 ul.contact-info .email {background-repeat: no-repeat;}
 
 .light ul.contact-info .phone,
-.light ul.contact-info .email {background-image: url(../images/icons/contact-icons-light.png?t=TIMESTAMP:BEGIN:images/icons/contact-icons-light.png:END:TIMESTAMP);}
+.light ul.contact-info .email {background-image: url(../images/icons/contact-icons-light.png?h=HASH:B:images/icons/contact-icons-light.png:E:HASH);}
 
 .dark ul.contact-info .phone,
-.dark ul.contact-info .email {background-image: url(../images/icons/contact-icons-dark.png?t=TIMESTAMP:BEGIN:images/icons/contact-icons-dark.png:END:TIMESTAMP);}
+.dark ul.contact-info .email {background-image: url(../images/icons/contact-icons-dark.png?h=HASH:B:images/icons/contact-icons-dark.png:E:HASH);}
 
 ul.contact-info .phone {background-position: 0 3px;}
 ul.contact-info .email {background-position: 0 -25px;}
@@ -997,7 +997,7 @@ ul.contact-info .email {background-position: 0 -25px;}
 
             .navigation > ul li span.downarrowclass,
             .navigation > ul li span.rightarrowclass {
-                    background-image: url(../images/arrowsclass.png?t=TIMESTAMP:BEGIN:images/arrowsclass.png:END:TIMESTAMP);
+                    background-image: url(../images/arrowsclass.png?h=HASH:B:images/arrowsclass.png:E:HASH);
                     background-repeat: no-repeat;
                 }
 
@@ -1082,7 +1082,7 @@ ul.contact-info .email {background-position: 0 -25px;}
                 .dark .navigation ul ul a {background-color: #313430; border-color: #252724;}
 
                 .navigation > ul ul li:hover > a {
-                    background-image: url(../images/arrow-top-left.png?t=TIMESTAMP:BEGIN:images/arrow-top-left.png:END:TIMESTAMP);
+                    background-image: url(../images/arrow-top-left.png?h=HASH:B:images/arrow-top-left.png:E:HASH);
                     background-repeat: no-repeat;
                     background-position: left top;
                 }
@@ -1149,7 +1149,7 @@ ul.contact-info .email {background-position: 0 -25px;}
         visibility: hidden;
         overflow: hidden;
         padding: 2px 10px;
-        background: #fff url(../images/arrow-left-bottom.png?t=TIMESTAMP:BEGIN:images/arrow-left-bottom.png:END:TIMESTAMP) no-repeat left bottom;
+        background: #fff url(../images/arrow-left-bottom.png?h=HASH:B:images/arrow-left-bottom.png:E:HASH) no-repeat left bottom;
         color: #121412;
         content: attr(data-tooltip);
         font-style: italic;
@@ -1166,7 +1166,7 @@ ul.contact-info .email {background-position: 0 -25px;}
     #header-top ul.social-links li:before,
     .meta ul.social-links li:before,
     .post-item ul.social-links li:before {
-        background: #fff url(../images/arrow-top-left.png?t=TIMESTAMP:BEGIN:images/arrow-top-left.png:END:TIMESTAMP) no-repeat left top;
+        background: #fff url(../images/arrow-top-left.png?h=HASH:B:images/arrow-top-left.png:E:HASH) no-repeat left top;
     }
 
     ul.social-links a {
@@ -1188,7 +1188,7 @@ ul.contact-info .email {background-position: 0 -25px;}
     .dark ul.social-links a {background-color: #bfc6c1;}
     .dark #footer ul.social-links a {background-color: #58605b;}
 
-    ul.social-links a {background-image: url(../images/icons/social-icons.png?t=TIMESTAMP:BEGIN:images/icons/social-icons.png:END:TIMESTAMP);}
+    ul.social-links a {background-image: url(../images/icons/social-icons.png?h=HASH:B:images/icons/social-icons.png:E:HASH);}
 
     #header-top ul.social-links li:before,
     .meta ul.social-links li:before,
@@ -1460,7 +1460,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 .quote-prev, .quote-next,
 .pagination a,
 .view-all {
-    background-image: url(../images/arrowsclass.png?t=TIMESTAMP:BEGIN:images/arrowsclass.png:END:TIMESTAMP);
+    background-image: url(../images/arrowsclass.png?h=HASH:B:images/arrowsclass.png:E:HASH);
     background-repeat:  no-repeat;
     cursor: pointer;
     font-style: italic;
@@ -1672,8 +1672,8 @@ ul.related span.categories {color: #50554e; font-style: italic;}
         background-repeat: no-repeat;
     }
 
-    .light .tab-content .entry-meta a {background-image: url(../images/icons/meta-icons-light.png?t=TIMESTAMP:BEGIN:images/icons/meta-icons-light.png:END:TIMESTAMP);}
-    .dark .tab-content .entry-meta a {background-image: url(../images/icons/meta-icons-dark.png?t=TIMESTAMP:BEGIN:images/icons/meta-icons-dark.png:END:TIMESTAMP);}
+    .light .tab-content .entry-meta a {background-image: url(../images/icons/meta-icons-light.png?h=HASH:B:images/icons/meta-icons-light.png:E:HASH);}
+    .dark .tab-content .entry-meta a {background-image: url(../images/icons/meta-icons-dark.png?h=HASH:B:images/icons/meta-icons-dark.png:E:HASH);}
 
     .tab-content .entry-meta .post-date {padding-right: 15px;}
     .tab-content .entry-meta .post-comments {background-position: 0 -30px;}
@@ -1704,7 +1704,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
     .light .post-type {background-color: #1f221e;}
     .dark .post-type {background-color: #58605B;}
 
-    .post-type {background-image: url(../images/icons/post-type-icons.png?t=TIMESTAMP:BEGIN:images/icons/post-type-icons.png:END:TIMESTAMP);}
+    .post-type {background-image: url(../images/icons/post-type-icons.png?h=HASH:B:images/icons/post-type-icons.png:E:HASH);}
 
     .post-type.video {background-position: 0 0;}
 
@@ -1782,7 +1782,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
         height: 30px;
         border: none;
         cursor: pointer;
-        background: url(../images/button-search.png?t=TIMESTAMP:BEGIN:images/button-search.png:END:TIMESTAMP) no-repeat;
+        background: url(../images/button-search.png?h=HASH:B:images/button-search.png:E:HASH) no-repeat;
 
         -webkit-transition: all .25s linear;
            -moz-transition: all .25s linear;
@@ -1829,12 +1829,12 @@ ul.related span.categories {color: #50554e; font-style: italic;}
                     .dark .comment > article {background-color: rgba(235, 238, 235, .09);}
 
                     .ie8 .light .comment > article {
-                        background-image: url(../images/bg-light-feature-menu.png?t=TIMESTAMP:BEGIN:images/bg-light-feature-menu.png:END:TIMESTAMP);
+                        background-image: url(../images/bg-light-feature-menu.png?h=HASH:B:images/bg-light-feature-menu.png:E:HASH);
                         background-repeat: repeat;
                     }
 
                     .ie8 .dark .comment > article {
-                        background-image: url(../images/bg-dark-feature-menu.png?t=TIMESTAMP:BEGIN:images/bg-dark-feature-menu.png:END:TIMESTAMP);
+                        background-image: url(../images/bg-dark-feature-menu.png?h=HASH:B:images/bg-dark-feature-menu.png:E:HASH);
                         background-repeat: repeat;
                     }
 
@@ -1874,8 +1874,8 @@ ul.related span.categories {color: #50554e; font-style: italic;}
                                 font-style: italic;
                             }
 
-                            .light .comment .date {background: url(../images/icons/meta-icons-light.png?t=TIMESTAMP:BEGIN:images/icons/meta-icons-light.png:END:TIMESTAMP) no-repeat 0 1px;}
-                            .dark .comment .date {background: url(../images/icons/meta-icons-dark.png?t=TIMESTAMP:BEGIN:images/icons/meta-icons-dark.png:END:TIMESTAMP) no-repeat 0 1px;}
+                            .light .comment .date {background: url(../images/icons/meta-icons-light.png?h=HASH:B:images/icons/meta-icons-light.png:E:HASH) no-repeat 0 1px;}
+                            .dark .comment .date {background: url(../images/icons/meta-icons-dark.png?h=HASH:B:images/icons/meta-icons-dark.png:E:HASH) no-repeat 0 1px;}
 
                             .comment .reply {
                                 position: absolute;
@@ -2110,8 +2110,8 @@ ul.related span.categories {color: #50554e; font-style: italic;}
         content: "";
     }
 
-    .picture-icon .curtain:before {background: url(../images/zoom.png?t=TIMESTAMP:BEGIN:images/zoom.png:END:TIMESTAMP) no-repeat scroll 0 0 transparent;}
-    .video-icon .curtain:before {background: url(../images/video-icon.png?t=TIMESTAMP:BEGIN:images/video-icon.png:END:TIMESTAMP) no-repeat scroll 0 0 transparent;}
+    .picture-icon .curtain:before {background: url(../images/zoom.png?h=HASH:B:images/zoom.png:E:HASH) no-repeat scroll 0 0 transparent;}
+    .video-icon .curtain:before {background: url(../images/video-icon.png?h=HASH:B:images/video-icon.png:E:HASH) no-repeat scroll 0 0 transparent;}
 
     .single-image:hover .curtain,
     .video:hover .curtain {
@@ -2199,7 +2199,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
                 width: 25px;
                 height: 25px;
                 cursor: pointer;
-                background: url(../images/slider-arrows.png?t=TIMESTAMP:BEGIN:images/slider-arrows.png:END:TIMESTAMP) no-repeat;
+                background: url(../images/slider-arrows.png?h=HASH:B:images/slider-arrows.png:E:HASH) no-repeat;
                 text-indent: -9999px;
             }
 
@@ -2246,12 +2246,12 @@ ul.related span.categories {color: #50554e; font-style: italic;}
         .light .meta-entry .date,
         .light .meta-entry .author,
         .light .meta-entry .category,
-        .light .meta-entry .comments {background-image: url(../images/icons/meta-icons-light.png?t=TIMESTAMP:BEGIN:images/icons/meta-icons-light.png:END:TIMESTAMP);}
+        .light .meta-entry .comments {background-image: url(../images/icons/meta-icons-light.png?h=HASH:B:images/icons/meta-icons-light.png:E:HASH);}
 
         .dark .meta-entry .date,
         .dark .meta-entry .author,
         .dark .meta-entry .category,
-        .dark .meta-entry .comments {background-image: url(../images/icons/meta-icons-dark.png?t=TIMESTAMP:BEGIN:images/icons/meta-icons-dark.png:END:TIMESTAMP);}
+        .dark .meta-entry .comments {background-image: url(../images/icons/meta-icons-dark.png?h=HASH:B:images/icons/meta-icons-dark.png:E:HASH);}
 
         .meta-entry .date {background-position: right top;}
         .meta-entry .author {background-position: right -60px;}
@@ -2300,12 +2300,12 @@ ul.related span.categories {color: #50554e; font-style: italic;}
 .dark .contact-block {background-color: rgba(235, 238, 235,.09);}
 
 .ie8 .light .contact-block {
-    background-image: url(../images/bg-light-feature-menu.png?t=TIMESTAMP:BEGIN:images/bg-light-feature-menu.png:END:TIMESTAMP);
+    background-image: url(../images/bg-light-feature-menu.png?h=HASH:B:images/bg-light-feature-menu.png:E:HASH);
     background-repeat: repeat;
 }
 
 .ie8 .dark .contact-block {
-    background-image: url(../images/bg-dark-feature-menu.png?t=TIMESTAMP:BEGIN:images/bg-dark-feature-menu.png:END:TIMESTAMP);
+    background-image: url(../images/bg-dark-feature-menu.png?h=HASH:B:images/bg-dark-feature-menu.png:E:HASH);
     background-repeat: repeat;
 }
 
@@ -2323,8 +2323,8 @@ ul.related span.categories {color: #50554e; font-style: italic;}
             background-repeat: no-repeat;
         }
 
-        .light .contact-list li {background-image: url(../images/icons/contact-icons-light.png?t=TIMESTAMP:BEGIN:images/icons/contact-icons-light.png:END:TIMESTAMP);}
-        .dark .contact-list li {background-image: url(../images/icons/contact-icons-dark.png?t=TIMESTAMP:BEGIN:images/icons/contact-icons-dark.png:END:TIMESTAMP);}
+        .light .contact-list li {background-image: url(../images/icons/contact-icons-light.png?h=HASH:B:images/icons/contact-icons-light.png:E:HASH);}
+        .dark .contact-list li {background-image: url(../images/icons/contact-icons-dark.png?h=HASH:B:images/icons/contact-icons-dark.png:E:HASH);}
 
         .contact-list li.contact-phone {background-position: 0 -65px;}
         .contact-list li.contact-mail {background-position: 0 -104px;}
@@ -2535,10 +2535,10 @@ ul.related span.categories {color: #50554e; font-style: italic;}
         }
 
         .light blockquote.quote-text:before,
-        .light blockquote.quote-text:after {background-image: url(../images/quotes-light.png?t=TIMESTAMP:BEGIN:images/quotes-light.png:END:TIMESTAMP);}
+        .light blockquote.quote-text:after {background-image: url(../images/quotes-light.png?h=HASH:B:images/quotes-light.png:E:HASH);}
 
         .dark blockquote.quote-text:before,
-        .dark blockquote.quote-text:after {background-image: url(../images/quotes-dark.png?t=TIMESTAMP:BEGIN:images/quotes-dark.png:END:TIMESTAMP);}
+        .dark blockquote.quote-text:after {background-image: url(../images/quotes-dark.png?h=HASH:B:images/quotes-dark.png:E:HASH);}
 
         blockquote.quote-text:after {
             background-position: right;
@@ -2666,7 +2666,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
             width: 15px;
             height: 15px;
             margin-top: -8px;
-            background-image: url(../images/collapse.png?t=TIMESTAMP:BEGIN:images/collapse.png:END:TIMESTAMP);
+            background-image: url(../images/collapse.png?h=HASH:B:images/collapse.png:E:HASH);
             background-repeat: no-repeat;
             background-position: 5px 5px;
             background-color: #2e332e;
@@ -2746,7 +2746,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
             padding: 0 10px;
             height: 23px;
             line-height: 23px;
-            background: url(../images/arrow-left-bottom.png?t=TIMESTAMP:BEGIN:images/arrow-left-bottom.png:END:TIMESTAMP) no-repeat scroll left bottom #FFFFFF;
+            background: url(../images/arrow-left-bottom.png?h=HASH:B:images/arrow-left-bottom.png:E:HASH) no-repeat scroll left bottom #FFFFFF;
             color: #121412;
             content: attr(data-tooltip);
             font-style: italic;
@@ -2767,8 +2767,8 @@ ul.related span.categories {color: #50554e; font-style: italic;}
                 text-indent: -9999px;
             }
 
-            .light .aside-tabs .tabs-nav li a {background: url(../images/icons/sprite-icons-light.png?t=TIMESTAMP:BEGIN:images/icons/sprite-icons-light.png:END:TIMESTAMP) no-repeat;}
-            .dark .aside-tabs .tabs-nav li a {background: url(../images/icons/sprite-icons-dark.png?t=TIMESTAMP:BEGIN:images/icons/sprite-icons-dark.png:END:TIMESTAMP) no-repeat;}
+            .light .aside-tabs .tabs-nav li a {background: url(../images/icons/sprite-icons-light.png?h=HASH:B:images/icons/sprite-icons-light.png:E:HASH) no-repeat;}
+            .dark .aside-tabs .tabs-nav li a {background: url(../images/icons/sprite-icons-dark.png?h=HASH:B:images/icons/sprite-icons-dark.png:E:HASH) no-repeat;}
 
         .aside-tabs .tabs-nav li:after {right: -35px;}
         .aside-tabs .tabs-nav li.recent:after {right: -40px;}
@@ -2904,7 +2904,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
         width: 15px;
         height: 15px;
         margin-top: -8px;
-        background-image: url(../images/collapse.png?t=TIMESTAMP:BEGIN:images/collapse.png:END:TIMESTAMP);
+        background-image: url(../images/collapse.png?h=HASH:B:images/collapse.png:E:HASH);
         background-repeat: no-repeat;
         background-position: 5px 5px;
         background-color: #2e332e;
@@ -3039,7 +3039,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
         -webkit-border-radius: 50px;
            -moz-border-radius: 50px;
                 border-radius: 50px;
-        background: url(../images/arrow-up.png?t=TIMESTAMP:BEGIN:images/arrow-up.png:END:TIMESTAMP) no-repeat top;
+        background: url(../images/arrow-up.png?h=HASH:B:images/arrow-up.png:E:HASH) no-repeat top;
         background-color: #1f221e;
         text-indent: -9999px;
 
@@ -3451,7 +3451,7 @@ ul.related span.categories {color: #50554e; font-style: italic;}
                 height: 32px;
                 color: #50554e;
                 border: 1px solid #ccd3cd;
-                background-image: url(../images/bg-nav.png?t=TIMESTAMP:BEGIN:images/bg-nav.png:END:TIMESTAMP);
+                background-image: url(../images/bg-nav.png?h=HASH:B:images/bg-nav.png:E:HASH);
                 background-repeat: no-repeat;
                 background-position: right top;
                 font-style: italic;
@@ -4184,7 +4184,7 @@ div.markdown.resume {
 }
 .markdown table th, .markdown table td {
   padding: 2px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 .markdown table th {
   padding-bottom: 0;
@@ -4261,77 +4261,77 @@ div.markdown.resume {
 }
 
 .fixed.light.f-pattern-1 .markdown pre {
-  background-image: url(../images/bgs/fd-bg-1.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-1.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/fd-bg-1.png?h=HASH:B:images/bgs/fd-bg-1.png:E:HASH);
 }
 .fixed.light.f-pattern-2 .markdown pre {
-  background-image: url(../images/bgs/fd-bg-2.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-2.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/fd-bg-2.png?h=HASH:B:images/bgs/fd-bg-2.png:E:HASH);
 }
 .fixed.light.f-pattern-3 .markdown pre {
-  background-image: url(../images/bgs/fd-bg-3.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-3.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/fd-bg-3.png?h=HASH:B:images/bgs/fd-bg-3.png:E:HASH);
 }
 .fixed.light.f-pattern-4 .markdown pre {
-  background-image: url(../images/bgs/fd-bg-4.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-4.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/fd-bg-4.png?h=HASH:B:images/bgs/fd-bg-4.png:E:HASH);
 }
 .fixed.light.f-pattern-5 .markdown pre {
-  background-image: url(../images/bgs/fd-bg-5.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-5.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/fd-bg-5.png?h=HASH:B:images/bgs/fd-bg-5.png:E:HASH);
 }
 .fixed.light.f-pattern-6 .markdown pre {
-  background-image: url(../images/bgs/fd-bg-6.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-6.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/fd-bg-6.png?h=HASH:B:images/bgs/fd-bg-6.png:E:HASH);
 }
 .fixed.light.f-pattern-7 .markdown pre {
-  background-image: url(../images/bgs/fd-bg-7.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-7.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/fd-bg-7.png?h=HASH:B:images/bgs/fd-bg-7.png:E:HASH);
 }
 .fixed.light.f-pattern-8 .markdown pre {
-  background-image: url(../images/bgs/fd-bg-8.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-8.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/fd-bg-8.png?h=HASH:B:images/bgs/fd-bg-8.png:E:HASH);
 }
 .fixed.light.f-pattern-9 .markdown pre {
-  background-image: url(../images/bgs/fd-bg-9.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-9.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/fd-bg-9.png?h=HASH:B:images/bgs/fd-bg-9.png:E:HASH);
 }
 .fixed.light.f-pattern-10 .markdown pre {
-  background-image: url(../images/bgs/fd-bg-10.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-10.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/fd-bg-10.png?h=HASH:B:images/bgs/fd-bg-10.png:E:HASH);
 }
 .fixed.light.f-pattern-11 .markdown pre {
-  background-image: url(../images/bgs/fd-bg-11.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-11.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/fd-bg-11.png?h=HASH:B:images/bgs/fd-bg-11.png:E:HASH);
 }
 .fixed.light.f-pattern-12 .markdown pre {
-  background-image: url(../images/bgs/fd-bg-12.png?t=TIMESTAMP:BEGIN:images/bgs/fd-bg-12.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/fd-bg-12.png?h=HASH:B:images/bgs/fd-bg-12.png:E:HASH);
 }
 
 .fixed.dark.f-pattern-1 .markdown pre {
-  background-image: url(../images/bgs/f-bg-1.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-1.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/f-bg-1.png?h=HASH:B:images/bgs/f-bg-1.png:E:HASH);
 }
 .fixed.dark.f-pattern-2 .markdown pre {
-  background-image: url(../images/bgs/f-bg-2.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-2.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/f-bg-2.png?h=HASH:B:images/bgs/f-bg-2.png:E:HASH);
 }
 .fixed.dark.f-pattern-3 .markdown pre {
-  background-image: url(../images/bgs/f-bg-3.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-3.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/f-bg-3.png?h=HASH:B:images/bgs/f-bg-3.png:E:HASH);
 }
 .fixed.dark.f-pattern-4 .markdown pre {
-  background-image: url(../images/bgs/f-bg-4.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-4.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/f-bg-4.png?h=HASH:B:images/bgs/f-bg-4.png:E:HASH);
 }
 .fixed.dark.f-pattern-5 .markdown pre {
-  background-image: url(../images/bgs/f-bg-5.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-5.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/f-bg-5.png?h=HASH:B:images/bgs/f-bg-5.png:E:HASH);
 }
 .fixed.dark.f-pattern-6 .markdown pre {
-  background-image: url(../images/bgs/f-bg-6.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-6.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/f-bg-6.png?h=HASH:B:images/bgs/f-bg-6.png:E:HASH);
 }
 .fixed.dark.f-pattern-7 .markdown pre {
-  background-image: url(../images/bgs/f-bg-7.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-7.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/f-bg-7.png?h=HASH:B:images/bgs/f-bg-7.png:E:HASH);
 }
 .fixed.dark.f-pattern-8 .markdown pre {
-  background-image: url(../images/bgs/f-bg-8.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-8.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/f-bg-8.png?h=HASH:B:images/bgs/f-bg-8.png:E:HASH);
 }
 .fixed.dark.f-pattern-9 .markdown pre {
-  background-image: url(../images/bgs/f-bg-9.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-9.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/f-bg-9.png?h=HASH:B:images/bgs/f-bg-9.png:E:HASH);
 }
 .fixed.dark.f-pattern-10 .markdown pre {
-  background-image: url(../images/bgs/f-bg-10.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-10.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/f-bg-10.png?h=HASH:B:images/bgs/f-bg-10.png:E:HASH);
 }
 .fixed.dark.f-pattern-11 .markdown pre {
-  background-image: url(../images/bgs/f-bg-11.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-11.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/f-bg-11.png?h=HASH:B:images/bgs/f-bg-11.png:E:HASH);
 }
 .fixed.dark.f-pattern-12 .markdown pre {
-  background-image: url(../images/bgs/f-bg-12.png?t=TIMESTAMP:BEGIN:images/bgs/f-bg-12.png:END:TIMESTAMP);
+  background-image: url(../images/bgs/f-bg-12.png?h=HASH:B:images/bgs/f-bg-12.png:E:HASH);
 }
 
 /*  <!-- Markdown END -->  */
@@ -4429,7 +4429,7 @@ background-color: rgba(49, 152, 48, 0.4);
 .linelink:before {
   content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMAQMAAAAedKwSAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAtJREFUCB1joAEAAABUAAFx3DL8AAAAAElFTkSuQmCC);
   margin-left: -48px;
-  background-image: url(../images/icons/social-links.png?t=TIMESTAMP:BEGIN:images/icons/social-links.png:END:TIMESTAMP);
+  background-image: url(../images/icons/social-links.png?h=HASH:B:images/icons/social-links.png:E:HASH);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -4980,11 +4980,11 @@ background-color: rgba(49, 152, 48, 0.4);
   float: left;
   padding: 8px;
   padding-bottom: 10px;
-  background-image: url(../images/icons/ftpindex.png?t=TIMESTAMP:BEGIN:images/icons/ftpindex.png:END:TIMESTAMP);
+  background-image: url(../images/icons/ftpindex.png?h=HASH:B:images/icons/ftpindex.png:E:HASH);
   background-repeat: no-repeat;
 }
 .autoindex div.one-half a:hover:before {
-  background-image: url(../images/icons/ftpindex-hover.png?t=TIMESTAMP:BEGIN:images/icons/ftpindex-hover.png:END:TIMESTAMP);
+  background-image: url(../images/icons/ftpindex-hover.png?h=HASH:B:images/icons/ftpindex-hover.png:E:HASH);
 }
 .light .type-folder.type-file div.one-half a:before,
 .light .type-folder.type-file div.one-half a:hover:before {
@@ -5118,11 +5118,11 @@ a.return {
   width: 24px;
   height: 19px;
   margin-right: 16px;
-  background-image: url(../images/icons/return.png?t=TIMESTAMP:BEGIN:images/icons/return.png:END:TIMESTAMP);
+  background-image: url(../images/icons/return.png?h=HASH:B:images/icons/return.png:E:HASH);
   background-repeat: no-repeat;
 }
 a.return:hover {
-  background-image: url(../images/icons/return-hover.png?t=TIMESTAMP:BEGIN:images/icons/return-hover.png:END:TIMESTAMP);
+  background-image: url(../images/icons/return-hover.png?h=HASH:B:images/icons/return-hover.png:E:HASH);
 }
 .light a.return, .light a.return:hover {
   background-position: 0 0;

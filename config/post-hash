@@ -19,8 +19,8 @@ function timestamp() {
     url=$(echo $realurl | sed 's/\//\\\//g')
     replace=$(echo $url | sed 's/\./\\./g')
     echo "s/\\(\\\"\\(https\?:\\)\?$replace\\)\\\"/\\1?t=$time\\\"/g" >>$1
-    TIMESTAMP=$(echo $3 | sed  's/^static\/\(.*\)/TIMESTAMP:BEGIN:\1:END:TIMESTAMP/g')
-    stamp=$(echo $TIMESTAMP | sed 's/\//\\\//g')
+    HASH=$(echo $3 | sed  's/^static\/\(.*\)/HASH:B:\1:E:HASH/g')
+    stamp=$(echo $HASH | sed 's/\//\\\//g')
     replace=$(echo $stamp | sed 's/\./\\./g')
     echo "s/$replace/$time/g" >>$2
     echo "hash $realurl"
@@ -51,8 +51,8 @@ elif [ "$1"x = STANDARDx ] ; then
     sed -i -f $sed_std $2 >/dev/null
   fi
   exit
-elif [ "$1"x = TIMESTAMPx ] ; then
-  ## sed Script replace TIMESTAMP
+elif [ "$1"x = HASHx ] ; then
+  ## sed Script replace HASH
   if [ ! -L $2 ] ; then
     sed -i -f $sed_inl $2 >/dev/null
   fi

@@ -74,11 +74,11 @@ html[xmlns] .slides {display: block;}
 .flexslider .slides {zoom: 1;}
 
 .light .flexslider .slides {
-    background: url(theme/loading-light.gif?t=TIMESTAMP:BEGIN:sliders/flexslider/theme/loading-light.gif:END:TIMESTAMP) no-repeat 50% 50%;
+    background: url(theme/loading-light.gif?h=HASH:B:sliders/flexslider/theme/loading-light.gif:E:HASH) no-repeat 50% 50%;
 }
 
 .dark .flexslider .slides {
-    background: url(theme/loading-dark.gif?t=TIMESTAMP:BEGIN:sliders/flexslider/theme/loading-dark.gif:END:TIMESTAMP) no-repeat 50% 50%;
+    background: url(theme/loading-dark.gif?h=HASH:B:sliders/flexslider/theme/loading-dark.gif:E:HASH) no-repeat 50% 50%;
 }
 
 .flexslider .slides > li {
@@ -155,7 +155,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endCol
                 margin: 0;
                 width: 30px;
                 height: 30px;
-                background-image: url(theme/bg_direction_nav.png?t=TIMESTAMP:BEGIN:sliders/flexslider/theme/bg_direction_nav.png:END:TIMESTAMP);
+                background-image: url(theme/bg_direction_nav.png?h=HASH:B:sliders/flexslider/theme/bg_direction_nav.png:E:HASH);
                 background-repeat: no-repeat;
                 cursor: pointer;
                 text-indent: -999em;

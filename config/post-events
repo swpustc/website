@@ -24,10 +24,10 @@ echo call config/post-hash startup
 config/post-hash startup
 
 #### Hash static directory
-echo call config/post-hash TIMESTAMP
+echo call config/post-hash HASH
 for file in $(find -P ./ -type f \( -name '*.html' -or -name '*.php' -or -name '*.css' -or -name '*.js' -or -name '*.json' -or -name '*.md' \) -print) ; do
   if [ ! -L $file ] ; then
-    config/post-hash TIMESTAMP $file
+    config/post-hash HASH $file
   fi
 done
 

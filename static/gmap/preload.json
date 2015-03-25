@@ -4,11 +4,11 @@
   "image_green"  : "//proxy.swpbox.info/maps.google.com/mapfiles/marker_green.png",
   "image_grey"   : "//proxy.swpbox.info/maps.google.com/mapfiles/marker_grey.png",
 
-  "json-marker"       : "/gmap/marker_nl_nl.json?t=TIMESTAMP:BEGIN:gmap/marker_nl_nl.json:END:TIMESTAMP",
-  "json-marker-dn-dn" : "/gmap/marker_dn_dn.json?t=TIMESTAMP:BEGIN:gmap/marker_dn_dn.json:END:TIMESTAMP",
-  "json-marker-dn-nl" : "/gmap/marker_dn_nl.json?t=TIMESTAMP:BEGIN:gmap/marker_dn_nl.json:END:TIMESTAMP",
-  "json-marker-dn-up" : "/gmap/marker_dn_up.json?t=TIMESTAMP:BEGIN:gmap/marker_dn_up.json:END:TIMESTAMP",
-  "json-marker-up-dn" : "/gmap/marker_up_dn.json?t=TIMESTAMP:BEGIN:gmap/marker_up_dn.json:END:TIMESTAMP",
-  "json-marker-up-nl" : "/gmap/marker_up_nl.json?t=TIMESTAMP:BEGIN:gmap/marker_up_nl.json:END:TIMESTAMP",
-  "json-marker-up-up" : "/gmap/marker_up_up.json?t=TIMESTAMP:BEGIN:gmap/marker_up_up.json:END:TIMESTAMP"
+  "json-marker"       : "/gmap/marker_nl_nl.json?h=HASH:B:gmap/marker_nl_nl.json:E:HASH",
+  "json-marker-dn-dn" : "/gmap/marker_dn_dn.json?h=HASH:B:gmap/marker_dn_dn.json:E:HASH",
+  "json-marker-dn-nl" : "/gmap/marker_dn_nl.json?h=HASH:B:gmap/marker_dn_nl.json:E:HASH",
+  "json-marker-dn-up" : "/gmap/marker_dn_up.json?h=HASH:B:gmap/marker_dn_up.json:E:HASH",
+  "json-marker-up-dn" : "/gmap/marker_up_dn.json?h=HASH:B:gmap/marker_up_dn.json:E:HASH",
+  "json-marker-up-nl" : "/gmap/marker_up_nl.json?h=HASH:B:gmap/marker_up_nl.json:E:HASH",
+  "json-marker-up-up" : "/gmap/marker_up_up.json?h=HASH:B:gmap/marker_up_up.json:E:HASH"
 }

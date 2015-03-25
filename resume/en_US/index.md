@@ -2,7 +2,7 @@ My Resume
 =========
 
 <div class="alignright-with-title alignright-image">
-  <img src="//cdn.swpbox.info/images/photo.png?t=TIMESTAMP:BEGIN:images/photo.png:END:TIMESTAMP" alt="">
+  <img src="//cdn.swpbox.info/images/photo.png?h=HASH:B:images/photo.png:E:HASH" alt="">
   <h5 class="title">My Photo</h5>
 </div>
 

@@ -1,3 +1,3 @@
 <title>swpustc | CDN Page</title>
-<link rel="stylesheet" href="/sliders/elastslider/elastic.min.css?t=TIMESTAMP:BEGIN:sliders/elastslider/elastic.min.css:END:TIMESTAMP" media="screen"/>
-<link rel="stylesheet" href="/css/style.min.css?t=TIMESTAMP:BEGIN:css/style.min.css:END:TIMESTAMP" media="screen"/>
+<link rel="stylesheet" href="/sliders/elastslider/elastic.min.css?h=HASH:B:sliders/elastslider/elastic.min.css:E:HASH" media="screen"/>
+<link rel="stylesheet" href="/css/style.min.css?h=HASH:B:css/style.min.css:E:HASH" media="screen"/>

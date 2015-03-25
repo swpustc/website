@@ -117,7 +117,7 @@ cat header.shtml              | sed "s/<li><!--CURRENT:CDN-->/<li class=\"curren
                               | sed "s/<li><!--CURRENT:STATUS-->/<li class=\"current\">/g" \
                               | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                               | tee static/index.html -a >/dev/null
-cat static/index_body.shtml   | sed "s/<!--REPLACE:json-center--><div/<div json-center=\"\/gmap\/center.json?t=TIMESTAMP:BEGIN:gmap\/center.json:END:TIMESTAMP\"/g" \
+cat static/index_body.shtml   | sed "s/<!--REPLACE:json-center--><div/<div json-center=\"\/gmap\/center.json?h=HASH:B:gmap\/center.json:E:HASH\"/g" \
                               | tee static/index.html -a >/dev/null
 cat footer.shtml              | tee static/index.html -a >/dev/null
 cat static/jquery.shtml       | tee static/index.html -a >/dev/null
@@ -129,7 +129,7 @@ cat header.shtml              | sed "s/<li><!--CURRENT:FREESHELL-->/<li class=\"
                               | sed "s/<li><!--CURRENT:STATUS-->/<li class=\"current\">/g" \
                               | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                               | tee static/index-freeshell.html -a >/dev/null
-cat static/index_body.shtml   | sed "s/<!--REPLACE:json-center--><div/<div json-center=\"\/gmap\/center.freeshell.json?t=TIMESTAMP:BEGIN:gmap\/center.freeshell.json:END:TIMESTAMP\"/g" \
+cat static/index_body.shtml   | sed "s/<!--REPLACE:json-center--><div/<div json-center=\"\/gmap\/center.freeshell.json?h=HASH:B:gmap\/center.freeshell.json:E:HASH\"/g" \
                               | tee static/index-freeshell.html -a >/dev/null
 cat footer.shtml              | tee static/index-freeshell.html -a >/dev/null
 cat static/jquery.shtml       | tee static/index-freeshell.html -a >/dev/null
@@ -141,7 +141,7 @@ cat header.shtml              | sed "s/<li><!--CURRENT:STATIC-->/<li class=\"cur
                               | sed "s/<li><!--CURRENT:STATUS-->/<li class=\"current\">/g" \
                               | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
                               | tee static/index-static.html -a >/dev/null
-cat static/index_body.shtml   | sed "s/<!--REPLACE:json-center--><div/<div json-center=\"\/gmap\/center.static.json?t=TIMESTAMP:BEGIN:gmap\/center.static.json:END:TIMESTAMP\"/g" \
+cat static/index_body.shtml   | sed "s/<!--REPLACE:json-center--><div/<div json-center=\"\/gmap\/center.static.json?h=HASH:B:gmap\/center.static.json:E:HASH\"/g" \
                               | tee static/index-static.html -a >/dev/null
 cat footer.shtml              | tee static/index-static.html -a >/dev/null
 cat static/jquery.shtml       | tee static/index-static.html -a >/dev/null

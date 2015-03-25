@@ -13,7 +13,7 @@
     top: 0px;
     left: 0px;
     z-index:999;
-    background: url(loader.gif?t=TIMESTAMP:BEGIN:sliders/elastslider/loader.gif:END:TIMESTAMP) no-repeat 50% 50%;
+    background: url(loader.gif?h=HASH:B:sliders/elastslider/loader.gif:E:HASH) no-repeat 50% 50%;
     text-indent: -9999px;
     text-align: center;
 }
