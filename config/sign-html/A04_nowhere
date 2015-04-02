@@ -8,4 +8,5 @@ config/sign-commit nowhere/502_body.shtml   | tee nowhere/502.html -a >/dev/null
 config/sign-commit footer.shtml             | tee nowhere/502.html -a >/dev/null
 config/sign-commit jquery.shtml             | tee nowhere/502.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml   | tee nowhere/502.html -a >/dev/null
+config/sign-commit config/post-html/A04*    | tee nowhere/502.html -a >/dev/null
 echo Sign nowhere/502.html

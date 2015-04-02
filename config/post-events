@@ -4,7 +4,7 @@
 
 ## Generate HTML5 document
 echo call config/post-html/
-run-parts --report config/post-html
+run-parts config/post-html
 
 ## resume zh_TW page
 echo call config/post-cconv

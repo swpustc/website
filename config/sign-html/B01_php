@@ -7,6 +7,7 @@ config/sign-commit php/ftpindex_body.phps   | tee php/ftpindex.php -a >/dev/null
 config/sign-commit footer.shtml             | tee php/ftpindex.php -a >/dev/null
 config/sign-commit jquery.shtml             | tee php/ftpindex.php -a >/dev/null
 config/sign-commit php/ftpindex_footer.phps | tee php/ftpindex.php -a >/dev/null
+config/sign-commit config/post-html/B01*    | tee php/ftpindex.php -a >/dev/null
 echo Sign php/ftpindex.php
 config/sign-commit php/image_header.phps | tee php/image.php    >/dev/null
 config/sign-commit header.shtml          | tee php/image.php -a >/dev/null
@@ -14,6 +15,7 @@ config/sign-commit php/image_body.phps   | tee php/image.php -a >/dev/null
 config/sign-commit footer.shtml          | tee php/image.php -a >/dev/null
 config/sign-commit jquery.shtml          | tee php/image.php -a >/dev/null
 config/sign-commit php/image_footer.phps | tee php/image.php -a >/dev/null
+config/sign-commit config/post-html/B01* | tee php/image.php -a >/dev/null
 echo Sign php/image.php
 config/sign-commit php/prettify_header.phps | tee php/prettify.php    >/dev/null
 config/sign-commit header.shtml             | tee php/prettify.php -a >/dev/null
@@ -21,4 +23,5 @@ config/sign-commit php/prettify_body.phps   | tee php/prettify.php -a >/dev/null
 config/sign-commit footer.shtml             | tee php/prettify.php -a >/dev/null
 config/sign-commit jquery.shtml             | tee php/prettify.php -a >/dev/null
 config/sign-commit php/prettify_footer.phps | tee php/prettify.php -a >/dev/null
+config/sign-commit config/post-html/B01*    | tee php/prettify.php -a >/dev/null
 echo Sign php/prettify.php

@@ -135,6 +135,18 @@ cat footer.shtml              | tee static/index-freeshell.html -a >/dev/null
 cat static/jquery.shtml       | tee static/index-freeshell.html -a >/dev/null
 cat static/index_footer.shtml | tee static/index-freeshell.html -a >/dev/null
 echo Generate static/index-freeshell.html
+cat DOCTYPE.shtml             | tee static/index-hangzhou.html    >/dev/null
+cat static/index_header.shtml | tee static/index-hangzhou.html -a >/dev/null
+cat header.shtml              | sed "s/<li><!--CURRENT:HANGZHOU-->/<li class=\"current\">/g" \
+                              | sed "s/<li><!--CURRENT:STATUS-->/<li class=\"current\">/g" \
+                              | sed "s/<li><!--CURRENT:[^>]*-->/<li>/g" \
+                              | tee static/index-hangzhou.html -a >/dev/null
+cat static/index_body.shtml   | sed "s/<!--REPLACE:json-center--><div/<div json-center=\"\/gmap\/center.hangzhou.json?h=HASH:B:gmap\/center.hangzhou.json:E:HASH\"/g" \
+                              | tee static/index-hangzhou.html -a >/dev/null
+cat footer.shtml              | tee static/index-hangzhou.html -a >/dev/null
+cat static/jquery.shtml       | tee static/index-hangzhou.html -a >/dev/null
+cat static/index_footer.shtml | tee static/index-hangzhou.html -a >/dev/null
+echo Generate static/index-hangzhou.html
 cat DOCTYPE.shtml             | tee static/index-static.html    >/dev/null
 cat static/index_header.shtml | tee static/index-static.html -a >/dev/null
 cat header.shtml              | sed "s/<li><!--CURRENT:STATIC-->/<li class=\"current\">/g" \

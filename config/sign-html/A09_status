@@ -8,6 +8,7 @@ config/sign-commit status/502-ganglia_body.shtml | tee status/502-ganglia.html -
 config/sign-commit footer.shtml                  | tee status/502-ganglia.html -a >/dev/null
 config/sign-commit jquery.shtml                  | tee status/502-ganglia.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml        | tee status/502-ganglia.html -a >/dev/null
+config/sign-commit config/post-html/A09*         | tee status/502-ganglia.html -a >/dev/null
 echo Sign status/502-ganglia.html
 config/sign-commit DOCTYPE.shtml                 | tee status/502-phpinfo.html    >/dev/null
 config/sign-commit 502_header.shtml              | tee status/502-phpinfo.html -a >/dev/null
@@ -16,6 +17,7 @@ config/sign-commit status/502-phpinfo_body.shtml | tee status/502-phpinfo.html -
 config/sign-commit footer.shtml                  | tee status/502-phpinfo.html -a >/dev/null
 config/sign-commit jquery.shtml                  | tee status/502-phpinfo.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml        | tee status/502-phpinfo.html -a >/dev/null
+config/sign-commit config/post-html/A09*         | tee status/502-phpinfo.html -a >/dev/null
 echo Sign status/502-phpinfo.html
 config/sign-commit DOCTYPE.shtml         | tee status/ddns-log-static.html    >/dev/null
 config/sign-commit ddns-log_header.shtml | tee status/ddns-log-static.html -a >/dev/null
@@ -24,4 +26,5 @@ config/sign-commit ddns-log_body.shtml   | tee status/ddns-log-static.html -a >/
 config/sign-commit footer.shtml          | tee status/ddns-log-static.html -a >/dev/null
 config/sign-commit jquery.shtml          | tee status/ddns-log-static.html -a >/dev/null
 config/sign-commit ddns-log_footer.shtml | tee status/ddns-log-static.html -a >/dev/null
+config/sign-commit config/post-html/A09* | tee status/ddns-log-static.html -a >/dev/null
 echo Sign status/ddns-log-static.html

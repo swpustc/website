@@ -120,6 +120,7 @@
                 <li><!--CURRENT:DDNS--><a href="//status.swpbox.info/ddns-log.html">DDNS</a></li>
                 <li><!--CURRENT:CDN--><a href="//cdn.swpbox.info/">CDN</a></li>
                 <li><!--CURRENT:FREESHELL--><a href="//freeshell.swpbox.info/">Freeshell</a></li>
+                <li><!--CURRENT:HANGZHOU--><a href="//hangzhou.swpbox.info/">Hangzhou</a></li>
                 <li><!--CURRENT:STATIC--><a href="//static.swpbox.info/">Static</a></li>
               </ul>
             </li>
