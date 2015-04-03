@@ -9,6 +9,7 @@ config/sign-commit footer.shtml                  | tee static/400.html -a >/dev/
 config/sign-commit static/jquery.shtml           | tee static/400.html -a >/dev/null
 config/sign-commit static/errorpage_footer.shtml | tee static/400.html -a >/dev/null
 config/sign-commit config/post-html/A06*         | tee static/400.html -a >/dev/null
+cat static_resource                              | tee static/400.html -a >/dev/null
 echo Sign static/400.html
 config/sign-commit DOCTYPE.shtml                 | tee static/403.html    >/dev/null
 config/sign-commit static/403_header.shtml       | tee static/403.html -a >/dev/null
@@ -18,6 +19,7 @@ config/sign-commit footer.shtml                  | tee static/403.html -a >/dev/
 config/sign-commit static/jquery.shtml           | tee static/403.html -a >/dev/null
 config/sign-commit static/errorpage_footer.shtml | tee static/403.html -a >/dev/null
 config/sign-commit config/post-html/A06*         | tee static/403.html -a >/dev/null
+cat static_resource                              | tee static/403.html -a >/dev/null
 echo Sign static/403.html
 config/sign-commit DOCTYPE.shtml                 | tee static/404.html    >/dev/null
 config/sign-commit static/404_header.shtml       | tee static/404.html -a >/dev/null
@@ -27,6 +29,7 @@ config/sign-commit footer.shtml                  | tee static/404.html -a >/dev/
 config/sign-commit static/jquery.shtml           | tee static/404.html -a >/dev/null
 config/sign-commit static/errorpage_footer.shtml | tee static/404.html -a >/dev/null
 config/sign-commit config/post-html/A06*         | tee static/404.html -a >/dev/null
+cat static_resource                              | tee static/404.html -a >/dev/null
 echo Sign static/404.html
 config/sign-commit DOCTYPE.shtml                 | tee static/414.html    >/dev/null
 config/sign-commit static/414_header.shtml       | tee static/414.html -a >/dev/null
@@ -36,6 +39,7 @@ config/sign-commit footer.shtml                  | tee static/414.html -a >/dev/
 config/sign-commit static/jquery.shtml           | tee static/414.html -a >/dev/null
 config/sign-commit static/errorpage_footer.shtml | tee static/414.html -a >/dev/null
 config/sign-commit config/post-html/A06*         | tee static/414.html -a >/dev/null
+cat static_resource                              | tee static/414.html -a >/dev/null
 echo Sign static/414.html
 config/sign-commit DOCTYPE.shtml                 | tee static/422.html    >/dev/null
 config/sign-commit static/422_header.shtml       | tee static/422.html -a >/dev/null
@@ -45,6 +49,7 @@ config/sign-commit footer.shtml                  | tee static/422.html -a >/dev/
 config/sign-commit static/jquery.shtml           | tee static/422.html -a >/dev/null
 config/sign-commit static/errorpage_footer.shtml | tee static/422.html -a >/dev/null
 config/sign-commit config/post-html/A06*         | tee static/422.html -a >/dev/null
+cat static_resource                              | tee static/422.html -a >/dev/null
 echo Sign static/422.html
 config/sign-commit DOCTYPE.shtml                 | tee static/500.html    >/dev/null
 config/sign-commit static/500_header.shtml       | tee static/500.html -a >/dev/null
@@ -54,6 +59,7 @@ config/sign-commit footer.shtml                  | tee static/500.html -a >/dev/
 config/sign-commit static/jquery.shtml           | tee static/500.html -a >/dev/null
 config/sign-commit static/errorpage_footer.shtml | tee static/500.html -a >/dev/null
 config/sign-commit config/post-html/A06*         | tee static/500.html -a >/dev/null
+cat static_resource                              | tee static/500.html -a >/dev/null
 echo Sign static/500.html
 config/sign-commit DOCTYPE.shtml                 | tee static/502.html    >/dev/null
 config/sign-commit static/502_header.shtml       | tee static/502.html -a >/dev/null
@@ -63,6 +69,7 @@ config/sign-commit footer.shtml                  | tee static/502.html -a >/dev/
 config/sign-commit static/jquery.shtml           | tee static/502.html -a >/dev/null
 config/sign-commit static/errorpage_footer.shtml | tee static/502.html -a >/dev/null
 config/sign-commit config/post-html/A06*         | tee static/502.html -a >/dev/null
+cat static_resource                              | tee static/502.html -a >/dev/null
 echo Sign static/502.html
 config/sign-commit DOCTYPE.shtml                 | tee static/503.html    >/dev/null
 config/sign-commit static/503_header.shtml       | tee static/503.html -a >/dev/null
@@ -72,6 +79,7 @@ config/sign-commit footer.shtml                  | tee static/503.html -a >/dev/
 config/sign-commit static/jquery.shtml           | tee static/503.html -a >/dev/null
 config/sign-commit static/errorpage_footer.shtml | tee static/503.html -a >/dev/null
 config/sign-commit config/post-html/A06*         | tee static/503.html -a >/dev/null
+cat static_resource                              | tee static/503.html -a >/dev/null
 echo Sign static/503.html
 config/sign-commit DOCTYPE.shtml                 | tee static/504.html    >/dev/null
 config/sign-commit static/504_header.shtml       | tee static/504.html -a >/dev/null
@@ -81,6 +89,7 @@ config/sign-commit footer.shtml                  | tee static/504.html -a >/dev/
 config/sign-commit static/jquery.shtml           | tee static/504.html -a >/dev/null
 config/sign-commit static/errorpage_footer.shtml | tee static/504.html -a >/dev/null
 config/sign-commit config/post-html/A06*         | tee static/504.html -a >/dev/null
+cat static_resource                              | tee static/504.html -a >/dev/null
 echo Sign static/504.html
 config/sign-commit DOCTYPE.shtml             | tee static/index.html    >/dev/null
 config/sign-commit static/index_header.shtml | tee static/index.html -a >/dev/null
@@ -90,6 +99,7 @@ config/sign-commit footer.shtml              | tee static/index.html -a >/dev/nu
 config/sign-commit static/jquery.shtml       | tee static/index.html -a >/dev/null
 config/sign-commit static/index_footer.shtml | tee static/index.html -a >/dev/null
 config/sign-commit config/post-html/A06*     | tee static/index.html -a >/dev/null
+cat static_resource                          | tee static/index.html -a >/dev/null
 echo Sign static/index.html
 config/sign-commit DOCTYPE.shtml             | tee static/index-freeshell.html    >/dev/null
 config/sign-commit static/index_header.shtml | tee static/index-freeshell.html -a >/dev/null
@@ -99,6 +109,7 @@ config/sign-commit footer.shtml              | tee static/index-freeshell.html -
 config/sign-commit static/jquery.shtml       | tee static/index-freeshell.html -a >/dev/null
 config/sign-commit static/index_footer.shtml | tee static/index-freeshell.html -a >/dev/null
 config/sign-commit config/post-html/A06*     | tee static/index-freeshell.html -a >/dev/null
+cat static_resource                          | tee static/index-freeshell.html -a >/dev/null
 echo Sign static/index-freeshell.html
 config/sign-commit DOCTYPE.shtml             | tee static/index-hangzhou.html    >/dev/null
 config/sign-commit static/index_header.shtml | tee static/index-hangzhou.html -a >/dev/null
@@ -108,6 +119,7 @@ config/sign-commit footer.shtml              | tee static/index-hangzhou.html -a
 config/sign-commit static/jquery.shtml       | tee static/index-hangzhou.html -a >/dev/null
 config/sign-commit static/index_footer.shtml | tee static/index-hangzhou.html -a >/dev/null
 config/sign-commit config/post-html/A06*     | tee static/index-hangzhou.html -a >/dev/null
+cat static_resource                          | tee static/index-hangzhou.html -a >/dev/null
 echo Sign static/index-hangzhou.html
 config/sign-commit DOCTYPE.shtml             | tee static/index-static.html    >/dev/null
 config/sign-commit static/index_header.shtml | tee static/index-static.html -a >/dev/null
@@ -117,4 +129,5 @@ config/sign-commit footer.shtml              | tee static/index-static.html -a >
 config/sign-commit static/jquery.shtml       | tee static/index-static.html -a >/dev/null
 config/sign-commit static/index_footer.shtml | tee static/index-static.html -a >/dev/null
 config/sign-commit config/post-html/A06*     | tee static/index-static.html -a >/dev/null
+cat static_resource                          | tee static/index-static.html -a >/dev/null
 echo Sign static/index-static.html

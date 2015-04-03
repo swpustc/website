@@ -1,4 +1,13 @@
 #!/bin/bash
 
+echo Generate css and js commit information
+cat /dev/null | tee static_resource
+for file in $(find -P static/ -type f \( -name '*.css' -or -name '*.js' \) -print) ; do
+  if [ ! -L $file ] ; then
+    config/sign-commit $file | tee -a static_resource >/dev/null
+  fi
+done
+echo Update static_resource
+
 echo Generate commit information
 run-parts config/sign-html

@@ -9,4 +9,5 @@ config/sign-commit footer.shtml                 | tee resume/502-resume.html -a 
 config/sign-commit jquery.shtml                 | tee resume/502-resume.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml       | tee resume/502-resume.html -a >/dev/null
 config/sign-commit config/post-html/A05*        | tee resume/502-resume.html -a >/dev/null
+cat static_resource                             | tee resume/502-resume.html -a >/dev/null
 echo Sign resume/502-resume.html
