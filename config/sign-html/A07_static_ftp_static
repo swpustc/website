@@ -11,7 +11,7 @@ config/sign-commit footer.shtml                                  | tee static/ft
 config/sign-commit jquery.shtml                                  | tee static/ftp/static/403-deny-files.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml                        | tee static/ftp/static/403-deny-files.html -a >/dev/null
 config/sign-commit config/post-html/A07*                         | tee static/ftp/static/403-deny-files.html -a >/dev/null
-cat static_resource                                              | tee static/ftp/static/403-deny-files.html -a >/dev/null
+config/sign-hash static_resource                                 | tee static/ftp/static/403-deny-files.html -a >/dev/null
 echo Sign static/ftp/static/403-deny-files.html
 config/sign-commit DOCTYPE.shtml                          | tee static/ftp/static/502-image.html    >/dev/null
 config/sign-commit 502_header.shtml                       | tee static/ftp/static/502-image.html -a >/dev/null
@@ -21,7 +21,7 @@ config/sign-commit footer.shtml                           | tee static/ftp/stati
 config/sign-commit jquery.shtml                           | tee static/ftp/static/502-image.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml                 | tee static/ftp/static/502-image.html -a >/dev/null
 config/sign-commit config/post-html/A07*                  | tee static/ftp/static/502-image.html -a >/dev/null
-cat static_resource                                       | tee static/ftp/static/502-image.html -a >/dev/null
+config/sign-hash static_resource                          | tee static/ftp/static/502-image.html -a >/dev/null
 echo Sign static/ftp/static/502-image.html
 config/sign-commit DOCTYPE.shtml                          | tee static/ftp/static/502-index.html    >/dev/null
 config/sign-commit 502_header.shtml                       | tee static/ftp/static/502-index.html -a >/dev/null
@@ -31,7 +31,7 @@ config/sign-commit footer.shtml                           | tee static/ftp/stati
 config/sign-commit jquery.shtml                           | tee static/ftp/static/502-index.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml                 | tee static/ftp/static/502-index.html -a >/dev/null
 config/sign-commit config/post-html/A07*                  | tee static/ftp/static/502-index.html -a >/dev/null
-cat static_resource                                       | tee static/ftp/static/502-index.html -a >/dev/null
+config/sign-hash static_resource                          | tee static/ftp/static/502-index.html -a >/dev/null
 echo Sign static/ftp/static/502-index.html
 config/sign-commit DOCTYPE.shtml                             | tee static/ftp/static/502-markdown.html    >/dev/null
 config/sign-commit 502_header.shtml                          | tee static/ftp/static/502-markdown.html -a >/dev/null
@@ -41,7 +41,7 @@ config/sign-commit footer.shtml                              | tee static/ftp/st
 config/sign-commit jquery.shtml                              | tee static/ftp/static/502-markdown.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml                    | tee static/ftp/static/502-markdown.html -a >/dev/null
 config/sign-commit config/post-html/A07*                     | tee static/ftp/static/502-markdown.html -a >/dev/null
-cat static_resource                                          | tee static/ftp/static/502-markdown.html -a >/dev/null
+config/sign-hash static_resource                             | tee static/ftp/static/502-markdown.html -a >/dev/null
 echo Sign static/ftp/static/502-markdown.html
 config/sign-commit DOCTYPE.shtml                             | tee static/ftp/static/502-prettify.html    >/dev/null
 config/sign-commit 502_header.shtml                          | tee static/ftp/static/502-prettify.html -a >/dev/null
@@ -51,5 +51,5 @@ config/sign-commit footer.shtml                              | tee static/ftp/st
 config/sign-commit jquery.shtml                              | tee static/ftp/static/502-prettify.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml                    | tee static/ftp/static/502-prettify.html -a >/dev/null
 config/sign-commit config/post-html/A07*                     | tee static/ftp/static/502-prettify.html -a >/dev/null
-cat static_resource                                          | tee static/ftp/static/502-prettify.html -a >/dev/null
+config/sign-hash static_resource                             | tee static/ftp/static/502-prettify.html -a >/dev/null
 echo Sign static/ftp/static/502-prettify.html

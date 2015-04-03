@@ -9,5 +9,5 @@ config/sign-commit footer.shtml           | tee CA/index.html -a >/dev/null
 config/sign-commit jquery.shtml           | tee CA/index.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml | tee CA/index.html -a >/dev/null
 config/sign-commit config/post-html/A03*  | tee CA/index.html -a >/dev/null
-cat static_resource                       | tee CA/index.html -a >/dev/null
+config/sign-hash static_resource          | tee CA/index.html -a >/dev/null
 echo Sign CA/index.html

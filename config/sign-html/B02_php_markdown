@@ -8,7 +8,7 @@ config/sign-commit footer.shtml                | tee php/markdown/md.php -a >/de
 config/sign-commit jquery.shtml                | tee php/markdown/md.php -a >/dev/null
 config/sign-commit php/markdown/md_footer.phps | tee php/markdown/md.php -a >/dev/null
 config/sign-commit config/post-html/B02*       | tee php/markdown/md.php -a >/dev/null
-cat static_resource                            | tee php/markdown/md.php -a >/dev/null
+config/sign-hash static_resource               | tee php/markdown/md.php -a >/dev/null
 echo Sign php/markdown/md.php
 config/sign-commit php/markdown/resume_header.phps | tee php/markdown/resume.php    >/dev/null
 config/sign-commit header.shtml                    | tee php/markdown/resume.php -a >/dev/null
@@ -17,5 +17,5 @@ config/sign-commit footer.shtml                    | tee php/markdown/resume.php
 config/sign-commit jquery.shtml                    | tee php/markdown/resume.php -a >/dev/null
 config/sign-commit php/markdown/resume_footer.phps | tee php/markdown/resume.php -a >/dev/null
 config/sign-commit config/post-html/B02*           | tee php/markdown/resume.php -a >/dev/null
-cat static_resource                                | tee php/markdown/resume.php -a >/dev/null
+config/sign-hash static_resource                   | tee php/markdown/resume.php -a >/dev/null
 echo Sign php/markdown/resume.php

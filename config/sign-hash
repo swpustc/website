@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ "$1"x = x ] ; then
+  ## Error
+  exit 1
+else
+  ## Output SHA1 hash
+  shahash=($(sha1sum $1))
+  echo "$shahash ($1)"
+fi

@@ -9,7 +9,7 @@ config/sign-commit footer.shtml           | tee 400.html -a >/dev/null
 config/sign-commit jquery.shtml           | tee 400.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml | tee 400.html -a >/dev/null
 config/sign-commit config/post-html/A01*  | tee 400.html -a >/dev/null
-cat static_resource                       | tee 400.html -a >/dev/null
+config/sign-hash static_resource          | tee 400.html -a >/dev/null
 echo Sign 400.html
 config/sign-commit DOCTYPE.shtml          | tee 403.html    >/dev/null
 config/sign-commit 403_header.shtml       | tee 403.html -a >/dev/null
@@ -19,7 +19,7 @@ config/sign-commit footer.shtml           | tee 403.html -a >/dev/null
 config/sign-commit jquery.shtml           | tee 403.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml | tee 403.html -a >/dev/null
 config/sign-commit config/post-html/A01*  | tee 403.html -a >/dev/null
-cat static_resource                       | tee 403.html -a >/dev/null
+config/sign-hash static_resource          | tee 403.html -a >/dev/null
 echo Sign 403.html
 config/sign-commit DOCTYPE.shtml          | tee 404.html    >/dev/null
 config/sign-commit 404_header.shtml       | tee 404.html -a >/dev/null
@@ -29,7 +29,7 @@ config/sign-commit footer.shtml           | tee 404.html -a >/dev/null
 config/sign-commit jquery.shtml           | tee 404.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml | tee 404.html -a >/dev/null
 config/sign-commit config/post-html/A01*  | tee 404.html -a >/dev/null
-cat static_resource                       | tee 404.html -a >/dev/null
+config/sign-hash static_resource          | tee 404.html -a >/dev/null
 echo Sign 404.html
 config/sign-commit DOCTYPE.shtml          | tee 414.html    >/dev/null
 config/sign-commit 414_header.shtml       | tee 414.html -a >/dev/null
@@ -39,7 +39,7 @@ config/sign-commit footer.shtml           | tee 414.html -a >/dev/null
 config/sign-commit jquery.shtml           | tee 414.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml | tee 414.html -a >/dev/null
 config/sign-commit config/post-html/A01*  | tee 414.html -a >/dev/null
-cat static_resource                       | tee 414.html -a >/dev/null
+config/sign-hash static_resource          | tee 414.html -a >/dev/null
 echo Sign 414.html
 config/sign-commit DOCTYPE.shtml          | tee 422.html    >/dev/null
 config/sign-commit 422_header.shtml       | tee 422.html -a >/dev/null
@@ -49,7 +49,7 @@ config/sign-commit footer.shtml           | tee 422.html -a >/dev/null
 config/sign-commit jquery.shtml           | tee 422.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml | tee 422.html -a >/dev/null
 config/sign-commit config/post-html/A01*  | tee 422.html -a >/dev/null
-cat static_resource                       | tee 422.html -a >/dev/null
+config/sign-hash static_resource          | tee 422.html -a >/dev/null
 echo Sign 422.html
 config/sign-commit DOCTYPE.shtml          | tee 500.html    >/dev/null
 config/sign-commit 500_header.shtml       | tee 500.html -a >/dev/null
@@ -59,7 +59,7 @@ config/sign-commit footer.shtml           | tee 500.html -a >/dev/null
 config/sign-commit jquery.shtml           | tee 500.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml | tee 500.html -a >/dev/null
 config/sign-commit config/post-html/A01*  | tee 500.html -a >/dev/null
-cat static_resource                       | tee 500.html -a >/dev/null
+config/sign-hash static_resource          | tee 500.html -a >/dev/null
 echo Sign 500.html
 config/sign-commit DOCTYPE.shtml          | tee 502.html    >/dev/null
 config/sign-commit 502_header.shtml       | tee 502.html -a >/dev/null
@@ -69,7 +69,7 @@ config/sign-commit footer.shtml           | tee 502.html -a >/dev/null
 config/sign-commit jquery.shtml           | tee 502.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml | tee 502.html -a >/dev/null
 config/sign-commit config/post-html/A01*  | tee 502.html -a >/dev/null
-cat static_resource                       | tee 502.html -a >/dev/null
+config/sign-hash static_resource          | tee 502.html -a >/dev/null
 echo Sign 502.html
 config/sign-commit DOCTYPE.shtml          | tee 503.html    >/dev/null
 config/sign-commit 503_header.shtml       | tee 503.html -a >/dev/null
@@ -79,7 +79,7 @@ config/sign-commit footer.shtml           | tee 503.html -a >/dev/null
 config/sign-commit jquery.shtml           | tee 503.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml | tee 503.html -a >/dev/null
 config/sign-commit config/post-html/A01*  | tee 503.html -a >/dev/null
-cat static_resource                       | tee 503.html -a >/dev/null
+config/sign-hash static_resource          | tee 503.html -a >/dev/null
 echo Sign 503.html
 config/sign-commit DOCTYPE.shtml          | tee 504.html    >/dev/null
 config/sign-commit 504_header.shtml       | tee 504.html -a >/dev/null
@@ -89,5 +89,5 @@ config/sign-commit footer.shtml           | tee 504.html -a >/dev/null
 config/sign-commit jquery.shtml           | tee 504.html -a >/dev/null
 config/sign-commit errorpage_footer.shtml | tee 504.html -a >/dev/null
 config/sign-commit config/post-html/A01*  | tee 504.html -a >/dev/null
-cat static_resource                       | tee 504.html -a >/dev/null
+config/sign-hash static_resource          | tee 504.html -a >/dev/null
 echo Sign 504.html
