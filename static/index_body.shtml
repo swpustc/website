@@ -1,13 +1,21 @@
 <div class="content-wrapper clearfix">
   <!--REPLACE:json-center--><div
     id="map" class="cdn-map"
-    json-marker="/gmap/marker_nl_nl.json?h=HASH:B:gmap/marker_nl_nl.json:E:HASH"
-    json-marker-dn-dn="/gmap/marker_dn_dn.json?h=HASH:B:gmap/marker_dn_dn.json:E:HASH"
-    json-marker-dn-nl="/gmap/marker_dn_nl.json?h=HASH:B:gmap/marker_dn_nl.json:E:HASH"
-    json-marker-dn-up="/gmap/marker_dn_up.json?h=HASH:B:gmap/marker_dn_up.json:E:HASH"
-    json-marker-up-dn="/gmap/marker_up_dn.json?h=HASH:B:gmap/marker_up_dn.json:E:HASH"
-    json-marker-up-nl="/gmap/marker_up_nl.json?h=HASH:B:gmap/marker_up_nl.json:E:HASH"
-    json-marker-up-up="/gmap/marker_up_up.json?h=HASH:B:gmap/marker_up_up.json:E:HASH"
+    json-marker="/gmap/marker_nl_nl_nl.json?h=HASH:B:gmap/marker_nl_nl_nl.json:E:HASH"
+    json-marker-dn-dn-dn="/gmap/marker_dn_dn_dn.json?h=HASH:B:gmap/marker_dn_dn_dn.json:E:HASH"
+    json-marker-dn-dn-nl="/gmap/marker_dn_dn_nl.json?h=HASH:B:gmap/marker_dn_dn_nl.json:E:HASH"
+    json-marker-dn-dn-up="/gmap/marker_dn_dn_up.json?h=HASH:B:gmap/marker_dn_dn_up.json:E:HASH"
+    json-marker-dn-nl-nl="/gmap/marker_dn_nl_nl.json?h=HASH:B:gmap/marker_dn_nl_nl.json:E:HASH"
+    json-marker-dn-up-dn="/gmap/marker_dn_up_dn.json?h=HASH:B:gmap/marker_dn_up_dn.json:E:HASH"
+    json-marker-dn-up-nl="/gmap/marker_dn_up_nl.json?h=HASH:B:gmap/marker_dn_up_nl.json:E:HASH"
+    json-marker-dn-up-up="/gmap/marker_dn_up_up.json?h=HASH:B:gmap/marker_dn_up_up.json:E:HASH"
+    json-marker-up-dn-dn="/gmap/marker_up_dn_dn.json?h=HASH:B:gmap/marker_up_dn_dn.json:E:HASH"
+    json-marker-up-dn-nl="/gmap/marker_up_dn_nl.json?h=HASH:B:gmap/marker_up_dn_nl.json:E:HASH"
+    json-marker-up-dn-up="/gmap/marker_up_dn_up.json?h=HASH:B:gmap/marker_up_dn_up.json:E:HASH"
+    json-marker-up-nl-nl="/gmap/marker_up_nl_nl.json?h=HASH:B:gmap/marker_up_nl_nl.json:E:HASH"
+    json-marker-up-up-dn="/gmap/marker_up_up_dn.json?h=HASH:B:gmap/marker_up_up_dn.json:E:HASH"
+    json-marker-up-up-nl="/gmap/marker_up_up_nl.json?h=HASH:B:gmap/marker_up_up_nl.json:E:HASH"
+    json-marker-up-up-up="/gmap/marker_up_up_up.json?h=HASH:B:gmap/marker_up_up_up.json:E:HASH"
     json-preload="/gmap/preload.json?h=HASH:B:gmap/preload.json:E:HASH"
     ></div>
   <div class="image-title clearfix">
@@ -15,16 +23,25 @@
       <h2 class="highlight1 domain-status-cdn">
         <span class="post-type quote"></span>
         <span class="highlight1 domain-status-cdn">cdn.swpbox.info</span>
-        This domain stores static resources, and have two servers.
+        This domain stores static resources, have three servers.
       </h2>
     </a>
-  <div class="image-title clearfix">
   </div><!--/ .image-title-->
+  <div class="image-title clearfix">
     <a href="//freeshell.swpbox.info">
       <h2 class="highlight1 domain-status-freeshell">
         <span class="post-type quote"></span>
         <span class="highlight1 domain-status-freeshell">freeshell.swpbox.info</span>
         This is the master server.
+      </h2>
+    </a>
+  </div><!--/ .image-title-->
+  <div class="image-title clearfix">
+    <a href="//hangzhou.swpbox.info">
+      <h2 class="highlight1 domain-status-freeshell">
+        <span class="post-type quote"></span>
+        <span class="highlight1 domain-status-hangzhou">hangzhou.swpbox.info</span>
+        This is another master server.
       </h2>
     </a>
   </div><!--/ .image-title-->

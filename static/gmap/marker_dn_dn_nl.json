@@ -4,7 +4,16 @@
     "longitude" : 117.26956,
     "html"      : "University of Science and Techonogly of China - East Campus",
     "icon"      : {
-      "image"      : "//proxy.swpbox.info/maps.google.com/mapfiles/marker_green.png",
+      "image"      : "//proxy.swpbox.info/maps.google.com/mapfiles/marker.png",
+      "iconsize"   : [20, 34],
+      "iconanchor" : [9, 34]
+    }
+  }, {
+    "latitude"  : 30.266396,
+    "longitude" : 120.108737,
+    "html"      : "Hangzhou Chixiao Technology Co. Ltd.",
+    "icon"      : {
+      "image"      : "//proxy.swpbox.info/maps.google.com/mapfiles/marker.png",
       "iconsize"   : [20, 34],
       "iconanchor" : [9, 34]
     }

@@ -1339,6 +1339,7 @@ jQuery(document).ready( function() {
             var domainStatusClass = '.domain-status-',
                 $cdnBody          = $(domainStatusClass + 'cdn'),
                 $freeshellBody    = $(domainStatusClass + 'freeshell'),
+                $hangzhouBody     = $(domainStatusClass + 'hangzhou'),
                 $staticBody       = $(domainStatusClass + 'static'),
                 $mapBody          = $('#map.cdn-map'),
                 mapBody_length    = $mapBody.length,
@@ -1466,17 +1467,19 @@ jQuery(document).ready( function() {
                 attrJsonCenter    = attrJson + 'center',
                 attrJsonMarker    = attrJson + 'marker',
 
-                testTimeval       = 10000,
-                testDelay         = 500;
+                testTimeval       = 20000,
+                testDelay         = 1000;
 
             if ($cdnBody.length || $freeshellBody.length || $staticBody.length || mapBody_length) {
 
                 var domain          = '.swpbox.info',
                     testPngURL      = '/domain-test.png?t=',
                     freeshellDomain = '//freeshell' + domain + testPngURL,
+                    hangzhouDomain  = '//hangzhou'  + domain + testPngURL,
                     staticDomain    = '//static'    + domain + testPngURL,
 
                     freeshellStatus = null,
+                    hangzhouStatus  = null,
                     staticStatus    = null,
 
                     // domain status word className
@@ -1526,15 +1529,14 @@ jQuery(document).ready( function() {
                                     freeshellStatus = true;
                                     $cdnBody.each( function() {
                                         $(this).removeClass(highlight_all).addClass(
-                                            staticStatus === null ? highlight_part :
-                                                (staticStatus ? highlight_ok : highlight_part)
-                                            );
+                                            (freeshellStatus && hangzhouStatus && staticStatus) ? highlight_ok : highlight_part
+                                        );
                                     });
                                     $freeshellBody.each( function() {
                                         $(this).removeClass(highlight_all).addClass(highlight_ok);
                                     });
-                                    if (staticStatus === null) {
-                                        $staticBody.each( function() {
+                                    if (hangzhouStatus === null) {
+                                        $hangzhouBody.each( function() {
                                             $(this).removeClass(highlight_all).addClass(highlight_wait);
                                         });
                                     }
@@ -1545,7 +1547,8 @@ jQuery(document).ready( function() {
                                             var $this      = $(this),
                                                 markerAttr = attrJsonMarker
                                                         + mapMarker_up
-                                                        + ( staticStatus === null ? mapMarker_none : (staticStatus ? mapMarker_up : mapMarker_down) )
+                                                        + ( hangzhouStatus === null ? mapMarker_none : (hangzhouStatus ? mapMarker_up : mapMarker_down) )
+                                                        + ( staticStatus   === null ? mapMarker_none : (staticStatus   ? mapMarker_up : mapMarker_down) )
                                                     ;
                                             $.when(
                                                 addMarkers($this, $this.attr(markerAttr))
@@ -1569,15 +1572,14 @@ jQuery(document).ready( function() {
                                     freeshellStatus = false;
                                     $cdnBody.each( function() {
                                         $(this).removeClass(highlight_all).addClass(
-                                            staticStatus === null ? highlight_none :
-                                                (staticStatus ? highlight_part : highlight_fail)
-                                            );
+                                            (freeshellStatus || hangzhouStatus || staticStatus) ? highlight_part : highlight_fail
+                                        );
                                     });
                                     $freeshellBody.each( function() {
                                         $(this).removeClass(highlight_all).addClass(highlight_fail);
                                     });
-                                    if (staticStatus === null) {
-                                        $staticBody.each( function() {
+                                    if (hangzhouStatus === null) {
+                                        $hangzhouBody.each( function() {
                                             $(this).removeClass(highlight_all).addClass(highlight_wait);
                                         });
                                     }
@@ -1588,7 +1590,8 @@ jQuery(document).ready( function() {
                                             var $this      = $(this),
                                                 markerAttr = attrJsonMarker
                                                         + mapMarker_down
-                                                        + ( staticStatus === null ? mapMarker_none : (staticStatus ? mapMarker_up : mapMarker_down) )
+                                                        + ( hangzhouStatus === null ? mapMarker_none : (hangzhouStatus ? mapMarker_up : mapMarker_down) )
+                                                        + ( staticStatus   === null ? mapMarker_none : (staticStatus   ? mapMarker_up : mapMarker_down) )
                                                     ;
                                             $.when(
                                                 addMarkers($this, $this.attr(markerAttr))
@@ -1609,8 +1612,100 @@ jQuery(document).ready( function() {
                             });
                         },
 
-                        // static
+                        // hangzhou
                         b : function () {
+                            $.when(
+                                testImageFun(hangzhouDomain)
+                            ).done( function() {
+                                if (hangzhouStatus !== true) {
+                                    hangzhouStatus = true;
+                                    $cdnBody.each( function() {
+                                        $(this).removeClass(highlight_all).addClass(
+                                            (freeshellStatus && hangzhouStatus && staticStatus) ? highlight_ok : highlight_part
+                                        );
+                                    });
+                                    $hangzhouBody.each( function() {
+                                        $(this).removeClass(highlight_all).addClass(highlight_ok);
+                                    });
+                                    if (staticStatus === null) {
+                                        $staticBody.each( function() {
+                                            $(this).removeClass(highlight_all).addClass(highlight_wait);
+                                        });
+                                    }
+                                    // setup map
+                                    if (mapBody_length) {
+                                        var mapPos = 0;
+                                        $mapBody.each( function() {
+                                            var $this      = $(this),
+                                                markerAttr = attrJsonMarker
+                                                        + (freeshellStatus ? mapMarker_up : mapMarker_down)
+                                                        + mapMarker_up
+                                                        + ( staticStatus === null ? mapMarker_none : (staticStatus ? mapMarker_up : mapMarker_down) )
+                                                    ;
+                                            $.when(
+                                                addMarkers($this, $this.attr(markerAttr))
+                                            ).fail( function() {
+                                                hangzhouStatus = false;
+                                            }).always( function() {
+                                                if (++mapPos == mapBody_length) {
+                                                    setTimeout(functionTable.c, testDelay);
+                                                }
+                                            });
+                                        });
+                                    } else {
+                                        setTimeout(functionTable.c, testDelay);
+                                    }
+                                } else {
+                                    setTimeout(functionTable.c, testDelay);
+                                }
+
+                            }).fail( function() {
+                                if (hangzhouStatus !== false) {
+                                    hangzhouStatus = false;
+                                    $cdnBody.each( function() {
+                                        $(this).removeClass(highlight_all).addClass(
+                                            (freeshellStatus || hangzhouStatus || staticStatus) ? highlight_part : highlight_fail
+                                        );
+                                    });
+                                    $hangzhouBody.each( function() {
+                                        $(this).removeClass(highlight_all).addClass(highlight_fail);
+                                    });
+                                    if (staticStatus === null) {
+                                        $staticBody.each( function() {
+                                            $(this).removeClass(highlight_all).addClass(highlight_wait);
+                                        });
+                                    }
+                                    // setup map
+                                    if (mapBody_length) {
+                                        var mapPos = 0;
+                                        $mapBody.each( function() {
+                                            var $this      = $(this),
+                                                markerAttr = attrJsonMarker
+                                                        + (freeshellStatus ? mapMarker_up : mapMarker_down)
+                                                        + mapMarker_down
+                                                        + ( staticStatus === null ? mapMarker_none : (staticStatus ? mapMarker_up : mapMarker_down) )
+                                                    ;
+                                            $.when(
+                                                addMarkers($this, $this.attr(markerAttr))
+                                            ).fail( function() {
+                                                hangzhouStatus = true;
+                                            }).always( function() {
+                                                if (++mapPos == mapBody_length) {
+                                                    setTimeout(functionTable.c, testDelay);
+                                                }
+                                            });
+                                        });
+                                    } else {
+                                        setTimeout(functionTable.c, testDelay);
+                                    }
+                                } else {
+                                    setTimeout(functionTable.c, testDelay);
+                                }
+                            });
+                        },
+
+                        // static
+                        c : function () {
                             $.when(
                                 testImageFun(staticDomain)
                             ).done( function() {
@@ -1618,8 +1713,8 @@ jQuery(document).ready( function() {
                                     staticStatus = true;
                                     $cdnBody.each( function() {
                                         $(this).removeClass(highlight_all).addClass(
-                                                freeshellStatus ? highlight_ok : highlight_part
-                                            );
+                                            (freeshellStatus && hangzhouStatus && staticStatus) ? highlight_ok : highlight_part
+                                        );
                                     });
                                     $staticBody.each( function() {
                                         $(this).removeClass(highlight_all).addClass(highlight_ok);
@@ -1631,6 +1726,7 @@ jQuery(document).ready( function() {
                                             var $this      = $(this),
                                                 markerAttr = attrJsonMarker
                                                         + (freeshellStatus ? mapMarker_up : mapMarker_down)
+                                                        + (hangzhouStatus  ? mapMarker_up : mapMarker_down)
                                                         + mapMarker_up
                                                     ;
                                             $.when(
@@ -1655,8 +1751,8 @@ jQuery(document).ready( function() {
                                     staticStatus = false;
                                     $cdnBody.each( function() {
                                         $(this).removeClass(highlight_all).addClass(
-                                                freeshellStatus ? highlight_part : highlight_fail
-                                            );
+                                            (freeshellStatus || hangzhouStatus || staticStatus) ? highlight_part : highlight_fail
+                                        );
                                     });
                                     $staticBody.each( function() {
                                         $(this).removeClass(highlight_all).addClass(highlight_fail);
@@ -1668,6 +1764,7 @@ jQuery(document).ready( function() {
                                             var $this      = $(this),
                                                 markerAttr = attrJsonMarker
                                                         + (freeshellStatus ? mapMarker_up : mapMarker_down)
+                                                        + (hangzhouStatus  ? mapMarker_up : mapMarker_down)
                                                         + mapMarker_down
                                                     ;
                                             $.when(

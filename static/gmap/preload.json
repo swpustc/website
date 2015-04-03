@@ -4,11 +4,20 @@
   "image_green"  : "//proxy.swpbox.info/maps.google.com/mapfiles/marker_green.png",
   "image_grey"   : "//proxy.swpbox.info/maps.google.com/mapfiles/marker_grey.png",
 
-  "json-marker"       : "/gmap/marker_nl_nl.json?h=HASH:B:gmap/marker_nl_nl.json:E:HASH",
-  "json-marker-dn-dn" : "/gmap/marker_dn_dn.json?h=HASH:B:gmap/marker_dn_dn.json:E:HASH",
-  "json-marker-dn-nl" : "/gmap/marker_dn_nl.json?h=HASH:B:gmap/marker_dn_nl.json:E:HASH",
-  "json-marker-dn-up" : "/gmap/marker_dn_up.json?h=HASH:B:gmap/marker_dn_up.json:E:HASH",
-  "json-marker-up-dn" : "/gmap/marker_up_dn.json?h=HASH:B:gmap/marker_up_dn.json:E:HASH",
-  "json-marker-up-nl" : "/gmap/marker_up_nl.json?h=HASH:B:gmap/marker_up_nl.json:E:HASH",
-  "json-marker-up-up" : "/gmap/marker_up_up.json?h=HASH:B:gmap/marker_up_up.json:E:HASH"
+  "json-marker"  : "/gmap/marker_nl_nl_nl.json?h=HASH:B:gmap/marker_nl_nl_nl.json:E:HASH",
+
+  "json-marker-dn-dn-dn" : "/gmap/marker_dn_dn_dn.json?h=HASH:B:gmap/marker_dn_dn_dn.json:E:HASH",
+  "json-marker-dn-dn-nl" : "/gmap/marker_dn_dn_nl.json?h=HASH:B:gmap/marker_dn_dn_nl.json:E:HASH",
+  "json-marker-dn-dn-up" : "/gmap/marker_dn_dn_up.json?h=HASH:B:gmap/marker_dn_dn_up.json:E:HASH",
+  "json-marker-dn-nl-nl" : "/gmap/marker_dn_nl_nl.json?h=HASH:B:gmap/marker_dn_nl_nl.json:E:HASH",
+  "json-marker-dn-up-dn" : "/gmap/marker_dn_up_dn.json?h=HASH:B:gmap/marker_dn_up_dn.json:E:HASH",
+  "json-marker-dn-up-nl" : "/gmap/marker_dn_up_nl.json?h=HASH:B:gmap/marker_dn_up_nl.json:E:HASH",
+  "json-marker-dn-up-up" : "/gmap/marker_dn_up_up.json?h=HASH:B:gmap/marker_dn_up_up.json:E:HASH",
+  "json-marker-up-dn-dn" : "/gmap/marker_up_dn_dn.json?h=HASH:B:gmap/marker_up_dn_dn.json:E:HASH",
+  "json-marker-up-dn-nl" : "/gmap/marker_up_dn_nl.json?h=HASH:B:gmap/marker_up_dn_nl.json:E:HASH",
+  "json-marker-up-dn-up" : "/gmap/marker_up_dn_up.json?h=HASH:B:gmap/marker_up_dn_up.json:E:HASH",
+  "json-marker-up-nl-nl" : "/gmap/marker_up_nl_nl.json?h=HASH:B:gmap/marker_up_nl_nl.json:E:HASH",
+  "json-marker-up-up-dn" : "/gmap/marker_up_up_dn.json?h=HASH:B:gmap/marker_up_up_dn.json:E:HASH",
+  "json-marker-up-up-nl" : "/gmap/marker_up_up_nl.json?h=HASH:B:gmap/marker_up_up_nl.json:E:HASH",
+  "json-marker-up-up-up" : "/gmap/marker_up_up_up.json?h=HASH:B:gmap/marker_up_up_up.json:E:HASH"
 }
