@@ -5,27 +5,27 @@ cd "`dirname $0`/../"
 
 ## Generate Table
 TMPFILE="/tmp/ddns.`date +%s`"
-if host mirrors.lug >$TMPFILE; then
+if host mirrors.lug | grep 'alias.*mirrors\.ustc\.edu\.cn' >$TMPFILE; then
   UTC="`date +%s`"
   DAY="`date --date=@$UTC +%m-%d`"
   TME="`date --date=@$UTC '+%F %T'`"
   echo "<article data-categories=\"$DAY\"><div class=\"one-fourth time\">$TME</div><div class=\"three-fourth last vpn1\">`cat $TMPFILE | awk 'NR==1'`</div></article>" >>/var/log/ddns.log
-elif host mirrors.lug >$TMPFILE; then
+elif host mirrors.lug | grep 'alias.*mirrors\.ustc\.edu\.cn' >$TMPFILE; then
   UTC="`date +%s`"
   DAY="`date --date=@$UTC +%m-%d`"
   TME="`date --date=@$UTC '+%F %T'`"
   echo "<article data-categories=\"$DAY\"><div class=\"one-fourth time\">$TME</div><div class=\"three-fourth last vpn2\">`cat $TMPFILE | awk 'NR==1'`</div></article>" >>/var/log/ddns.log
-elif host mirrors.lug >$TMPFILE; then
+elif host mirrors.lug | grep 'alias.*mirrors\.ustc\.edu\.cn' >$TMPFILE; then
   UTC="`date +%s`"
   DAY="`date --date=@$UTC +%m-%d`"
   TME="`date --date=@$UTC '+%F %T'`"
   echo "<article data-categories=\"$DAY\"><div class=\"one-fourth time\">$TME</div><div class=\"three-fourth last vpn3\">`cat $TMPFILE | awk 'NR==1'`</div></article>" >>/var/log/ddns.log
-elif host mirrors.lug >$TMPFILE; then
+elif host mirrors.lug | grep 'alias.*mirrors\.ustc\.edu\.cn' >$TMPFILE; then
   UTC="`date +%s`"
   DAY="`date --date=@$UTC +%m-%d`"
   TME="`date --date=@$UTC '+%F %T'`"
   echo "<article data-categories=\"$DAY\"><div class=\"one-fourth time\">$TME</div><div class=\"three-fourth last vpn4\">`cat $TMPFILE | awk 'NR==1'`</div></article>" >>/var/log/ddns.log
-elif host mirrors.lug >$TMPFILE; then
+elif host mirrors.lug | grep 'alias.*mirrors\.ustc\.edu\.cn' >$TMPFILE; then
   UTC="`date +%s`"
   DAY="`date --date=@$UTC +%m-%d`"
   TME="`date --date=@$UTC '+%F %T'`"
