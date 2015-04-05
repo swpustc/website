@@ -969,7 +969,7 @@ class Markdown implements MarkdownInterface {
 		# trim leading newlines and trailing newlines
 		$codeblock = preg_replace('/\A\n+|\n+\z/', '', $codeblock);
 
-		$codeblock = "<pre class=\"prettyprint\"><code>$codeblock\n</code></pre>";
+		$codeblock = "<pre><code>$codeblock\n</code></pre>";
 		return "\n\n".$this->hashBlock($codeblock)."\n\n";
 	}
 
