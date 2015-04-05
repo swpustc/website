@@ -1311,6 +1311,11 @@ jQuery(document).ready( function() {
         ( function() {
             var $itemBody = $('.markdown'),
                 $itemImage = $itemBody.find('.alignright-image');
+            if ($itemBody.length) {
+                $itemBody.find('pre').each( function() {
+                    $(this).addClass('prettyprint');
+                });
+            }
             if ($itemImage.length) {
                 var $resizeFun = function() {
                     $itemImage.each( function() {
